@@ -1,4 +1,3 @@
-// Code by zky & djwj233
 #include <bits/stdc++.h>
 using namespace std;
 #define fo(v, a, b) for(int v = a; v <= b; v++)
