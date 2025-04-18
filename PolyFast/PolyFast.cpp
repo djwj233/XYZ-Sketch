@@ -1,4 +1,3 @@
-// Code by djwj233
 #include <bits/stdc++.h>
 #include "tools.cpp"
 using namespace std;
