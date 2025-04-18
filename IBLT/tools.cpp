@@ -7,7 +7,7 @@ using namespace std;
 const int P = 998244353;
 typedef vector<int> vi;
 // mt19937 rng(time(0));
-mt19937 rng(19260817);
+mt19937 rng(114514);
 
 void print(vector<int> v) {
     for(int x : v) printf("%d ", x);
