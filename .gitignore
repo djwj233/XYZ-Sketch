@@ -1,0 +1,6 @@
+docs/
+
+build/
+
+tests/__pycache__/
+tests/results/

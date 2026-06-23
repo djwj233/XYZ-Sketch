@@ -11,6 +11,7 @@ using namespace std;
 #define cl(a, v) memset(a, v, sizeof(a))
 
 int M, z, RangeLength;
+extern int k;
 
 namespace MurmurHash {
     uint32_t Hash(const int& data, uint32_t seed){
@@ -29,14 +30,19 @@ namespace RandomHash {
     }
 }
 namespace SpatialCoupling {
-    inline int base_h0(int x) {
-        // return MurmurHash::Hash(x, 114514) % (M - RangeLength + 1);
+    inline int circular_base_h0(int x) {
         return MurmurHash::Hash(x, 114514) % (M - RangeLength / 3 + 1);
+    }
+    inline int naive_base_h0(int x) {
+        return MurmurHash::Hash(x, 114514) % (M - RangeLength + 1);
+    }
+    inline int base_h0(int x) {
+        return k <= 2 ? circular_base_h0(x) : naive_base_h0(x);
     }
     inline int h(int i, int x) {
         int cur = MurmurHash::Hash(x, i) % RangeLength;
-        // return base_h0(x) + cur;
-        return (base_h0(x) + cur) % M;
+        if(k <= 2) return (base_h0(x) + cur) % M;
+        return base_h0(x) + cur;
     }
     void HashingInit(int znow) {
         z = znow, RangeLength = M / (z + 1);
