@@ -30,6 +30,28 @@ namespace RandomHash {
     }
 }
 namespace SpatialCoupling {
+    enum HashMode {
+        AUTO = 0,
+        RANDOM = 1,
+        CIRCULAR = 2,
+        NAIVE = 3
+    };
+
+    HashMode CurrentHashMode = AUTO;
+
+    void SetHashMode(HashMode mode) {
+        CurrentHashMode = mode;
+    }
+
+    HashMode GetHashMode() {
+        return CurrentHashMode;
+    }
+
+    inline HashMode EffectiveHashMode() {
+        if(CurrentHashMode != AUTO) return CurrentHashMode;
+        return k <= 2 ? CIRCULAR : NAIVE;
+    }
+
     inline int circular_base_h0(int x) {
         return MurmurHash::Hash(x, 114514) % (M - RangeLength / 3 + 1);
     }
@@ -37,11 +59,13 @@ namespace SpatialCoupling {
         return MurmurHash::Hash(x, 114514) % (M - RangeLength + 1);
     }
     inline int base_h0(int x) {
-        return k <= 2 ? circular_base_h0(x) : naive_base_h0(x);
+        return EffectiveHashMode() == CIRCULAR ? circular_base_h0(x) : naive_base_h0(x);
     }
     inline int h(int i, int x) {
+        auto mode = EffectiveHashMode();
+        if(mode == RANDOM) return RandomHash::h(i, x);
         int cur = MurmurHash::Hash(x, i) % RangeLength;
-        if(k <= 2) return (base_h0(x) + cur) % M;
+        if(mode == CIRCULAR) return (base_h0(x) + cur) % M;
         return base_h0(x) + cur;
     }
     void HashingInit(int znow) {

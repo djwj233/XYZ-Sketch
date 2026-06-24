@@ -50,7 +50,7 @@ struct TrialResult {
 [[noreturn]] void usage_error(const string &message) {
     cerr << "error: " << message << "\n";
     cerr << "usage: xyz_v2_bench --d D --l L --k K --z Z --trials N --seed S "
-            "[--m M | --m-factor F] [--mode spatial] [--ca N] [--cb N] "
+            "[--m M | --m-factor F] [--mode spatial|random|circular|naive] [--ca N] [--cb N] "
             "[--format jsonl]\n";
     exit(2);
 }
@@ -119,8 +119,9 @@ Options parse_args(int argc, char **argv) {
     if(opt.Z < 0) usage_error("--z must be non-negative");
     if(opt.trials <= 0) usage_error("--trials must be positive");
     if(opt.cA <= 0 || opt.cB <= 0) usage_error("--ca and --cb must be positive");
-    if(opt.mode != "spatial")
-        usage_error("this benchmark currently supports only --mode spatial");
+    if(opt.mode != "spatial" && opt.mode != "random" &&
+       opt.mode != "circular" && opt.mode != "naive")
+        usage_error("--mode must be spatial, random, circular, or naive");
     if(opt.format != "jsonl")
         usage_error("this benchmark currently supports only --format jsonl");
     if(opt.exact_m <= 0 && opt.m_factor <= 0)
@@ -263,6 +264,10 @@ int main(int argc, char **argv) {
     M = opt.exact_m > 0 ? opt.exact_m
                         : static_cast<int>(ceil(opt.m_factor * opt.D / opt.L));
     if(M <= 0) usage_error("computed M must be positive");
+    if(opt.mode == "spatial") SpatialCoupling::SetHashMode(SpatialCoupling::AUTO);
+    else if(opt.mode == "random") SpatialCoupling::SetHashMode(SpatialCoupling::RANDOM);
+    else if(opt.mode == "circular") SpatialCoupling::SetHashMode(SpatialCoupling::CIRCULAR);
+    else if(opt.mode == "naive") SpatialCoupling::SetHashMode(SpatialCoupling::NAIVE);
     HashingInit(opt.Z);
 
     const int max_len = 1 << 19;

@@ -33,6 +33,14 @@ namespace RandomHash {
     int h(int i, int x);
 }
 namespace SpatialCoupling {
+    enum HashMode {
+        AUTO = 0,
+        RANDOM = 1,
+        CIRCULAR = 2,
+        NAIVE = 3
+    };
+    void SetHashMode(HashMode mode);
+    HashMode GetHashMode();
     int base_h0(int x);
     int h(int i, int x);
 }
