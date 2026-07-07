@@ -184,7 +184,7 @@ K_VALUES = [2, 3, 4]
 
 第一份实验主要变量是 `d/l/k`，不是搜索通信阈值。因此先使用一个简单、确定性的 `M` 和 `z` 策略。
 
-当前脚本对 `k = 2` 继续使用原来的启发式；对更大的 `k`，使用通过 `tests/find_best_m.py` 测得的经验 `C/d`。
+当前脚本对 `k = 2` 继续使用原来的启发式；对更大的 `k`，使用通过 `tests/test_find_best_m.py` 测得的经验 `C/d`。
 
 对于 `k = 3` 和 `k = 4`，这些值来自代表配置 `d = 1000, l = 6, target_success_rate = 0.9`：
 
@@ -294,7 +294,7 @@ seed 必须包含在输出记录中。
 
 当前实验由两个文件组成：
 
-- `XYZ-v2/xyz_v2_bench.cpp`：C++ benchmark 可执行文件源码。
+- `tests/benchmarks/xyz_v2_bench.cpp`：C++ benchmark 可执行文件源码。
 - `tests/test_dlk.py`：Python 实验驱动脚本。
 
 ### 手动编译 Benchmark
@@ -303,14 +303,14 @@ seed 必须包含在输出记录中。
 
 ```bash
 mkdir -p build
-g++ -std=c++17 -O2 XYZ-v2/xyz_v2_bench.cpp -o build/xyz_v2_bench
+g++ -std=c++17 -O2 tests/benchmarks/xyz_v2_bench.cpp -o build/xyz_v2_bench
 ```
 
 在 Windows PowerShell 中可以运行：
 
 ```powershell
 New-Item -ItemType Directory -Force build
-g++ -std=c++17 -O2 XYZ-v2\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
+g++ -std=c++17 -O2 tests\benchmarks\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
 ```
 
 ### 运行单组 Benchmark 配置
@@ -398,3 +398,4 @@ python tests/test_dlk.py --max-set-size 1000000 --set-size-scale 20
 ### 当前限制
 
 `xyz_v2_bench.cpp` 当前只支持 `--mode spatial`，因为现有 `XYZ-v2/XYZSketch.cpp` 在编译期固定选择 `SpatialCoupling`。后续做 spatial-coupling 对比实验时，应该重构或复制 hash 选择路径，使 `--mode random` 能被干净地 benchmark。
+

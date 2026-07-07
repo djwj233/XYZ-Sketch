@@ -14,7 +14,7 @@
 
 这和 best-`M` 实验不同：
 
-- `find_best_m.py` 搜索最小可用 `M`。
+- `test_find_best_m.py` 搜索最小可用 `M`。
 - `test_spatial.py` 通过搜索各 mode 的 best `M` 来比较 hash mode。
 - `test_z.py` 固定 `M`，只扫描 `z`。
 
@@ -252,3 +252,4 @@ z -> RangeLength
 - 小 trial 数只适合 smoke test。
 - `spatial` mode 下的 `z = 0` 不完全等同于 random hashing。
 - random-hash 对比属于 `test_spatial.py` 的目标，不是本实验的重点。
+

@@ -41,6 +41,11 @@ namespace SpatialCoupling {
     };
     void SetHashMode(HashMode mode);
     HashMode GetHashMode();
+    void SetCircularA(double value);
+    double GetCircularA();
+    void SetDedupHashes(bool enabled);
+    bool GetDedupHashes();
+    int CircularBaseRange();
     int base_h0(int x);
     int h(int i, int x);
 }

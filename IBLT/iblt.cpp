@@ -41,14 +41,18 @@ class IBLT{
 			get <2>(vec) ^= get <2>(delta);
 		}
 	public:
-		IBLT(int _D = 0) {
+		IBLT(int _D = 0, double capacity_factor = -1.0) {
 			hash_count = (_D < 200) ? 4 : 3;
-			if(_D < 100) IBF = max(1, 4 * _D); 
+			if(capacity_factor > 0) {
+				IBF = max(1, (int)ceil(capacity_factor * _D));
+			}
+			else if(_D < 100) IBF = max(1, 4 * _D); 
 			else if(_D < 1000) IBF = 2 * _D;
 			else if(_D < 10000) IBF = 1.5 * _D; 
 			else IBF = (int)ceil(1.23 * _D);
-			
 		}
+		int cell_count() const { return IBF; }
+		int hash_count_value() const { return hash_count; }
 		vector <arr> Encode(vector <uint32_t> Data){
 			vector <arr> code(IBF, make_tuple(0, 0, 0));
 			

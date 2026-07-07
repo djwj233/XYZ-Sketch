@@ -39,7 +39,7 @@ best_M 下的 encode/decode 时间
 推荐后续脚本命名为：
 
 ```text
-tests/find_best_m.py
+tests/test_find_best_m.py
 ```
 
 它应该和 `tests/test_dlk.py` 分开，因为阈值搜索和固定网格扫描是两类不同实验。
@@ -49,7 +49,7 @@ tests/find_best_m.py
 脚本应复用：
 
 ```text
-XYZ-v2/xyz_v2_bench.cpp
+tests/benchmarks/xyz_v2_bench.cpp
 ```
 
 当前 benchmark 已支持：
@@ -340,7 +340,7 @@ benchmark_error
 脚本应支持：
 
 ```bash
-python tests/find_best_m.py --dry-run
+python tests/test_find_best_m.py --dry-run
 ```
 
 它应该打印计划运行的配置，而不调用 benchmark。
@@ -350,7 +350,7 @@ python tests/find_best_m.py --dry-run
 运行：
 
 ```bash
-python tests/find_best_m.py \
+python tests/test_find_best_m.py \
   --d-values 1000 \
   --l-values 6 \
   --k-values 3 \
@@ -380,7 +380,7 @@ M=300 succeeded
 运行：
 
 ```bash
-python tests/find_best_m.py \
+python tests/test_find_best_m.py \
   --d-values 1000 \
   --l-values 6 \
   --k-values 2 \
@@ -403,7 +403,7 @@ python tests/find_best_m.py \
 使用一个人为设置得很小的 `max_C_over_d`，例如：
 
 ```bash
-python tests/find_best_m.py --max-C-over-d 1.05
+python tests/test_find_best_m.py --max-C-over-d 1.05
 ```
 
 预期行为：
@@ -439,3 +439,4 @@ M = 300 成功
 - 对不同候选 `M` 使用确定性 seed。
 - 用更多 trial 重新验证最终的 `best_M`。
 - 可选地在 final validation 阶段额外测试 `best_M - 1` 和 `best_M + 1`。
+

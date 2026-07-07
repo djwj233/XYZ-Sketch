@@ -186,7 +186,7 @@ For this first experiment, the main variable is `d/l/k`, not communication-thres
 
 The current script uses the original heuristic for `k = 2`, and uses empirically measured `C/d` values for larger `k`.
 
-For `k = 3` and `k = 4`, the values come from `tests/find_best_m.py` on the representative setting `d = 1000, l = 6, target_success_rate = 0.9`:
+For `k = 3` and `k = 4`, the values come from `tests/test_find_best_m.py` on the representative setting `d = 1000, l = 6, target_success_rate = 0.9`:
 
 ```text
 k = 3: C/d = 1.668
@@ -294,7 +294,7 @@ Those are later tasks. This script should stay focused on the detailed `d/l/k` s
 
 The experiment now consists of two files:
 
-- `XYZ-v2/xyz_v2_bench.cpp`: the C++ benchmark executable source.
+- `tests/benchmarks/xyz_v2_bench.cpp`: the C++ benchmark executable source.
 - `tests/test_dlk.py`: the Python experiment driver.
 
 ### Build the Benchmark Manually
@@ -303,14 +303,14 @@ From the repository root:
 
 ```bash
 mkdir -p build
-g++ -std=c++17 -O2 XYZ-v2/xyz_v2_bench.cpp -o build/xyz_v2_bench
+g++ -std=c++17 -O2 tests/benchmarks/xyz_v2_bench.cpp -o build/xyz_v2_bench
 ```
 
 On Windows, the output path can be:
 
 ```powershell
 New-Item -ItemType Directory -Force build
-g++ -std=c++17 -O2 XYZ-v2\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
+g++ -std=c++17 -O2 tests\benchmarks\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
 ```
 
 ### Run One Benchmark Configuration
@@ -398,3 +398,4 @@ python tests/test_dlk.py --max-set-size 1000000 --set-size-scale 20
 ### Current Limitation
 
 `xyz_v2_bench.cpp` currently supports only `--mode spatial`, because the existing `XYZ-v2/XYZSketch.cpp` selects `SpatialCoupling` at compile time. The later spatial-coupling comparison experiment should refactor or duplicate the hash selection path so that `--mode random` can be benchmarked cleanly.
+

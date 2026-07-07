@@ -14,7 +14,7 @@ For fixed d, l, k, and M, how does decoding success rate change as z changes?
 
 This is different from the best-`M` experiments:
 
-- `find_best_m.py` searches for the smallest working `M`.
+- `test_find_best_m.py` searches for the smallest working `M`.
 - `test_spatial.py` compares hash modes by searching each mode's best `M`.
 - `test_z.py` should keep `M` fixed and sweep only `z`.
 
@@ -121,7 +121,7 @@ But the first version should use `spatial`.
 Reuse:
 
 ```text
-XYZ-v2/xyz_v2_bench.cpp
+tests/benchmarks/xyz_v2_bench.cpp
 ```
 
 The script should call it with exact `--m` and varying `--z`:
@@ -396,7 +396,7 @@ Important caveats:
 ## Relationship to Other Scripts
 
 - `tests/test_dlk.py`: chooses representative `d/l/k/M` values.
-- `tests/find_best_m.py`: finds best `M` for a fixed mode.
+- `tests/test_find_best_m.py`: finds best `M` for a fixed mode.
 - `tests/test_spatial.py`: compares spatial vs non-spatial modes.
 - `tests/test_z.py`: fixes `M` and sweeps `z` to measure sensitivity.
 
@@ -489,3 +489,4 @@ raw.csv       Same rows in CSV form.
 summary.md    Per-configuration best-z summary.
 errors.log    Failed subprocess calls, if any.
 ```
+

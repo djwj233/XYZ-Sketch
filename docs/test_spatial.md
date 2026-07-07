@@ -26,7 +26,7 @@ The existing `tests/test_dlk.py` runs a fixed parameter grid. That is useful for
 
 For a fair comparison, each mode should be allowed to choose its own best `M`. Otherwise one mode may look bad only because the shared `M` is too small for it.
 
-Therefore, this experiment should use threshold search, similar to `tests/find_best_m.py`.
+Therefore, this experiment should use threshold search, similar to `tests/test_find_best_m.py`.
 
 ## Proposed Script Name
 
@@ -64,7 +64,7 @@ It usually needs a larger `M` than circular coupling, but it is the appropriate 
 
 ## Required C++ Benchmark Changes
 
-The current `XYZ-v2/xyz_v2_bench.cpp` accepts:
+The current `tests/benchmarks/xyz_v2_bench.cpp` accepts:
 
 ```bash
 --mode spatial
@@ -105,7 +105,7 @@ Recommended implementation approach:
    k >= 3 -> naive
    ```
 
-   This preserves compatibility with `test_dlk.py` and `find_best_m.py`.
+   This preserves compatibility with `test_dlk.py` and `test_find_best_m.py`.
 
 ## Fair Comparison Policy
 
@@ -168,7 +168,7 @@ successes >= ceil(target_success_rate * trials)
 
 ## Search Strategy
 
-Reuse the same core idea as `tests/find_best_m.py`:
+Reuse the same core idea as `tests/test_find_best_m.py`:
 
 1. Choose lower bound:
 
@@ -423,7 +423,7 @@ Important caveats:
 ## Relationship to Other Scripts
 
 - `tests/test_dlk.py`: fixed-grid sweep over `d/l/k`.
-- `tests/find_best_m.py`: generic best-`M` search for one algorithm mode.
+- `tests/test_find_best_m.py`: generic best-`M` search for one algorithm mode.
 - `tests/test_spatial.py`: best-`M` search grouped by spatial mode, designed specifically to isolate the benefit of spatial coupling.
 
 ## Build and Usage Guide
@@ -431,7 +431,7 @@ Important caveats:
 The implemented experiment uses:
 
 - `XYZ-v2/hash.cpp` and `XYZ-v2/hash.h` for selectable hash modes.
-- `XYZ-v2/xyz_v2_bench.cpp` for benchmark execution.
+- `tests/benchmarks/xyz_v2_bench.cpp` for benchmark execution.
 - `tests/test_spatial.py` for mode-wise best-`M` search.
 
 ### Benchmark Modes
@@ -457,7 +457,7 @@ k >= 3 -> naive
 From the repository root:
 
 ```powershell
-g++ -std=c++17 -O2 XYZ-v2\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
+g++ -std=c++17 -O2 tests\benchmarks\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
 build\xyz_v2_bench.exe --d 1000 --l 6 --k 2 --m 217 --z 2 --mode circular --trials 5 --seed 114514 --ca 10000 --cb 10000 --format jsonl
 build\xyz_v2_bench.exe --d 1000 --l 6 --k 2 --m 217 --z 0 --mode random --trials 5 --seed 114514 --ca 10000 --cb 10000 --format jsonl
 build\xyz_v2_bench.exe --d 1000 --l 6 --k 3 --m 300 --z 2 --mode naive --trials 5 --seed 114514 --ca 10000 --cb 10000 --format jsonl
@@ -530,3 +530,4 @@ For more stable results, use:
 ```bash
 python tests/test_spatial.py --probe-trials 30 --final-trials 100 --target-success-rate 0.95
 ```
+

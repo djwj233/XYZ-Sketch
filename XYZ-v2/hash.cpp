@@ -1,5 +1,7 @@
 #include <random>
 #include <iostream>
+#include <algorithm>
+#include <cmath>
 
 #include <limits.h>
 #include <stdint.h>
@@ -38,6 +40,8 @@ namespace SpatialCoupling {
     };
 
     HashMode CurrentHashMode = AUTO;
+    double CircularA = 1.0 / 3.0;
+    bool DedupHashes = false;
 
     void SetHashMode(HashMode mode) {
         CurrentHashMode = mode;
@@ -47,13 +51,36 @@ namespace SpatialCoupling {
         return CurrentHashMode;
     }
 
+    void SetCircularA(double value) {
+        CircularA = value;
+    }
+
+    double GetCircularA() {
+        return CircularA;
+    }
+
+    void SetDedupHashes(bool enabled) {
+        DedupHashes = enabled;
+    }
+
+    bool GetDedupHashes() {
+        return DedupHashes;
+    }
+
+    int CircularBaseRange() {
+        int shrink = (int)floor(CircularA * (double)RangeLength);
+        int base_range = M - shrink + 1;
+        base_range = max(1, min(M, base_range));
+        return base_range;
+    }
+
     inline HashMode EffectiveHashMode() {
         if(CurrentHashMode != AUTO) return CurrentHashMode;
         return k <= 2 ? CIRCULAR : NAIVE;
     }
 
     inline int circular_base_h0(int x) {
-        return MurmurHash::Hash(x, 114514) % (M - RangeLength / 3 + 1);
+        return MurmurHash::Hash(x, 114514) % (uint32_t)CircularBaseRange();
     }
     inline int naive_base_h0(int x) {
         return MurmurHash::Hash(x, 114514) % (M - RangeLength + 1);

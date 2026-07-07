@@ -26,7 +26,7 @@ best_C_over_d = best_M * l / d
 
 为了公平比较，每种 mode 都应该允许选择自己的最佳 `M`。否则某个 mode 可能只是因为共享的 `M` 太小而显得很差。
 
-因此，该实验应使用类似 `tests/find_best_m.py` 的阈值搜索。
+因此，该实验应使用类似 `tests/test_find_best_m.py` 的阈值搜索。
 
 ## 建议脚本名称
 
@@ -64,7 +64,7 @@ naive
 
 ## 所需 C++ Benchmark 改动
 
-当前 `XYZ-v2/xyz_v2_bench.cpp` 支持：
+当前 `tests/benchmarks/xyz_v2_bench.cpp` 支持：
 
 ```bash
 --mode spatial
@@ -105,7 +105,7 @@ naive
    k >= 3 -> naive
    ```
 
-   这样可以保持 `test_dlk.py` 和 `find_best_m.py` 的兼容性。
+   这样可以保持 `test_dlk.py` 和 `test_find_best_m.py` 的兼容性。
 
 ## 公平比较策略
 
@@ -168,7 +168,7 @@ successes >= ceil(target_success_rate * trials)
 
 ## 搜索策略
 
-复用 `tests/find_best_m.py` 的核心思路：
+复用 `tests/test_find_best_m.py` 的核心思路：
 
 1. 选择下界：
 
@@ -423,7 +423,7 @@ python tests/test_spatial.py --max-C-over-d 1.05
 ## 与其他脚本的关系
 
 - `tests/test_dlk.py`：固定网格扫描 `d/l/k`。
-- `tests/find_best_m.py`：对单一算法 mode 做通用 best-`M` 搜索。
+- `tests/test_find_best_m.py`：对单一算法 mode 做通用 best-`M` 搜索。
 - `tests/test_spatial.py`：按 spatial mode 分组做 best-`M` 搜索，专门用于隔离 spatial coupling 的收益。
 
 ## 编译和使用指南
@@ -431,7 +431,7 @@ python tests/test_spatial.py --max-C-over-d 1.05
 当前实现使用：
 
 - `XYZ-v2/hash.cpp` 和 `XYZ-v2/hash.h`：支持可选择的 hash mode。
-- `XYZ-v2/xyz_v2_bench.cpp`：执行 benchmark。
+- `tests/benchmarks/xyz_v2_bench.cpp`：执行 benchmark。
 - `tests/test_spatial.py`：按 mode 搜索 best-`M`。
 
 ### Benchmark Modes
@@ -457,7 +457,7 @@ k >= 3 -> naive
 从仓库根目录运行：
 
 ```powershell
-g++ -std=c++17 -O2 XYZ-v2\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
+g++ -std=c++17 -O2 tests\benchmarks\xyz_v2_bench.cpp -o build\xyz_v2_bench.exe
 build\xyz_v2_bench.exe --d 1000 --l 6 --k 2 --m 217 --z 2 --mode circular --trials 5 --seed 114514 --ca 10000 --cb 10000 --format jsonl
 build\xyz_v2_bench.exe --d 1000 --l 6 --k 2 --m 217 --z 0 --mode random --trials 5 --seed 114514 --ca 10000 --cb 10000 --format jsonl
 build\xyz_v2_bench.exe --d 1000 --l 6 --k 3 --m 300 --z 2 --mode naive --trials 5 --seed 114514 --ca 10000 --cb 10000 --format jsonl
@@ -530,3 +530,4 @@ tests/results/spatial/summary.csv
 ```bash
 python tests/test_spatial.py --probe-trials 30 --final-trials 100 --target-success-rate 0.95
 ```
+

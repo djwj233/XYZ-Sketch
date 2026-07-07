@@ -16,6 +16,17 @@ struct Cell {
     Cell() {  c = 0, p = plv({1});  }
 } ;
 
+inline vector<int> HashLocations(int x) {
+    vector<int> positions;
+    positions.reserve(k);
+    fo(i, 1, k) positions.push_back(h(i, x));
+    if(GetDedupHashes()) {
+        sort(positions.begin(), positions.end());
+        positions.erase(unique(positions.begin(), positions.end()), positions.end());
+    }
+    return positions;
+}
+
 struct XYZSketch {
     vector<Cell> B;
     // int queryMemory() {  return B.size() * (sizeof(char) + B[0].p.size() * sizeof(int));  }
@@ -45,7 +56,7 @@ struct XYZSketch {
         B[i].p[0] = tool::fastMod::calcmod((ll)(P - x) * B[i].p[0]);
     }
     inline void Update(int x) {
-        fo(i, 1, k) InsertToCell_Fast(h(i, x), x);
+        for(int i : HashLocations(x)) InsertToCell_Fast(i, x);
     }
 
     // pair<vector<int>, vector<int> > PureCellDecode(int i) {
@@ -67,7 +78,7 @@ struct XYZSketch {
         auto DeltaA = get<vi>(DA), DeltaB = get<vi>(DB);
         for(auto t : {DeltaA, DeltaB}) for(int x : t) {
             bool fl = false;
-            fo(j, 1, k) if(h(j, x) == i) {  fl = true; break;  }
+            for(int pos : HashLocations(x)) if(pos == i) {  fl = true; break;  }
             if(!fl) return false;
         }
         sort(DeltaA.begin(), DeltaA.end()),
@@ -79,8 +90,7 @@ struct XYZSketch {
     void Extract(int x, int type) {
         poly now = plv({P - x, 1});
         if(type == 0) now.rs(l), now = now.Inv();
-        fo(j, 1, k) {
-            int i = h(j, x);
+        for(int i : HashLocations(x)) {
             if(type == 0)
                 B[i].c = (B[i].c + 2 * l) % (2 * l + 1);
             else

@@ -11,6 +11,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from dataset_generator import choose_set_sizes
+from json_schema import normalize_benchmark_row
+
 
 DEFAULT_CONFIGS = [
     {"d": 1000, "l": 6, "k": 2, "M": 217},
@@ -78,7 +81,7 @@ def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
 
-    source = root / "XYZ-v2" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
     command = ["g++", "-std=c++17", "-O2", str(source), "-o", str(binary)]
     subprocess.run(command, cwd=root, check=True)
     return binary
@@ -86,18 +89,6 @@ def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
 
 def parse_int_list(value: str) -> list[int]:
     return [int(part.strip()) for part in value.split(",") if part.strip()]
-
-
-def choose_set_sizes(d_value: int, max_set_size: int, scale: int) -> tuple[int, int]:
-    base = max(1000, d_value * scale)
-    base = min(base, max_set_size)
-    if base <= d_value:
-        base = d_value + 2
-    ca = base
-    cb = base - (d_value % 2)
-    if cb <= 0:
-        cb = ca
-    return ca, cb
 
 
 def configs_from_args(args: argparse.Namespace) -> list[dict[str, int]]:
@@ -203,7 +194,15 @@ def run_one(
     row["RangeLength"] = range_length(int(config["M"]), z_value)
     row["field_C_over_d"] = int(config["M"]) * int(config["l"]) / int(config["d"])
     row["bit_C_over_d"] = int(row["bits"]) / (32.0 * int(config["d"]))
-    return row
+    return normalize_benchmark_row(
+        row,
+        experiment="z_sensitivity",
+        record_type="aggregate",
+        algorithm="xyz_v2",
+        variant=args.mode,
+        implementation="local/XYZ-v2",
+        dataset_mode="internal_generator",
+    )
 
 
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:

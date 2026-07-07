@@ -12,6 +12,10 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from dataset_generator import choose_set_sizes
+from json_schema import normalize_benchmark_row
+from statistics import add_binomial_ci, normal_z
+
 
 SUMMARY_FIELDS = [
     "search_id",
@@ -28,6 +32,22 @@ SUMMARY_FIELDS = [
     "final_trials",
     "final_successes",
     "final_success_rate",
+    "final_ci_low",
+    "final_ci_high",
+    "ci_method",
+    "ci_confidence",
+    "threshold_policy",
+    "point_estimate_reaches_target",
+    "ci_low_reaches_target",
+    "ci_high_reaches_target",
+    "point_best_M",
+    "point_best_C_over_d",
+    "ci_low_best_M",
+    "ci_low_best_C_over_d",
+    "uncertain_M_min",
+    "uncertain_M_max",
+    "uncertain_C_over_d_min",
+    "uncertain_C_over_d_max",
     "encode_avg_s",
     "decode_avg_s",
     "status",
@@ -67,7 +87,7 @@ def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
 
-    source = root / "XYZ-v2" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
     command = [
         "g++",
         "-std=c++17",
@@ -82,18 +102,6 @@ def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
 
 def parse_int_list(value: str) -> list[int]:
     return [int(part.strip()) for part in value.split(",") if part.strip()]
-
-
-def choose_set_sizes(d_value: int, max_set_size: int, scale: int) -> tuple[int, int]:
-    base = max(1000, d_value * scale)
-    base = min(base, max_set_size)
-    if base <= d_value:
-        base = d_value + 2
-    ca = base
-    cb = base - (d_value % 2)
-    if cb <= 0:
-        cb = ca
-    return ca, cb
 
 
 def make_grid(args: argparse.Namespace) -> list[dict[str, Any]]:
@@ -168,6 +176,49 @@ def required_successes(target: float, trials: int) -> int:
     return math.ceil(target * trials)
 
 
+def c_over_d_for_m(config: dict[str, Any], m_value: int | str | None) -> float | str:
+    if m_value is None or m_value == "":
+        return ""
+    return int(m_value) * int(config["l"]) / int(config["d"])
+
+
+def reaches_target(row: dict[str, Any], target: float) -> dict[str, bool]:
+    return {
+        "point_estimate_reaches_target": float(row.get("success_rate", 0.0)) >= target,
+        "ci_low_reaches_target": float(row.get("ci_low", 0.0)) >= target,
+        "ci_high_reaches_target": float(row.get("ci_high", 0.0)) >= target,
+    }
+
+
+def threshold_rollup(config: dict[str, Any], probes: list[dict[str, Any]], target: float) -> dict[str, Any]:
+    candidates = [
+        row
+        for row in probes
+        if row is not None and row.get("status") == "ok" and row.get("candidate_M") not in (None, "")
+    ]
+    point_ms = [int(row["candidate_M"]) for row in candidates if float(row.get("success_rate", 0.0)) >= target]
+    ci_low_ms = [int(row["candidate_M"]) for row in candidates if float(row.get("ci_low", 0.0)) >= target]
+    uncertain_ms = [
+        int(row["candidate_M"])
+        for row in candidates
+        if float(row.get("ci_low", 0.0)) < target <= float(row.get("ci_high", 0.0))
+    ]
+    point_best_m = min(point_ms) if point_ms else ""
+    ci_low_best_m = min(ci_low_ms) if ci_low_ms else ""
+    uncertain_min = min(uncertain_ms) if uncertain_ms else ""
+    uncertain_max = max(uncertain_ms) if uncertain_ms else ""
+    return {
+        "point_best_M": point_best_m,
+        "point_best_C_over_d": c_over_d_for_m(config, point_best_m),
+        "ci_low_best_M": ci_low_best_m,
+        "ci_low_best_C_over_d": c_over_d_for_m(config, ci_low_best_m),
+        "uncertain_M_min": uncertain_min,
+        "uncertain_M_max": uncertain_max,
+        "uncertain_C_over_d_min": c_over_d_for_m(config, uncertain_min),
+        "uncertain_C_over_d_max": c_over_d_for_m(config, uncertain_max),
+    }
+
+
 def command_for(
     binary: Path,
     config: dict[str, Any],
@@ -218,7 +269,7 @@ def run_probe(
     trials: int,
     seed: int,
     phase: str,
-    target: float,
+    args: argparse.Namespace,
     errors_path: Path,
 ) -> dict[str, Any] | None:
     command = command_for(binary, config, m_value, z_value, trials, seed)
@@ -263,17 +314,30 @@ def run_probe(
             "search_id": config["search_id"],
             "phase": phase,
             "candidate_M": m_value,
-            "target_success_rate": target,
-            "required_successes": required_successes(target, trials),
+            "target_success_rate": args.target_success_rate,
+            "required_successes": required_successes(args.target_success_rate, trials),
         }
     )
-    return row
+    row = add_binomial_ci(row, confidence=args.ci_confidence, method=args.ci_method)
+    return normalize_benchmark_row(
+        row,
+        experiment="find_best_m",
+        record_type="probe",
+        algorithm="xyz_v2",
+        variant=str(config["mode"]),
+        implementation="local/XYZ-v2",
+        dataset_mode="internal_generator",
+    )
 
 
-def works(row: dict[str, Any] | None, target: float) -> bool:
+def works(row: dict[str, Any] | None, args: argparse.Namespace) -> bool:
     if row is None:
         return False
-    return int(row["successes"]) >= required_successes(target, int(row["trials"]))
+    if args.threshold_policy == "point":
+        return int(row["successes"]) >= required_successes(args.target_success_rate, int(row["trials"]))
+    if args.threshold_policy == "ci-low":
+        return float(row.get("ci_low", 0.0)) >= args.target_success_rate
+    raise ValueError(f"unknown threshold policy: {args.threshold_policy}")
 
 
 def find_upper_bound(
@@ -296,12 +360,12 @@ def find_upper_bound(
             args.probe_trials,
             int(config["seed"]),
             "upper_bound",
-            args.target_success_rate,
+            args,
             errors_path,
         )
         if row is not None:
             probes.append(row)
-        if works(row, args.target_success_rate):
+        if works(row, args):
             return hi, probes
         hi *= 2
 
@@ -330,12 +394,12 @@ def binary_search_m(
             args.probe_trials,
             int(config["seed"]),
             "binary_search",
-            args.target_success_rate,
+            args,
             errors_path,
         )
         if row is not None:
             probes.append(row)
-        if works(row, args.target_success_rate):
+        if works(row, args):
             best = mid
             hi = mid - 1
         else:
@@ -360,7 +424,7 @@ def final_validate(
         args.final_trials,
         int(config["seed"]),
         "final_validate",
-        args.target_success_rate,
+        args,
         errors_path,
     )
 
@@ -371,53 +435,100 @@ def summary_from_final(
     best_m: int | None,
     args: argparse.Namespace,
     status: str,
+    probes: list[dict[str, Any]],
 ) -> dict[str, Any]:
+    rollup = threshold_rollup(config, probes, args.target_success_rate)
     if final_row is None or best_m is None:
-        return {
+        return normalize_benchmark_row(
+            {
+                "search_id": config["search_id"],
+                "d": config["d"],
+                "l": config["l"],
+                "k": config["k"],
+                "mode": config["mode"],
+                "best_M": "",
+                "best_C_over_d": "",
+                "z_policy": args.z_policy,
+                "target_success_rate": args.target_success_rate,
+                "required_probe_successes": required_successes(args.target_success_rate, args.probe_trials),
+                "required_final_successes": required_successes(args.target_success_rate, args.final_trials),
+                "probe_trials": args.probe_trials,
+                "final_trials": args.final_trials,
+                "final_successes": "",
+                "final_success_rate": "",
+                "final_ci_low": "",
+                "final_ci_high": "",
+                "ci_method": args.ci_method,
+                "ci_confidence": args.ci_confidence,
+                "threshold_policy": args.threshold_policy,
+                "point_estimate_reaches_target": False,
+                "ci_low_reaches_target": False,
+                "ci_high_reaches_target": False,
+                "encode_avg_s": "",
+                "decode_avg_s": "",
+                "status": status,
+                "seed": config["seed"],
+                "ca": config["ca"],
+                "cb": config["cb"],
+                **rollup,
+            },
+            experiment="find_best_m",
+            record_type="threshold",
+            algorithm="xyz_v2",
+            variant=str(config["mode"]),
+            implementation="local/XYZ-v2",
+            dataset_mode="internal_generator",
+        )
+
+    return normalize_benchmark_row(
+        {
             "search_id": config["search_id"],
             "d": config["d"],
             "l": config["l"],
             "k": config["k"],
-            "best_M": "",
-            "best_C_over_d": "",
+            "mode": config["mode"],
+            "M": best_m,
+            "best_M": best_m,
+            "best_C_over_d": best_m * int(config["l"]) / int(config["d"]),
             "z_policy": args.z_policy,
             "target_success_rate": args.target_success_rate,
             "required_probe_successes": required_successes(args.target_success_rate, args.probe_trials),
             "required_final_successes": required_successes(args.target_success_rate, args.final_trials),
             "probe_trials": args.probe_trials,
             "final_trials": args.final_trials,
-            "final_successes": "",
-            "final_success_rate": "",
-            "encode_avg_s": "",
-            "decode_avg_s": "",
+            "final_successes": final_row["successes"],
+            "final_success_rate": final_row["success_rate"],
+            "final_ci_low": final_row.get("ci_low", ""),
+            "final_ci_high": final_row.get("ci_high", ""),
+            "ci_method": args.ci_method,
+            "ci_confidence": args.ci_confidence,
+            "threshold_policy": args.threshold_policy,
+            **reaches_target(final_row, args.target_success_rate),
+            **rollup,
+            "encode_avg_s": final_row["encode_avg_s"],
+            "decode_avg_s": final_row["decode_avg_s"],
             "status": status,
             "seed": config["seed"],
             "ca": config["ca"],
             "cb": config["cb"],
-        }
-
-    return {
-        "search_id": config["search_id"],
-        "d": config["d"],
-        "l": config["l"],
-        "k": config["k"],
-        "best_M": best_m,
-        "best_C_over_d": best_m * int(config["l"]) / int(config["d"]),
-        "z_policy": args.z_policy,
-        "target_success_rate": args.target_success_rate,
-        "required_probe_successes": required_successes(args.target_success_rate, args.probe_trials),
-        "required_final_successes": required_successes(args.target_success_rate, args.final_trials),
-        "probe_trials": args.probe_trials,
-        "final_trials": args.final_trials,
-        "final_successes": final_row["successes"],
-        "final_success_rate": final_row["success_rate"],
-        "encode_avg_s": final_row["encode_avg_s"],
-        "decode_avg_s": final_row["decode_avg_s"],
-        "status": status,
-        "seed": config["seed"],
-        "ca": config["ca"],
-        "cb": config["cb"],
-    }
+            "trials": final_row.get("trials", args.final_trials),
+            "successes": final_row.get("successes", 0),
+            "success_rate": final_row.get("success_rate", 0.0),
+            "ci_low": final_row.get("ci_low", ""),
+            "ci_high": final_row.get("ci_high", ""),
+            "bits": final_row.get("bits", 0),
+            "bit_C_over_d": final_row.get("bit_C_over_d", ""),
+            "encode_median_s": final_row.get("encode_median_s", 0.0),
+            "decode_median_s": final_row.get("decode_median_s", 0.0),
+        },
+        experiment="find_best_m",
+        record_type="threshold",
+        algorithm="xyz_v2",
+        variant=str(config["mode"]),
+        implementation="local/XYZ-v2",
+        dataset_mode="internal_generator",
+        status=status,
+    )
 
 
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
@@ -444,6 +555,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-C-over-d", type=float, default=8.0, dest="max_c_over_d")
     parser.add_argument("--z-policy", choices=["adaptive", "fixed"], default="adaptive")
     parser.add_argument("--fixed-z", type=int, default=None)
+    parser.add_argument("--ci-confidence", type=float, default=0.95, choices=[0.90, 0.95, 0.99])
+    parser.add_argument("--ci-method", default="wilson", choices=["wilson"])
+    parser.add_argument("--threshold-policy", default="point", choices=["point", "ci-low"])
     parser.add_argument("--skip-build", action="store_true", help="Reuse existing benchmark binary.")
     parser.add_argument("--dry-run", action="store_true", help="Print planned configurations only.")
     parser.add_argument("--limit", type=int, default=None, help="Run only first N configurations.")
@@ -464,6 +578,7 @@ def main() -> None:
         raise SystemExit("--max-C-over-d must be positive")
     if args.z_policy == "fixed" and args.fixed_z is None:
         raise SystemExit("--fixed-z is required with --z-policy fixed")
+    normal_z(args.ci_confidence)
 
     root = repo_root()
     dirs = ensure_dirs(root, args.output_dir)
@@ -499,7 +614,7 @@ def main() -> None:
 
         if hi is None:
             print("  unresolved: no working upper bound", flush=True)
-            summaries.append(summary_from_final(config, None, None, args, "unresolved"))
+            summaries.append(summary_from_final(config, None, None, args, "unresolved", upper_probes))
             write_jsonl(dirs["probes"], all_probes)
             write_jsonl(dirs["summary_jsonl"], summaries)
             write_summary_csv(dirs["summary_csv"], summaries)
@@ -510,17 +625,20 @@ def main() -> None:
 
         if best_m is None:
             print("  unresolved: binary search failed", flush=True)
-            summaries.append(summary_from_final(config, None, None, args, "unresolved"))
+            current_probes = upper_probes + search_probes
+            summaries.append(summary_from_final(config, None, None, args, "unresolved", current_probes))
             write_jsonl(dirs["probes"], all_probes)
             write_jsonl(dirs["summary_jsonl"], summaries)
             write_summary_csv(dirs["summary_csv"], summaries)
             continue
 
         final_row = final_validate(binary, config, best_m, args, dirs["errors"])
+        current_probes = upper_probes + search_probes
         if final_row is not None:
             all_probes.append(final_row)
-        status = "ok" if works(final_row, args.target_success_rate) else "unresolved"
-        summary = summary_from_final(config, final_row, best_m, args, status)
+            current_probes.append(final_row)
+        status = "ok" if works(final_row, args) else "unresolved"
+        summary = summary_from_final(config, final_row, best_m, args, status, current_probes)
         summaries.append(summary)
         print(
             f"  best_M={best_m} C/d={summary['best_C_over_d']:.3f} "

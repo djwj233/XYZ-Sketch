@@ -1,43 +1,40 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
-#include <cstdlib>
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <numeric>
-#include <set>
-#include <sstream>
+#include <random>
 #include <stdexcept>
 #include <string>
 #include <unordered_set>
 #include <vector>
 
-#include "XYZSketch.cpp"
+#include "../../IBLT/iblt.cpp"
 
 using namespace std;
 
 namespace {
 
+const uint32_t ALL = (1u << 30) - 1u;
+
 struct Options {
     int D = -1;
-    int L = -1;
-    int K = -1;
-    int exact_m = -1;
-    double m_factor = 1.2;
-    int Z = -1;
     int trials = -1;
     uint32_t seed = 114514;
-    string mode = "spatial";
     int cA = 10000000;
     int cB = 10000000;
+    double capacity_factor = -1.0;
+    string dataset_path;
     string format = "jsonl";
 };
 
 struct TrialData {
-    vector<int> alice;
-    vector<int> bob;
-    vector<int> a_diff;
-    vector<int> b_diff;
+    vector<uint32_t> alice;
+    vector<uint32_t> bob;
+    vector<uint32_t> a_diff;
+    vector<uint32_t> b_diff;
 };
 
 struct TrialResult {
@@ -47,11 +44,12 @@ struct TrialResult {
     int bits = 0;
 };
 
+mt19937 rng(114514);
+
 [[noreturn]] void usage_error(const string &message) {
     cerr << "error: " << message << "\n";
-    cerr << "usage: xyz_v2_bench --d D --l L --k K --z Z --trials N --seed S "
-            "[--m M | --m-factor F] [--mode spatial|random|circular|naive] [--ca N] [--cb N] "
-            "[--format jsonl]\n";
+    cerr << "usage: iblt_bench --d D --trials N --seed S [--ca N] [--cb N] "
+            "[--capacity-factor F] [--dataset PATH] [--format jsonl]\n";
     exit(2);
 }
 
@@ -93,41 +91,26 @@ Options parse_args(int argc, char **argv) {
     Options opt;
     for(int i = 1; i < argc; i++) {
         string key = argv[i];
-        if(key == "--help" || key == "-h") {
-            usage_error("help requested");
-        }
+        if(key == "--help" || key == "-h") usage_error("help requested");
         if(i + 1 >= argc) usage_error("missing value for " + key);
         string value = argv[++i];
         if(key == "--d") opt.D = parse_int(value, key);
-        else if(key == "--l") opt.L = parse_int(value, key);
-        else if(key == "--k") opt.K = parse_int(value, key);
-        else if(key == "--m") opt.exact_m = parse_int(value, key);
-        else if(key == "--m-factor") opt.m_factor = parse_double(value, key);
-        else if(key == "--z") opt.Z = parse_int(value, key);
         else if(key == "--trials") opt.trials = parse_int(value, key);
         else if(key == "--seed") opt.seed = parse_uint32(value, key);
-        else if(key == "--mode") opt.mode = value;
         else if(key == "--ca") opt.cA = parse_int(value, key);
         else if(key == "--cb") opt.cB = parse_int(value, key);
+        else if(key == "--capacity-factor") opt.capacity_factor = parse_double(value, key);
+        else if(key == "--dataset") opt.dataset_path = value;
         else if(key == "--format") opt.format = value;
         else usage_error("unknown argument: " + key);
     }
 
     if(opt.D <= 0) usage_error("--d must be positive");
-    if(opt.L <= 0) usage_error("--l must be positive");
-    if(opt.K <= 0) usage_error("--k must be positive");
-    if(opt.Z < 0) usage_error("--z must be non-negative");
     if(opt.trials <= 0) usage_error("--trials must be positive");
     if(opt.cA <= 0 || opt.cB <= 0) usage_error("--ca and --cb must be positive");
-    if(opt.mode != "spatial" && opt.mode != "random" &&
-       opt.mode != "circular" && opt.mode != "naive")
-        usage_error("--mode must be spatial, random, circular, or naive");
-    if(opt.format != "jsonl")
-        usage_error("this benchmark currently supports only --format jsonl");
-    if(opt.exact_m <= 0 && opt.m_factor <= 0)
-        usage_error("either --m must be positive or --m-factor must be positive");
-    if(opt.D < abs(opt.cA - opt.cB))
-        usage_error("--d must be at least abs(ca - cb)");
+    if(opt.capacity_factor <= 0) usage_error("--capacity-factor must be positive");
+    if(opt.format != "jsonl") usage_error("this benchmark currently supports only --format jsonl");
+    if(opt.D < abs(opt.cA - opt.cB)) usage_error("--d must be at least abs(ca - cb)");
     if(((opt.D - abs(opt.cA - opt.cB)) & 1) != 0)
         usage_error("--d and abs(ca - cb) must have the same parity");
     if((opt.D - abs(opt.cA - opt.cB)) / 2 > min(opt.cA, opt.cB))
@@ -135,11 +118,9 @@ Options parse_args(int argc, char **argv) {
     return opt;
 }
 
-int next_value(unordered_set<int> &used) {
-    int x = static_cast<int>(rng() % (P - 1)) + 1;
-    while(used.find(x) != used.end()) {
-        x = static_cast<int>(rng() % (P - 1)) + 1;
-    }
+uint32_t next_value(unordered_set<uint32_t> &used) {
+    uint32_t x = rng() & ALL;
+    while(used.find(x) != used.end()) x = rng() & ALL;
     used.insert(x);
     return x;
 }
@@ -153,10 +134,9 @@ TrialData generate_data(const Options &opt, uint32_t trial_seed) {
     int imbalance = abs(opt.cA - opt.cB);
     int replacements = (opt.D - imbalance) / 2;
 
-    vector<int> base(max_size);
-    unordered_set<int> used;
+    vector<uint32_t> base(max_size);
+    unordered_set<uint32_t> used;
     used.reserve(static_cast<size_t>(max_size + replacements + 16));
-
     for(int i = 0; i < max_size; i++) base[i] = next_value(used);
 
     data.alice.assign(base.begin(), base.begin() + opt.cA);
@@ -171,7 +151,7 @@ TrialData generate_data(const Options &opt, uint32_t trial_seed) {
         }
         used_positions.insert(pos);
 
-        int new_value = next_value(used);
+        uint32_t new_value = next_value(used);
         data.a_diff.push_back(data.alice[pos]);
         data.b_diff.push_back(new_value);
         data.bob[pos] = new_value;
@@ -190,36 +170,88 @@ TrialData generate_data(const Options &opt, uint32_t trial_seed) {
     return data;
 }
 
+void compute_diffs(TrialData &data) {
+    unordered_set<uint32_t> alice(data.alice.begin(), data.alice.end());
+    unordered_set<uint32_t> bob(data.bob.begin(), data.bob.end());
+    data.a_diff.clear();
+    data.b_diff.clear();
+    for(uint32_t value : data.alice) {
+        if(bob.find(value) == bob.end()) data.a_diff.push_back(value);
+    }
+    for(uint32_t value : data.bob) {
+        if(alice.find(value) == alice.end()) data.b_diff.push_back(value);
+    }
+    sort(data.a_diff.begin(), data.a_diff.end());
+    sort(data.b_diff.begin(), data.b_diff.end());
+}
+
+TrialData load_dataset(const string &path) {
+    ifstream input(path);
+    if(!input) usage_error("failed to open dataset: " + path);
+
+    TrialData data;
+    string token;
+    vector<uint32_t> *current = nullptr;
+    int expected = -1;
+    int seen = 0;
+    while(input >> token) {
+        if(token.size() && token[0] == '#') {
+            string rest;
+            getline(input, rest);
+            continue;
+        }
+        if(token == "A" || token == "B") {
+            if(current != nullptr && expected >= 0 && seen != expected)
+                usage_error("dataset section length mismatch: " + path);
+            input >> expected;
+            if(expected < 0) usage_error("negative dataset section length: " + path);
+            current = token == "A" ? &data.alice : &data.bob;
+            current->clear();
+            current->reserve(static_cast<size_t>(expected));
+            seen = 0;
+            continue;
+        }
+        if(current == nullptr) usage_error("dataset value before section header: " + path);
+        uint32_t value = parse_uint32(token, "dataset value");
+        current->push_back(value);
+        seen++;
+    }
+    if(current != nullptr && expected >= 0 && seen != expected)
+        usage_error("dataset section length mismatch: " + path);
+    if(data.alice.empty() || data.bob.empty()) usage_error("dataset missing Alice or Bob section: " + path);
+    compute_diffs(data);
+    return data;
+}
+
 double seconds_since(chrono::steady_clock::time_point start,
                      chrono::steady_clock::time_point finish) {
     return chrono::duration<double>(finish - start).count();
 }
 
-TrialResult run_trial(const Options &opt, uint32_t trial_seed) {
-    TrialData data = generate_data(opt, trial_seed);
-    TrialResult result;
+TrialResult run_trial_on_data(const Options &opt, const TrialData &data, int &cells, int &hash_count) {
+    IBLT iblt(opt.D, opt.capacity_factor);
+    cells = iblt.cell_count();
+    hash_count = iblt.hash_count_value();
 
+    TrialResult result;
     auto encode_begin = chrono::steady_clock::now();
-    XYZSketch alice = Encode(data.alice);
+    auto alice = iblt.Encode(data.alice);
     auto encode_end = chrono::steady_clock::now();
 
-    XYZSketch bob = Encode(data.bob);
+    auto bob = iblt.Encode(data.bob);
     auto decode_begin = chrono::steady_clock::now();
-    auto diff_res = (alice - bob).Decode();
+    auto diff = iblt.Decode(alice, bob);
     auto decode_end = chrono::steady_clock::now();
 
     result.encode_s = seconds_since(encode_begin, encode_end);
     result.decode_s = seconds_since(decode_begin, decode_end);
-    result.bits = static_cast<int>(alice.to_bitstring().size());
-
-    if(diff_res.index() == 1) {
-        result.success = false;
-        return result;
-    }
-
-    auto diff = get<pair<vector<int>, vector<int>>>(diff_res);
+    result.bits = static_cast<int>(alice.size() * sizeof(tuple<int, uint32_t, uint32_t>) * 8);
     result.success = (diff.first == data.a_diff && diff.second == data.b_diff);
     return result;
+}
+
+TrialResult run_trial(const Options &opt, uint32_t trial_seed, int &cells, int &hash_count) {
+    return run_trial_on_data(opt, generate_data(opt, trial_seed), cells, hash_count);
 }
 
 double average(const vector<double> &values) {
@@ -257,48 +289,37 @@ int main(int argc, char **argv) {
     cin.tie(nullptr);
 
     Options opt = parse_args(argc, argv);
-
-    k = opt.K;
-    l = opt.L;
-    d = opt.D;
-    M = opt.exact_m > 0 ? opt.exact_m
-                        : static_cast<int>(ceil(opt.m_factor * opt.D / opt.L));
-    if(M <= 0) usage_error("computed M must be positive");
-    if(opt.mode == "spatial") SpatialCoupling::SetHashMode(SpatialCoupling::AUTO);
-    else if(opt.mode == "random") SpatialCoupling::SetHashMode(SpatialCoupling::RANDOM);
-    else if(opt.mode == "circular") SpatialCoupling::SetHashMode(SpatialCoupling::CIRCULAR);
-    else if(opt.mode == "naive") SpatialCoupling::SetHashMode(SpatialCoupling::NAIVE);
-    HashingInit(opt.Z);
-
-    const int max_len = 1 << 19;
-    tool::init(max_len);
-    tool::Pinit(max_len);
-
     vector<double> encode_times;
     vector<double> decode_times;
     int successes = 0;
     int bits = 0;
+    int cells = 0;
+    int hash_count = 0;
+    vector<TrialData> loaded_data;
+    if(!opt.dataset_path.empty()) {
+        loaded_data.push_back(load_dataset(opt.dataset_path));
+    }
 
     for(int t = 0; t < opt.trials; t++) {
-        TrialResult result = run_trial(opt, opt.seed + static_cast<uint32_t>(t));
+        TrialResult result = opt.dataset_path.empty()
+                                 ? run_trial(opt, opt.seed + static_cast<uint32_t>(t), cells, hash_count)
+                                 : run_trial_on_data(opt, loaded_data[0], cells, hash_count);
         encode_times.push_back(result.encode_s);
         decode_times.push_back(result.decode_s);
         bits = result.bits;
         if(result.success) successes++;
     }
 
+    const int cell_bits = static_cast<int>(sizeof(tuple<int, uint32_t, uint32_t>) * 8);
     double success_rate = static_cast<double>(successes) / static_cast<double>(opt.trials);
-    double c_over_d = static_cast<double>(bits) / (static_cast<double>(opt.D) * 32.0);
+    double bit_c_over_d = static_cast<double>(bits) / (static_cast<double>(opt.D) * 32.0);
 
     cout << fixed << setprecision(9);
     cout << "{";
-    print_json_string_field("algorithm", "xyz_v2");
-    print_json_string_field("mode", opt.mode);
+    print_json_string_field("algorithm", "iblt");
+    print_json_string_field("variant", "local");
+    print_json_string_field("implementation", "local");
     print_json_int_field("d", opt.D);
-    print_json_int_field("l", opt.L);
-    print_json_int_field("k", opt.K);
-    print_json_int_field("M", M);
-    print_json_int_field("z", opt.Z);
     print_json_int_field("trials", opt.trials);
     print_json_int_field("successes", successes);
     print_json_number_field("success_rate", success_rate);
@@ -307,11 +328,15 @@ int main(int argc, char **argv) {
     print_json_number_field("encode_median_s", median(encode_times));
     print_json_number_field("decode_median_s", median(decode_times));
     print_json_int_field("bits", bits);
-    print_json_number_field("C_over_d", c_over_d);
+    print_json_number_field("C_over_d", bit_c_over_d);
+    print_json_number_field("bit_C_over_d", bit_c_over_d);
+    print_json_int_field("cells", cells);
+    print_json_int_field("hash_count", hash_count);
+    print_json_int_field("cell_bits", cell_bits);
+    print_json_number_field("capacity_factor", opt.capacity_factor);
     print_json_int_field("seed", opt.seed);
     print_json_int_field("ca", opt.cA);
     print_json_int_field("cb", opt.cB, false);
     cout << "}\n";
-
     return 0;
 }

@@ -3,3 +3,4 @@ build/
 
 tests/__pycache__/
 tests/results/
+tests/tmp/

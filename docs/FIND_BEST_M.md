@@ -39,7 +39,7 @@ encode/decode timing at best_M
 Recommended future script:
 
 ```text
-tests/find_best_m.py
+tests/test_find_best_m.py
 ```
 
 This should be separate from `tests/test_dlk.py`, because threshold search is a different experiment from a fixed-grid sweep.
@@ -49,7 +49,7 @@ This should be separate from `tests/test_dlk.py`, because threshold search is a 
 The script should reuse:
 
 ```text
-XYZ-v2/xyz_v2_bench.cpp
+tests/benchmarks/xyz_v2_bench.cpp
 ```
 
 The benchmark already supports:
@@ -340,7 +340,7 @@ benchmark_error
 The script should support:
 
 ```bash
-python tests/find_best_m.py --dry-run
+python tests/test_find_best_m.py --dry-run
 ```
 
 This should print the planned configurations without calling the benchmark.
@@ -350,7 +350,7 @@ This should print the planned configurations without calling the benchmark.
 Run:
 
 ```bash
-python tests/find_best_m.py \
+python tests/test_find_best_m.py \
   --d-values 1000 \
   --l-values 6 \
   --k-values 3 \
@@ -380,7 +380,7 @@ So a reasonable result should find `best_M` somewhere near this interval, depend
 Run:
 
 ```bash
-python tests/find_best_m.py \
+python tests/test_find_best_m.py \
   --d-values 1000 \
   --l-values 6 \
   --k-values 2 \
@@ -403,7 +403,7 @@ Run the same command twice with the same seed. The result should be identical if
 Use an artificially tiny `max_C_over_d`, such as:
 
 ```bash
-python tests/find_best_m.py --max-C-over-d 1.05
+python tests/test_find_best_m.py --max-C-over-d 1.05
 ```
 
 Expected behavior:
@@ -439,3 +439,4 @@ To reduce this issue:
 - Keep seeds deterministic across candidate `M`.
 - Re-test the final `best_M` with more trials.
 - Optionally also test `best_M - 1` and `best_M + 1` in the final validation phase.
+

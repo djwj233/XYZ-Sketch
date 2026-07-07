@@ -16,6 +16,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from dataset_generator import choose_set_sizes
+from json_schema import normalize_benchmark_row
+
 
 QUICK_D_VALUES = [100, 300, 1000, 3000, 10000]
 QUICK_L_VALUES = [2, 3, 4, 6, 8, 10]
@@ -90,7 +93,7 @@ def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
 
-    source = root / "XYZ-v2" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
     command = [
         "g++",
         "-std=c++17",
@@ -139,18 +142,6 @@ def choose_m(d: int, l_value: int, k_value: int) -> int:
 
 def choose_z(m_value: int) -> int:
     return max(0, round((m_value ** (1.0 / 3.0)) / 3.0))
-
-
-def choose_set_sizes(d: int, max_set_size: int, scale: int) -> tuple[int, int]:
-    base = max(1000, d * scale)
-    base = min(base, max_set_size)
-    if base <= d:
-        base = d + 2
-    ca = base
-    cb = base - (d % 2)
-    if cb <= 0:
-        cb = ca
-    return ca, cb
 
 
 def default_grid(extended: bool, max_set_size: int, scale: int, base_seed: int) -> list[dict[str, Any]]:
@@ -254,7 +245,7 @@ def run_one(binary: Path, config: dict[str, Any], errors_path: Path) -> dict[str
         return None
 
     try:
-        return json.loads(lines[0])
+        row = json.loads(lines[0])
     except json.JSONDecodeError as exc:
         append_error(
             errors_path,
@@ -263,6 +254,15 @@ def run_one(binary: Path, config: dict[str, Any], errors_path: Path) -> dict[str
             f"JSONERROR {exc}\nSTDOUT\n{completed.stdout}\nSTDERR\n{completed.stderr}",
         )
         return None
+    return normalize_benchmark_row(
+        row,
+        experiment="dlk_sweep",
+        record_type="aggregate",
+        algorithm="xyz_v2",
+        variant=str(config["mode"]),
+        implementation="local/XYZ-v2",
+        dataset_mode="internal_generator",
+    )
 
 
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
