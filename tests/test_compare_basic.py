@@ -15,6 +15,7 @@ from typing import Any
 
 from dataset_generator import DatasetConfig, choose_set_sizes, prepare_datasets
 from json_schema import normalize_benchmark_row
+from xyz_tuning import add_tuning_arguments, a_from_args, z_from_args
 
 
 CSV_FIELDS = [
@@ -143,8 +144,8 @@ def choose_xyz_m(d_value: int, l_value: int, k_value: int) -> int:
     return max(1, math.ceil(choose_xyz_c_over_d_target(d_value, k_value) * d_value / l_value))
 
 
-def choose_z(m_value: int) -> int:
-    return max(0, round((m_value ** (1.0 / 3.0)) / 3.0))
+def choose_z(m_value: int, k_value: int, l_value: int, a_value: float, args: argparse.Namespace) -> int:
+    return z_from_args(k_value, l_value, m_value, a_value, args)
 
 
 def build_binaries(root: Path, build_dir: Path, algorithms: set[str], skip_build: bool) -> dict[str, Path]:
@@ -358,8 +359,9 @@ def make_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
                     "l": args.xyz_l,
                     "k": args.xyz_k,
                     "M": m_value,
-                    "z": choose_z(m_value),
+                    "z": choose_z(m_value, args.xyz_k, args.xyz_l, args.xyz_circular_a if args.xyz_circular_a is not None else a_from_args(args.xyz_k, args.xyz_l, args), args),
                     "mode": args.xyz_mode,
+                    "circular_a": args.xyz_circular_a if args.xyz_circular_a is not None else a_from_args(args.xyz_k, args.xyz_l, args),
                 }
             )
         if "iblt" in algorithms:
@@ -499,6 +501,8 @@ def command_for(binary: Path, job: dict[str, Any], dataset: Path | None = None) 
             str(job["z"]),
             "--mode",
             str(job["mode"]),
+            "--circular-a",
+            str(job.get("circular_a", 0.0)),
             "--trials",
             str(job["trials"]),
             "--seed",
@@ -939,6 +943,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--xyz-l", type=int, default=6)
     parser.add_argument("--xyz-k", type=int, default=2)
     parser.add_argument("--xyz-mode", default="spatial", choices=["spatial", "random", "circular", "naive"])
+    parser.add_argument("--xyz-circular-a", type=float, default=None, help="Override XYZ circular a. By default use a_{k,l}=C*c_orient/c_peel.")
+    add_tuning_arguments(parser)
     parser.add_argument("--iblt-cpp-value-size", type=int, default=4)
     parser.add_argument("--minisketch-field-bits", type=int, default=30)
     parser.add_argument("--cpisync-bits", type=int, default=30)
@@ -965,6 +971,8 @@ def main() -> None:
         raise SystemExit("--trials must be positive")
     if args.xyz_l <= 0 or args.xyz_k <= 0:
         raise SystemExit("--xyz-l and --xyz-k must be positive")
+    if args.xyz_circular_a is not None and not (0.0 <= args.xyz_circular_a < 1.0):
+        raise SystemExit("--xyz-circular-a must be in [0, 1)")
 
     root = repo_root()
     dirs = ensure_dirs(root, args.output_dir)

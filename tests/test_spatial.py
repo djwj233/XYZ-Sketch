@@ -15,6 +15,7 @@ from typing import Any
 from dataset_generator import DatasetConfig, choose_set_sizes, prepare_datasets
 from json_schema import normalize_benchmark_row
 from statistics import add_binomial_ci, normal_z
+from xyz_tuning import add_tuning_arguments, a_from_args, z_from_args
 
 
 SUMMARY_FIELDS = [
@@ -185,7 +186,7 @@ def make_grid(args: argparse.Namespace) -> list[dict[str, Any]]:
                                 "mode": mode,
                                 "dedup_hashes": dedup_hashes,
                                 "dedup_variant_suffix": include_dedup_suffix,
-                                "circular_a": args.circular_a,
+                                "circular_a": args.circular_a if args.circular_a is not None else a_from_args(k_value, l_value, args),
                                 "seed": seed,
                                 "ca": ca,
                                 "cb": cb,
@@ -194,10 +195,10 @@ def make_grid(args: argparse.Namespace) -> list[dict[str, Any]]:
     return configs
 
 
-def choose_z(mode: str, m_value: int) -> int:
+def choose_z(mode: str, m_value: int, config: dict[str, Any], args: argparse.Namespace) -> int:
     if mode == "random":
         return 0
-    return max(0, round((m_value ** (1.0 / 3.0)) / 3.0))
+    return z_from_args(int(config["k"]), int(config["l"]), m_value, float(config.get("circular_a", 0.0)), args)
 
 
 def initial_factor(mode: str, k_value: int) -> float:
@@ -406,7 +407,7 @@ def run_probe(
     errors_path: Path,
     dataset_paths: list[Path] | None = None,
 ) -> dict[str, Any] | None:
-    z_value = choose_z(str(config["mode"]), m_value)
+    z_value = choose_z(str(config["mode"]), m_value, config, args)
     if args.shared_datasets:
         if dataset_paths is None:
             raise ValueError("dataset_paths are required when --shared-datasets is enabled")
@@ -586,7 +587,7 @@ def summary_from_final(
             "best_M": best_m,
             "best_C_over_d": best_m * int(config["l"]) / int(config["d"]),
             "best_R_w30": r_w30_for_m(config, best_m),
-            "z_at_best_M": choose_z(str(config["mode"]), best_m),
+            "z_at_best_M": choose_z(str(config["mode"]), best_m, config, args),
             "final_successes": final_row["successes"],
             "final_success_rate": final_row["success_rate"],
             "final_ci_low": final_row.get("ci_low", ""),
@@ -653,7 +654,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dataset-dir", type=Path, default=None)
     parser.add_argument("--keep-datasets", action="store_true")
     parser.add_argument("--dedup-hashes", default="false")
-    parser.add_argument("--circular-a", type=float, default=0.0)
+    parser.add_argument("--circular-a", type=float, default=None, help="Override circular a. By default use a_{k,l}=C*c_orient/c_peel.")
+    add_tuning_arguments(parser)
     parser.add_argument("--base-seed", type=int, default=114514)
     parser.add_argument("--max-set-size", type=int, default=100000)
     parser.add_argument("--set-size-scale", type=int, default=10)
@@ -668,7 +670,7 @@ def main() -> None:
         raise SystemExit("--target-success-rate must be in (0, 1]")
     if args.max_c_over_d <= 0:
         raise SystemExit("--max-C-over-d must be positive")
-    if not (0.0 <= args.circular_a < 1.0):
+    if args.circular_a is not None and not (0.0 <= args.circular_a < 1.0):
         raise SystemExit("--circular-a must be in [0, 1)")
     normal_z(args.ci_confidence)
 

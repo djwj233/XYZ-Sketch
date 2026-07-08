@@ -12,7 +12,10 @@ from pathlib import Path
 from typing import Any
 
 from json_schema import normalize_benchmark_row
+from xyz_tuning import add_tuning_arguments, z_from_args
 
+
+ARGS: argparse.Namespace
 
 SUMMARY_FIELDS = [
     "d",
@@ -79,8 +82,8 @@ def ensure_dirs(output_dir: Path | None) -> dict[str, Path]:
     }
 
 
-def z_theory_for_m(m_value: int) -> int:
-    return max(0, round((int(m_value) ** (1.0 / 3.0)) / 3.0))
+def z_theory_for_row(row: dict[str, Any], args: argparse.Namespace) -> int:
+    return z_from_args(int(row.get("k", 0)), int(row.get("l", 0)), int(row["best_M"]), float(row.get("circular_a", 0.0)), args)
 
 
 def best_key(row: dict[str, Any], preferred_a: float, tolerance: float) -> tuple[float, float, int, float]:
@@ -142,7 +145,7 @@ def aggregate_group(
 
     best = min(ok_rows, key=lambda row: best_key(row, preferred_a, tolerance))
     best_m = int(best["best_M"])
-    z_theory = z_theory_for_m(best_m)
+    z_theory = z_theory_for_row(best, ARGS)
     z_star = int(best["z"])
     row = {
         "d": best.get("d", 0),
@@ -189,12 +192,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, default=None)
     parser.add_argument("--preferred-a", type=float, default=0.0)
     parser.add_argument("--tie-tolerance", type=float, default=1e-9)
-    parser.add_argument("--z-theory-policy", default="round(M^(1/3)/3)")
+    parser.add_argument("--z-theory-policy", default="D(1-a)^(2/3)(M/log(1/delta))^(1/3)")
+    add_tuning_arguments(parser)
     return parser.parse_args()
 
 
 def main() -> None:
+    global ARGS
     args = parse_args()
+    ARGS = args
     if args.tie_tolerance < 0:
         raise SystemExit("--tie-tolerance must be non-negative")
     rows = read_jsonl(args.input)

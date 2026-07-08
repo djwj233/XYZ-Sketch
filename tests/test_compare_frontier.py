@@ -17,9 +17,11 @@ from dataset_generator import DatasetConfig, choose_set_sizes, prepare_datasets
 from json_schema import normalize_benchmark_row
 from statistics import add_binomial_ci, normal_z
 from test_compare_basic import build_binaries
+from xyz_tuning import add_tuning_arguments, a_from_args, z_from_args
 
 
 SUPPORTED_ALGORITHMS = {"xyz_v2", "iblt", "minisketch"}
+CURRENT_ARGS: argparse.Namespace
 
 SUMMARY_FIELDS = [
     "algorithm",
@@ -102,8 +104,8 @@ def r_w30(bits: Any, d_value: Any) -> float:
     return float(bits) / (30.0 * d_float) if d_float > 0 else 0.0
 
 
-def choose_z(m_value: int) -> int:
-    return max(0, round((int(m_value) ** (1.0 / 3.0)) / 3.0))
+def choose_z(job: dict[str, Any], m_value: int, args: argparse.Namespace) -> int:
+    return z_from_args(int(job["k"]), int(job["l"]), int(m_value), float(job.get("circular_a", 0.0)), args)
 
 
 def read_xyz_tuning(path: Path | None) -> list[dict[str, Any]]:
@@ -155,7 +157,7 @@ def make_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
             }
             if algorithm == "xyz_v2":
                 tuning = tuning_for_d(tuning_rows, d_value)
-                circular_a = float(tuning["a_star"]) if tuning is not None else args.xyz_circular_a
+                circular_a = float(tuning["a_star"]) if tuning is not None else (args.xyz_circular_a if args.xyz_circular_a is not None else a_from_args(args.xyz_k, args.xyz_l, args))
                 fixed_z = int(tuning["z_star"]) if tuning is not None else None
                 base.update(
                     {
@@ -214,7 +216,7 @@ def max_parameter(job: dict[str, Any], max_factor: float) -> int:
 def parameter_to_command_fields(job: dict[str, Any], parameter: int) -> dict[str, Any]:
     d_value = int(job["d"])
     if job["algorithm"] == "xyz_v2":
-        z_value = int(job["fixed_z"]) if job.get("fixed_z") not in (None, "") else choose_z(parameter)
+        z_value = int(job["fixed_z"]) if job.get("fixed_z") not in (None, "") else choose_z(job, parameter, CURRENT_ARGS)
         return {"M": parameter, "z": z_value}
     if job["algorithm"] in {"iblt", "minisketch"}:
         return {"capacity_factor": float(parameter) / float(d_value), "capacity": parameter}
@@ -607,7 +609,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--ci-method", default="wilson", choices=["wilson"])
     parser.add_argument("--xyz-l", type=int, default=6)
     parser.add_argument("--xyz-k", type=int, default=2)
-    parser.add_argument("--xyz-circular-a", type=float, default=0.0)
+    parser.add_argument("--xyz-circular-a", type=float, default=None, help="Override XYZ circular a. By default use a_{k,l}=C*c_orient/c_peel.")
+    add_tuning_arguments(parser)
     parser.add_argument("--xyz-tuning", type=Path, default=None)
     parser.add_argument("--minisketch-field-bits", type=int, default=30)
     parser.add_argument("--skip-build", action="store_true")
@@ -623,7 +626,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    global CURRENT_ARGS
     args = parse_args()
+    CURRENT_ARGS = args
     if args.probe_trials <= 0 or args.final_trials <= 0:
         raise SystemExit("--probe-trials and --final-trials must be positive")
     if not (0 < args.target_success_rate <= 1):
@@ -632,7 +637,7 @@ def main() -> None:
         raise SystemExit("--max-parameter-factor must be positive")
     if args.xyz_l <= 0 or args.xyz_k <= 0:
         raise SystemExit("--xyz-l and --xyz-k must be positive")
-    if not (0.0 <= args.xyz_circular_a < 1.0):
+    if args.xyz_circular_a is not None and not (0.0 <= args.xyz_circular_a < 1.0):
         raise SystemExit("--xyz-circular-a must be in [0, 1)")
     normal_z(args.ci_confidence)
 

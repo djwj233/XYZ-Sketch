@@ -18,6 +18,7 @@ from typing import Any
 
 from dataset_generator import choose_set_sizes
 from json_schema import normalize_benchmark_row
+from xyz_tuning import add_tuning_arguments, a_from_args, z_from_args
 
 
 QUICK_D_VALUES = [100, 300, 1000, 3000, 10000]
@@ -140,8 +141,8 @@ def choose_m(d: int, l_value: int, k_value: int) -> int:
     return max(1, math.ceil(choose_c_over_d_target(d, k_value) * d / l_value))
 
 
-def choose_z(m_value: int) -> int:
-    return max(0, round((m_value ** (1.0 / 3.0)) / 3.0))
+def choose_z(m_value: int, k_value: int, l_value: int, a_value: float, args: argparse.Namespace) -> int:
+    return z_from_args(k_value, l_value, m_value, a_value, args)
 
 
 def default_grid(extended: bool, max_set_size: int, scale: int, base_seed: int) -> list[dict[str, Any]]:
@@ -166,7 +167,8 @@ def default_grid(extended: bool, max_set_size: int, scale: int, base_seed: int) 
                         "l": l_value,
                         "k": k_value,
                         "m": m_value,
-                        "z": choose_z(m_value),
+                        "z": choose_z(m_value, k_value, l_value, a_from_args(k_value, l_value, args), args),
+                        "circular_a": a_from_args(k_value, l_value, args),
                         "trials": choose_trials(d_value, quick=not extended),
                         "seed": seed,
                         "mode": "spatial",
@@ -196,6 +198,8 @@ def command_for(binary: Path, config: dict[str, Any]) -> list[str]:
         str(config["seed"]),
         "--mode",
         str(config["mode"]),
+        "--circular-a",
+        str(config.get("circular_a", 0.0)),
         "--ca",
         str(config["ca"]),
         "--cb",

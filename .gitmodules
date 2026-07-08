@@ -1,15 +1,15 @@
 [submodule "external/minisketch"]
 	path = external/minisketch
-	url = https://github.com/bitcoin-core/minisketch
+	url = git@github.com:bitcoin-core/minisketch
 [submodule "external/riblt"]
 	path = external/riblt
-	url = https://github.com/yangl1996/riblt
+	url = git@github.com:yangl1996/riblt
 [submodule "external/IBLT_Cplusplus"]
 	path = external/IBLT_Cplusplus
-	url = https://github.com/gavinandresen/IBLT_Cplusplus
+	url = git@github.com:gavinandresen/IBLT_Cplusplus
 [submodule "external/cpisync"]
 	path = external/cpisync
-	url = https://github.com/Bowenislandsong/cpisync
+	url = git@github.com:Bowenislandsong/cpisync
 [submodule "external/negentropy"]
 	path = external/negentropy
-	url = https://github.com/hoytech/negentropy
+	url = git@github.com:hoytech/negentropy

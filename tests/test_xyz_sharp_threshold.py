@@ -15,6 +15,7 @@ from typing import Any
 from dataset_generator import choose_set_sizes
 from json_schema import normalize_benchmark_row
 from statistics import add_binomial_ci, normal_z
+from xyz_tuning import add_tuning_arguments, a_from_args, z_from_args
 
 
 RAW_FIELDS = [
@@ -200,12 +201,12 @@ def variant_name(config: dict[str, Any]) -> str:
     return variant
 
 
-def choose_z(mode: str, m_value: int, fixed_z: int | None = None) -> int:
+def choose_z(mode: str, m_value: int, fixed_z: int | None, config: dict[str, Any], args: argparse.Namespace) -> int:
     if fixed_z is not None:
         return fixed_z
     if mode == "random":
         return 0
-    return max(0, round((m_value ** (1.0 / 3.0)) / 3.0))
+    return z_from_args(int(config["k"]), int(config["l"]), m_value, float(config.get("circular_a", 0.0)), args)
 
 
 def initial_factor(mode: str, k_value: int) -> float:
@@ -237,6 +238,11 @@ def c_over_d(config: dict[str, Any], m_value: int | str | None) -> float | str:
     if m_value in (None, ""):
         return ""
     return int(m_value) * int(config["l"]) / int(config["d"])
+
+
+def log_progress(args: argparse.Namespace, message: str) -> None:
+    if not getattr(args, "quiet", False):
+        print(message, flush=True)
 
 
 def r_w30_for_m(config: dict[str, Any], m_value: int | str | None) -> float | str:
@@ -281,7 +287,7 @@ def make_configs(args: argparse.Namespace) -> list[dict[str, Any]]:
                                 "mode": mode,
                                 "dedup_hashes": dedup_hashes,
                                 "dedup_variant_suffix": include_dedup_suffix,
-                                "circular_a": args.circular_a,
+                                "circular_a": args.circular_a if args.circular_a is not None else a_from_args(k_value, l_value, args),
                                 "seed": seed,
                                 "ca": ca,
                                 "cb": cb,
@@ -375,7 +381,7 @@ def run_point(
     *,
     scan_metadata: dict[str, Any] | None = None,
 ) -> dict[str, Any] | None:
-    z_value = choose_z(str(config["mode"]), m_value, args.fixed_z)
+    z_value = choose_z(str(config["mode"]), m_value, args.fixed_z, config, args)
     command = command_for(binary, config, m_value, z_value, trials)
     try:
         completed = subprocess.run(command, check=False, capture_output=True, text=True)
@@ -423,22 +429,46 @@ def estimate_m0(binary: Path, config: dict[str, Any], args: argparse.Namespace, 
     lo = lower_bound_m(config)
     hi = initial_m0(config)
     limit = max_m(config, args.max_c_over_d)
+    log_progress(
+        args,
+        f"  [center] {config['scan_id']} search start: lo={lo} initial_hi={hi} limit={limit} "
+        f"target={args.center_target}",
+    )
     while hi <= limit:
         row = run_point(binary, config, hi, args.center_trials, args, errors_path)
+        if row is None:
+            log_progress(args, f"  [center] upper_bound M={hi}: failed; see errors.log")
+        else:
+            log_progress(
+                args,
+                f"  [center] upper_bound M={hi}: success={float(row.get('success_rate', 0.0)):.3f} "
+                f"({row.get('successes', 0)}/{row.get('trials', args.center_trials)})",
+            )
         if row is not None and float(row.get("success_rate", 0.0)) >= args.center_target:
             break
         hi *= 2
     else:
-        return min(limit, max(lo, hi // 2)), "internal_unresolved"
+        fallback = min(limit, max(lo, hi // 2))
+        log_progress(args, f"  [center] unresolved before limit; using M={fallback}")
+        return fallback, "internal_unresolved"
     best = hi
     while lo <= hi:
         mid = (lo + hi) // 2
         row = run_point(binary, config, mid, args.center_trials, args, errors_path)
+        if row is None:
+            log_progress(args, f"  [center] binary M={mid}: failed; see errors.log")
+        else:
+            log_progress(
+                args,
+                f"  [center] binary M={mid}: success={float(row.get('success_rate', 0.0)):.3f} "
+                f"({row.get('successes', 0)}/{row.get('trials', args.center_trials)})",
+            )
         if row is not None and float(row.get("success_rate", 0.0)) >= args.center_target:
             best = mid
             hi = mid - 1
         else:
             lo = mid + 1
+    log_progress(args, f"  [center] selected M0={best}")
     return best, "internal_search"
 
 
@@ -614,10 +644,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--output-dir", type=Path, default=None)
     parser.add_argument("--dedup-hashes", default="false")
-    parser.add_argument("--circular-a", type=float, default=0.0)
+    parser.add_argument("--circular-a", type=float, default=None, help="Override circular a. By default use a_{k,l}=C*c_orient/c_peel.")
+    add_tuning_arguments(parser)
     parser.add_argument("--base-seed", type=int, default=114514)
     parser.add_argument("--max-set-size", type=int, default=100000)
     parser.add_argument("--set-size-scale", type=int, default=10)
+    parser.add_argument("--quiet", action="store_true", help="Suppress progress output.")
     return parser.parse_args()
 
 
@@ -629,7 +661,7 @@ def main() -> None:
         raise SystemExit("--center-target must be in (0, 1]")
     if not (0 < args.target_success_rate <= 1):
         raise SystemExit("--target-success-rate must be in (0, 1]")
-    if not (0.0 <= args.circular_a < 1.0):
+    if args.circular_a is not None and not (0.0 <= args.circular_a < 1.0):
         raise SystemExit("--circular-a must be in [0, 1)")
     if args.points <= 0:
         raise SystemExit("--points must be positive")
@@ -643,20 +675,32 @@ def main() -> None:
     if args.limit is not None:
         configs = configs[: args.limit]
     summary_centers = load_threshold_summary(args.threshold_summary)
+    log_progress(
+        args,
+        f"[setup] configs={len(configs)} trials={args.trials} center_trials={args.center_trials} "
+        f"points={args.points} output={dirs['base']}",
+    )
 
+    if not args.dry_run and not args.skip_build:
+        log_progress(args, "[setup] building xyz_v2_bench")
+    else:
+        log_progress(args, "[setup] using existing/skipped benchmark build")
     binary = build_benchmark(root, dirs["build"], args.skip_build) if not args.dry_run else dirs["build"] / f"xyz_v2_bench{exe_suffix()}"
     if dirs["errors"].exists():
         dirs["errors"].unlink()
 
     planned: list[tuple[dict[str, Any], int, str, list[int]]] = []
-    for config in configs:
+    for config_index, config in enumerate(configs, start=1):
+        log_progress(args, f"[plan {config_index}/{len(configs)}] {config['scan_id']}")
         key = (int(config["d"]), int(config["l"]), int(config["k"]), str(config["mode"]))
         if key in summary_centers:
             m0 = summary_centers[key]
             source = "threshold_summary"
+            log_progress(args, f"  [center] using threshold-summary M0={m0}")
         else:
             m0, source = estimate_m0(binary, config, args, dirs["errors"])
         grid = m_grid(config, m0, args)
+        log_progress(args, f"  [grid] source={source} range={grid[0]}..{grid[-1]} points={len(grid)}")
         planned.append((config, m0, source, grid))
 
     if args.dry_run:
@@ -676,8 +720,9 @@ def main() -> None:
     summaries: list[dict[str, Any]] = []
     for config_index, (config, m0, source, grid) in enumerate(planned, start=1):
         group_rows: list[dict[str, Any]] = []
-        print(f"[{config_index}/{len(planned)}] {config['scan_id']} M0={m0} points={len(grid)}", flush=True)
+        log_progress(args, f"[scan {config_index}/{len(planned)}] {config['scan_id']} M0={m0} points={len(grid)}")
         for grid_index, m_value in enumerate(grid):
+            log_progress(args, f"  [point {grid_index + 1}/{len(grid)}] running M={m_value}")
             metadata = {
                 "scan_id": config["scan_id"],
                 "M0": m0,
@@ -689,19 +734,22 @@ def main() -> None:
             }
             row = run_point(binary, config, m_value, args.trials, args, dirs["errors"], scan_metadata=metadata)
             if row is None:
-                print(f"  M={m_value}: failed; see errors.log", flush=True)
+                log_progress(args, f"  [point {grid_index + 1}/{len(grid)}] M={m_value}: failed; see errors.log")
                 continue
             group_rows.append(row)
             raw_rows.append(row)
-            print(
-                f"  M={m_value} C/d={float(row.get('field_C_over_d', 0.0)):.3f} "
-                f"success={float(row.get('success_rate', 0.0)):.3f}",
-                flush=True,
+            log_progress(
+                args,
+                f"  [point {grid_index + 1}/{len(grid)}] M={m_value} "
+                f"C/d={float(row.get('field_C_over_d', 0.0)):.3f} "
+                f"success={float(row.get('success_rate', 0.0)):.3f} "
+                f"({row.get('successes', 0)}/{row.get('trials', args.trials)})",
             )
             write_jsonl(dirs["raw_jsonl"], raw_rows)
             write_csv(dirs["raw_csv"], raw_rows, RAW_FIELDS)
         summary = summarize_group(config, group_rows, m0, source, args)
         summaries.append(summary)
+        log_progress(args, f"[scan {config_index}/{len(planned)}] summary status={summary.get('status', '')}")
         write_jsonl(dirs["summary_jsonl"], summaries)
         write_csv(dirs["summary_csv"], summaries, SUMMARY_FIELDS)
         write_summary_md(dirs["summary_md"], summaries)
