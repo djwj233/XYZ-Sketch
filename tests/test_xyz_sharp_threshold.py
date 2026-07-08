@@ -42,6 +42,7 @@ RAW_FIELDS = [
     "cb",
     "seed",
     "dedup_hashes",
+    "circular_a",
     "dataset_mode",
     "trials",
     "successes",
@@ -53,6 +54,7 @@ RAW_FIELDS = [
     "bits",
     "bits_per_difference",
     "bit_C_over_d",
+    "R_w30",
     "field_C_over_d",
     "encode_avg_s",
     "decode_avg_s",
@@ -82,8 +84,12 @@ SUMMARY_FIELDS = [
     "point_C_over_d_50",
     "point_M_95",
     "point_C_over_d_95",
+    "point_M_90",
+    "point_R_w30_90",
     "ci_low_M_95",
     "ci_low_C_over_d_95",
+    "ci_low_M_90",
+    "ci_low_R_w30_90",
     "transition_M_min",
     "transition_M_max",
     "transition_width_M",
@@ -95,6 +101,7 @@ SUMMARY_FIELDS = [
     "cb",
     "seed",
     "dedup_hashes",
+    "circular_a",
     "dataset_mode",
     "trials",
     "successes",
@@ -106,6 +113,7 @@ SUMMARY_FIELDS = [
     "bits",
     "bits_per_difference",
     "bit_C_over_d",
+    "R_w30",
     "encode_avg_s",
     "decode_avg_s",
     "encode_median_s",
@@ -171,6 +179,16 @@ def parse_bool_list(value: str) -> list[bool]:
     return [parse_bool(part) for part in value.split(",") if part.strip()]
 
 
+def r_w30_from_bits(bits: Any, d_value: Any) -> float | str:
+    try:
+        d_float = float(d_value)
+        if d_float <= 0:
+            return ""
+        return float(bits) / (30.0 * d_float)
+    except (TypeError, ValueError):
+        return ""
+
+
 def dedup_suffix(dedup_hashes: bool, include: bool) -> str:
     return f"_dedup{1 if dedup_hashes else 0}" if include else ""
 
@@ -221,6 +239,13 @@ def c_over_d(config: dict[str, Any], m_value: int | str | None) -> float | str:
     return int(m_value) * int(config["l"]) / int(config["d"])
 
 
+def r_w30_for_m(config: dict[str, Any], m_value: int | str | None) -> float | str:
+    if m_value in (None, ""):
+        return ""
+    cell_bits = (math.floor(math.log2(2 * int(config["l"]) + 1)) + 1) + 32 * int(config["l"])
+    return int(m_value) * cell_bits / (30.0 * int(config["d"]))
+
+
 def make_configs(args: argparse.Namespace) -> list[dict[str, Any]]:
     d_values = parse_int_list(args.d_values)
     l_values = parse_int_list(args.l_values)
@@ -256,6 +281,7 @@ def make_configs(args: argparse.Namespace) -> list[dict[str, Any]]:
                                 "mode": mode,
                                 "dedup_hashes": dedup_hashes,
                                 "dedup_variant_suffix": include_dedup_suffix,
+                                "circular_a": args.circular_a,
                                 "seed": seed,
                                 "ca": ca,
                                 "cb": cb,
@@ -319,6 +345,8 @@ def command_for(binary: Path, config: dict[str, Any], m_value: int, z_value: int
         str(config["seed"]),
         "--mode",
         str(config["mode"]),
+        "--circular-a",
+        f"{float(config.get('circular_a', 1.0 / 3.0)):.12g}",
         "--ca",
         str(config["ca"]),
         "--cb",
@@ -372,6 +400,8 @@ def run_point(
         append_error(errors_path, config, command, f"JSONERROR {exc}\n{completed.stdout}")
         return None
     row = add_binomial_ci(row, confidence=args.ci_confidence, method=args.ci_method)
+    row["R_w30"] = r_w30_from_bits(row.get("bits", 0), config["d"])
+    row["circular_a"] = float(config.get("circular_a", 1.0 / 3.0))
     if scan_metadata:
         row.update(scan_metadata)
     row.setdefault("scan_id", config["scan_id"])
@@ -417,11 +447,22 @@ def first_m(rows: list[dict[str, Any]], predicate: Any) -> int | str:
     return min(matches) if matches else ""
 
 
+def first_value(rows: list[dict[str, Any]], predicate: Any, field: str) -> Any:
+    matches = [row for row in rows if predicate(row)]
+    if not matches:
+        return ""
+    row = min(matches, key=lambda item: int(item["M"]))
+    return row.get(field, "")
+
+
 def summarize_group(config: dict[str, Any], rows: list[dict[str, Any]], m0: int, source: str, args: argparse.Namespace) -> dict[str, Any]:
     ordered = sorted(rows, key=lambda row: int(row["M"]))
     point_m50 = first_m(ordered, lambda row: float(row.get("success_rate", 0.0)) >= 0.50)
     point_m95 = first_m(ordered, lambda row: float(row.get("success_rate", 0.0)) >= 0.95)
     ci_low_m95 = first_m(ordered, lambda row: float(row.get("ci_low", 0.0)) >= 0.95)
+    target = float(args.target_success_rate)
+    point_m90 = first_m(ordered, lambda row: float(row.get("success_rate", 0.0)) >= target)
+    ci_low_m90 = first_m(ordered, lambda row: float(row.get("ci_low", 0.0)) >= target)
     transition_min = first_m(ordered, lambda row: float(row.get("ci_high", 0.0)) >= 0.10)
     transition_max = first_m(ordered, lambda row: float(row.get("ci_low", 0.0)) >= 0.90)
 
@@ -465,6 +506,10 @@ def summarize_group(config: dict[str, Any], rows: list[dict[str, Any]], m0: int,
         "point_C_over_d_95": c_over_d(config, point_m95),
         "ci_low_M_95": ci_low_m95,
         "ci_low_C_over_d_95": c_over_d(config, ci_low_m95),
+        "point_M_90": point_m90,
+        "point_R_w30_90": first_value(ordered, lambda row: float(row.get("success_rate", 0.0)) >= target, "R_w30"),
+        "ci_low_M_90": ci_low_m90,
+        "ci_low_R_w30_90": first_value(ordered, lambda row: float(row.get("ci_low", 0.0)) >= target, "R_w30"),
         "transition_M_min": transition_min,
         "transition_M_max": transition_max,
         "transition_width_M": transition_width_m,
@@ -476,6 +521,7 @@ def summarize_group(config: dict[str, Any], rows: list[dict[str, Any]], m0: int,
         "cb": config["cb"],
         "seed": config["seed"],
         "dedup_hashes": bool(config.get("dedup_hashes", False)),
+        "circular_a": float(config.get("circular_a", 1.0 / 3.0)),
         "dataset_mode": "internal_generator",
         "trials": args.trials,
         "successes": 0,
@@ -487,6 +533,7 @@ def summarize_group(config: dict[str, Any], rows: list[dict[str, Any]], m0: int,
         "bits": 0.0,
         "bits_per_difference": 0.0,
         "bit_C_over_d": 0.0,
+        "R_w30": 0.0,
         "encode_avg_s": 0.0,
         "decode_avg_s": 0.0,
         "encode_median_s": 0.0,
@@ -521,13 +568,15 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None
 def write_summary_md(path: Path, summaries: list[dict[str, Any]]) -> None:
     with path.open("w", encoding="utf-8") as handle:
         handle.write("# XYZ Sharp-Threshold Summary\n\n")
-        handle.write("| d | l | k | mode | M0 | M@50 | M@95 | CI-low M@95 | width M | status |\n")
-        handle.write("| ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |\n")
+        handle.write("| d | l | k | mode | M0 | M@50 | M@90 | R@90 | CI-low M@90 | CI-low R@90 | M@95 | width M | status |\n")
+        handle.write("| ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n")
         for row in sorted(summaries, key=lambda item: (int(item["d"]), int(item["l"]), int(item["k"]), str(item["mode"]))):
             handle.write(
                 f"| {row['d']} | {row['l']} | {row['k']} | {row['mode']} | {row.get('M0', '')} | "
-                f"{row.get('point_M_50', '')} | {row.get('point_M_95', '')} | "
-                f"{row.get('ci_low_M_95', '')} | {row.get('transition_width_M', '')} | {row.get('status', '')} |\n"
+                f"{row.get('point_M_50', '')} | {row.get('point_M_90', '')} | "
+                f"{row.get('point_R_w30_90', '')} | {row.get('ci_low_M_90', '')} | "
+                f"{row.get('ci_low_R_w30_90', '')} | {row.get('point_M_95', '')} | "
+                f"{row.get('transition_width_M', '')} | {row.get('status', '')} |\n"
             )
 
 
@@ -550,6 +599,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--trials", type=int, default=100)
     parser.add_argument("--center-trials", type=int, default=20)
     parser.add_argument("--center-target", type=float, default=0.50)
+    parser.add_argument("--target-success-rate", type=float, default=0.90)
     parser.add_argument("--points", type=int, default=41)
     parser.add_argument("--step", type=int, default=None)
     parser.add_argument("--window-fraction", type=float, default=0.20)
@@ -564,6 +614,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--output-dir", type=Path, default=None)
     parser.add_argument("--dedup-hashes", default="false")
+    parser.add_argument("--circular-a", type=float, default=0.0)
     parser.add_argument("--base-seed", type=int, default=114514)
     parser.add_argument("--max-set-size", type=int, default=100000)
     parser.add_argument("--set-size-scale", type=int, default=10)
@@ -576,6 +627,10 @@ def main() -> None:
         raise SystemExit("--trials and --center-trials must be positive")
     if not (0 < args.center_target <= 1):
         raise SystemExit("--center-target must be in (0, 1]")
+    if not (0 < args.target_success_rate <= 1):
+        raise SystemExit("--target-success-rate must be in (0, 1]")
+    if not (0.0 <= args.circular_a < 1.0):
+        raise SystemExit("--circular-a must be in [0, 1)")
     if args.points <= 0:
         raise SystemExit("--points must be positive")
     if args.window_fraction < 0 or args.min_window < 0:
