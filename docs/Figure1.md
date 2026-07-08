@@ -134,7 +134,11 @@ d = 1000
 (k,l) in {(2,3), (2,6), (3,4)}
 modes = random,naive
 trials = 30
-points = 31
+center_trials = 10
+window_fraction = 0.06
+min_window = 20
+max_window = 80
+step = 2
 confidence = 0.95
 ```
 
@@ -145,9 +149,18 @@ d = 10000 or larger if runtime allows
 (k,l) in {(2,3), (2,6), (3,4)}
 modes = random,naive
 trials >= 100
-points >= 41
+center_trials = 10
+window_fraction = 0.06
+min_window = 20
+max_window = 120
+step = 2
 confidence = 0.95
 ```
+
+These settings scan a narrower interval around the empirical center `M0` and
+test adjacent `M` values more densely. If a curve does not include clear failure
+and success regions on both sides, increase `max_window` before increasing the
+point count.
 
 If paired datasets are added:
 

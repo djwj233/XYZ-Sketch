@@ -43,12 +43,20 @@ python3 tests/test_xyz_sharp_threshold.py \
   --k-values 2,3 \
   --modes random,naive \
   --trials 100 \
-  --center-trials 30 \
-  --points 41 \
+  --center-trials 10 \
+  --window-fraction 0.06 \
+  --min-window 20 \
+  --max-window 120 \
+  --step 2 \
   --target-success-rate 0.9 \
   --circular-a 0 \
   --output-dir tests/results/paper_fig1_sharp_threshold
 ```
+
+This first searches an empirical center `M0` with 10 `center-trials`, then scans
+the narrower interval `M0 +/- min(max(0.06*M0, 20), 120)` with `step = 2`.
+If the resulting curve does not include clear failure and success points on
+both sides, increase `--max-window` or `--window-fraction`.
 
 Important output files:
 
@@ -399,4 +407,3 @@ the remaining code work is:
 4. Optionally extend tests/test_compare_frontier.py with extra baselines:
    xyz_v1, iblt_cpp, cpisync, riblt, negentropy.
 ```
-

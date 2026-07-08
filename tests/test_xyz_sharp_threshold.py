@@ -318,6 +318,8 @@ def load_threshold_summary(path: Path | None) -> dict[tuple[int, int, int, str],
 
 def m_grid(config: dict[str, Any], m0: int, args: argparse.Namespace) -> list[int]:
     radius = max(args.min_window, math.ceil(args.window_fraction * m0))
+    if args.max_window is not None:
+        radius = min(radius, args.max_window)
     lo = max(lower_bound_m(config), m0 - radius)
     hi = m0 + radius
     if args.step is not None:
@@ -627,13 +629,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--k-values", default="2,3")
     parser.add_argument("--modes", default="random,spatial")
     parser.add_argument("--trials", type=int, default=100)
-    parser.add_argument("--center-trials", type=int, default=20)
+    parser.add_argument("--center-trials", type=int, default=10)
     parser.add_argument("--center-target", type=float, default=0.50)
     parser.add_argument("--target-success-rate", type=float, default=0.90)
     parser.add_argument("--points", type=int, default=41)
     parser.add_argument("--step", type=int, default=None)
     parser.add_argument("--window-fraction", type=float, default=0.20)
     parser.add_argument("--min-window", type=int, default=8)
+    parser.add_argument(
+        "--max-window",
+        type=int,
+        default=None,
+        help="Optional cap on the M scan half-window after applying --window-fraction and --min-window.",
+    )
     parser.add_argument("--threshold-summary", type=Path, default=None)
     parser.add_argument("--max-C-over-d", type=float, default=8.0, dest="max_c_over_d")
     parser.add_argument("--fixed-z", type=int, default=None)
@@ -667,6 +675,8 @@ def main() -> None:
         raise SystemExit("--points must be positive")
     if args.window_fraction < 0 or args.min_window < 0:
         raise SystemExit("--window-fraction and --min-window must be non-negative")
+    if args.max_window is not None and args.max_window < args.min_window:
+        raise SystemExit("--max-window must be greater than or equal to --min-window")
     normal_z(args.ci_confidence)
 
     root = repo_root()
@@ -678,7 +688,8 @@ def main() -> None:
     log_progress(
         args,
         f"[setup] configs={len(configs)} trials={args.trials} center_trials={args.center_trials} "
-        f"points={args.points} output={dirs['base']}",
+        f"points={args.points} step={args.step} window_fraction={args.window_fraction} "
+        f"min_window={args.min_window} max_window={args.max_window} output={dirs['base']}",
     )
 
     if not args.dry_run and not args.skip_build:

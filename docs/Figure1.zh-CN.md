@@ -106,7 +106,10 @@ python tests\test_xyz_sharp_threshold.py `
   --modes random,naive `
   --trials 30 `
   --center-trials 10 `
-  --points 31 `
+  --window-fraction 0.06 `
+  --min-window 20 `
+  --max-window 80 `
+  --step 2 `
   --target-success-rate 0.9 `
   --circular-a 0 `
   --output-dir tests\results\paper_fig1_sharp_threshold
@@ -121,9 +124,17 @@ d = 10000 or larger if runtime allows
 (k,l) in {(2,3), (2,6), (3,4)}
 modes = random,naive
 trials >= 100
-points >= 41
+center_trials = 10
+window_fraction = 0.06
+min_window = 20
+max_window = 120
+step = 2
 confidence = 0.95
 ```
+
+新的推荐设置会在经验中心 `M0` 附近扫描更窄的区间，并用更小步长测试更多相邻
+`M`。如果结果曲线两端没有同时出现明显失败和明显成功，需要优先增大
+`max_window`，而不是单纯增加点数。
 
 输出：
 

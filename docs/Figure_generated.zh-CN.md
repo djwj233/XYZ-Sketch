@@ -41,12 +41,20 @@ python3 tests/test_xyz_sharp_threshold.py \
   --k-values 2,3 \
   --modes random,naive \
   --trials 100 \
-  --center-trials 30 \
-  --points 41 \
+  --center-trials 10 \
+  --window-fraction 0.06 \
+  --min-window 20 \
+  --max-window 120 \
+  --step 2 \
   --target-success-rate 0.9 \
   --circular-a 0 \
   --output-dir tests/results/paper_fig1_sharp_threshold
 ```
+
+这里先用 10 次 `center-trials` 快速搜索经验中心 `M0`，再只扫描
+`M0 +/- min(max(0.06*M0, 20), 120)` 的较窄区间，并以 `step = 2`
+密集测试候选 `M`。如果曲线两端没有同时覆盖明显失败点和成功点，再适当增大
+`--max-window` 或 `--window-fraction`。
 
 重要输出文件：
 
@@ -395,4 +403,3 @@ Figure 3:    tests/results/paper_fig3_compare_frontier/summary.csv
 4. 可选：扩展 tests/test_compare_frontier.py，加入更多 baseline：
    xyz_v1, iblt_cpp, cpisync, riblt, negentropy。
 ```
-
