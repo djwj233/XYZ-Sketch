@@ -83,12 +83,12 @@ def ensure_dirs(root: Path, output_dir: Path | None) -> dict[str, Path]:
 
 
 def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
-    binary = build_dir / f"xyz_v2_bench{exe_suffix()}"
+    binary = build_dir / f"xyz_sketch_bench{exe_suffix()}"
     if skip_build:
         if not binary.exists():
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
-    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_sketch_bench.cpp"
     subprocess.run(["g++", "-std=c++17", "-O2", str(source), "-o", str(binary)], cwd=root, check=True)
     return binary
 
@@ -299,7 +299,7 @@ def aggregate_trial_rows(rows: list[dict[str, Any]], trials: int) -> dict[str, A
     first["error_trials"] = max(0, trials - len(valid_rows))
     first["successes"] = successes
     first["success_rate"] = successes / float(len(valid_rows))
-    first["status"] = "ok"
+    first["status"] = "ok" if len(valid_rows) == trials else "incomplete"
     first["encode_avg_s"] = sum(float(row.get("encode_avg_s", 0.0)) for row in valid_rows) / len(valid_rows)
     first["decode_avg_s"] = sum(float(row.get("decode_avg_s", 0.0)) for row in valid_rows) / len(valid_rows)
     first["encode_median_s"] = median([float(row.get("encode_median_s", 0.0)) for row in valid_rows])
@@ -368,9 +368,9 @@ def run_probe(
         row,
         experiment="paper_fig2_az_grid",
         record_type="probe",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="shared_file" if args.shared_datasets else "internal_generator",
     )
 
@@ -408,9 +408,9 @@ def invalid_probe(config: dict[str, Any], m_value: int, trials: int, phase: str,
         row,
         experiment="paper_fig2_az_grid",
         record_type="probe",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         status="invalid",
         dataset_mode="shared_file" if args.shared_datasets else "internal_generator",
     )
@@ -559,9 +559,9 @@ def summary_from_final(
         base,
         experiment="paper_fig2_az_grid",
         record_type="threshold",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         status=status,
         dataset_mode="shared_file" if args.shared_datasets else "internal_generator",
     )
@@ -660,8 +660,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--k-values", default="2")
     parser.add_argument("--a-values", default="0,0.3333333333,0.6")
     parser.add_argument("--z-values", default="0,1,2,3")
-    parser.add_argument("--probe-trials", type=int, default=5)
-    parser.add_argument("--final-trials", type=int, default=10)
+    parser.add_argument("--probe-trials", type=int, default=30)
+    parser.add_argument("--final-trials", type=int, default=100)
     parser.add_argument("--target-success-rate", type=float, default=0.90)
     parser.add_argument("--max-C-over-d", type=float, default=8.0, dest="max_c_over_d")
     parser.add_argument("--min-range-length", type=int, default=2)
@@ -673,7 +673,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--resume", action="store_true", help="Skip cells already present in summary.jsonl and append remaining cells.")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--output-dir", type=Path, default=None)
-    parser.add_argument("--shared-datasets", action="store_true")
+    parser.add_argument("--shared-datasets", dest="shared_datasets", action="store_true", default=True)
+    parser.add_argument("--no-shared-datasets", dest="shared_datasets", action="store_false")
     parser.add_argument("--dataset-dir", type=Path, default=None)
     parser.add_argument("--dedup-hashes", default="false")
     parser.add_argument("--base-seed", type=int, default=114514)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scan the circular spatial-coupling parameter a for XYZ-v2."""
+"""Scan the circular spatial-coupling parameter a for XYZ-Sketch."""
 
 from __future__ import annotations
 
@@ -88,12 +88,12 @@ def ensure_dirs(root: Path, output_dir: Path | None) -> dict[str, Path]:
 
 
 def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
-    binary = build_dir / f"xyz_v2_bench{exe_suffix()}"
+    binary = build_dir / f"xyz_sketch_bench{exe_suffix()}"
     if skip_build:
         if not binary.exists():
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
-    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_sketch_bench.cpp"
     subprocess.run(["g++", "-std=c++17", "-O2", str(source), "-o", str(binary)], cwd=root, check=True)
     return binary
 
@@ -311,7 +311,7 @@ def aggregate_trial_rows(rows: list[dict[str, Any]], trials: int) -> dict[str, A
     first["error_trials"] = max(0, trials - len(valid_rows))
     first["successes"] = successes
     first["success_rate"] = successes / float(len(valid_rows))
-    first["status"] = "ok"
+    first["status"] = "ok" if len(valid_rows) == trials else "incomplete"
     first["encode_avg_s"] = sum(float(row.get("encode_avg_s", 0.0)) for row in valid_rows) / len(valid_rows)
     first["decode_avg_s"] = sum(float(row.get("decode_avg_s", 0.0)) for row in valid_rows) / len(valid_rows)
     first["encode_median_s"] = median([float(row.get("encode_median_s", 0.0)) for row in valid_rows])
@@ -373,9 +373,9 @@ def run_probe(
         row,
         experiment="circular_a",
         record_type="probe" if phase != "fixed_m" else "aggregate",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="shared_file" if args.shared_datasets else "internal_generator",
     )
 
@@ -442,9 +442,9 @@ def summary_from_fixed(row: dict[str, Any], config: dict[str, Any]) -> dict[str,
         summary,
         experiment="circular_a",
         record_type="aggregate",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode=str(row.get("dataset_mode", "internal_generator")),
     )
 
@@ -509,9 +509,9 @@ def summary_from_threshold(
         base,
         experiment="circular_a",
         record_type="threshold",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="shared_file" if args.shared_datasets else "internal_generator",
         status=status,
     )
@@ -556,14 +556,14 @@ def write_summary_md(path: Path, rows: list[dict[str, Any]]) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Scan XYZ-v2 circular spatial-coupling parameter a.")
+    parser = argparse.ArgumentParser(description="Scan XYZ-Sketch circular spatial-coupling parameter a.")
     parser.add_argument("--mode", choices=["fixed-m", "threshold"], default="fixed-m")
     parser.add_argument("--d-values", default="1000")
     parser.add_argument("--l-values", default="6")
     parser.add_argument("--k-values", default="2")
     parser.add_argument("--a-values", default="0,0.1,0.2,1/3,0.4,0.5,0.6,0.75,0.9")
     parser.add_argument("--m-values", default=None)
-    parser.add_argument("--trials", type=int, default=50)
+    parser.add_argument("--trials", type=int, default=100)
     parser.add_argument("--probe-trials", type=int, default=30)
     parser.add_argument("--final-trials", type=int, default=100)
     parser.add_argument("--target-success-rate", type=float, default=0.95)
@@ -575,7 +575,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--output-dir", type=Path, default=None)
-    parser.add_argument("--shared-datasets", action="store_true")
+    parser.add_argument("--shared-datasets", dest="shared_datasets", action="store_true", default=True)
+    parser.add_argument("--no-shared-datasets", dest="shared_datasets", action="store_false")
     parser.add_argument("--dataset-dir", type=Path, default=None)
     parser.add_argument("--keep-datasets", action="store_true")
     parser.add_argument("--dedup-hashes", default="false")

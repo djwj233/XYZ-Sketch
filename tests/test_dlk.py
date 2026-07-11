@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the first XYZ-v2 d/l/k parameter sweep.
+"""Run the first XYZ-Sketch d/l/k parameter sweep.
 
 This script is an experiment driver. It builds or locates the C++ benchmark
 binary, runs a moderate parameter grid, and writes structured raw results.
@@ -88,13 +88,13 @@ def exe_suffix() -> str:
 
 
 def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
-    binary = build_dir / f"xyz_v2_bench{exe_suffix()}"
+    binary = build_dir / f"xyz_sketch_bench{exe_suffix()}"
     if skip_build:
         if not binary.exists():
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
 
-    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_sketch_bench.cpp"
     command = [
         "g++",
         "-std=c++17",
@@ -262,9 +262,9 @@ def run_one(binary: Path, config: dict[str, Any], errors_path: Path) -> dict[str
         row,
         experiment="dlk_sweep",
         record_type="aggregate",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=str(config["mode"]),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="internal_generator",
     )
 
@@ -296,7 +296,7 @@ def write_summary(path: Path, rows: list[dict[str, Any]], attempted: int) -> Non
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run XYZ-v2 d/l/k parameter sweep.")
+    parser = argparse.ArgumentParser(description="Run XYZ-Sketch d/l/k parameter sweep.")
     parser.add_argument("--extended", action="store_true", help="Use the extended parameter grid.")
     parser.add_argument("--skip-build", action="store_true", help="Reuse an existing benchmark binary.")
     parser.add_argument("--dry-run", action="store_true", help="Print commands without running them.")

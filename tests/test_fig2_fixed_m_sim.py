@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the new Figure 2 fixed-M peeling simulation grid."""
+"""Run fixed-M peeling grids for current Figure 1(b,c) and Appendix Figure 3."""
 
 from __future__ import annotations
 
@@ -365,7 +365,7 @@ def write_run_config(path: Path, args: argparse.Namespace, configs: list[dict[st
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run fixed-M circular a/z peeling simulations for new Figure 2.")
+    parser = argparse.ArgumentParser(description="Run fixed-M circular a/z peeling simulations for Figure 1 and Appendix Figure 3.")
     parser.add_argument("--m-candidates", type=Path, default=Path("tests") / "results" / "paper_fig2_m_candidates" / "m_candidates.csv")
     parser.add_argument("--a-values", default="0,0.1,0.2,0.3333333333,0.4,0.5,0.6,0.75,0.9")
     parser.add_argument("--z-values", default="0,1,2,3,4,5,6,8,10,12,16")
@@ -379,10 +379,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--base-seed", type=int, default=114514)
     parser.add_argument("--jobs", type=int, default=1, help="Number of simulator subprocesses to run concurrently.")
     parser.add_argument(
-        "--shared-trial-seeds",
-        action="store_true",
-        help="Use the same trial seeds for every fixed-M and (a,z) configuration.",
+        "--shared-trial-seeds", dest="shared_trial_seeds", action="store_true",
+        help="Use the same trial seeds for every fixed-M and (a,z) configuration (default).",
     )
+    parser.add_argument(
+        "--independent-trial-seeds", dest="shared_trial_seeds", action="store_false",
+        help="Use different trial seeds for each grid cell.",
+    )
+    parser.set_defaults(shared_trial_seeds=True)
     parser.add_argument("--skip-build", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--resume", action="store_true")

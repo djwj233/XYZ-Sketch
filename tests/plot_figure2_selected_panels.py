@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Combine selected fixed-M Figure 2 heatmaps into one SVG."""
+"""Combine fixed-M heatmaps for current Figure 1(b,c) or Appendix Figure 3."""
 
 from __future__ import annotations
 

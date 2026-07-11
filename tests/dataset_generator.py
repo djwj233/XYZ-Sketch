@@ -160,7 +160,9 @@ def _parse_metadata(header: str) -> dict[str, Any]:
     if not header.startswith(f"# {DATASET_FORMAT}"):
         raise ValueError("unsupported dataset format")
     metadata: dict[str, Any] = {}
-    for item in header.removeprefix(f"# {DATASET_FORMAT}").strip().split():
+    prefix = f"# {DATASET_FORMAT}"
+    payload = header[len(prefix):] if header.startswith(prefix) else header
+    for item in payload.strip().split():
         key, _, value = item.partition("=")
         if not key or not _:
             raise ValueError(f"invalid metadata item: {item}")

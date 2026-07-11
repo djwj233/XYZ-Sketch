@@ -236,9 +236,8 @@ TrialResult run_trial_on_data(const Options &opt, const TrialData &data, int &ce
     TrialResult result;
     auto encode_begin = chrono::steady_clock::now();
     auto alice = iblt.Encode(data.alice);
-    auto encode_end = chrono::steady_clock::now();
-
     auto bob = iblt.Encode(data.bob);
+    auto encode_end = chrono::steady_clock::now();
     auto decode_begin = chrono::steady_clock::now();
     auto diff = iblt.Decode(alice, bob);
     auto decode_end = chrono::steady_clock::now();

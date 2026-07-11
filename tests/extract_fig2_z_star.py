@@ -136,9 +136,9 @@ def aggregate_group(
             row,
             experiment="paper_fig2_z_star",
             record_type="aggregate",
-            algorithm="xyz_v2",
+            algorithm="xyz_sketch",
             variant="z_star",
-            implementation="local/XYZ-v2",
+            implementation="local/XYZ-Sketch",
             status="unresolved",
             dataset_mode=first.get("dataset_mode", "unknown"),
         )
@@ -178,9 +178,9 @@ def aggregate_group(
         row,
         experiment="paper_fig2_z_star",
         record_type="aggregate",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=f"a={float(best['circular_a']):.6g},z={z_star}",
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         status="ok",
         dataset_mode=best.get("dataset_mode", "unknown"),
     )

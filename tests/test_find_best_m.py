@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Find the smallest empirical working M for XYZ-v2 configurations."""
+"""Find the smallest empirical working M for XYZ-Sketch configurations."""
 
 from __future__ import annotations
 
@@ -81,13 +81,13 @@ def exe_suffix() -> str:
 
 
 def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
-    binary = build_dir / f"xyz_v2_bench{exe_suffix()}"
+    binary = build_dir / f"xyz_sketch_bench{exe_suffix()}"
     if skip_build:
         if not binary.exists():
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
 
-    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_sketch_bench.cpp"
     command = [
         "g++",
         "-std=c++17",
@@ -323,9 +323,9 @@ def run_probe(
         row,
         experiment="find_best_m",
         record_type="probe",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=str(config["mode"]),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="internal_generator",
     )
 
@@ -474,9 +474,9 @@ def summary_from_final(
             },
             experiment="find_best_m",
             record_type="threshold",
-            algorithm="xyz_v2",
+            algorithm="xyz_sketch",
             variant=str(config["mode"]),
-            implementation="local/XYZ-v2",
+            implementation="local/XYZ-Sketch",
             dataset_mode="internal_generator",
         )
 
@@ -523,9 +523,9 @@ def summary_from_final(
         },
         experiment="find_best_m",
         record_type="threshold",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=str(config["mode"]),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="internal_generator",
         status=status,
     )
@@ -545,7 +545,7 @@ def write_summary_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Find empirical best M for XYZ-v2.")
+    parser = argparse.ArgumentParser(description="Find empirical best M for XYZ-Sketch.")
     parser.add_argument("--d-values", default="1000,3000,10000", help="Comma-separated d values.")
     parser.add_argument("--l-values", default="4,6,8", help="Comma-separated l values.")
     parser.add_argument("--k-values", default="2,3", help="Comma-separated k values.")

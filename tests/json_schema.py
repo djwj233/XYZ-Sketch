@@ -18,8 +18,7 @@ DEFAULT_TIMING_FIELDS = (
 )
 
 IMPLEMENTATION_BY_ALGORITHM = {
-    "xyz_v1": "local/XYZ-v1",
-    "xyz_v2": "local/XYZ-v2",
+    "xyz_sketch": "local/XYZ-Sketch",
     "iblt": "local/IBLT",
     "iblt_cpp": "external/IBLT_Cplusplus",
     "cpisync": "external/cpisync",

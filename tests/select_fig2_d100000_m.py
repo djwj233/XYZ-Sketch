@@ -376,7 +376,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--d", type=int, default=100000)
     parser.add_argument("--k", type=int, default=2)
     parser.add_argument("--l", type=int, default=6)
-    parser.add_argument("--trials", type=int, default=20)
+    parser.add_argument("--trials", type=int, default=100)
     parser.add_argument("--target-success-rate", type=float, default=0.9)
     parser.add_argument("--lower-m", type=int, default=10000)
     parser.add_argument("--upper-m", type=int, default=40000)

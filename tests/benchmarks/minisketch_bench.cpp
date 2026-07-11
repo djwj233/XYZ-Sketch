@@ -204,6 +204,8 @@ TrialResult run_minisketch(const Options &opt, const Dataset &data) {
     result.bytes = static_cast<long long>((static_cast<long long>(cap) * opt.field_bits + 7) / 8);
     result.bits = result.bytes * 8;
 
+    auto encode_begin = clock::now();
+
     if(!minisketch_bits_supported(static_cast<uint32_t>(opt.field_bits))) {
         result.status = "unavailable";
         result.error = "field_bits not supported by linked minisketch";
@@ -222,7 +224,6 @@ TrialResult run_minisketch(const Options &opt, const Dataset &data) {
     minisketch_set_seed(alice, opt.seed);
     minisketch_set_seed(bob, opt.seed);
 
-    auto encode_begin = clock::now();
     for(uint64_t value : data.alice) minisketch_add_uint64(alice, value);
     for(uint64_t value : data.bob) minisketch_add_uint64(bob, value);
     auto encode_end = clock::now();

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a basic comparison between XYZ-v2 and local IBLT."""
+"""Run a basic comparison between XYZ-Sketch and local IBLT."""
 
 from __future__ import annotations
 
@@ -76,8 +76,7 @@ CSV_FIELDS = [
 
 DEFAULT_D_VALUES = [100, 300, 1000, 3000, 10000]
 SUPPORTED_ALGORITHMS = {
-    "xyz_v1",
-    "xyz_v2",
+    "xyz_sketch",
     "iblt",
     "iblt_cpp",
     "minisketch",
@@ -150,8 +149,7 @@ def choose_z(m_value: int, k_value: int, l_value: int, a_value: float, args: arg
 
 def build_binaries(root: Path, build_dir: Path, algorithms: set[str], skip_build: bool) -> dict[str, Path]:
     binaries = {
-        "xyz_v1": build_dir / f"xyz_v1_bench{exe_suffix()}",
-        "xyz_v2": build_dir / f"xyz_v2_bench{exe_suffix()}",
+        "xyz_sketch": build_dir / f"xyz_sketch_bench{exe_suffix()}",
         "iblt": build_dir / f"iblt_bench{exe_suffix()}",
         "iblt_cpp": build_dir / f"iblt_cpp_bench{exe_suffix()}",
         "minisketch": build_dir / f"minisketch_bench{exe_suffix()}",
@@ -166,23 +164,14 @@ def build_binaries(root: Path, build_dir: Path, algorithms: set[str], skip_build
         return binaries
 
     commands: list[list[str]] = []
-    if "xyz_v1" in algorithms:
+    if "xyz_sketch" in algorithms:
         commands.append([
             "g++",
             "-std=c++17",
             "-O2",
-            str(root / "tests" / "benchmarks" / "xyz_v1_bench.cpp"),
+            str(root / "tests" / "benchmarks" / "xyz_sketch_bench.cpp"),
             "-o",
-            str(binaries["xyz_v1"]),
-        ])
-    if "xyz_v2" in algorithms:
-        commands.append([
-            "g++",
-            "-std=c++17",
-            "-O2",
-            str(root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"),
-            "-o",
-            str(binaries["xyz_v2"]),
+            str(binaries["xyz_sketch"]),
         ])
     if "iblt" in algorithms:
         commands.append([
@@ -335,23 +324,11 @@ def make_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
     for d_index, d_value in enumerate(d_values):
         ca, cb = choose_set_sizes(d_value, args.max_set_size, args.set_size_scale)
         base_seed = args.base_seed + 1_000_000 * d_index
-        if "xyz_v1" in algorithms:
-            jobs.append(
-                {
-                    "algorithm": "xyz_v1",
-                    "variant": "basic",
-                    "d": d_value,
-                    "ca": ca,
-                    "cb": cb,
-                    "trials": args.trials,
-                    "seed": base_seed,
-                }
-            )
-        if "xyz_v2" in algorithms:
+        if "xyz_sketch" in algorithms:
             m_value = choose_xyz_m(d_value, args.xyz_l, args.xyz_k)
             jobs.append(
                 {
-                    "algorithm": "xyz_v2",
+                    "algorithm": "xyz_sketch",
                     "variant": args.xyz_mode,
                     "d": d_value,
                     "ca": ca,
@@ -467,28 +444,7 @@ def make_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
 
 
 def command_for(binary: Path, job: dict[str, Any], dataset: Path | None = None) -> list[str]:
-    if job["algorithm"] == "xyz_v1":
-        command = [
-            str(binary),
-            "--d",
-            str(job["d"]),
-            "--trials",
-            str(job["trials"]),
-            "--seed",
-            str(job["seed"]),
-            "--ca",
-            str(job["ca"]),
-            "--cb",
-            str(job["cb"]),
-            "--format",
-            "jsonl",
-        ]
-        if dataset is not None:
-            command.extend(["--dataset", str(dataset)])
-            trial_index = command.index("--trials")
-            command[trial_index + 1] = "1"
-        return command
-    if job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         command = [
             str(binary),
             "--d",
@@ -677,11 +633,9 @@ def normalize_row(row: dict[str, Any], job: dict[str, Any], record_type: str = "
     row["bits_per_difference"] = float(row["bits"]) / float(d_value)
     row["bit_C_over_d"] = float(row.get("bit_C_over_d", row.get("C_over_d"))) if "C_over_d" in row or "bit_C_over_d" in row else float(row["bits"]) / (32.0 * d_value)
 
-    if row["algorithm"] == "xyz_v2":
+    if row["algorithm"] == "xyz_sketch":
         row["variant"] = job["variant"]
         row["field_C_over_d"] = int(row["M"]) * int(row["l"]) / float(d_value)
-    if row["algorithm"] == "xyz_v1":
-        row["implementation"] = "local/XYZ-v1"
     if row["algorithm"] == "iblt":
         row["implementation"] = "local/IBLT"
     if row["algorithm"] == "iblt_cpp":
@@ -803,7 +757,7 @@ def aggregate_trials(job: dict[str, Any], trial_rows: list[dict[str, Any]], data
     first["error_trials"] = max(0, len(trial_rows) - trials)
     first["successes"] = successes
     first["success_rate"] = successes / float(trials)
-    first["status"] = "ok"
+    first["status"] = "ok" if trials == int(job["trials"]) else "incomplete"
     first["encode_avg_s"] = sum(float(row.get("encode_avg_s", 0.0)) for row in valid_rows) / trials
     first["decode_avg_s"] = sum(float(row.get("decode_avg_s", 0.0)) for row in valid_rows) / trials
     encode_values = sorted(float(row.get("encode_median_s", 0.0)) for row in valid_rows)
@@ -934,9 +888,9 @@ def write_run_config(path: Path, args: argparse.Namespace, jobs: list[dict[str, 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run a basic algorithm comparison.")
-    parser.add_argument("--algorithms", default="xyz_v2,iblt")
+    parser.add_argument("--algorithms", default="xyz_sketch,iblt")
     parser.add_argument("--d-values", default=None)
-    parser.add_argument("--trials", type=int, default=10)
+    parser.add_argument("--trials", type=int, default=100)
     parser.add_argument("--capacity-factors", default="1.5,2.0,2.5,3.0")
     parser.add_argument("--mbar-factors", default="1.0,1.2,1.5")
     parser.add_argument("--symbol-factors", default="1.35,1.5,1.8")

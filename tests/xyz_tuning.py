@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Shared XYZ-v2 tuning formulas for circular a and coupling z."""
+"""Shared XYZ-Sketch tuning formulas for circular a and coupling z."""
 
 from __future__ import annotations
 
@@ -7,6 +7,10 @@ import math
 from functools import lru_cache
 from typing import Mapping
 
+# Implementation convention: choose_a uses a = C * c_orient / c_peel.
+# The supplied July 2026 paper draft prints the reciprocal ratio; resolve that
+# manuscript/implementation mismatch before treating a new full run as final.
+#
 # Threshold constants for random k-uniform hypergraphs with edge density m/n.
 # The values below are precomputed from the formulas implemented in this file.
 # Missing tuples are computed lazily, so the table is a cache of common paper tuples
@@ -22,9 +26,9 @@ C_PEEL: dict[tuple[int, int], float] = {
     (3, 4): 2.7467258763600393,
 }
 
-DEFAULT_A_CONSTANT = 0.0
-DEFAULT_Z_CONSTANT = 1.0
-DEFAULT_DELTA = math.exp(-27.0)
+DEFAULT_A_CONSTANT = 0.27591534917087435
+DEFAULT_Z_CONSTANT = 0.5
+DEFAULT_DELTA = 0.1
 
 
 def _validate_kl(k_value: int, l_value: int) -> tuple[int, int]:

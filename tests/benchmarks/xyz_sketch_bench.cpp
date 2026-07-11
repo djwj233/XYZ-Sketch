@@ -13,7 +13,7 @@
 #include <unordered_set>
 #include <vector>
 
-#include "../../XYZ-v2/XYZSketch.cpp"
+#include "../../XYZ-Sketch/XYZSketch.cpp"
 
 using namespace std;
 
@@ -53,7 +53,7 @@ struct TrialResult {
 
 [[noreturn]] void usage_error(const string &message) {
     cerr << "error: " << message << "\n";
-    cerr << "usage: xyz_v2_bench --d D --l L --k K --z Z --trials N --seed S "
+    cerr << "usage: xyz_sketch_bench --d D --l L --k K --z Z --trials N --seed S "
             "[--m M | --m-factor F] [--mode spatial|random|circular|naive] [--ca N] [--cb N] "
             "[--circular-a A] [--dedup-hashes true|false] "
             "[--dataset PATH] "
@@ -271,9 +271,8 @@ TrialResult run_trial_on_data(const TrialData &data) {
 
     auto encode_begin = chrono::steady_clock::now();
     XYZSketch alice = Encode(data.alice);
-    auto encode_end = chrono::steady_clock::now();
-
     XYZSketch bob = Encode(data.bob);
+    auto encode_end = chrono::steady_clock::now();
     auto decode_begin = chrono::steady_clock::now();
     auto diff_res = (alice - bob).Decode();
     auto decode_end = chrono::steady_clock::now();
@@ -379,7 +378,7 @@ int main(int argc, char **argv) {
 
     cout << fixed << setprecision(9);
     cout << "{";
-    print_json_string_field("algorithm", "xyz_v2");
+    print_json_string_field("algorithm", "xyz_sketch");
     print_json_string_field("mode", opt.mode);
     print_json_int_field("d", opt.D);
     print_json_int_field("l", opt.L);

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Paper Figure 1(b) frontier wrapper for XYZ-v2."""
+"""Paper Figure 1(b) frontier wrapper for XYZ-Sketch."""
 
 from __future__ import annotations
 
@@ -100,8 +100,8 @@ def parse_args() -> tuple[argparse.Namespace, list[str]]:
     parser.add_argument("--d-values", default="100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000")
     parser.add_argument("--tuple-values", default="2:3,2:6,3:4", help="Comma-separated k:l tuples.")
     parser.add_argument("--modes", default="random,naive,circular")
-    parser.add_argument("--probe-trials", type=int, default=20)
-    parser.add_argument("--final-trials", type=int, default=50)
+    parser.add_argument("--probe-trials", type=int, default=30)
+    parser.add_argument("--final-trials", type=int, default=100)
     parser.add_argument("--target-success-rate", type=float, default=0.90)
     parser.add_argument("--threshold-policy", default="point", choices=["point", "ci-low"])
     parser.add_argument("--max-C-over-d", type=float, default=8.0, dest="max_c_over_d")

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Paper Figure 3 frontier comparison across practical baselines."""
+"""Paper Figure 2 frontier comparison across practical baselines."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ import csv
 import json
 import math
 import os
+import platform
 import shutil
 import subprocess
 import sys
@@ -22,7 +23,7 @@ from test_compare_basic import build_binaries
 from xyz_tuning import add_tuning_arguments, a_from_args, z_from_args
 
 
-SUPPORTED_ALGORITHMS = {"xyz_v1", "xyz_v2", "iblt", "minisketch", "cpisync", "riblt", "negentropy"}
+SUPPORTED_ALGORITHMS = {"xyz_sketch", "iblt", "minisketch", "cpisync", "riblt", "negentropy"}
 CURRENT_ARGS: argparse.Namespace
 
 SUMMARY_FIELDS = [
@@ -104,11 +105,11 @@ def repo_root() -> Path:
 
 
 def ensure_dirs(root: Path, output_dir: Path | None) -> dict[str, Path]:
-    base = output_dir or root / "tests" / "results" / "paper_fig3_compare_frontier"
+    base = output_dir or root / "tests" / "results" / "paper_fig2_end_to_end"
     base.mkdir(parents=True, exist_ok=True)
     build = root / "build"
     build.mkdir(parents=True, exist_ok=True)
-    tmp = root / "tests" / "tmp" / "paper_fig3_compare_frontier"
+    tmp = root / "tests" / "tmp" / "paper_fig2_end_to_end"
     tmp.mkdir(parents=True, exist_ok=True)
     return {
         "base": base,
@@ -222,9 +223,7 @@ def make_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
                 "probe_trials": args.probe_trials,
                 "final_trials": args.final_trials,
             }
-            if algorithm == "xyz_v1":
-                base.update({"variant": "basic,fixed", "parameter_name": "fixed"})
-            elif algorithm == "xyz_v2":
+            if algorithm == "xyz_sketch":
                 tuning = tuning_for_d(tuning_rows, d_value)
                 circular_a = float(tuning["a_star"]) if tuning is not None else (args.xyz_circular_a if args.xyz_circular_a is not None else a_from_args(args.xyz_k, args.xyz_l, args))
                 fixed_z = int(tuning["z_star"]) if tuning is not None else None
@@ -287,9 +286,7 @@ def make_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
 
 def lower_bound(job: dict[str, Any]) -> int:
     d_value = int(job["d"])
-    if job["algorithm"] == "xyz_v1":
-        return 1
-    if job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         return max(1, math.ceil(d_value / int(job["l"])), int(job["k"]))
     if job["algorithm"] == "negentropy":
         return 4096
@@ -298,9 +295,7 @@ def lower_bound(job: dict[str, Any]) -> int:
 
 def initial_upper(job: dict[str, Any]) -> int:
     d_value = int(job["d"])
-    if job["algorithm"] == "xyz_v1":
-        return 1
-    if job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         return max(lower_bound(job), math.ceil(1.5 * d_value / int(job["l"])))
     if job["algorithm"] == "iblt":
         return max(1, math.ceil(1.5 * d_value))
@@ -317,8 +312,6 @@ def initial_upper(job: dict[str, Any]) -> int:
 
 def fixed_parameter(job: dict[str, Any]) -> int:
     d_value = int(job["d"])
-    if job["algorithm"] == "xyz_v1":
-        return 1
     if job["algorithm"] in {"minisketch", "cpisync"}:
         return d_value
     raise ValueError(f"no fixed parameter policy for algorithm: {job['algorithm']}")
@@ -326,9 +319,7 @@ def fixed_parameter(job: dict[str, Any]) -> int:
 
 def max_parameter(job: dict[str, Any], max_factor: float) -> int:
     d_value = int(job["d"])
-    if job["algorithm"] == "xyz_v1":
-        return 1
-    if job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         return max(lower_bound(job), math.ceil(max_factor * d_value / int(job["l"])))
     if job["algorithm"] == "negentropy":
         return max(lower_bound(job), math.ceil(max_factor * 512.0 * d_value))
@@ -337,9 +328,7 @@ def max_parameter(job: dict[str, Any], max_factor: float) -> int:
 
 def parameter_to_command_fields(job: dict[str, Any], parameter: int) -> dict[str, Any]:
     d_value = int(job["d"])
-    if job["algorithm"] == "xyz_v1":
-        return {"fixed": 1}
-    if job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         z_value = int(job["fixed_z"]) if job.get("fixed_z") not in (None, "") else choose_z(job, parameter, CURRENT_ARGS)
         return {"M": parameter, "z": z_value}
     if job["algorithm"] in {"iblt", "minisketch"}:
@@ -368,9 +357,7 @@ def command_for(binary: Path, job: dict[str, Any], parameter: int, dataset: Path
         "--cb",
         str(job["cb"]),
     ]
-    if job["algorithm"] == "xyz_v1":
-        command = common
-    elif job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         command = common + [
             "--l",
             str(job["l"]),
@@ -507,7 +494,7 @@ def normalize_probe_row(row: dict[str, Any], job: dict[str, Any], parameter: int
     row.setdefault("ca", job["ca"])
     row.setdefault("cb", job["cb"])
     row["R_w30"] = r_w30(row.get("bits", 0.0), job["d"])
-    if job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         row["xyz_circular_a"] = float(job["circular_a"])
         row["xyz_z"] = int(parameter_to_command_fields(job, parameter)["z"])
         row["xyz_tuning_source"] = job.get("xyz_tuning_source", "")
@@ -531,7 +518,7 @@ def normalize_probe_row(row: dict[str, Any], job: dict[str, Any], parameter: int
     row = add_binomial_ci(row, confidence=args.ci_confidence, method=args.ci_method)
     return normalize_benchmark_row(
         row,
-        experiment="paper_fig3_compare_frontier",
+        experiment="paper_fig2_end_to_end",
         record_type="probe",
         algorithm=str(job["algorithm"]),
         variant=str(job["variant"]),
@@ -655,7 +642,7 @@ def run_candidate(
     aggregate["error_trials"] = max(0, trials - len(valid_rows))
     aggregate["successes"] = successes
     aggregate["success_rate"] = successes / float(len(valid_rows))
-    aggregate["status"] = "ok"
+    aggregate["status"] = "ok" if len(valid_rows) == trials else "incomplete"
     aggregate["encode_avg_s"] = sum(float(row.get("encode_avg_s", 0.0)) for row in valid_rows) / len(valid_rows)
     aggregate["decode_avg_s"] = sum(float(row.get("decode_avg_s", 0.0)) for row in valid_rows) / len(valid_rows)
     aggregate["encode_median_s"] = median([float(row.get("encode_median_s", 0.0)) for row in valid_rows])
@@ -693,7 +680,7 @@ def format_progress_row(row: dict[str, Any], args: argparse.Namespace) -> str:
 
 def format_job_details(job: dict[str, Any], args: argparse.Namespace) -> str:
     parts = [f"parameter={job['parameter_name']}"]
-    if job["algorithm"] == "xyz_v2":
+    if job["algorithm"] == "xyz_sketch":
         parts.extend([
             f"k={job['k']}",
             f"l={job['l']}",
@@ -738,7 +725,7 @@ def search_best_parameter(
 ) -> tuple[int | None, list[dict[str, Any]]]:
     probes: list[dict[str, Any]] = []
     fixed_algorithms = parse_algorithm_set(args.fixed_parameter_algorithms)
-    if job["algorithm"] == "xyz_v1" or job["algorithm"] in fixed_algorithms:
+    if job["algorithm"] in fixed_algorithms:
         parameter = fixed_parameter(job)
         print(f"    fixed probe {job['parameter_name']}={parameter} trials={args.probe_trials} ...", flush=True)
         row = run_candidate(binaries, job, parameter, dataset_paths, args.probe_trials, args, errors_path, deadline)
@@ -804,7 +791,7 @@ def timing_metrics(row: dict[str, Any]) -> dict[str, Any]:
     return {
         "update_denominator": update_denominator,
         "update_avg_s_per_element": encode_avg / update_denominator if update_denominator > 0 else 0.0,
-        "update_metric_policy": "encode_avg_s/(ca+cb)",
+        "update_metric_policy": "build_both_sketches_s/(ca+cb)",
         "decode_denominator": decode_denominator,
         "decode_avg_s_per_difference": decode_avg / decode_denominator if decode_denominator > 0 else 0.0,
         "decode_metric_policy": "decode_or_reconcile_avg_s/d",
@@ -882,7 +869,7 @@ def summary_from_final(job: dict[str, Any], best_parameter: int | None, final_ro
                 "status": status,
             }
         )
-        if job["algorithm"] == "xyz_v2":
+        if job["algorithm"] == "xyz_sketch":
             base.update(
                 {
                     "xyz_circular_a": float(job["circular_a"]),
@@ -937,7 +924,7 @@ def summary_from_final(job: dict[str, Any], best_parameter: int | None, final_ro
     base.update(timing_metrics(base))
     return normalize_benchmark_row(
         base,
-        experiment="paper_fig3_compare_frontier",
+        experiment="paper_fig2_end_to_end",
         record_type="threshold",
         algorithm=str(job["algorithm"]),
         variant=str(job["variant"]),
@@ -961,7 +948,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 
 def write_summary_md(path: Path, rows: list[dict[str, Any]]) -> None:
     with path.open("w", encoding="utf-8") as handle:
-        handle.write("# Figure 3 Frontier Summary\n\n")
+        handle.write("# Figure 2 End-to-End Summary\n\n")
         handle.write("| d | algorithm | variant | parameter | R_w30 | success | update/elem s | decode/diff s | status |\n")
         handle.write("| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |\n")
         for row in sorted(rows, key=lambda item: (int(item["d"]), str(item["algorithm"]), str(item["variant"]))):
@@ -973,11 +960,37 @@ def write_summary_md(path: Path, rows: list[dict[str, Any]]) -> None:
             )
 
 
+def collect_environment(root: Path) -> dict[str, Any]:
+    memory_kib = None
+    meminfo = Path("/proc/meminfo")
+    if meminfo.exists():
+        for line in meminfo.read_text(encoding="utf-8").splitlines():
+            if line.startswith("MemTotal:"):
+                memory_kib = int(line.split()[1])
+                break
+    def command_output(command: list[str]) -> str:
+        try:
+            return subprocess.run(command, cwd=root, check=True, capture_output=True, text=True).stdout.strip()
+        except (OSError, subprocess.CalledProcessError):
+            return ""
+    gxx_output = command_output(["g++", "--version"])
+    return {
+        "hostname": platform.node(),
+        "platform": platform.platform(),
+        "python": platform.python_version(),
+        "logical_cpu_count": os.cpu_count(),
+        "memory_kib": memory_kib,
+        "git_commit": command_output(["git", "rev-parse", "HEAD"]),
+        "gxx_version": gxx_output.splitlines()[0] if gxx_output else "",
+    }
+
+
 def write_run_config(path: Path, args: argparse.Namespace, jobs: list[dict[str, Any]]) -> None:
     with path.open("w", encoding="utf-8") as handle:
         json.dump(
             {
                 "args": {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+                "environment": collect_environment(repo_root()),
                 "jobs": jobs,
                 "supported_algorithms": sorted(SUPPORTED_ALGORITHMS),
             },
@@ -989,16 +1002,16 @@ def write_run_config(path: Path, args: argparse.Namespace, jobs: list[dict[str, 
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run Figure 3 per-algorithm communication frontier searches.")
+    parser = argparse.ArgumentParser(description="Run Figure 2 per-algorithm communication frontier searches.")
     parser.add_argument("--d-values", default="100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000")
-    parser.add_argument("--algorithms", default="xyz_v2,iblt,minisketch")
-    parser.add_argument("--probe-trials", type=int, default=5)
-    parser.add_argument("--final-trials", type=int, default=10)
+    parser.add_argument("--algorithms", default="xyz_sketch,iblt,minisketch,riblt,cpisync")
+    parser.add_argument("--probe-trials", type=int, default=30)
+    parser.add_argument("--final-trials", type=int, default=100)
     parser.add_argument("--target-success-rate", type=float, default=0.90)
     parser.add_argument("--threshold-policy", default="point", choices=["point", "ci-low"])
     parser.add_argument(
         "--fixed-parameter-algorithms",
-        default="",
+        default="minisketch,cpisync",
         help="Comma-separated algorithms to evaluate at their deterministic parameter d instead of binary searching. Currently intended for minisketch,cpisync.",
     )
     parser.add_argument("--max-parameter-factor", type=float, default=8.0)
@@ -1006,15 +1019,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--final-retry-growth", type=float, default=1.05)
     parser.add_argument("--final-retry-limit", type=int, default=0)
     parser.add_argument("--final-retry-min-success-rate", type=float, default=0.75)
-    parser.add_argument("--job-timeout-s", type=float, default=1800.0, help="Per (algorithm,d) job timeout in seconds. Use 0 to disable.")
+    parser.add_argument("--job-timeout-s", type=float, default=0.0, help="Per (algorithm,d) job timeout in seconds. Use 0 to disable.")
     parser.add_argument("--ci-confidence", type=float, default=0.95, choices=[0.90, 0.95, 0.99])
     parser.add_argument("--ci-method", default="wilson", choices=["wilson"])
     parser.add_argument("--xyz-l", type=int, default=6)
     parser.add_argument("--xyz-k", type=int, default=2)
     parser.add_argument("--xyz-circular-a", type=float, default=None, help="Override XYZ circular a. By default use a_{k,l}=C*c_orient/c_peel.")
-    parser.add_argument("--xyz-final-m-offset", type=int, default=0, help="Add this offset to the searched XYZ-v2 M before final validation.")
+    parser.add_argument("--xyz-final-m-offset", type=int, default=0, help="Add this offset to the searched XYZ-Sketch M before final validation.")
     add_tuning_arguments(parser)
-    parser.set_defaults(a_constant=1.0 / 3.0, z_constant=4.0 / 3.0)
+    parser.set_defaults(a_constant=0.27591534917087435, z_constant=0.5, delta=0.1)
     parser.add_argument("--xyz-tuning", type=Path, default=None, help="Optional Figure 2 tuning summary. If omitted, use heuristic a,z formulas.")
     parser.add_argument("--minisketch-field-bits", type=int, default=30)
     parser.add_argument("--cpisync-bits", type=int, default=30)
@@ -1055,9 +1068,9 @@ def main() -> None:
     if not (0.0 <= args.final_retry_min_success_rate <= 1.0):
         raise SystemExit("--final-retry-min-success-rate must be in [0, 1]")
     retry_algorithms = parse_algorithm_set(args.final_retry_algorithms)
-    unsupported_retry = retry_algorithms - {"xyz_v2", "iblt", "riblt"}
+    unsupported_retry = retry_algorithms - {"xyz_sketch", "iblt", "riblt"}
     if unsupported_retry:
-        raise SystemExit("--final-retry-algorithms currently supports only xyz_v2,iblt,riblt")
+        raise SystemExit("--final-retry-algorithms currently supports only xyz_sketch,iblt,riblt")
     fixed_algorithms = parse_algorithm_set(args.fixed_parameter_algorithms)
     unsupported_fixed = fixed_algorithms - {"minisketch", "cpisync"}
     if unsupported_fixed:
@@ -1127,7 +1140,7 @@ def main() -> None:
         final_parameter_offset = 0
         final_retry_count = 0
         if best_parameter is not None:
-            if job["algorithm"] == "xyz_v2" and args.xyz_final_m_offset > 0:
+            if job["algorithm"] == "xyz_sketch" and args.xyz_final_m_offset > 0:
                 final_parameter_offset = args.xyz_final_m_offset
                 final_parameter = best_parameter + args.xyz_final_m_offset
                 print(

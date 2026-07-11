@@ -113,6 +113,26 @@ def verify_row(row: dict[str, Any], *, strict: bool, allow_legacy: bool) -> list
         errors.append("successes must not exceed trials")
     if success_rate is not None and not (0.0 <= success_rate <= 1.0):
         errors.append("success_rate must be in [0, 1]")
+    if trials is not None and trials > 0 and successes is not None and success_rate is not None:
+        expected_success_rate = successes / float(trials)
+        if abs(success_rate - expected_success_rate) > 1e-9:
+            errors.append("success_rate does not match successes/trials")
+
+    attempted_trials = _int(row.get("attempted_trials"))
+    completed_trials = _int(row.get("completed_trials"))
+    error_trials = _int(row.get("error_trials"))
+    if attempted_trials is not None and completed_trials is not None:
+        if completed_trials > attempted_trials:
+            errors.append("completed_trials must not exceed attempted_trials")
+        if error_trials is not None and completed_trials + error_trials != attempted_trials:
+            errors.append("completed_trials + error_trials must equal attempted_trials")
+        if row.get("status") == "ok" and completed_trials != attempted_trials:
+            errors.append("status ok requires all attempted trials to complete")
+
+    final_trials = _int(row.get("final_trials"))
+    if row.get("record_type") == "threshold" and row.get("status") == "ok" and final_trials is not None:
+        if trials != final_trials:
+            errors.append("successful threshold row must complete final_trials")
 
     d_value = _float(row.get("d"))
     bits = _float(row.get("bits"))

@@ -1,0 +1,11 @@
+{
+  "corrected_algorithms": [
+    "xyz_v2",
+    "iblt"
+  ],
+  "note": "Other algorithms retain prior measurements because their benchmarks already time both sides.",
+  "repeats": 3,
+  "source": "tests/results/figure3_current_retry_fixed.jsonl",
+  "statistic": "median",
+  "timing_scope": "both Alice and Bob"
+}

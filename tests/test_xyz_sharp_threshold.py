@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scan XYZ-v2 sharp-threshold curves for uniform and spatial modes."""
+"""Scan XYZ-Sketch sharp-threshold curves for uniform and spatial modes."""
 
 from __future__ import annotations
 
@@ -149,12 +149,12 @@ def ensure_dirs(root: Path, output_dir: Path | None) -> dict[str, Path]:
 
 
 def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
-    binary = build_dir / f"xyz_v2_bench{exe_suffix()}"
+    binary = build_dir / f"xyz_sketch_bench{exe_suffix()}"
     if skip_build:
         if not binary.exists():
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
-    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_sketch_bench.cpp"
     subprocess.run(["g++", "-std=c++17", "-O2", str(source), "-o", str(binary)], cwd=root, check=True)
     return binary
 
@@ -438,9 +438,9 @@ def run_point(
         row,
         experiment="xyz_sharp_threshold",
         record_type="aggregate",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="internal_generator",
     )
 
@@ -596,9 +596,9 @@ def summarize_group(config: dict[str, Any], rows: list[dict[str, Any]], m0: int,
         row,
         experiment="xyz_sharp_threshold",
         record_type="aggregate",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=variant_name(config),
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="internal_generator",
         status=status,
     )
@@ -643,7 +643,7 @@ def write_run_config(path: Path, args: argparse.Namespace, configs: list[dict[st
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run XYZ-v2 uniform-vs-SC sharp-threshold scans.")
+    parser = argparse.ArgumentParser(description="Run XYZ-Sketch uniform-vs-SC sharp-threshold scans.")
     parser.add_argument("--d-values", default="1000,3000,10000")
     parser.add_argument("--l-values", default="6")
     parser.add_argument("--k-values", default="2,3")
@@ -714,10 +714,10 @@ def main() -> None:
     )
 
     if not args.dry_run and not args.skip_build:
-        log_progress(args, "[setup] building xyz_v2_bench")
+        log_progress(args, "[setup] building xyz_sketch_bench")
     else:
         log_progress(args, "[setup] using existing/skipped benchmark build")
-    binary = build_benchmark(root, dirs["build"], args.skip_build) if not args.dry_run else dirs["build"] / f"xyz_v2_bench{exe_suffix()}"
+    binary = build_benchmark(root, dirs["build"], args.skip_build) if not args.dry_run else dirs["build"] / f"xyz_sketch_bench{exe_suffix()}"
     if dirs["errors"].exists():
         dirs["errors"].unlink()
 

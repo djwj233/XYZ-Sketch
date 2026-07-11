@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run XYZ-v2 z sensitivity experiments with fixed M."""
+"""Run XYZ-Sketch z sensitivity experiments with fixed M."""
 
 from __future__ import annotations
 
@@ -75,13 +75,13 @@ def exe_suffix() -> str:
 
 
 def build_benchmark(root: Path, build_dir: Path, skip_build: bool) -> Path:
-    binary = build_dir / f"xyz_v2_bench{exe_suffix()}"
+    binary = build_dir / f"xyz_sketch_bench{exe_suffix()}"
     if skip_build:
         if not binary.exists():
             raise FileNotFoundError(f"benchmark binary not found: {binary}")
         return binary
 
-    source = root / "tests" / "benchmarks" / "xyz_v2_bench.cpp"
+    source = root / "tests" / "benchmarks" / "xyz_sketch_bench.cpp"
     command = ["g++", "-std=c++17", "-O2", str(source), "-o", str(binary)]
     subprocess.run(command, cwd=root, check=True)
     return binary
@@ -198,9 +198,9 @@ def run_one(
         row,
         experiment="z_sensitivity",
         record_type="aggregate",
-        algorithm="xyz_v2",
+        algorithm="xyz_sketch",
         variant=args.mode,
-        implementation="local/XYZ-v2",
+        implementation="local/XYZ-Sketch",
         dataset_mode="internal_generator",
     )
 
@@ -239,14 +239,14 @@ def write_summary(path: Path, rows: list[dict[str, Any]], planned: int) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run XYZ-v2 z sensitivity experiments.")
+    parser = argparse.ArgumentParser(description="Run XYZ-Sketch z sensitivity experiments.")
     parser.add_argument("--d-values", default=None, help="Comma-separated d values.")
     parser.add_argument("--l-values", default=None, help="Comma-separated l values.")
     parser.add_argument("--k-values", default=None, help="Comma-separated k values.")
     parser.add_argument("--m-values", default=None, help="Comma-separated exact M values.")
     parser.add_argument("--z-values", default=None, help="Comma-separated z values.")
     parser.add_argument("--mode", default="spatial", choices=["spatial", "random", "circular", "naive"])
-    parser.add_argument("--trials", type=int, default=30)
+    parser.add_argument("--trials", type=int, default=100)
     parser.add_argument("--min-range-length", type=int, default=None)
     parser.add_argument("--skip-build", action="store_true")
     parser.add_argument("--dry-run", action="store_true")

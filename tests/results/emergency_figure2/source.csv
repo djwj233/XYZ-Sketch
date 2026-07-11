@@ -1,0 +1,24 @@
+algorithm,d,ca,cb,raw_encode_s,encode_correction_factor,encode_avg_s,decode_avg_s,bits,best_R_w30,update_avg_s_per_element,decode_avg_s_per_difference,status,final_success_rate,timing_note
+xyz_v2,10,10000000,10000000,2.271,2,4.542,0.001,980,3.266666666667,2.271e-7,1e-4,ok,0.9,estimated: old Alice-only encode doubled
+xyz_v2,100,10000000,10000000,2.286,2,4.572,0.005,5292,1.764,2.286e-7,5e-5,ok,0.9,estimated: old Alice-only encode doubled
+xyz_v2,1000,10000000,10000000,2.278,2,4.556,0.050,42532,1.417733333333,2.278e-7,5e-5,ok,0.9,estimated: old Alice-only encode doubled
+xyz_v2,10000,10000000,10000000,2.321,2,4.642,0.673,375732,1.25244,2.321e-7,6.73e-5,ok,0.9,estimated: old Alice-only encode doubled
+xyz_v2,100000,10000000,10000000,2.556,2,5.112,8.202,3534664,1.178221333333,2.556e-7,8.202e-5,ok,0.9,estimated: old Alice-only encode doubled
+xyz_v2,1000000,10000000,10000000,2.966,2,5.932,81.078,34136732,1.137891066667,2.966e-7,8.1078e-5,ok,0.9,estimated: old Alice-only encode doubled
+PolyFast,10,10000000,10000000,3.242,1,3.242,0.000,325,1.083333333333,1.621e-7,0,ok,0.9,reported total encode time
+PolyFast,100,10000000,10000000,5.026,1,5.026,0.008,3208,1.069333333333,2.513e-7,8e-5,ok,0.9,reported total encode time
+PolyFast,1000,10000000,10000000,6.681,1,6.681,0.166,32011,1.067033333333,3.3405e-7,1.66e-4,ok,0.9,reported total encode time
+PolyFast,10000,10000000,10000000,12.578,1,12.578,3.258,320015,1.066716666667,6.289e-7,3.258e-4,ok,0.9,reported total encode time
+PolyFast,100000,10000000,10000000,14.504,1,14.504,41.748,3200018,1.066672666667,7.252e-7,4.1748e-4,ok,0.9,reported total encode time
+PolyFast,1000000,10000000,10000000,15.558,1,15.558,544.592,32000021,1.066667366667,7.779e-7,5.44592e-4,ok,0.9,reported total encode time
+minisketch,10,10000000,10000000,0.613,1,0.613,0.000,320,1.066666666667,3.065e-8,0,ok,0.9,reported total encode time
+minisketch,100,10000000,10000000,3.486,1,3.486,0.002,3200,1.066666666667,1.743e-7,2e-5,ok,0.9,reported total encode time
+minisketch,1000,10000000,10000000,35.590,1,35.590,0.095,32000,1.066666666667,1.7795e-6,9.5e-5,ok,0.9,reported total encode time
+minisketch,10000,10000000,10000000,327.368,1,327.368,9.381,320000,1.066666666667,1.63684e-5,9.381e-4,ok,0.9,reported total encode time
+minisketch,100000,10000000,10000000,3314.062,1,3314.062,830.491,3200000,1.066666666667,1.657031e-4,8.30491e-3,ok,0.9,reported total encode time
+iblt,10,10000000,10000000,2.116,2,4.232,0.000,480,1.6,2.116e-7,0,ok,0.9,estimated: old Alice-only encode doubled
+iblt,100,10000000,10000000,2.130,2,4.260,0.000,2400,0.8,2.13e-7,0,ok,0.9,estimated: old Alice-only encode doubled
+iblt,1000,10000000,10000000,2.029,2,4.058,0.000,18000,0.6,2.029e-7,0,ok,0.9,estimated: old Alice-only encode doubled
+iblt,10000,10000000,10000000,2.032,2,4.064,0.001,147600,0.492,2.032e-7,1e-7,ok,0.9,estimated: old Alice-only encode doubled
+iblt,100000,10000000,10000000,2.091,2,4.182,0.015,1476000,0.492,2.091e-7,1.5e-7,ok,0.9,estimated: old Alice-only encode doubled
+iblt,1000000,10000000,10000000,2.504,2,5.008,0.208,14760000,0.492,2.504e-7,2.08e-7,ok,0.9,estimated: old Alice-only encode doubled
