@@ -46,6 +46,7 @@ struct TrialData {
 
 struct TrialResult {
     bool success = false;
+    double encode_s = 0.0;
     double reconcile_s = 0.0;
     long long bytes = 0;
 };
@@ -249,7 +250,7 @@ void print_unavailable(const Options &opt, int mbar, const string &reason) {
 TrialResult run_trial_on_data(const Options &opt, const TrialData &data, int mbar) {
     using NTL::ZZ;
 
-    auto start = chrono::steady_clock::now();
+    auto encode_start = chrono::steady_clock::now();
     GenSync alice = GenSync::Builder()
                         .setProtocol(GenSync::SyncProtocol::CPISync)
                         .setComm(GenSync::SyncComm::socket)
@@ -273,15 +274,18 @@ TrialResult run_trial_on_data(const Options &opt, const TrialData &data, int mba
     for(uint32_t value : data.bob) {
         bob.addElem(new DataObject(ZZ(static_cast<long>(value))));
     }
+    auto encode_finish = chrono::steady_clock::now();
 
+    auto reconcile_start = chrono::steady_clock::now();
     forkHandleReport report = forkHandle(alice, bob, false);
-    auto finish = chrono::steady_clock::now();
+    auto reconcile_finish = chrono::steady_clock::now();
 
     TrialResult result;
     result.success = report.success;
+    result.encode_s = chrono::duration<double>(encode_finish - encode_start).count();
     result.reconcile_s = report.totalTime >= 0.0
                              ? report.totalTime
-                             : chrono::duration<double>(finish - start).count();
+                             : chrono::duration<double>(reconcile_finish - reconcile_start).count();
     long long recv_bytes = report.bytesRTot > 0 ? report.bytesRTot : 0;
     long long xmit_bytes = report.bytesXTot > 0 ? report.bytesXTot : 0;
     result.bytes = recv_bytes + xmit_bytes;
@@ -303,11 +307,13 @@ int main(int argc, char **argv) {
     print_unavailable(opt, mbar, "cpisync_bench was built without ENABLE_REAL_CPISYNC");
     return 0;
 #else
+    vector<double> encode_times;
     vector<double> reconcile_times;
     vector<long long> byte_values;
     int successes = 0;
     for(int t = 0; t < opt.trials; t++) {
         TrialResult result = run_trial_on_data(opt, data, mbar);
+        encode_times.push_back(result.encode_s);
         reconcile_times.push_back(result.reconcile_s);
         byte_values.push_back(result.bytes);
         if(result.success) successes++;
@@ -327,9 +333,9 @@ int main(int argc, char **argv) {
     print_json_int_field("trials", opt.trials);
     print_json_int_field("successes", successes);
     print_json_number_field("success_rate", success_rate);
-    print_json_number_field("encode_avg_s", 0.0);
+    print_json_number_field("encode_avg_s", average(encode_times));
     print_json_number_field("decode_avg_s", average(reconcile_times));
-    print_json_number_field("encode_median_s", 0.0);
+    print_json_number_field("encode_median_s", median(encode_times));
     print_json_number_field("decode_median_s", median(reconcile_times));
     print_json_number_field("reconcile_avg_s", average(reconcile_times));
     print_json_number_field("reconcile_median_s", median(reconcile_times));

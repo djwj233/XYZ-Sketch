@@ -47,6 +47,7 @@ type resultRow struct {
 	SymbolsSent        int     `json:"symbols_sent"`
 	MaxSymbols         int     `json:"max_symbols"`
 	SymbolBits         int     `json:"symbol_bits"`
+	CodedSymbolBits    int     `json:"coded_symbol_bits"`
 	FieldBits          int     `json:"field_bits"`
 	CommunicationModel string  `json:"communication_model"`
 	Seed               uint    `json:"seed"`
@@ -222,6 +223,8 @@ func main() {
 	if !success {
 		status = "failed_decode"
 	}
+	codedSymbolBits := *symbolBits + 64 + 64
+	transmittedBits := symbolsSent * codedSymbolBits
 
 	row := resultRow{
 		Algorithm:          "riblt",
@@ -235,12 +238,13 @@ func main() {
 		DecodeAvgS:         decodeS,
 		EncodeMedianS:      encodeS,
 		DecodeMedianS:      decodeS,
-		Bits:               symbolsSent * *symbolBits,
-		COverD:             float64(symbolsSent**symbolBits) / (32.0 * float64(*d)),
+		Bits:               transmittedBits,
+		COverD:             float64(transmittedBits) / (32.0 * float64(*d)),
 		SymbolFactor:       *symbolFactor,
 		SymbolsSent:        symbolsSent,
 		MaxSymbols:         maxSymbols,
 		SymbolBits:         *symbolBits,
+		CodedSymbolBits:    codedSymbolBits,
 		FieldBits:          *fieldBits,
 		CommunicationModel: "rateless",
 		Seed:               *seed,

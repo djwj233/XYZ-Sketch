@@ -2,7 +2,7 @@
 
 This document plans the paper-facing Figure 3 experiments.
 
-Figure 3 compares the tuned XYZ-Sketch against practical set-reconciliation baselines. It should use the tuned `(a,z)` policy from Figure 2 and report communication, update cost, and decode cost under the same shared workloads.
+Figure 3 compares XYZ-Sketch with `(a,z)` computed from heuristic formulas against practical set-reconciliation baselines. It reports communication, update cost, and decode cost under the same shared workloads. The tuned `(a,z)` policy from Figure 2 remains available as an optional `--xyz-tuning` input for future runs.
 
 ## Shared Setup
 
@@ -31,7 +31,7 @@ algorithm = xyz_v2
 k = 2
 l = 6
 mode = circular
-a,z = tuned from Figure 2
+a,z = heuristic formulas with C=1/3, D=4/3
 ```
 
 If Figure 2 has not produced stable tuning yet, use a documented fallback:
@@ -105,14 +105,14 @@ Current capabilities:
 Resolved in this implementation:
 
 - `tests/test_compare_frontier.py` performs per-algorithm frontier search for the primary algorithms.
-- The first supported algorithms are `xyz_v2`, `iblt`, and `minisketch`.
+- The supported algorithms are `xyz_v1`, `xyz_v2`, `iblt`, `minisketch`, `cpisync`, `riblt`, and `negentropy`.
 - The script uses shared paired datasets and writes `benchmark.v1` probes/summaries.
 - It derives `best_R_w30`, `update_avg_s_per_element`, and `decode_avg_s_per_difference`.
-- It can consume Figure 2 tuning through `--xyz-tuning`.
+- By default it computes `a,z` from formulas. It can still consume Figure 2 tuning through `--xyz-tuning` when requested.
 
 Remaining gap:
 
-- Optional baselines `xyz_v1`, `iblt_cpp`, `cpisync`, `riblt`, and `negentropy` are not yet implemented in `test_compare_frontier.py`.
+- `xyz_v1` and `riblt` are implemented in `test_compare_frontier.py`; `xyz_v1` is fixed-parameter because the current wrapper exposes no capacity knob, while `riblt` searches `max_symbols`. `iblt_cpp` can smoke-run through `test_compare_basic.py` but is not yet implemented in `test_compare_frontier.py`.
 - Dependency-free SVG plotting is implemented in `tests/plot_figure3.py`. PNG/PDF export still needs a matplotlib backend or an SVG conversion step.
 
 ## Figure 3(a): Communication Frontier
@@ -154,6 +154,53 @@ Responsibilities:
 6. Derive `R_w30 = bits / (30*d)`.
 7. Record threshold uncertainty fields.
 
+### Bounded Final Retry
+
+The frontier runner now supports an optional repair step for near-miss final
+validations. The idea is to keep the current binary search cheap, but avoid
+leaving many points unresolved only because the selected parameter was slightly
+too aggressive.
+
+Policy:
+
+```text
+1. Run the normal search and obtain search_parameter.
+2. Run final validation on held-out final datasets.
+3. If final_success_rate >= target_success_rate, accept the point.
+4. If final_success_rate is below final_retry_min_success_rate, keep unresolved.
+5. Otherwise multiply the searched parameter by final_retry_growth and rerun
+   final validation, up to final_retry_limit times.
+```
+
+Recommended smoke-run settings:
+
+```bash
+--final-retry-algorithms xyz_v2,iblt,riblt
+--final-retry-growth 1.05
+--final-retry-limit 4
+--final-retry-min-success-rate 0.75
+```
+
+This gives at most four extra final validations per near-miss point and raises
+the final parameter to at most about `1.05^4 = 1.216` times the binary-search
+candidate. It should be used for `xyz_v2`, `iblt`, and `riblt`, but not for
+fixed-parameter baselines such as `minisketch` and `cpisync`.
+
+The summary records both the original search result and the accepted final
+parameter:
+
+```text
+search_parameter
+best_parameter
+final_retry_count
+final_parameter_offset
+final_parameter_multiplier
+```
+
+This is a pragmatic smoke-run repair. The paper-quality estimator should still
+be a capacity grid with isotonic success-rate fitting and bootstrap confidence
+intervals.
+
 Recommended search parameters:
 
 ```text
@@ -161,7 +208,7 @@ xyz_v2:
   search M
   fixed k = 2, l = 6
   fixed mode = circular
-  use tuned a,z policy
+  use heuristic a,z policy by default
 
 iblt:
   search capacity_factor or cells
@@ -221,6 +268,10 @@ variant
 d
 best_parameter
 best_parameter_name
+search_parameter
+final_retry_count
+final_parameter_offset
+final_parameter_multiplier
 best_R_w30
 best_bits
 target_success_rate
@@ -315,7 +366,7 @@ Smoke:
 
 ```text
 d in {100, 300}
-algorithms = xyz_v2, iblt, minisketch
+algorithms = xyz_v1, xyz_v2, iblt, minisketch, cpisync, riblt, negentropy
 probe_trials = 5
 final_trials = 10
 target_success_rate = 0.9
@@ -325,7 +376,7 @@ Paper:
 
 ```text
 d in {100, 300, 1000, 3000, 10000}
-algorithms = xyz_v2, iblt, minisketch
+algorithms = xyz_v1, xyz_v2, iblt, minisketch, cpisync, riblt, negentropy
 probe_trials >= 30
 final_trials >= 100
 target_success_rate = 0.9
@@ -335,9 +386,7 @@ confidence_interval = 95%
 If runtime allows:
 
 ```text
-add xyz_v1, iblt_cpp, cpisync
-add riblt if Go is available
-add negentropy if OpenSSL build is available
+add iblt_cpp to frontier search
 ```
 
 ## Tuning Input from Figure 2
@@ -345,7 +394,8 @@ add negentropy if OpenSSL build is available
 `test_compare_frontier.py` should accept:
 
 ```text
---xyz-tuning tests/results/paper_fig2_z_star/summary.jsonl
+--a-constant 0.3333333333
+--z-constant 1.3333333333
 ```
 
 Policy:
@@ -444,11 +494,13 @@ Smoke:
 ```powershell
 python tests\test_compare_frontier.py `
   --d-values 100,300 `
-  --algorithms xyz_v2,iblt,minisketch `
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy `
   --probe-trials 5 `
   --final-trials 10 `
   --target-success-rate 0.9 `
-  --xyz-tuning tests\results\paper_fig2_z_star\summary.jsonl `
+  --job-timeout-s 1800 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig3_compare_frontier_smoke
 ```
 
@@ -456,25 +508,29 @@ Paper:
 
 ```powershell
 python tests\test_compare_frontier.py `
-  --d-values 100,300,1000,3000,10000 `
-  --algorithms xyz_v2,iblt,minisketch `
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 `
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy `
   --probe-trials 30 `
   --final-trials 100 `
   --target-success-rate 0.9 `
-  --xyz-tuning tests\results\paper_fig2_z_star\summary.jsonl `
+  --job-timeout-s 1800 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig3_compare_frontier
 ```
 
-Optional extended baselines:
+Currently supported extended baseline run:
 
 ```powershell
 python tests\test_compare_frontier.py `
-  --d-values 100,300,1000,3000,10000 `
-  --algorithms xyz_v2,iblt,minisketch,xyz_v1,iblt_cpp,cpisync,riblt,negentropy `
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 `
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy `
   --probe-trials 30 `
   --final-trials 100 `
   --target-success-rate 0.9 `
-  --xyz-tuning tests\results\paper_fig2_z_star\summary.jsonl `
+  --job-timeout-s 1800 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig3_compare_frontier_extended
 ```
 
@@ -482,8 +538,8 @@ python tests\test_compare_frontier.py `
 
 ```text
 Figure 3(a): primary data generation implemented
-  tests/test_compare_frontier.py runs per-algorithm threshold/frontier search for xyz_v2, iblt, and minisketch.
-  Optional baselines remain open.
+  tests/test_compare_frontier.py runs per-algorithm threshold/frontier search for xyz_v1, xyz_v2, iblt, minisketch, cpisync, riblt, and negentropy.
+  xyz_v1, cpisync, riblt, and negentropy are connected; iblt_cpp remains open.
 
 Figure 3(b): primary data generation implemented
   tests/test_compare_frontier.py derives update_avg_s_per_element.

@@ -2,7 +2,7 @@
 
 本文档规划论文 Figure 3 的实验 pipeline。
 
-Figure 3 用调参后的 XYZ-Sketch 与实用 set-reconciliation baselines 进行对比。它应使用 Figure 2 输出的 tuned `(a,z)` 策略，并在同一批 shared workloads 上报告通信量、update cost 和 decode cost。
+Figure 3 用按启发式公式计算 `(a,z)` 的 XYZ-Sketch 与实用 set-reconciliation baselines 进行对比，并在同一批 shared workloads 上报告通信量、update cost 和 decode cost。Figure 2 输出的 tuned `(a,z)` 策略作为可选输入保留，后续可以通过 `--xyz-tuning` 切回。
 
 ## 共享实验设置
 
@@ -31,7 +31,7 @@ algorithm = xyz_v2
 k = 2
 l = 6
 mode = circular
-a,z = tuned from Figure 2
+a,z = heuristic formulas with C=1/3, D=4/3
 ```
 
 如果 Figure 2 暂时还没有稳定调参结果，使用有记录的 fallback：
@@ -105,14 +105,14 @@ tests/benchmarks/negentropy_bench.cpp
 本次实现已经解决：
 
 - `tests/test_compare_frontier.py` 已能对主要算法做 per-algorithm frontier search。
-- 第一版支持 `xyz_v2`、`iblt` 和 `minisketch`。
+- frontier 脚本现在支持 `xyz_v1`、`xyz_v2`、`iblt`、`minisketch`、`cpisync`、`riblt` 和 `negentropy`。
 - 脚本使用 shared paired datasets，并写出 `benchmark.v1` probes/summaries。
 - 脚本会派生 `best_R_w30`、`update_avg_s_per_element` 和 `decode_avg_s_per_difference`。
-- 脚本可以通过 `--xyz-tuning` 消费 Figure 2 的调参结果。
+- 默认不传 `--xyz-tuning`，脚本按公式计算 `a,z`；需要时仍可通过 `--xyz-tuning` 消费 Figure 2 的调参结果。
 
 剩余缺口：
 
-- optional baselines `xyz_v1`、`iblt_cpp`、`cpisync`、`riblt` 和 `negentropy` 尚未接入 `test_compare_frontier.py`。
+- `xyz_v1` 和 `riblt` 已接入 `test_compare_frontier.py`；`xyz_v1` 当前 wrapper 没有容量参数，因此作为固定参数 baseline；`riblt` 使用 `max_symbols` 搜索。`iblt_cpp` 已能通过 `test_compare_basic.py` smoke run，但尚未接入 frontier search。
 - 已实现无依赖 SVG 绘图脚本 `tests/plot_figure3.py`。PNG/PDF 导出仍需要 matplotlib 后端或 SVG 转换步骤。
 
 ## Figure 3(a): Communication Frontier
@@ -154,6 +154,48 @@ tests/test_compare_frontier.py
 6. 派生 `R_w30 = bits / (30*d)`。
 7. 记录 threshold uncertainty 字段。
 
+### 有限 final retry
+
+frontier runner 现在支持一个可选的 near-miss 修补步骤。目标是在保留当前二分搜索低开销
+的同时，避免很多点只是因为参数略激进就停留在 unresolved。
+
+策略：
+
+```text
+1. 正常搜索，得到 search_parameter。
+2. 在 held-out final datasets 上做 final validation。
+3. 如果 final_success_rate >= target_success_rate，接受该点。
+4. 如果 final_success_rate 低于 final_retry_min_success_rate，保持 unresolved。
+5. 否则把搜索得到的参数乘以 final_retry_growth，并重新做 final validation，最多
+   重复 final_retry_limit 次。
+```
+
+推荐 smoke-run 设置：
+
+```bash
+--final-retry-algorithms xyz_v2,iblt,riblt
+--final-retry-growth 1.05
+--final-retry-limit 4
+--final-retry-min-success-rate 0.75
+```
+
+这样每个 near-miss 点最多多跑四次 final validation，最终参数最多约为二分候选点的
+`1.05^4 = 1.216` 倍。该策略适合 `xyz_v2`、`iblt` 和 `riblt`，不适合
+`minisketch`、`cpisync` 这类固定参数 baseline。
+
+summary 同时记录原始搜索结果和最终接受参数：
+
+```text
+search_parameter
+best_parameter
+final_retry_count
+final_parameter_offset
+final_parameter_multiplier
+```
+
+这是一个实用的 smoke-run 修补策略。论文质量的 estimator 仍应使用 capacity grid、
+isotonic success-rate fitting 和 bootstrap confidence intervals。
+
 推荐搜索参数：
 
 ```text
@@ -161,7 +203,7 @@ xyz_v2:
   search M
   fixed k = 2, l = 6
   fixed mode = circular
-  use tuned a,z policy
+  use heuristic a,z policy by default
 
 iblt:
   search capacity_factor or cells
@@ -187,10 +229,10 @@ negentropy:
 第一版已经支持：
 
 ```text
-xyz_v2, iblt, minisketch
+xyz_v1, xyz_v2, iblt, minisketch, cpisync, riblt, negentropy
 ```
 
-后续再逐步加入 optional baselines。
+`cpisync` 使用 `mbar` 做 frontier 参数搜索；`negentropy` 使用 `frame_size_limit` 做 interactive frame-budget 搜索，图中纵轴仍使用实际总通信量。
 
 ### 输出目录
 
@@ -221,6 +263,10 @@ variant
 d
 best_parameter
 best_parameter_name
+search_parameter
+final_retry_count
+final_parameter_offset
+final_parameter_multiplier
 best_R_w30
 best_bits
 target_success_rate
@@ -315,7 +361,7 @@ Smoke：
 
 ```text
 d in {100, 300}
-algorithms = xyz_v2, iblt, minisketch
+algorithms = xyz_v1, xyz_v2, iblt, minisketch, cpisync, riblt, negentropy
 probe_trials = 5
 final_trials = 10
 target_success_rate = 0.9
@@ -325,7 +371,7 @@ target_success_rate = 0.9
 
 ```text
 d in {100, 300, 1000, 3000, 10000}
-algorithms = xyz_v2, iblt, minisketch
+algorithms = xyz_v1, xyz_v2, iblt, minisketch, cpisync, riblt, negentropy
 probe_trials >= 30
 final_trials >= 100
 target_success_rate = 0.9
@@ -335,9 +381,7 @@ confidence_interval = 95%
 如果运行时间允许：
 
 ```text
-add xyz_v1, iblt_cpp, cpisync
-add riblt if Go is available
-add negentropy if OpenSSL build is available
+add iblt_cpp to frontier search
 ```
 
 ## 从 Figure 2 读取调参
@@ -345,7 +389,8 @@ add negentropy if OpenSSL build is available
 `test_compare_frontier.py` 应接受：
 
 ```text
---xyz-tuning tests/results/paper_fig2_z_star/summary.jsonl
+--a-constant 0.3333333333
+--z-constant 1.3333333333
 ```
 
 策略：
@@ -444,11 +489,13 @@ Smoke：
 ```powershell
 python tests\test_compare_frontier.py `
   --d-values 100,300 `
-  --algorithms xyz_v2,iblt,minisketch `
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy `
   --probe-trials 5 `
   --final-trials 10 `
   --target-success-rate 0.9 `
-  --xyz-tuning tests\results\paper_fig2_z_star\summary.jsonl `
+  --job-timeout-s 1800 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig3_compare_frontier_smoke
 ```
 
@@ -456,25 +503,29 @@ python tests\test_compare_frontier.py `
 
 ```powershell
 python tests\test_compare_frontier.py `
-  --d-values 100,300,1000,3000,10000 `
-  --algorithms xyz_v2,iblt,minisketch `
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 `
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy `
   --probe-trials 30 `
   --final-trials 100 `
   --target-success-rate 0.9 `
-  --xyz-tuning tests\results\paper_fig2_z_star\summary.jsonl `
+  --job-timeout-s 1800 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig3_compare_frontier
 ```
 
-可选扩展 baseline：
+当前已支持的扩展 baseline 运行：
 
 ```powershell
 python tests\test_compare_frontier.py `
-  --d-values 100,300,1000,3000,10000 `
-  --algorithms xyz_v2,iblt,minisketch,xyz_v1,iblt_cpp,cpisync,riblt,negentropy `
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 `
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy `
   --probe-trials 30 `
   --final-trials 100 `
   --target-success-rate 0.9 `
-  --xyz-tuning tests\results\paper_fig2_z_star\summary.jsonl `
+  --job-timeout-s 1800 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig3_compare_frontier_extended
 ```
 
@@ -482,8 +533,8 @@ python tests\test_compare_frontier.py `
 
 ```text
 Figure 3(a): primary data generation implemented
-  tests/test_compare_frontier.py 已能为 xyz_v2、iblt 和 minisketch 运行 per-algorithm threshold/frontier search。
-  optional baselines 仍未完成。
+  tests/test_compare_frontier.py 已能为 xyz_v1、xyz_v2、iblt、minisketch、cpisync、riblt 和 negentropy 运行 per-algorithm threshold/frontier search。
+  xyz_v1、cpisync、riblt 和 negentropy 已接入；iblt_cpp 仍需接入 frontier search。
 
 Figure 3(b): primary data generation implemented
   tests/test_compare_frontier.py 已派生 update_avg_s_per_element。

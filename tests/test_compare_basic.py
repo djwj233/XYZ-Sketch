@@ -240,7 +240,7 @@ def build_binaries(root: Path, build_dir: Path, algorithms: set[str], skip_build
     if "negentropy" in algorithms:
         real_command = [
             "g++",
-            "-std=c++20",
+            "-std=c++2a",
             "-O2",
             "-DENABLE_REAL_NEGENTROPY",
             "-I",
@@ -305,15 +305,17 @@ def cpisync_real_build_command(root: Path, output: Path) -> list[str]:
     ]
     command = [
         "g++",
-        "-std=c++17",
+        "-std=c++14",
         "-O2",
         "-DENABLE_REAL_CPISYNC",
+        "-include",
+        str(root / "tests" / "benchmarks" / "cpisync_linux_compat.h"),
         "-I",
         str(root / "external" / "cpisync" / "include"),
         str(root / "tests" / "benchmarks" / "cpisync_bench.cpp"),
     ]
     command.extend(str(root / "external" / "cpisync" / "src" / source) for source in sources)
-    command.extend(["-lntl", "-lgmp", "-lpthread", "-o", str(output)])
+    command.extend(["-lntl", "-lgmp", "-ltcmalloc", "-lpthread", "-o", str(output)])
     return command
 
 

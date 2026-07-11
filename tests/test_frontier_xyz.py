@@ -97,9 +97,9 @@ def rewrite_experiment(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 def parse_args() -> tuple[argparse.Namespace, list[str]]:
     parser = argparse.ArgumentParser(description="Run the XYZ Figure 1(b) communication frontier experiment.")
-    parser.add_argument("--d-values", default="100,300,1000")
+    parser.add_argument("--d-values", default="100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000")
     parser.add_argument("--tuple-values", default="2:3,2:6,3:4", help="Comma-separated k:l tuples.")
-    parser.add_argument("--modes", default="random,naive")
+    parser.add_argument("--modes", default="random,naive,circular")
     parser.add_argument("--probe-trials", type=int, default=20)
     parser.add_argument("--final-trials", type=int, default=50)
     parser.add_argument("--target-success-rate", type=float, default=0.90)
@@ -107,7 +107,7 @@ def parse_args() -> tuple[argparse.Namespace, list[str]]:
     parser.add_argument("--max-C-over-d", type=float, default=8.0, dest="max_c_over_d")
     parser.add_argument("--ci-confidence", type=float, default=0.95, choices=[0.90, 0.95, 0.99])
     parser.add_argument("--ci-method", default="wilson", choices=["wilson"])
-    parser.add_argument("--circular-a", type=float, default=0.0)
+    parser.add_argument("--circular-a", type=float, default=None, help="Override circular a. If omitted, downstream scripts compute a from --a-constant.")
     parser.add_argument("--dedup-hashes", default="false")
     parser.add_argument("--shared-datasets", dest="shared_datasets", action="store_true", default=True)
     parser.add_argument("--no-shared-datasets", dest="shared_datasets", action="store_false")
@@ -124,7 +124,7 @@ def main() -> None:
     args, passthrough = parse_args()
     if not (0 < args.target_success_rate <= 1):
         raise SystemExit("--target-success-rate must be in (0, 1]")
-    if not (0.0 <= args.circular_a < 1.0):
+    if args.circular_a is not None and not (0.0 <= args.circular_a < 1.0):
         raise SystemExit("--circular-a must be in [0, 1)")
 
     root = repo_root()
@@ -160,8 +160,6 @@ def main() -> None:
             str(args.ci_confidence),
             "--ci-method",
             args.ci_method,
-            "--circular-a",
-            str(args.circular_a),
             "--dedup-hashes",
             args.dedup_hashes,
             "--base-seed",
@@ -173,6 +171,8 @@ def main() -> None:
             "--output-dir",
             str(shard_dir),
         ]
+        if args.circular_a is not None:
+            command.extend(["--circular-a", str(args.circular_a)])
         if args.shared_datasets:
             command.append("--shared-datasets")
         if args.skip_build or tuple_index > 0:

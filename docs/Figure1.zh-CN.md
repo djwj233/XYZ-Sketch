@@ -45,7 +45,7 @@ R_w30 = bits / (30*d)
 默认使用：
 
 ```text
-a = 0
+a = C * c_orient / c_peel，其中 C = 1/3
 ```
 
 mode 映射：
@@ -58,7 +58,7 @@ SC            -> mode=naive
 如果后续要把 circularized SC 放进 Figure 1，则使用：
 
 ```text
-mode=circular --circular-a 0
+默认不传 `--circular-a`；如需手动覆盖 circular 参数时才使用 `--circular-a`。Figure 1 默认按 `a=C*c_orient/c_peel` 计算，`C=1/3`，并按公式计算 `z`，`D=4/3`。
 ```
 
 ## Figure 1(a): Sharp Threshold
@@ -70,7 +70,7 @@ mode=circular --circular-a 0
 ```text
 x-axis = R_w30
 y-axis = success_rate
-curves = {(k,l)} x {iid, SC}
+curves = {(k,l)} x {iid, SC-naive, SC-circular}
 error bars/bands = 95% CI
 ```
 
@@ -101,28 +101,28 @@ smoke 级运行示例：
 ```powershell
 python tests\test_xyz_sharp_threshold.py `
   --d-values 1000 `
-  --l-values 3,6,4 `
-  --k-values 2,3 `
-  --modes random,naive `
+  --tuple-values 2:3,2:6,3:4 `
+  --modes random,naive,circular `
   --trials 30 `
   --center-trials 10 `
   --window-fraction 0.06 `
   --min-window 20 `
   --max-window 80 `
-  --step 2 `
+  --step 3 `
   --target-success-rate 0.9 `
-  --circular-a 0 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig1_sharp_threshold
 ```
 
-注意：上面的命令会做 `k` 和 `l` 的笛卡尔积。如果只想严格跑 `(2,3),(2,6),(3,4)` 三个 tuple，可以分别运行三次，或后续给 sharp-threshold 脚本补一个 tuple wrapper。
+上面的命令使用 `--tuple-values`，因此只会运行 `(2,3)`、`(2,6)` 和 `(3,4)`。
 
 论文规模建议：
 
 ```text
 d = 10000 or larger if runtime allows
 (k,l) in {(2,3), (2,6), (3,4)}
-modes = random,naive
+modes = random,naive,circular
 trials >= 100
 center_trials = 10
 window_fraction = 0.06
@@ -155,7 +155,7 @@ tests/results/paper_fig1_sharp_threshold/run_config.json
 ```text
 x-axis = d
 y-axis = R_w30 at target_success_rate = 0.9
-curves = {(k,l,a)} x {iid, SC}
+curves = {(k,l,a)} x {iid, SC-naive, SC-circular}
 error bars/bands = threshold uncertainty / success-rate CI
 ```
 
@@ -191,20 +191,22 @@ smoke 级运行示例：
 python tests\test_frontier_xyz.py `
   --d-values 100,300,1000 `
   --tuple-values 2:6 `
-  --modes random,naive `
+  --modes random,naive,circular `
   --probe-trials 20 `
   --final-trials 50 `
   --target-success-rate 0.9 `
-  --circular-a 0 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig1_frontier
 ```
 
 论文规模建议：
 
 ```text
-d in {100, 300, 1000, 3000, 10000}
-(k,l,a) in {(2,3,0), (2,6,0), (3,4,0)}
-modes = random,naive
+d in {100, 300, 1000, 3000, 10000, 30000, 100000, 300000, 1000000, 3000000, 10000000}
+(k,l) in {(2,3), (2,6), (3,4)}
+a and z are computed from the theory constants with C=1/3 and D=4/3
+modes = random,naive,circular
 target_success_rate = 0.9
 probe_trials >= 50
 final_trials >= 100
@@ -214,13 +216,14 @@ final_trials >= 100
 
 ```powershell
 python tests\test_frontier_xyz.py `
-  --d-values 100,300,1000,3000,10000 `
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 `
   --tuple-values 2:3,2:6,3:4 `
-  --modes random,naive `
+  --modes random,naive,circular `
   --probe-trials 50 `
   --final-trials 100 `
   --target-success-rate 0.9 `
-  --circular-a 0 `
+  --a-constant 0.3333333333 `
+  --z-constant 1.3333333333 `
   --output-dir tests\results\paper_fig1_frontier
 ```
 
@@ -266,7 +269,7 @@ python tests\json_verifier.py tests\results\paper_fig1_frontier\summary.jsonl --
 
 - 所有 row 使用 `target_success_rate = 0.9`。
 - 所有 row 使用 `ci_confidence = 0.95`。
-- `random = iid`，`naive = SC` 的 mode 映射在图注或实验说明中写清楚。
+- `random = iid`，`naive/circular = SC variants` 的 mode 映射在图注或实验说明中写清楚。
 - 每条 sharp-threshold 曲线都有足够的失败点和成功点，否则需要扩大扫描窗口。
 
 ## 当前状态
@@ -279,6 +282,6 @@ Figure 1(b): implemented for data generation
   tests/test_frontier_xyz.py 已提供 paper-facing frontier wrapper。
   tests/test_spatial.py 已支持 best_R_w30、point/ci-low R_w30 和 circular_a。
 
-Plotting: open
-  还需要实现 tests/plot_figure1.py。
+Plotting: implemented
+  tests/plot_figure1.py 已能从 sharp-threshold raw.csv 和 frontier summary.csv 生成 Figure 1(a)/(b) SVG。
 ```

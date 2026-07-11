@@ -167,6 +167,26 @@ def parse_str_list(value: str) -> list[str]:
     return [part.strip() for part in value.split(",") if part.strip()]
 
 
+def parse_tuple_values(value: str | None) -> list[tuple[int, int]] | None:
+    if value is None:
+        return None
+    result: list[tuple[int, int]] = []
+    for item in value.split(","):
+        item = item.strip()
+        if not item:
+            continue
+        if ":" in item:
+            k_text, l_text = item.split(":", 1)
+        elif "-" in item:
+            k_text, l_text = item.split("-", 1)
+        else:
+            raise ValueError(f"tuple must be k:l or k-l, got {item!r}")
+        result.append((int(k_text), int(l_text)))
+    if not result:
+        raise ValueError("--tuple-values must contain at least one tuple")
+    return result
+
+
 def parse_bool(value: str) -> bool:
     lowered = value.strip().lower()
     if lowered in {"true", "1", "yes"}:
@@ -256,6 +276,7 @@ def make_configs(args: argparse.Namespace) -> list[dict[str, Any]]:
     d_values = parse_int_list(args.d_values)
     l_values = parse_int_list(args.l_values)
     k_values = parse_int_list(args.k_values)
+    tuple_values = parse_tuple_values(args.tuple_values)
     modes = parse_str_list(args.modes)
     valid_modes = {"random", "spatial", "circular", "naive"}
     dedup_values = parse_bool_list(args.dedup_hashes)
@@ -263,36 +284,35 @@ def make_configs(args: argparse.Namespace) -> list[dict[str, Any]]:
     configs: list[dict[str, Any]] = []
     for d_index, d_value in enumerate(d_values):
         ca, cb = choose_set_sizes(d_value, args.max_set_size, args.set_size_scale)
-        for l_index, l_value in enumerate(l_values):
+        pairs = tuple_values if tuple_values is not None else [(k_value, l_value) for l_value in l_values for k_value in k_values]
+        for pair_index, (k_value, l_value) in enumerate(pairs):
             if l_value > d_value:
                 continue
-            for k_index, k_value in enumerate(k_values):
-                for mode_index, mode in enumerate(modes):
-                    if mode not in valid_modes:
-                        raise SystemExit(f"unknown mode: {mode}")
-                    for dedup_hashes in dedup_values:
-                        seed = (
-                            args.base_seed
-                            + 1_000_000 * d_index
-                            + 10_000 * l_index
-                            + 100 * k_index
-                            + mode_index
-                        )
-                        configs.append(
-                            {
-                                "scan_id": f"d{d_value}_l{l_value}_k{k_value}_{mode}{dedup_suffix(dedup_hashes, include_dedup_suffix)}",
-                                "d": d_value,
-                                "l": l_value,
-                                "k": k_value,
-                                "mode": mode,
-                                "dedup_hashes": dedup_hashes,
-                                "dedup_variant_suffix": include_dedup_suffix,
-                                "circular_a": args.circular_a if args.circular_a is not None else a_from_args(k_value, l_value, args),
-                                "seed": seed,
-                                "ca": ca,
-                                "cb": cb,
-                            }
-                        )
+            for mode_index, mode in enumerate(modes):
+                if mode not in valid_modes:
+                    raise SystemExit(f"unknown mode: {mode}")
+                for dedup_hashes in dedup_values:
+                    seed = (
+                        args.base_seed
+                        + 1_000_000 * d_index
+                        + 10_000 * pair_index
+                        + mode_index
+                    )
+                    configs.append(
+                        {
+                            "scan_id": f"d{d_value}_l{l_value}_k{k_value}_{mode}{dedup_suffix(dedup_hashes, include_dedup_suffix)}",
+                            "d": d_value,
+                            "l": l_value,
+                            "k": k_value,
+                            "mode": mode,
+                            "dedup_hashes": dedup_hashes,
+                            "dedup_variant_suffix": include_dedup_suffix,
+                            "circular_a": args.circular_a if args.circular_a is not None else a_from_args(k_value, l_value, args),
+                            "seed": seed,
+                            "ca": ca,
+                            "cb": cb,
+                        }
+                    )
     return configs
 
 
@@ -627,6 +647,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--d-values", default="1000,3000,10000")
     parser.add_argument("--l-values", default="6")
     parser.add_argument("--k-values", default="2,3")
+    parser.add_argument("--tuple-values", default=None, help="Optional comma-separated k:l tuples. Overrides --k-values/--l-values.")
     parser.add_argument("--modes", default="random,spatial")
     parser.add_argument("--trials", type=int, default=100)
     parser.add_argument("--center-trials", type=int, default=10)

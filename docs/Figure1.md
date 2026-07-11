@@ -49,7 +49,7 @@ Use representative tuples:
 Use:
 
 ```text
-a = 0
+a = C * c_orient / c_peel with C = 1/3
 ```
 
 Compare:
@@ -63,9 +63,9 @@ Recommended first policy:
 
 - Use `mode=random` for iid.
 - Use `mode=naive` for non-circular spatial coupling.
-- Use `mode=circular --circular-a 0` only when explicitly studying circularized SC.
+- Use `--circular-a` only as an explicit override; by default Figure 1 computes `a=C*c_orient/c_peel` with `C=1/3` and computes `z` with `D=4/3`.
 
-For Figure 1, because the organizer specifies `a=0`, record `circular_a = 0` for any circular-style SC rows.
+For Figure 1, compute `a` from `a=C*c_orient/c_peel` with `C=1/3`, compute `z` with `D=4/3`, and record the resulting `circular_a` and `z` in output rows.
 
 ## Figure 1(a): Sharp Threshold
 
@@ -78,7 +78,7 @@ Plot:
 ```text
 x-axis = R_w30
 y-axis = success_rate
-curves = {(k,l)} x {iid, SC}
+curves = {(k,l)} x {iid, SC-naive, SC-circular}
 error bars/bands = 95% CI
 ```
 
@@ -132,7 +132,7 @@ First smoke-level figure:
 ```text
 d = 1000
 (k,l) in {(2,3), (2,6), (3,4)}
-modes = random,naive
+modes = random,naive,circular
 trials = 30
 center_trials = 10
 window_fraction = 0.06
@@ -147,7 +147,7 @@ Paper-scale run:
 ```text
 d = 10000 or larger if runtime allows
 (k,l) in {(2,3), (2,6), (3,4)}
-modes = random,naive
+modes = random,naive,circular
 trials >= 100
 center_trials = 10
 window_fraction = 0.06
@@ -230,7 +230,7 @@ Plot:
 ```text
 x-axis = d
 y-axis = R_w30 at target_success_rate = 0.9
-curves = {(k,l,a)} x {iid, SC}
+curves = {(k,l,a)} x {iid, SC-naive, SC-circular}
 error bars/bands = threshold uncertainty / success-rate CI
 ```
 
@@ -295,7 +295,7 @@ First smoke frontier:
 ```text
 d in {100, 300, 1000}
 (k,l,a) in {(2,6,0)}
-modes = random,naive
+modes = random,naive,circular
 target_success_rate = 0.9
 probe_trials = 20
 final_trials = 50
@@ -304,9 +304,10 @@ final_trials = 50
 Paper-scale frontier:
 
 ```text
-d in {100, 300, 1000, 3000, 10000}
-(k,l,a) in {(2,3,0), (2,6,0), (3,4,0)}
-modes = random,naive
+d in {100, 300, 1000, 3000, 10000, 30000, 100000, 300000, 1000000, 3000000, 10000000}
+(k,l) in {(2,3), (2,6), (3,4)}
+a and z are computed from the theory constants with C=1/3 and D=4/3
+modes = random,naive,circular
 target_success_rate = 0.9
 probe_trials >= 50
 final_trials >= 100

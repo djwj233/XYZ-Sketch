@@ -31,7 +31,7 @@ Figure 1 is independent from Figure 2 and Figure 3.
 Goal:
 
 - Show success rate as communication `R_w30` increases.
-- Compare `random` and `naive` modes.
+- Compare `random`, `naive`, and `circular` modes.
 - Use representative tuples `(k,l) = (2,3), (2,6), (3,4)`.
 
 Run:
@@ -39,22 +39,22 @@ Run:
 ```bash
 python3 tests/test_xyz_sharp_threshold.py \
   --d-values 10000 \
-  --l-values 3,6,4 \
-  --k-values 2,3 \
-  --modes random,naive \
+  --tuple-values 2:3,2:6,3:4 \
+  --modes random,naive,circular \
   --trials 100 \
   --center-trials 10 \
   --window-fraction 0.06 \
   --min-window 20 \
   --max-window 120 \
-  --step 2 \
+  --step 3 \
   --target-success-rate 0.9 \
-  --circular-a 0 \
+  --a-constant 0.3333333333 \
+  --z-constant 1.3333333333 \
   --output-dir tests/results/paper_fig1_sharp_threshold
 ```
 
 This first searches an empirical center `M0` with 10 `center-trials`, then scans
-the narrower interval `M0 +/- min(max(0.06*M0, 20), 120)` with `step = 2`.
+the narrower interval `M0 +/- min(max(0.06*M0, 20), 120)` with `step = 3`.
 If the resulting curve does not include clear failure and success points on
 both sides, increase `--max-window` or `--window-fraction`.
 
@@ -69,9 +69,7 @@ tests/results/paper_fig1_sharp_threshold/summary.md
 tests/results/paper_fig1_sharp_threshold/run_config.json
 ```
 
-Note: the command above runs the Cartesian product of the listed `k` and `l`
-values. For strict paper runs with only `(2,3), (2,6), (3,4)`, run separate
-commands or add a tuple wrapper.
+The command above uses `--tuple-values`, so it runs only `(2,3)`, `(2,6)`, and `(3,4)`.
 
 ### Figure 1(b): Communication Frontier
 
@@ -79,19 +77,20 @@ Goal:
 
 - For each `d`, find the minimum communication needed to reach 90% success.
 - Compare iid hashing and spatial coupling.
-- In this codebase, `random = iid` and `naive = spatial coupling`.
+- In this codebase, `random = iid`; `naive` and `circular` are two spatial-coupling variants.
 
 Run:
 
 ```bash
 python3 tests/test_frontier_xyz.py \
-  --d-values 100,300,1000,3000,10000 \
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 \
   --tuple-values 2:3,2:6,3:4 \
-  --modes random,naive \
+  --modes random,naive,circular \
   --probe-trials 50 \
   --final-trials 100 \
   --target-success-rate 0.9 \
-  --circular-a 0 \
+  --a-constant 0.3333333333 \
+  --z-constant 1.3333333333 \
   --output-dir tests/results/paper_fig1_frontier
 ```
 
@@ -118,30 +117,30 @@ Current plotting status:
 
 ```text
 Figure 1 data generation exists.
-Figure 1 plotting script is not implemented yet.
-Expected script name: tests/plot_figure1.py
+Figure 1 SVG plotting is implemented in tests/plot_figure1.py.
+PNG/PDF export can be produced from the SVG files with Inkscape, rsvg-convert, or a browser print/export flow.
 ```
 
-The plotting script should read:
+Run:
 
-```text
-tests/results/paper_fig1_sharp_threshold/raw.csv
-tests/results/paper_fig1_frontier/summary.csv
+```bash
+python3 tests/plot_figure1.py \
+  --sharp-input tests/results/paper_fig1_sharp_threshold/raw.csv \
+  --frontier-input tests/results/paper_fig1_frontier/summary.csv \
+  --output-dir tests/results/paper_figures
 ```
 
-Expected final figure outputs:
+Current figure outputs:
 
 ```text
-tests/results/paper_figures/figure1a_sharp_threshold.png
-tests/results/paper_figures/figure1a_sharp_threshold.pdf
-tests/results/paper_figures/figure1b_frontier.png
-tests/results/paper_figures/figure1b_frontier.pdf
+tests/results/paper_figures/figure1a_sharp_threshold.svg
+tests/results/paper_figures/figure1b_frontier.svg
+tests/results/paper_figures/figure1_source_summary.md
 ```
 
 ## 2. Figure 2
 
-Figure 2 should be generated before Figure 3, because Figure 3 consumes the
-tuned `(a,z)` values extracted from Figure 2.
+Figure 2 can be generated independently. The current Figure 3 main run does not consume tuned `(a,z)` values from Figure 2 by default; it computes `a,z` from the heuristic formulas. `paper_fig2_z_star/summary.jsonl` remains available as an optional tuning input for future runs.
 
 ### Figure 2(a): Circular `(a,z)` Heatmap
 
@@ -171,7 +170,7 @@ If you also need a meaningful Figure 2(b) curve, use multiple `d` values:
 
 ```bash
 python3 tests/test_az_grid.py \
-  --d-values 100,300,1000,3000,10000 \
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 \
   --k-values 2 \
   --l-values 6 \
   --a-values 0,0.1,0.2,0.3333333333,0.4,0.5,0.6,0.75,0.9 \
@@ -254,12 +253,19 @@ tests/results/paper_figures/figure2b_z_star.pdf
 
 ## 3. Figure 3
 
-Figure 3 compares tuned XYZ-Sketch with practical baselines.
+Figure 3 compares heuristic-formula XYZ-Sketch with practical baselines.
 
-Figure 3 depends on this file from Figure 2:
+The default constants are `C=1/3` and `D=4/3`:
 
 ```text
-tests/results/paper_fig2_z_star/summary.jsonl
+a = C * c_orient / c_peel
+z = D * (1-a)^(2/3) * (M/log(1/delta))^(1/3)
+```
+
+To switch back to tuned `(a,z)` from Figure 2 later, add:
+
+```text
+--xyz-tuning tests/results/paper_fig2_z_star/summary.jsonl
 ```
 
 ### Figure 3(a), 3(b), 3(c): Shared Experiment
@@ -274,12 +280,14 @@ Run:
 
 ```bash
 python3 tests/test_compare_frontier.py \
-  --d-values 100,300,1000,3000,10000 \
-  --algorithms xyz_v2,iblt,minisketch \
+  --d-values 100,300,1000,3000,10000,30000,100000,300000,1000000,3000000,10000000 \
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy \
   --probe-trials 30 \
   --final-trials 100 \
   --target-success-rate 0.9 \
-  --xyz-tuning tests/results/paper_fig2_z_star/summary.jsonl \
+  --job-timeout-s 1800 \
+  --a-constant 0.3333333333 \
+  --z-constant 1.3333333333 \
   --output-dir tests/results/paper_fig3_compare_frontier
 ```
 
@@ -323,8 +331,8 @@ Current plotting status:
 ```text
 Figure 3 SVG plotting exists.
 PNG/PDF export is not implemented yet.
-Optional baselines are not included in test_compare_frontier.py yet.
-Currently supported baselines: xyz_v2, iblt, minisketch.
+test_compare_frontier.py includes xyz_v1, cpisync, riblt, and negentropy; iblt_cpp remains optional/outside frontier search.
+Currently supported baselines: xyz_v1, xyz_v2, iblt, minisketch, cpisync, riblt, negentropy. xyz_v1 is included as a fixed-parameter baseline; riblt searches max_symbols.
 ```
 
 Expected final publication outputs after PNG/PDF export is added:
@@ -363,11 +371,13 @@ Figure 3 smoke:
 ```bash
 python3 tests/test_compare_frontier.py \
   --d-values 100,300 \
-  --algorithms xyz_v2,iblt,minisketch \
+  --algorithms xyz_v1,xyz_v2,iblt,minisketch,cpisync,riblt,negentropy \
   --probe-trials 5 \
   --final-trials 10 \
   --target-success-rate 0.9 \
-  --xyz-tuning tests/results/paper_fig2_z_star/summary.jsonl \
+  --job-timeout-s 1800 \
+  --a-constant 0.3333333333 \
+  --z-constant 1.3333333333 \
   --output-dir tests/results/paper_fig3_compare_frontier_smoke
 ```
 
@@ -401,9 +411,7 @@ To fully generate publication-ready Figure 1, Figure 2, and Figure 3 images,
 the remaining code work is:
 
 ```text
-1. Add tests/plot_figure1.py.
-2. Add tests/plot_figure2.py.
-3. Add PNG/PDF export for tests/plot_figure3.py.
-4. Optionally extend tests/test_compare_frontier.py with extra baselines:
-   xyz_v1, iblt_cpp, cpisync, riblt, negentropy.
+1. Add tests/plot_figure2.py.
+2. Add PNG/PDF export for tests/plot_figure1.py and tests/plot_figure3.py if publication requires raster/PDF artifacts.
+3. Optional remaining extension: add iblt_cpp to tests/test_compare_frontier.py. xyz_v1 and riblt are already connected.
 ```
