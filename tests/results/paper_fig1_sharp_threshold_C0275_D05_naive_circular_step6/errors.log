@@ -1,0 +1,7 @@
+CONFIG {"ca": 100000, "cb": 100000, "circular_a": 0.3332923664702939, "d": 10000, "dedup_hashes": false, "dedup_variant_suffix": false, "k": 2, "l": 6, "mode": "circular", "scan_id": "d10000_l6_k2_circular", "seed": 124515}
+COMMAND ["/root/XYZ-Sketch/build/xyz_v2_bench", "--d", "10000", "--l", "6", "--k", "2", "--m", "1786", "--z", "2", "--trials", "100", "--seed", "124515", "--mode", "circular", "--circular-a", "0.33329236647", "--ca", "100000", "--cb", "100000", "--dedup-hashes", "false", "--format", "jsonl"]
+RETURNCODE -15
+STDOUT
+
+STDERR
+

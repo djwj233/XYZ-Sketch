@@ -1,0 +1,104 @@
+[cmd] python3 tests/test_xyz_sharp_threshold.py --d-values 10000 --trials 100 --center-trials 10 --target-success-rate 0.9 --points 41 --step 6 --window-fraction 0.06 --min-window 20 --max-window 120 --a-constant 0.27591534917087435 --z-constant 0.5 --skip-build --tuple-values 2:6 --modes circular --output-dir /root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular
+[setup] configs=1 trials=100 center_trials=10 points=41 step=6 window_fraction=0.06 min_window=20 max_window=120 output=/root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular
+[setup] using existing/skipped benchmark build
+[plan 1/1] d10000_l6_k2_circular
+  [center] d10000_l6_k2_circular search start: lo=1667 initial_hi=2500 limit=13334 target=0.5
+  [center] upper_bound M=2500: success=1.000 (10/10)
+  [center] binary M=2083: success=1.000 (10/10)
+  [center] binary M=1874: success=0.000 (0/10)
+  [center] binary M=1978: success=1.000 (10/10)
+  [center] binary M=1926: success=0.800 (8/10)
+  [center] binary M=1900: success=0.500 (5/10)
+  [center] binary M=1887: success=0.300 (3/10)
+  [center] binary M=1893: success=0.400 (4/10)
+  [center] binary M=1896: success=0.100 (1/10)
+  [center] binary M=1898: success=0.500 (5/10)
+  [center] binary M=1897: success=0.600 (6/10)
+  [center] selected M0=1897
+  [grid] source=internal_search range=1783..2011 points=39
+[scan 1/1] d10000_l6_k2_circular M0=1897 points=39
+  [point 1/39] running M=1783
+  [point 1/39] M=1783 C/d=1.070 success=0.000 (0/100)
+  [point 2/39] running M=1789
+  [point 2/39] M=1789 C/d=1.073 success=0.000 (0/100)
+  [point 3/39] running M=1795
+  [point 3/39] M=1795 C/d=1.077 success=0.000 (0/100)
+  [point 4/39] running M=1801
+  [point 4/39] M=1801 C/d=1.081 success=0.000 (0/100)
+  [point 5/39] running M=1807
+  [point 5/39] M=1807 C/d=1.084 success=0.000 (0/100)
+  [point 6/39] running M=1813
+  [point 6/39] M=1813 C/d=1.088 success=0.000 (0/100)
+  [point 7/39] running M=1819
+  [point 7/39] M=1819 C/d=1.091 success=0.000 (0/100)
+  [point 8/39] running M=1825
+  [point 8/39] M=1825 C/d=1.095 success=0.000 (0/100)
+  [point 9/39] running M=1831
+  [point 9/39] M=1831 C/d=1.099 success=0.000 (0/100)
+  [point 10/39] running M=1837
+  [point 10/39] M=1837 C/d=1.102 success=0.000 (0/100)
+  [point 11/39] running M=1843
+  [point 11/39] M=1843 C/d=1.106 success=0.000 (0/100)
+  [point 12/39] running M=1849
+  [point 12/39] M=1849 C/d=1.109 success=0.000 (0/100)
+  [point 13/39] running M=1855
+  [point 13/39] M=1855 C/d=1.113 success=0.000 (0/100)
+  [point 14/39] running M=1861
+  [point 14/39] M=1861 C/d=1.117 success=0.000 (0/100)
+  [point 15/39] running M=1867
+  [point 15/39] M=1867 C/d=1.120 success=0.010 (1/100)
+  [point 16/39] running M=1873
+  [point 16/39] M=1873 C/d=1.124 success=0.040 (4/100)
+  [point 17/39] running M=1879
+  [point 17/39] M=1879 C/d=1.127 success=0.100 (10/100)
+  [point 18/39] running M=1885
+  [point 18/39] M=1885 C/d=1.131 success=0.160 (16/100)
+  [point 19/39] running M=1891
+  [point 19/39] M=1891 C/d=1.135 success=0.280 (28/100)
+  [point 20/39] running M=1897
+  [point 20/39] M=1897 C/d=1.138 success=0.470 (47/100)
+  [point 21/39] running M=1903
+  [point 21/39] M=1903 C/d=1.142 success=0.500 (50/100)
+  [point 22/39] running M=1909
+  [point 22/39] M=1909 C/d=1.145 success=0.780 (78/100)
+  [point 23/39] running M=1915
+  [point 23/39] M=1915 C/d=1.149 success=0.850 (85/100)
+  [point 24/39] running M=1921
+  [point 24/39] M=1921 C/d=1.153 success=0.900 (90/100)
+  [point 25/39] running M=1927
+  [point 25/39] M=1927 C/d=1.156 success=0.970 (97/100)
+  [point 26/39] running M=1933
+  [point 26/39] M=1933 C/d=1.160 success=0.930 (93/100)
+  [point 27/39] running M=1939
+  [point 27/39] M=1939 C/d=1.163 success=0.990 (99/100)
+  [point 28/39] running M=1945
+  [point 28/39] M=1945 C/d=1.167 success=0.980 (98/100)
+  [point 29/39] running M=1951
+  [point 29/39] M=1951 C/d=1.171 success=1.000 (100/100)
+  [point 30/39] running M=1957
+  [point 30/39] M=1957 C/d=1.174 success=1.000 (100/100)
+  [point 31/39] running M=1963
+  [point 31/39] M=1963 C/d=1.178 success=0.990 (99/100)
+  [point 32/39] running M=1969
+  [point 32/39] M=1969 C/d=1.181 success=1.000 (100/100)
+  [point 33/39] running M=1975
+  [point 33/39] M=1975 C/d=1.185 success=1.000 (100/100)
+  [point 34/39] running M=1981
+  [point 34/39] M=1981 C/d=1.189 success=1.000 (100/100)
+  [point 35/39] running M=1987
+  [point 35/39] M=1987 C/d=1.192 success=1.000 (100/100)
+  [point 36/39] running M=1993
+  [point 36/39] M=1993 C/d=1.196 success=1.000 (100/100)
+  [point 37/39] running M=1999
+  [point 37/39] M=1999 C/d=1.199 success=1.000 (100/100)
+  [point 38/39] running M=2005
+  [point 38/39] M=2005 C/d=1.203 success=1.000 (100/100)
+  [point 39/39] running M=2011
+  [point 39/39] M=2011 C/d=1.207 success=1.000 (100/100)
+[scan 1/1] summary status=ok
+wrote /root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular/raw.jsonl
+wrote /root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular/raw.csv
+wrote /root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular/summary.jsonl
+wrote /root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular/summary.csv
+wrote /root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular/summary.md
+wrote /root/XYZ-Sketch/tests/results/paper_fig1_sharp_threshold_C0275_D05_naive_circular_step6_parallel_tail/d10000_l6_k2_circular/run_config.json

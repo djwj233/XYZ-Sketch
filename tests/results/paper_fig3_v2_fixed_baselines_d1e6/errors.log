@@ -1,0 +1,45 @@
+JOB {"algorithm": "cpisync", "bits_param": 30, "ca": 6000, "cb": 6000, "d": 3000, "epsilon": 64, "final_trials": 1, "hashes": false, "parameter_name": "mbar", "probe_trials": 1, "redundant": 0, "seed": 3114514, "variant": "mbar_search,bits=30,epsilon=64"}
+COMMAND ["/root/XYZ-Sketch/build/cpisync_bench", "--d", "3000", "--trials", "1", "--seed", "3114514", "--ca", "6000", "--cb", "6000", "--mbar", "3000", "--bits", "30", "--epsilon", "64", "--redundant", "0", "--hashes", "false", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d3000_ca6000_cb6000_seed3114514/trial1.sets", "--format", "jsonl"]
+TIMEOUT after 78.72847518901108s
+
+JOB {"algorithm": "cpisync", "bits_param": 30, "ca": 20000, "cb": 20000, "d": 10000, "epsilon": 64, "final_trials": 1, "hashes": false, "parameter_name": "mbar", "probe_trials": 1, "redundant": 0, "seed": 4114514, "variant": "mbar_search,bits=30,epsilon=64"}
+COMMAND ["/root/XYZ-Sketch/build/cpisync_bench", "--d", "10000", "--trials", "1", "--seed", "4114514", "--ca", "20000", "--cb", "20000", "--mbar", "10000", "--bits", "30", "--epsilon", "64", "--redundant", "0", "--hashes", "false", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d10000_ca20000_cb20000_seed4114514/trial0.sets", "--format", "jsonl"]
+RETURNCODE 254
+STDOUT
+
+STDERR
+Could not bind to a Communicant!: Address already in use
+Error receiving data on the socket!: Connection reset by peer
+
+JOB {"algorithm": "cpisync", "bits_param": 30, "ca": 20000, "cb": 20000, "d": 10000, "epsilon": 64, "final_trials": 1, "hashes": false, "parameter_name": "mbar", "probe_trials": 1, "redundant": 0, "seed": 4114514, "variant": "mbar_search,bits=30,epsilon=64"}
+COMMAND ["/root/XYZ-Sketch/build/cpisync_bench", "--d", "10000", "--trials", "1", "--seed", "4114514", "--ca", "20000", "--cb", "20000", "--mbar", "10000", "--bits", "30", "--epsilon", "64", "--redundant", "0", "--hashes", "false", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d10000_ca20000_cb20000_seed4114514/trial1.sets", "--format", "jsonl"]
+TIMEOUT after 182.4673552819877s
+
+JOB {"algorithm": "cpisync", "bits_param": 30, "ca": 60000, "cb": 60000, "d": 30000, "epsilon": 64, "final_trials": 1, "hashes": false, "parameter_name": "mbar", "probe_trials": 1, "redundant": 0, "seed": 5114514, "variant": "mbar_search,bits=30,epsilon=64"}
+COMMAND ["/root/XYZ-Sketch/build/cpisync_bench", "--d", "30000", "--trials", "1", "--seed", "5114514", "--ca", "60000", "--cb", "60000", "--mbar", "30000", "--bits", "30", "--epsilon", "64", "--redundant", "0", "--hashes", "false", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d30000_ca60000_cb60000_seed5114514/trial0.sets", "--format", "jsonl"]
+TIMEOUT after 299.99994249403244s
+
+JOB {"algorithm": "minisketch", "ca": 200000, "cb": 200000, "d": 100000, "field_bits": 30, "final_trials": 1, "parameter_name": "capacity", "probe_trials": 1, "seed": 6114514, "variant": "capacity_search,field_bits=30"}
+COMMAND ["/root/XYZ-Sketch/build/minisketch_bench", "--d", "100000", "--trials", "1", "--seed", "6114514", "--ca", "200000", "--cb", "200000", "--capacity-factor", "1", "--field-bits", "30", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d100000_ca200000_cb200000_seed6114514/trial0.sets", "--format", "jsonl"]
+TIMEOUT after 298.6941847910057s
+
+JOB {"algorithm": "cpisync", "bits_param": 30, "ca": 200000, "cb": 200000, "d": 100000, "epsilon": 64, "final_trials": 1, "hashes": false, "parameter_name": "mbar", "probe_trials": 1, "redundant": 0, "seed": 6114514, "variant": "mbar_search,bits=30,epsilon=64"}
+COMMAND ["/root/XYZ-Sketch/build/cpisync_bench", "--d", "100000", "--trials", "1", "--seed", "6114514", "--ca", "200000", "--cb", "200000", "--mbar", "100000", "--bits", "30", "--epsilon", "64", "--redundant", "0", "--hashes", "false", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d100000_ca200000_cb200000_seed6114514/trial0.sets", "--format", "jsonl"]
+TIMEOUT after 299.9999416830251s
+
+JOB {"algorithm": "minisketch", "ca": 600000, "cb": 600000, "d": 300000, "field_bits": 30, "final_trials": 1, "parameter_name": "capacity", "probe_trials": 1, "seed": 7114514, "variant": "capacity_search,field_bits=30"}
+COMMAND ["/root/XYZ-Sketch/build/minisketch_bench", "--d", "300000", "--trials", "1", "--seed", "7114514", "--ca", "600000", "--cb", "600000", "--capacity-factor", "1", "--field-bits", "30", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d300000_ca600000_cb600000_seed7114514/trial0.sets", "--format", "jsonl"]
+TIMEOUT after 296.0325695879874s
+
+JOB {"algorithm": "cpisync", "bits_param": 30, "ca": 600000, "cb": 600000, "d": 300000, "epsilon": 64, "final_trials": 1, "hashes": false, "parameter_name": "mbar", "probe_trials": 1, "redundant": 0, "seed": 7114514, "variant": "mbar_search,bits=30,epsilon=64"}
+COMMAND ["/root/XYZ-Sketch/build/cpisync_bench", "--d", "300000", "--trials", "1", "--seed", "7114514", "--ca", "600000", "--cb", "600000", "--mbar", "300000", "--bits", "30", "--epsilon", "64", "--redundant", "0", "--hashes", "false", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d300000_ca600000_cb600000_seed7114514/trial0.sets", "--format", "jsonl"]
+TIMEOUT after 299.99994278501254s
+
+JOB {"algorithm": "minisketch", "ca": 2000000, "cb": 2000000, "d": 1000000, "field_bits": 30, "final_trials": 1, "parameter_name": "capacity", "probe_trials": 1, "seed": 8114514, "variant": "capacity_search,field_bits=30"}
+COMMAND ["/root/XYZ-Sketch/build/minisketch_bench", "--d", "1000000", "--trials", "1", "--seed", "8114514", "--ca", "2000000", "--cb", "2000000", "--capacity-factor", "1", "--field-bits", "30", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d1000000_ca2000000_cb2000000_seed8114514/trial0.sets", "--format", "jsonl"]
+TIMEOUT after 285.1089373870054s
+
+JOB {"algorithm": "cpisync", "bits_param": 30, "ca": 2000000, "cb": 2000000, "d": 1000000, "epsilon": 64, "final_trials": 1, "hashes": false, "parameter_name": "mbar", "probe_trials": 1, "redundant": 0, "seed": 8114514, "variant": "mbar_search,bits=30,epsilon=64"}
+COMMAND ["/root/XYZ-Sketch/build/cpisync_bench", "--d", "1000000", "--trials", "1", "--seed", "8114514", "--ca", "2000000", "--cb", "2000000", "--mbar", "1000000", "--bits", "30", "--epsilon", "64", "--redundant", "0", "--hashes", "false", "--dataset", "/root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier/d1000000_ca2000000_cb2000000_seed8114514/trial0.sets", "--format", "jsonl"]
+TIMEOUT after 299.99985113402363s
+

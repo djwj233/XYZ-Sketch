@@ -1,0 +1,173 @@
+building/preparing benchmark binaries for cpisync, minisketch ...
+/root/XYZ-Sketch/external/cpisync/src/StrataEst.cpp: In member function ‘size_t StrataEst::estimate()’:
+/root/XYZ-Sketch/external/cpisync/src/StrataEst.cpp:75:39: warning: control reaches end of non-void function [-Wreturn-type]
+   75 |                            + to_string(pow(2, numStrata)) + "differences");
+      |                              ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+benchmark binaries ready
+[1/18] minisketch d=100 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=100 trials=1 ...
+      fixed capacity=100 success=1 (1/1) R=1 bits=3000 status=ok pass
+    final check capacity=100 trials=1 ...
+      final capacity=100 success=1 (1/1) R=1 bits=3000 status=ok pass
+  status=ok parameter=100 R=1.0 success=1.0
+[2/18] cpisync d=100 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=100 trials=1 ...
+      fixed mbar=100 success=1 (1/1) R=2.267 bits=6800 status=ok pass
+    final check mbar=100 trials=1 ...
+      final mbar=100 success=1 (1/1) R=2.264 bits=6792 status=ok pass
+  status=ok parameter=100 R=2.264 success=1.0
+[3/18] minisketch d=300 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=300 trials=1 ...
+      fixed capacity=300 success=1 (1/1) R=1 bits=9000 status=ok pass
+    final check capacity=300 trials=1 ...
+      final capacity=300 success=1 (1/1) R=1 bits=9000 status=ok pass
+  status=ok parameter=300 R=1.0 success=1.0
+[4/18] cpisync d=300 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=300 trials=1 ...
+      fixed mbar=300 success=1 (1/1) R=2.097 bits=18872 status=ok pass
+    final check mbar=300 trials=1 ...
+      final mbar=300 success=1 (1/1) R=2.098 bits=18880 status=ok pass
+  status=ok parameter=300 R=2.097777777777778 success=1.0
+[5/18] minisketch d=1000 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=1000 trials=1 ...
+      fixed capacity=1000 success=1 (1/1) R=1 bits=30000 status=ok pass
+    final check capacity=1000 trials=1 ...
+      final capacity=1000 success=1 (1/1) R=1 bits=30000 status=ok pass
+  status=ok parameter=1000 R=1.0 success=1.0
+[6/18] cpisync d=1000 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=1000 trials=1 ...
+      fixed mbar=1000 success=1 (1/1) R=2.03 bits=60912 status=ok pass
+    final check mbar=1000 trials=1 ...
+      final mbar=1000 success=1 (1/1) R=2.03 bits=60912 status=ok pass
+  status=ok parameter=1000 R=2.0304 success=1.0
+[7/18] minisketch d=3000 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=3000 trials=1 ...
+      fixed capacity=3000 success=1 (1/1) R=1 bits=90000 status=ok pass
+    final check capacity=3000 trials=1 ...
+      final capacity=3000 success=1 (1/1) R=1 bits=90000 status=ok pass
+  status=ok parameter=3000 R=1.0 success=1.0
+[8/18] cpisync d=3000 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=3000 trials=1 ...
+      fixed mbar=3000 success=1 (1/1) R=2.011 bits=180992 status=ok pass
+    final check mbar=3000 trials=1 ...
+      final mbar=3000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=3000 R=0.0 success=0.0
+[9/18] minisketch d=10000 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=10000 trials=1 ...
+      fixed capacity=10000 success=1 (1/1) R=1 bits=300000 status=ok pass
+    final check capacity=10000 trials=1 ...
+      final capacity=10000 success=1 (1/1) R=1 bits=300000 status=ok pass
+  status=ok parameter=10000 R=1.0 success=1.0
+[10/18] cpisync d=10000 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=10000 trials=1 ...
+      fixed mbar=10000 success=0 (0/1) R=0 bits=0 status=benchmark_error fail
+    final check mbar=10000 trials=1 ...
+      final mbar=10000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=10000 R=0.0 success=0.0
+[11/18] minisketch d=30000 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=30000 trials=1 ...
+      fixed capacity=30000 success=1 (1/1) R=1 bits=900000 status=ok pass
+    final check capacity=30000 trials=1 ...
+      final capacity=30000 success=1 (1/1) R=1 bits=900000 status=ok pass
+  status=ok parameter=30000 R=1.0 success=1.0
+[12/18] cpisync d=30000 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=30000 trials=1 ...
+      fixed mbar=30000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+    final check mbar=30000 trials=1 ...
+      final mbar=30000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=30000 R=0.0 success=0.0
+[13/18] minisketch d=100000 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=100000 trials=1 ...
+      fixed capacity=100000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+    final check capacity=100000 trials=1 ...
+      final capacity=100000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=100000 R=0.0 success=0.0
+[14/18] cpisync d=100000 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=100000 trials=1 ...
+      fixed mbar=100000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+    final check mbar=100000 trials=1 ...
+      final mbar=100000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=100000 R=0.0 success=0.0
+[15/18] minisketch d=300000 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=300000 trials=1 ...
+      fixed capacity=300000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+    final check capacity=300000 trials=1 ...
+      final capacity=300000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=300000 R=0.0 success=0.0
+[16/18] cpisync d=300000 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=300000 trials=1 ...
+      fixed mbar=300000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+    final check mbar=300000 trials=1 ...
+      final mbar=300000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=300000 R=0.0 success=0.0
+[17/18] minisketch d=1000000 capacity_search,field_bits=30
+  details: parameter=capacity
+  job timeout: 300s
+  preparing 2 shared datasets in /root/XYZ-Sketch/tests/tmp/paper_fig3_compare_frontier (1 search + 1 final)
+    fixed probe capacity=1000000 trials=1 ...
+      fixed capacity=1000000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+    final check capacity=1000000 trials=1 ...
+      final capacity=1000000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=1000000 R=0.0 success=0.0
+[18/18] cpisync d=1000000 mbar_search,bits=30,epsilon=64
+  details: parameter=mbar, bits=30, epsilon=64
+  job timeout: 300s
+  reusing shared datasets
+    fixed probe mbar=1000000 trials=1 ...
+      fixed mbar=1000000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+    final check mbar=1000000 trials=1 ...
+      final mbar=1000000 success=0 (0/0) R=0 bits=0 status=job_timeout fail
+  status=job_timeout parameter=1000000 R=0.0 success=0.0
+wrote tests/results/paper_fig3_v2_fixed_baselines_d1e6/probes.jsonl
+wrote tests/results/paper_fig3_v2_fixed_baselines_d1e6/summary.jsonl
+wrote tests/results/paper_fig3_v2_fixed_baselines_d1e6/summary.csv
+wrote tests/results/paper_fig3_v2_fixed_baselines_d1e6/summary.md
+wrote tests/results/paper_fig3_v2_fixed_baselines_d1e6/run_config.json
