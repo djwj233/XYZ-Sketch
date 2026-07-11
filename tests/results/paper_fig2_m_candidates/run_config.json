@@ -1,0 +1,11 @@
+{
+  "args": {
+    "c_over_d_bin_width": 0.1,
+    "include_unresolved_with_m": true,
+    "input": "tests/results/paper_fig2_az_grid/summary.jsonl",
+    "output_dir": "tests/results/paper_fig2_m_candidates"
+  },
+  "candidate_rows": 43,
+  "full_candidate_rows": 240,
+  "input_rows": 495
+}

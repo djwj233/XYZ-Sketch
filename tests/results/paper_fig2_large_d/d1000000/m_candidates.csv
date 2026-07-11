@@ -1,0 +1,4 @@
+candidate_id,d,k,l,M,field_C_over_d,merged_candidate_count,merged_M_values,source_count,source_ok_count,source_unresolved_count,source_a_values,source_z_values,source_search_ids,min_source_R_w30,max_source_R_w30,min_source_success_rate,max_source_success_rate
+d1000000_k2_l6_M178767,1000000,2,6,178767,1.072602,1,178767,1,1,0,0.333333333333,16,d1000000_threshold_M173767_plus5000,,,,
+d1000000_k2_l6_M183767,1000000,2,6,183767,1.102602,1,183767,1,1,0,0.333333333333,16,d1000000_threshold_M173767_plus10000,,,,
+d1000000_k2_l6_M193767,1000000,2,6,193767,1.162602,1,193767,1,1,0,0.333333333333,17,d1000000_threshold_M173767_plus20000,,,,

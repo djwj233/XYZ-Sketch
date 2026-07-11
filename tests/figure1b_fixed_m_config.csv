@@ -1,0 +1,8 @@
+d,k,l,M,expected_z,M_source_file,M_source_description
+100,2,6,26,1,tests/results/paper_fig2_fixed_m_sim/summary.csv,"Smallest tested heuristic-point M with at least 90/100 successes"
+300,2,6,67,1,tests/results/paper_fig2_fixed_m_sim/summary.csv,"Existing 100-trial fixed-M Figure 2 configuration"
+1000,2,6,211,2,tests/results/paper_fig2_fixed_m_sim/summary.csv,"Existing 100-trial fixed-M Figure 2 configuration"
+3000,2,6,596,2,tests/results/paper_fig2_fixed_m_sim/summary.csv,"Existing 100-trial fixed-M Figure 2 configuration"
+10000,2,6,1948,4,tests/results/paper_fig2_fixed_m_sim/summary.csv,"Existing 100-trial fixed-M Figure 2 configuration"
+100000,2,6,18155,8,tests/results/paper_fig2_d100000_m_search/threshold_summary.json,"Existing 20-trial large-d threshold candidate"
+1000000,2,6,178767,16,tests/results/paper_fig2_d1000000_m_search/m_candidates.csv,"Existing 20-trial large-d fixed-M candidate"

@@ -1,0 +1,42 @@
+{
+  "args": {
+    "a_values": "0",
+    "base_seed": 114514,
+    "ci_confidence": 0.95,
+    "ci_method": "wilson",
+    "d_values": "20",
+    "dataset_dir": null,
+    "dedup_hashes": "false",
+    "dry_run": false,
+    "final_trials": 1,
+    "k_values": "2",
+    "l_values": "3",
+    "limit": 1,
+    "max_c_over_d": 8.0,
+    "max_set_size": 100000,
+    "min_range_length": 2,
+    "output_dir": "tests/results/_smoke_fig2",
+    "probe_trials": 1,
+    "set_size_scale": 10,
+    "shared_datasets": true,
+    "skip_build": false,
+    "target_success_rate": 0.9,
+    "threshold_policy": "point",
+    "z_values": "0"
+  },
+  "configs": [
+    {
+      "ca": 1000,
+      "cb": 1000,
+      "circular_a": 0.0,
+      "d": 20,
+      "dedup_hashes": false,
+      "k": 2,
+      "l": 3,
+      "mode": "circular",
+      "search_id": "d20_l3_k2_a0_z0",
+      "seed": 114514,
+      "z": 0
+    }
+  ]
+}

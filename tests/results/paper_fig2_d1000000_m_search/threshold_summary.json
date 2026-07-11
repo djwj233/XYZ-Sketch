@@ -1,0 +1,37 @@
+{
+  "base_seed": 114514,
+  "binary_bracket": [
+    100000,
+    400000
+  ],
+  "binary_threshold_M": 173767,
+  "candidate_M_values": [
+    178767,
+    183767,
+    193767
+  ],
+  "candidate_offsets": [
+    5000,
+    10000,
+    20000
+  ],
+  "caveat": "20-trial empirical binary search assumes an approximately monotone success predicate.",
+  "d": 1000000,
+  "dedup_hashes": false,
+  "jobs": 2,
+  "k": 2,
+  "l": 6,
+  "m_resolution": 1,
+  "marker_a": 0.33333333333333326,
+  "marker_c": 0.27591534917087435,
+  "marker_c_orient_over_c_peel": 1.2081,
+  "marker_d": 0.5,
+  "marker_delta": 0.1,
+  "max_stabilization_steps": 20,
+  "pass_streak": 1,
+  "probe_count": 20,
+  "required_successes": 18,
+  "target_success_rate": 0.9,
+  "threshold_M": 173767,
+  "trials": 20
+}

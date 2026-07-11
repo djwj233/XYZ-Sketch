@@ -1,0 +1,68 @@
+{
+  "args": {
+    "a_constant": 0.0,
+    "algorithms": "xyz_v2,iblt",
+    "base_seed": 114514,
+    "c_orient": null,
+    "c_peel": null,
+    "ci_confidence": 0.95,
+    "ci_method": "wilson",
+    "d_values": "20",
+    "dataset_dir": null,
+    "delta": 1.8795288165390832e-12,
+    "dry_run": false,
+    "final_trials": 1,
+    "keep_datasets": false,
+    "limit": 2,
+    "max_parameter_factor": 8.0,
+    "max_set_size": 100000,
+    "minisketch_field_bits": 30,
+    "output_dir": "tests/results/_smoke_fig3_local",
+    "probe_trials": 1,
+    "set_size_scale": 10,
+    "skip_build": false,
+    "target_success_rate": 0.9,
+    "threshold_policy": "point",
+    "xyz_circular_a": null,
+    "xyz_k": 2,
+    "xyz_l": 6,
+    "xyz_tuning": null,
+    "z_constant": 1.0
+  },
+  "jobs": [
+    {
+      "algorithm": "xyz_v2",
+      "ca": 1000,
+      "cb": 1000,
+      "circular_a": 0.0,
+      "d": 20,
+      "final_trials": 1,
+      "fixed_z": null,
+      "k": 2,
+      "l": 6,
+      "mode": "circular",
+      "parameter_name": "M",
+      "probe_trials": 1,
+      "seed": 114514,
+      "variant": "circular,heuristic-z",
+      "xyz_tuning_d": "",
+      "xyz_tuning_source": ""
+    },
+    {
+      "algorithm": "iblt",
+      "ca": 1000,
+      "cb": 1000,
+      "d": 20,
+      "final_trials": 1,
+      "parameter_name": "cells",
+      "probe_trials": 1,
+      "seed": 114514,
+      "variant": "capacity_search"
+    }
+  ],
+  "supported_algorithms": [
+    "iblt",
+    "minisketch",
+    "xyz_v2"
+  ]
+}

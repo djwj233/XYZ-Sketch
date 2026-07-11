@@ -110,6 +110,17 @@ def parse_bool(value: str) -> bool:
     raise ValueError(f"invalid boolean: {value}")
 
 
+def read_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    rows: list[dict[str, Any]] = []
+    with path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            if line.strip():
+                rows.append(json.loads(line))
+    return rows
+
+
 def range_length(m_value: int, z_value: int) -> int:
     return int(m_value) // (int(z_value) + 1)
 
@@ -597,6 +608,51 @@ def write_run_config(path: Path, args: argparse.Namespace, configs: list[dict[st
         handle.write("\n")
 
 
+RESUME_ARG_KEYS = [
+    "d_values",
+    "l_values",
+    "k_values",
+    "a_values",
+    "z_values",
+    "probe_trials",
+    "final_trials",
+    "target_success_rate",
+    "max_c_over_d",
+    "min_range_length",
+    "ci_confidence",
+    "ci_method",
+    "threshold_policy",
+    "shared_datasets",
+    "dataset_dir",
+    "dedup_hashes",
+    "base_seed",
+    "max_set_size",
+    "set_size_scale",
+]
+
+
+def comparable_arg_value(value: Any) -> Any:
+    return str(value) if isinstance(value, Path) else value
+
+
+def validate_resume_args(path: Path, args: argparse.Namespace) -> None:
+    if not path.exists():
+        return
+    with path.open("r", encoding="utf-8") as handle:
+        previous = json.load(handle).get("args", {})
+    mismatches = []
+    current = {key: comparable_arg_value(getattr(args, key)) for key in RESUME_ARG_KEYS}
+    for key, value in current.items():
+        if key in previous and previous[key] != value:
+            mismatches.append((key, previous[key], value))
+    if mismatches:
+        detail = "; ".join(f"{key}: existing={old!r}, current={new!r}" for key, old, new in mismatches)
+        raise SystemExit(
+            "--resume refuses to mix different Figure 2 grid settings in one output directory. "
+            f"Use a new --output-dir for the reduced run, or rerun with the original settings. Differences: {detail}"
+        )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run the Figure 2(a) circular-a/z threshold grid.")
     parser.add_argument("--d-values", default="300")
@@ -614,6 +670,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--threshold-policy", default="point", choices=["point", "ci-low"])
     parser.add_argument("--skip-build", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--resume", action="store_true", help="Skip cells already present in summary.jsonl and append remaining cells.")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--output-dir", type=Path, default=None)
     parser.add_argument("--shared-datasets", action="store_true")
@@ -654,14 +711,28 @@ def main() -> None:
     binary = build_benchmark(root, dirs["build"], args.skip_build)
     dataset_dir = args.dataset_dir or dirs["tmp"]
     dataset_cache: dict[tuple[int, int, int, int], list[Path]] = {}
-    for path in (dirs["probes"], dirs["summary_jsonl"], dirs["summary_csv"], dirs["summary_md"], dirs["run_config"], dirs["errors"]):
-        if path.exists():
-            path.unlink()
+    if args.resume:
+        validate_resume_args(dirs["run_config"], args)
+        summaries = read_jsonl(dirs["summary_jsonl"])
+        completed_ids = {str(row.get("search_id")) for row in summaries if row.get("search_id") not in (None, "")}
+        all_probes = [
+            row
+            for row in read_jsonl(dirs["probes"])
+            if str(row.get("search_id")) in completed_ids
+        ]
+        print(f"[resume] completed={len(completed_ids)} remaining={len(configs) - len(completed_ids)}", flush=True)
+    else:
+        for path in (dirs["probes"], dirs["summary_jsonl"], dirs["summary_csv"], dirs["summary_md"], dirs["run_config"], dirs["errors"]):
+            if path.exists():
+                path.unlink()
+        all_probes: list[dict[str, Any]] = []
+        summaries: list[dict[str, Any]] = []
     write_run_config(dirs["run_config"], args, configs)
 
-    all_probes: list[dict[str, Any]] = []
-    summaries: list[dict[str, Any]] = []
     for index, config in enumerate(configs, start=1):
+        if args.resume and str(config["search_id"]) in completed_ids:
+            print(f"[{index}/{len(configs)}] skip completed {config['search_id']}", flush=True)
+            continue
         print(f"[{index}/{len(configs)}] {config['search_id']} a={config['circular_a']} z={config['z']}", flush=True)
         dataset_paths: list[Path] | None = None
         if args.shared_datasets:

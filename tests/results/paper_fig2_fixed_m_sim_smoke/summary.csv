@@ -1,0 +1,5 @@
+search_id,candidate_id,d,k,l,M,field_C_over_d,mode,circular_a,z,range_length,circular_base_range,trials,successes,success_rate,peeling_success_rate,ci_low,ci_high,ci_method,ci_confidence,status,invalid_reason,seed,dedup_hashes,source_count,source_ok_count,source_unresolved_count,source_a_values,source_z_values
+d100_k2_l6_M23_a0_z0,d100_k2_l6_M23,100,2,6,23,1.38,circular,0.0,0,23,23,100,89,0.89,0.89,0.8136870349691969,0.9374580364293543,wilson,0.95,ok,,114514,False,2,0,2,"0.2,0.9",0
+d100_k2_l6_M23_a0_z1,d100_k2_l6_M23,100,2,6,23,1.38,circular,0.0,1,11,23,100,79,0.79,0.79,0.7002003116591013,0.858343459380847,wilson,0.95,ok,,115523,False,2,0,2,"0.2,0.9",0
+d100_k2_l6_M23_a1_z0,d100_k2_l6_M23,100,2,6,23,1.38,circular,0.333333333,0,23,17,100,82,0.82,0.82,0.7333264161369926,0.8829977450105364,wilson,0.95,ok,,116532,False,2,0,2,"0.2,0.9",0
+d100_k2_l6_M23_a1_z1,d100_k2_l6_M23,100,2,6,23,1.38,circular,0.333333333,1,11,21,100,75,0.75,0.75,0.656955364519384,0.8245478863771232,wilson,0.95,ok,,117541,False,2,0,2,"0.2,0.9",0

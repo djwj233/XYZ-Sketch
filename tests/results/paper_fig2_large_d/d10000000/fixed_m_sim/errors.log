@@ -1,0 +1,42 @@
+CONFIG {"M": 1757032, "candidate_id": "d10000000_k2_l6_M1757032", "circular_a": 0.233333333333, "d": 10000000, "dedup_hashes": false, "k": 2, "l": 6, "search_id": "d10000000_k2_l6_M1757032_a2_z20", "seed": 114514, "source_a_values": "0.333333333333", "source_count": "1", "source_field_C_over_d": 1.0542192, "source_ok_count": "1", "source_search_ids": "d10000000_threshold_M1707032_plus50000", "source_unresolved_count": "0", "source_z_values": "35", "z": 20}
+COMMAND ["/home/administrator/XYZ-Sketch/build/fig2_peeling_sim", "--d", "10000000", "--l", "6", "--k", "2", "--M", "1757032", "--a", "0.233333333333", "--z", "20", "--trials", "20", "--seed", "114514", "--dedup-hashes", "false", "--format", "jsonl"]
+RETURNCODE -2
+STDOUT
+
+STDERR
+
+CONFIG {"M": 1757032, "candidate_id": "d10000000_k2_l6_M1757032", "circular_a": 0.233333333333, "d": 10000000, "dedup_hashes": false, "k": 2, "l": 6, "search_id": "d10000000_k2_l6_M1757032_a2_z30", "seed": 114514, "source_a_values": "0.333333333333", "source_count": "1", "source_field_C_over_d": 1.0542192, "source_ok_count": "1", "source_search_ids": "d10000000_threshold_M1707032_plus50000", "source_unresolved_count": "0", "source_z_values": "35", "z": 30}
+COMMAND ["/home/administrator/XYZ-Sketch/build/fig2_peeling_sim", "--d", "10000000", "--l", "6", "--k", "2", "--M", "1757032", "--a", "0.233333333333", "--z", "30", "--trials", "20", "--seed", "114514", "--dedup-hashes", "false", "--format", "jsonl"]
+RETURNCODE -2
+STDOUT
+
+STDERR
+
+CONFIG {"M": 1757032, "candidate_id": "d10000000_k2_l6_M1757032", "circular_a": 0.233333333333, "d": 10000000, "dedup_hashes": false, "k": 2, "l": 6, "search_id": "d10000000_k2_l6_M1757032_a2_z40", "seed": 114514, "source_a_values": "0.333333333333", "source_count": "1", "source_field_C_over_d": 1.0542192, "source_ok_count": "1", "source_search_ids": "d10000000_threshold_M1707032_plus50000", "source_unresolved_count": "0", "source_z_values": "35", "z": 40}
+COMMAND ["/home/administrator/XYZ-Sketch/build/fig2_peeling_sim", "--d", "10000000", "--l", "6", "--k", "2", "--M", "1757032", "--a", "0.233333333333", "--z", "40", "--trials", "20", "--seed", "114514", "--dedup-hashes", "false", "--format", "jsonl"]
+RETURNCODE -2
+STDOUT
+
+STDERR
+
+CONFIG {"M": 1757032, "candidate_id": "d10000000_k2_l6_M1757032", "circular_a": 0.233333333333, "d": 10000000, "dedup_hashes": false, "k": 2, "l": 6, "search_id": "d10000000_k2_l6_M1757032_a2_z35", "seed": 114514, "source_a_values": "0.333333333333", "source_count": "1", "source_field_C_over_d": 1.0542192, "source_ok_count": "1", "source_search_ids": "d10000000_threshold_M1707032_plus50000", "source_unresolved_count": "0", "source_z_values": "35", "z": 35}
+COMMAND ["/home/administrator/XYZ-Sketch/build/fig2_peeling_sim", "--d", "10000000", "--l", "6", "--k", "2", "--M", "1757032", "--a", "0.233333333333", "--z", "35", "--trials", "20", "--seed", "114514", "--dedup-hashes", "false", "--format", "jsonl"]
+RETURNCODE -2
+STDOUT
+
+STDERR
+
+CONFIG {"M": 1757032, "candidate_id": "d10000000_k2_l6_M1757032", "circular_a": 0.233333333333, "d": 10000000, "dedup_hashes": false, "k": 2, "l": 6, "search_id": "d10000000_k2_l6_M1757032_a2_z25", "seed": 114514, "source_a_values": "0.333333333333", "source_count": "1", "source_field_C_over_d": 1.0542192, "source_ok_count": "1", "source_search_ids": "d10000000_threshold_M1707032_plus50000", "source_unresolved_count": "0", "source_z_values": "35", "z": 25}
+COMMAND ["/home/administrator/XYZ-Sketch/build/fig2_peeling_sim", "--d", "10000000", "--l", "6", "--k", "2", "--M", "1757032", "--a", "0.233333333333", "--z", "25", "--trials", "20", "--seed", "114514", "--dedup-hashes", "false", "--format", "jsonl"]
+RETURNCODE -2
+STDOUT
+
+STDERR
+
+CONFIG {"M": 1757032, "candidate_id": "d10000000_k2_l6_M1757032", "circular_a": 0.233333333333, "d": 10000000, "dedup_hashes": false, "k": 2, "l": 6, "search_id": "d10000000_k2_l6_M1757032_a2_z15", "seed": 114514, "source_a_values": "0.333333333333", "source_count": "1", "source_field_C_over_d": 1.0542192, "source_ok_count": "1", "source_search_ids": "d10000000_threshold_M1707032_plus50000", "source_unresolved_count": "0", "source_z_values": "35", "z": 15}
+COMMAND ["/home/administrator/XYZ-Sketch/build/fig2_peeling_sim", "--d", "10000000", "--l", "6", "--k", "2", "--M", "1757032", "--a", "0.233333333333", "--z", "15", "--trials", "20", "--seed", "114514", "--dedup-hashes", "false", "--format", "jsonl"]
+RETURNCODE -2
+STDOUT
+
+STDERR
+
