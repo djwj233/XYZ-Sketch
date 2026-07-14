@@ -6,11 +6,14 @@ using namespace std;
 #define fr(v, a, b) for(int v = a; v >= b; v--)
 #define cl(a, v) memset(a, v, sizeof(a))
 
-// using namespace RandomHash;
-using namespace SpatialCoupling;
+using namespace Hashing;
 
 int k, l, d;
 queue<int> Q; vector<bool> Vis;
+constexpr int FIELD_COEFFICIENT_BITS = 30;
+static_assert(P >= (1 << (FIELD_COEFFICIENT_BITS - 1)) &&
+              P < (1LL << FIELD_COEFFICIENT_BITS));
+
 struct Cell {
     char c; poly p;
     Cell() {  c = 0, p = plv({1});  }
@@ -25,6 +28,17 @@ inline vector<int> HashLocations(int x) {
         positions.erase(unique(positions.begin(), positions.end()), positions.end());
     }
     return positions;
+}
+
+poly PolynomialFromRoots(const vector<int>& roots) {
+    poly result = plv({1});
+    for(int x : roots) result *= plv({P - x, 1});
+    result.PopZero();
+    return result;
+}
+
+bool HasDuplicateRoots(const vector<int>& roots) {
+    return adjacent_find(roots.begin(), roots.end()) != roots.end();
 }
 
 struct XYZSketch {
@@ -73,18 +87,27 @@ struct XYZSketch {
         auto ChiRes = tool :: RFuncReconstruct(B[i].p, l, m);
         if(ChiRes.index() == 1) return false;
         auto Chi = get<pair<poly, poly> >(ChiRes);
+        Chi.first.PopZero(), Chi.second.PopZero();
+        if(Chi.first.a.empty() || Chi.second.a.empty()) return false;
+        if(Chi.first.a.back() != Chi.second.a.back()) return false;
+        Chi.first.monic(), Chi.second.monic();
         auto DA = tool :: findAllRoots(Chi.first), DB = tool :: findAllRoots(Chi.second);
         if(DA.index() == 1 || DB.index() == 1) return false;
         auto DeltaA = get<vi>(DA), DeltaB = get<vi>(DB);
+
+        sort(DeltaA.begin(), DeltaA.end());
+        sort(DeltaB.begin(), DeltaB.end());
+        if(HasDuplicateRoots(DeltaA) || HasDuplicateRoots(DeltaB)) return false;
+        if((int)DeltaA.size() + (int)DeltaB.size() > l) return false;
+        if((int)DeltaA.size() - (int)DeltaB.size() != m) return false;
+        if(!(PolynomialFromRoots(DeltaA) == Chi.first)) return false;
+        if(!(PolynomialFromRoots(DeltaB) == Chi.second)) return false;
+
         for(auto t : {DeltaA, DeltaB}) for(int x : t) {
             bool fl = false;
             for(int pos : HashLocations(x)) if(pos == i) {  fl = true; break;  }
             if(!fl) return false;
         }
-        sort(DeltaA.begin(), DeltaA.end()),
-            DeltaA.erase(unique(DeltaA.begin(), DeltaA.end()), DeltaA.end());
-        sort(DeltaB.begin(), DeltaB.end()),
-            DeltaB.erase(unique(DeltaB.begin(), DeltaB.end()), DeltaB.end());
         return make_pair(DeltaA, DeltaB);
     }
     void Extract(int x, int type) {
@@ -116,7 +139,10 @@ struct XYZSketch {
             for(int x : da) Extract(x, 0), SA.push_back(x);
             for(int x : db) Extract(x, 1), SB.push_back(x);
         }
-        fo(i, 0, M - 1) if(!Vis[i]) return false;
+        fo(i, 0, M - 1) {
+            B[i].p.PopZero();
+            if(B[i].c != 0 || !(B[i].p == plv({1}))) return false;
+        }
         sort(SA.begin(), SA.end()), sort(SB.begin(), SB.end());
         return make_pair(SA, SB);
     }
@@ -126,8 +152,12 @@ struct XYZSketch {
             B[id].p.rs(l);
             fo(j, 0, __lg(2 * l + 1))
                 res.push_back(B[id].c >> j & 1);
-            fo(i, 0, l - 1) fo(j, 0, 31)
-                res.push_back(B[id].p[i] >> j & 1);
+            fo(i, 0, l - 1) {
+                int coefficient = B[id].p[i] % P;
+                if(coefficient < 0) coefficient += P;
+                fo(j, 0, FIELD_COEFFICIENT_BITS - 1)
+                    res.push_back(coefficient >> j & 1);
+            }
         }
         return res;
     }
@@ -146,9 +176,9 @@ XYZSketch to_sketch(vector<bool> S) {
             res.B[id].c |= ((int)S[pos + j]) << j;
         pos += __lg(2 * l + 1) + 1;
         fo(i, 0, l - 1) {
-            fo(j, 0, 31)
+            fo(j, 0, FIELD_COEFFICIENT_BITS - 1)
                 res.B[id].p[i] |= ((int)S[pos + j]) << j;
-            pos += 32;
+            pos += FIELD_COEFFICIENT_BITS;
         }
     }
     return res;

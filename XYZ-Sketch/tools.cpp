@@ -111,7 +111,7 @@ namespace tool {
 #ifdef BRUTE_POLY_OP
         friend poly operator * (poly aa, poly bb) {
             if(!sz(aa) || !sz(bb)) return (vi){};
-            int lim, all = sz(aa) + sz(bb) - 1; poly res(all);
+            int all = sz(aa) + sz(bb) - 1; poly res(all);
             L(i, 0, all - 1) L(j, max(0, i - sz(bb) + 1), min(i, sz(aa) - 1))
                 res[i] = (res[i] + (ll)aa[j] * bb[i - j]) % P; 
             return res;

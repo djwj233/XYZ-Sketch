@@ -1,9 +1,4 @@
-
 build/
-
-tests/__pycache__/
-tests/tmp/
-
-*.svg
-
-artifacts/
+*.o
+*.a
+*.so

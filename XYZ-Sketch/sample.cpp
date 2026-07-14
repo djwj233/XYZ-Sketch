@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "XYZSketch.cpp"
+#include "XYZSketch.h"
 
 using namespace std;
 #define fo(v, a, b) for(int v = a; v <= b; v++)
@@ -12,12 +12,13 @@ int main() {
     // freopen("data.out", "w", stdout);
     tool::init(MAXLEN), tool::Pinit(MAXLEN);
     
-    int cA, cB, D;
     vector<int> AliceData = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
                 BobData = {1, 12, 3, 4, 5, 6, 7, 28, 39, 10};
-    cA = 10, cB = 10, D = 6;
     k = 2, l = 3, M = 6;
-    HashingInit(0); // set z = 0
+    Hashing::SetHashMode(Hashing::CIRCULAR);
+    Hashing::SetCircularA(0.5);
+    Hashing::SetDedupHashes(true);
+    Hashing::HashingInit(1);
 
     XYZSketch Alice = Encode(AliceData);
     vector<bool> S = Alice.to_bitstring(); // Alice can transmit S to Bob

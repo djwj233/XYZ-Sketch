@@ -1,4 +1,0 @@
-d,M,C_over_d,a_star,z_star,star_success,selection_status,best_success,best_success_a,best_success_z,trials,successes,ci_low,ci_high
-100000,18055,1.0833,0.4,16,1.0,target_met,1.0,0.4,16,20,20,0.8388748419471806,1.0
-100000,18155,1.0893,0.4,16,1.0,target_met,1.0,0.4,16,20,20,0.8388748419471806,1.0
-100000,18255,1.0953,0.4,16,1.0,target_met,1.0,0.4,16,20,20,0.8388748419471806,1.0

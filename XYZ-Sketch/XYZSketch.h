@@ -1,25 +1,8 @@
-#ifndef XYZSketch_H
-#define XYZSketch_H
+#ifndef XYZ_SKETCH_H
+#define XYZ_SKETCH_H
 
-#include <bits/stdc++.h>
-#include "tools.cpp"
-using namespace std;
+// XYZ-Sketch is provided as a single-translation-unit reference implementation.
+// Including this header exposes the complete, current public implementation.
+#include "XYZSketch.cpp"
 
-struct Cell {
-    int c; poly p; Cell();
-} ;
-struct XYZSketch {
-    vector<Cell> B;
-    int size();
-    void init();
-    Cell & operator [] (int);
-    friend XYZSketch operator - (XYZSketch, XYZSketch);
-    void InsertToCell(int, int);
-    void Update(int);
-    pair<vector<int>, vector<int> > PureCellDecode(int);
-    bool PureCellVerify(int);
-    void Extract(int, int);
-    variant<pair<vi, vi>, bool> Decode();
-} ;
-XYZSketch Encode(vector<int>) ;
 #endif
