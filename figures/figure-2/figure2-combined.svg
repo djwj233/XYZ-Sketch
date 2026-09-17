@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+<rect width="1500" height="600" fill="#ffffff"/>
+<defs>
+<clipPath id="combined-panel-0"><rect x="78" y="66" width="390" height="365"/></clipPath>
+<clipPath id="combined-panel-1"><rect x="578" y="66" width="390" height="365"/></clipPath>
+<clipPath id="combined-panel-2"><rect x="1078" y="66" width="390" height="365"/></clipPath>
+</defs>
+<line x1="85.50" y1="66" x2="85.50" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="85.50" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^2</text>
+<line x1="179.25" y1="66" x2="179.25" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="179.25" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^3</text>
+<line x1="273.00" y1="66" x2="273.00" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="273.00" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^4</text>
+<line x1="366.75" y1="66" x2="366.75" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="366.75" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^5</text>
+<line x1="460.50" y1="66" x2="460.50" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="460.50" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^6</text>
+<line x1="78" y1="402.87" x2="468" y2="402.87" stroke="#e2e2e2" stroke-width="1"/>
+<text x="70.00" y="406.87" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">1</text>
+<line x1="78" y1="282.87" x2="468" y2="282.87" stroke="#e2e2e2" stroke-width="1"/>
+<text x="70.00" y="286.87" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">2</text>
+<line x1="78" y1="124.25" x2="468" y2="124.25" stroke="#e2e2e2" stroke-width="1"/>
+<text x="70.00" y="128.25" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">5</text>
+<rect x="78" y="66" width="390" height="365" fill="none" stroke="#303030" stroke-width="1.3"/>
+<g clip-path="url(#combined-panel-0)">
+<polyline points="85.50,343.30 130.23,356.33 179.25,364.07 223.98,369.24 273.00,376.38 317.73,380.06 366.75,385.74 411.48,387.67 460.50,389.63" fill="none" stroke="#2468d8" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="85.50" cy="343.30" r="3.60" fill="#2468d8"/>
+<circle cx="130.23" cy="356.33" r="3.60" fill="#2468d8"/>
+<circle cx="179.25" cy="364.07" r="3.60" fill="#2468d8"/>
+<circle cx="223.98" cy="369.24" r="3.60" fill="#2468d8"/>
+<circle cx="273.00" cy="376.38" r="3.60" fill="#2468d8"/>
+<circle cx="317.73" cy="380.06" r="3.60" fill="#2468d8"/>
+<circle cx="366.75" cy="385.74" r="3.60" fill="#2468d8"/>
+<circle cx="411.48" cy="387.67" r="3.60" fill="#2468d8"/>
+<circle cx="460.50" cy="389.63" r="3.60" fill="#2468d8"/>
+<polyline points="85.50,402.87 130.23,402.87 179.25,402.87 223.98,402.87 273.00,402.87" fill="none" stroke="#18a665" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="82.26" y="399.63" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="126.99" y="399.63" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="176.01" y="399.63" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="220.74" y="399.63" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="269.76" y="399.63" width="6.48" height="6.48" fill="#18a665"/>
+<polyline points="85.50,155.42 130.23,163.61 179.25,168.40 223.98,170.49 273.00,171.43 317.73,172.46 366.75,172.46 411.48,173.46 460.50,173.46" fill="none" stroke="#df2f2f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="85.50,151.02 81.10,159.02 89.90,159.02" fill="#df2f2f"/>
+<polygon points="130.23,159.21 125.83,167.21 134.63,167.21" fill="#df2f2f"/>
+<polygon points="179.25,164.00 174.85,172.00 183.65,172.00" fill="#df2f2f"/>
+<polygon points="223.98,166.09 219.58,174.09 228.38,174.09" fill="#df2f2f"/>
+<polygon points="273.00,167.03 268.60,175.03 277.40,175.03" fill="#df2f2f"/>
+<polygon points="317.73,168.06 313.33,176.06 322.13,176.06" fill="#df2f2f"/>
+<polygon points="366.75,168.06 362.35,176.06 371.15,176.06" fill="#df2f2f"/>
+<polygon points="411.48,169.06 407.08,177.06 415.88,177.06" fill="#df2f2f"/>
+<polygon points="460.50,169.06 456.10,177.06 464.90,177.06" fill="#df2f2f"/>
+<polyline points="85.50,108.46 130.23,118.64 179.25,127.83 223.98,130.39 273.00,132.94 317.73,134.10 366.75,134.63 411.48,134.97 460.50,135.08" fill="none" stroke="#f09a18" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="85.50,104.06 81.10,108.46 85.50,112.86 89.90,108.46" fill="#f09a18"/>
+<polygon points="130.23,114.24 125.83,118.64 130.23,123.04 134.63,118.64" fill="#f09a18"/>
+<polygon points="179.25,123.43 174.85,127.83 179.25,132.23 183.65,127.83" fill="#f09a18"/>
+<polygon points="223.98,125.99 219.58,130.39 223.98,134.79 228.38,130.39" fill="#f09a18"/>
+<polygon points="273.00,128.54 268.60,132.94 273.00,137.34 277.40,132.94" fill="#f09a18"/>
+<polygon points="317.73,129.70 313.33,134.10 317.73,138.50 322.13,134.10" fill="#f09a18"/>
+<polygon points="366.75,130.23 362.35,134.63 366.75,139.03 371.15,134.63" fill="#f09a18"/>
+<polygon points="411.48,130.57 407.08,134.97 411.48,139.37 415.88,134.97" fill="#f09a18"/>
+<polygon points="460.50,130.68 456.10,135.08 460.50,139.48 464.90,135.08" fill="#f09a18"/>
+<polyline points="85.50,383.25 130.23,396.08 179.25,400.80" fill="none" stroke="#16a6bd" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="85.50,387.65 81.10,379.65 89.90,379.65" fill="#16a6bd"/>
+<polygon points="130.23,400.48 125.83,392.48 134.63,392.48" fill="#16a6bd"/>
+<polygon points="179.25,405.20 174.85,397.20 183.65,397.20" fill="#16a6bd"/>
+</g>
+<text x="273.00" y="35.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="500" fill="#202020">Space overhead</text>
+<text x="273.00" y="485.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">Difference size d</text>
+<text x="20.00" y="248.50" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#202020" transform="rotate(-90 20.00 248.50)">Space overhead R</text>
+<line x1="585.50" y1="66" x2="585.50" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="585.50" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^2</text>
+<line x1="679.25" y1="66" x2="679.25" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="679.25" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^3</text>
+<line x1="773.00" y1="66" x2="773.00" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="773.00" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^4</text>
+<line x1="866.75" y1="66" x2="866.75" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="866.75" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^5</text>
+<line x1="960.50" y1="66" x2="960.50" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="960.50" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^6</text>
+<line x1="578" y1="431.00" x2="968" y2="431.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="570.00" y="435.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-8</text>
+<line x1="578" y1="339.75" x2="968" y2="339.75" stroke="#e2e2e2" stroke-width="1"/>
+<text x="570.00" y="343.75" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-7</text>
+<line x1="578" y1="248.50" x2="968" y2="248.50" stroke="#e2e2e2" stroke-width="1"/>
+<text x="570.00" y="252.50" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-6</text>
+<line x1="578" y1="157.25" x2="968" y2="157.25" stroke="#e2e2e2" stroke-width="1"/>
+<text x="570.00" y="161.25" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-5</text>
+<line x1="578" y1="66.00" x2="968" y2="66.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="570.00" y="70.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-4</text>
+<rect x="578" y="66" width="390" height="365" fill="none" stroke="#303030" stroke-width="1.3"/>
+<g clip-path="url(#combined-panel-1)">
+<polyline points="585.50,346.99 630.23,346.61 679.25,344.57 723.98,347.70 773.00,346.60 817.73,344.61 866.75,339.97 911.48,331.20 960.50,324.98" fill="none" stroke="#2468d8" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="585.50" cy="346.99" r="3.60" fill="#2468d8"/>
+<circle cx="630.23" cy="346.61" r="3.60" fill="#2468d8"/>
+<circle cx="679.25" cy="344.57" r="3.60" fill="#2468d8"/>
+<circle cx="723.98" cy="347.70" r="3.60" fill="#2468d8"/>
+<circle cx="773.00" cy="346.60" r="3.60" fill="#2468d8"/>
+<circle cx="817.73" cy="344.61" r="3.60" fill="#2468d8"/>
+<circle cx="866.75" cy="339.97" r="3.60" fill="#2468d8"/>
+<circle cx="911.48" cy="331.20" r="3.60" fill="#2468d8"/>
+<circle cx="960.50" cy="324.98" r="3.60" fill="#2468d8"/>
+<polyline points="585.50,276.05 630.23,231.54 679.25,182.67 723.98,141.03 773.00,93.21" fill="none" stroke="#18a665" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="582.26" y="272.81" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="626.99" y="228.30" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="676.01" y="179.43" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="720.74" y="137.79" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="769.76" y="89.97" width="6.48" height="6.48" fill="#18a665"/>
+<polyline points="585.50,330.77 630.23,331.27 679.25,330.95 723.98,330.45 773.00,330.91 817.73,326.31 866.75,322.96 911.48,315.10 960.50,288.00" fill="none" stroke="#df2f2f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="585.50,326.37 581.10,334.37 589.90,334.37" fill="#df2f2f"/>
+<polygon points="630.23,326.87 625.83,334.87 634.63,334.87" fill="#df2f2f"/>
+<polygon points="679.25,326.55 674.85,334.55 683.65,334.55" fill="#df2f2f"/>
+<polygon points="723.98,326.05 719.58,334.05 728.38,334.05" fill="#df2f2f"/>
+<polygon points="773.00,326.51 768.60,334.51 777.40,334.51" fill="#df2f2f"/>
+<polygon points="817.73,321.91 813.33,329.91 822.13,329.91" fill="#df2f2f"/>
+<polygon points="866.75,318.56 862.35,326.56 871.15,326.56" fill="#df2f2f"/>
+<polygon points="911.48,310.70 907.08,318.70 915.88,318.70" fill="#df2f2f"/>
+<polygon points="960.50,283.60 956.10,291.60 964.90,291.60" fill="#df2f2f"/>
+<polyline points="585.50,305.06 630.23,297.80 679.25,290.83 723.98,285.96 773.00,280.18 817.73,276.17 866.75,271.78 911.48,267.24 960.50,261.23" fill="none" stroke="#f09a18" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="585.50,300.66 581.10,305.06 585.50,309.46 589.90,305.06" fill="#f09a18"/>
+<polygon points="630.23,293.40 625.83,297.80 630.23,302.20 634.63,297.80" fill="#f09a18"/>
+<polygon points="679.25,286.43 674.85,290.83 679.25,295.23 683.65,290.83" fill="#f09a18"/>
+<polygon points="723.98,281.56 719.58,285.96 723.98,290.36 728.38,285.96" fill="#f09a18"/>
+<polygon points="773.00,275.78 768.60,280.18 773.00,284.58 777.40,280.18" fill="#f09a18"/>
+<polygon points="817.73,271.77 813.33,276.17 817.73,280.57 822.13,276.17" fill="#f09a18"/>
+<polygon points="866.75,267.38 862.35,271.78 866.75,276.18 871.15,271.78" fill="#f09a18"/>
+<polygon points="911.48,262.84 907.08,267.24 911.48,271.64 915.88,267.24" fill="#f09a18"/>
+<polygon points="960.50,256.83 956.10,261.23 960.50,265.63 964.90,261.23" fill="#f09a18"/>
+<polyline points="585.50,155.46 630.23,120.52 679.25,76.32" fill="none" stroke="#16a6bd" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="585.50,159.86 581.10,151.86 589.90,151.86" fill="#16a6bd"/>
+<polygon points="630.23,124.92 625.83,116.92 634.63,116.92" fill="#16a6bd"/>
+<polygon points="679.25,80.72 674.85,72.72 683.65,72.72" fill="#16a6bd"/>
+</g>
+<text x="773.00" y="35.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="500" fill="#202020">Update time</text>
+<text x="773.00" y="485.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">Difference size d</text>
+<text x="520.00" y="248.50" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#202020" transform="rotate(-90 520.00 248.50)">Update time per input element (s)</text>
+<line x1="1085.50" y1="66" x2="1085.50" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1085.50" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^2</text>
+<line x1="1179.25" y1="66" x2="1179.25" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1179.25" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^3</text>
+<line x1="1273.00" y1="66" x2="1273.00" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1273.00" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^4</text>
+<line x1="1366.75" y1="66" x2="1366.75" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1366.75" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^5</text>
+<line x1="1460.50" y1="66" x2="1460.50" y2="431" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1460.50" y="452.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^6</text>
+<line x1="1078" y1="431.00" x2="1468" y2="431.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1070.00" y="435.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-6</text>
+<line x1="1078" y1="339.75" x2="1468" y2="339.75" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1070.00" y="343.75" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-5</text>
+<line x1="1078" y1="248.50" x2="1468" y2="248.50" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1070.00" y="252.50" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-4</text>
+<line x1="1078" y1="157.25" x2="1468" y2="157.25" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1070.00" y="161.25" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-3</text>
+<line x1="1078" y1="66.00" x2="1468" y2="66.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1070.00" y="70.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#202020">10^-2</text>
+<rect x="1078" y="66" width="390" height="365" fill="none" stroke="#303030" stroke-width="1.3"/>
+<g clip-path="url(#combined-panel-2)">
+<polyline points="1085.50,276.04 1130.23,270.56 1179.25,260.30 1223.98,265.48 1273.00,262.78 1317.73,259.96 1366.75,257.53 1411.48,256.69 1460.50,255.66" fill="none" stroke="#2468d8" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1085.50" cy="276.04" r="3.60" fill="#2468d8"/>
+<circle cx="1130.23" cy="270.56" r="3.60" fill="#2468d8"/>
+<circle cx="1179.25" cy="260.30" r="3.60" fill="#2468d8"/>
+<circle cx="1223.98" cy="265.48" r="3.60" fill="#2468d8"/>
+<circle cx="1273.00" cy="262.78" r="3.60" fill="#2468d8"/>
+<circle cx="1317.73" cy="259.96" r="3.60" fill="#2468d8"/>
+<circle cx="1366.75" cy="257.53" r="3.60" fill="#2468d8"/>
+<circle cx="1411.48" cy="256.69" r="3.60" fill="#2468d8"/>
+<circle cx="1460.50" cy="255.66" r="3.60" fill="#2468d8"/>
+<polyline points="1085.50,350.38 1130.23,314.83 1179.25,271.03 1223.98,235.64 1273.00,192.44" fill="none" stroke="#18a665" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1082.26" y="347.14" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="1126.99" y="311.59" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="1176.01" y="267.79" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="1220.74" y="232.40" width="6.48" height="6.48" fill="#18a665"/>
+<rect x="1269.76" y="189.20" width="6.48" height="6.48" fill="#18a665"/>
+<polyline points="1085.50,426.24 1130.23,430.35 1179.25,428.14 1223.98,425.58 1273.00,425.58 1317.73,422.69 1366.75,418.51 1411.48,406.55 1460.50,398.45" fill="none" stroke="#df2f2f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1085.50,421.84 1081.10,429.84 1089.90,429.84" fill="#df2f2f"/>
+<polygon points="1130.23,425.95 1125.83,433.95 1134.63,433.95" fill="#df2f2f"/>
+<polygon points="1179.25,423.74 1174.85,431.74 1183.65,431.74" fill="#df2f2f"/>
+<polygon points="1223.98,421.18 1219.58,429.18 1228.38,429.18" fill="#df2f2f"/>
+<polygon points="1273.00,421.18 1268.60,429.18 1277.40,429.18" fill="#df2f2f"/>
+<polygon points="1317.73,418.29 1313.33,426.29 1322.13,426.29" fill="#df2f2f"/>
+<polygon points="1366.75,414.11 1362.35,422.11 1371.15,422.11" fill="#df2f2f"/>
+<polygon points="1411.48,402.15 1407.08,410.15 1415.88,410.15" fill="#df2f2f"/>
+<polygon points="1460.50,394.05 1456.10,402.05 1464.90,402.05" fill="#df2f2f"/>
+<polyline points="1085.50,399.38 1130.23,407.13 1179.25,409.16 1223.98,409.36 1273.00,408.65 1317.73,406.06 1366.75,403.82 1411.48,401.67 1460.50,400.52" fill="none" stroke="#f09a18" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1085.50,394.98 1081.10,399.38 1085.50,403.78 1089.90,399.38" fill="#f09a18"/>
+<polygon points="1130.23,402.73 1125.83,407.13 1130.23,411.53 1134.63,407.13" fill="#f09a18"/>
+<polygon points="1179.25,404.76 1174.85,409.16 1179.25,413.56 1183.65,409.16" fill="#f09a18"/>
+<polygon points="1223.98,404.96 1219.58,409.36 1223.98,413.76 1228.38,409.36" fill="#f09a18"/>
+<polygon points="1273.00,404.25 1268.60,408.65 1273.00,413.05 1277.40,408.65" fill="#f09a18"/>
+<polygon points="1317.73,401.66 1313.33,406.06 1317.73,410.46 1322.13,406.06" fill="#f09a18"/>
+<polygon points="1366.75,399.42 1362.35,403.82 1366.75,408.22 1371.15,403.82" fill="#f09a18"/>
+<polygon points="1411.48,397.27 1407.08,401.67 1411.48,406.07 1415.88,401.67" fill="#f09a18"/>
+<polygon points="1460.50,396.12 1456.10,400.52 1460.50,404.92 1464.90,400.52" fill="#f09a18"/>
+<polyline points="1085.50,216.47 1130.23,162.65 1179.25,80.58" fill="none" stroke="#16a6bd" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1085.50,220.87 1081.10,212.87 1089.90,212.87" fill="#16a6bd"/>
+<polygon points="1130.23,167.05 1125.83,159.05 1134.63,159.05" fill="#16a6bd"/>
+<polygon points="1179.25,84.98 1174.85,76.98 1183.65,76.98" fill="#16a6bd"/>
+</g>
+<text x="1273.00" y="35.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="500" fill="#202020">Decode time</text>
+<text x="1273.00" y="485.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">Difference size d</text>
+<text x="1020.00" y="248.50" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#202020" transform="rotate(-90 1020.00 248.50)">Decode time per difference (s)</text>
+<line x1="175.00" y1="558" x2="207.00" y2="558" stroke="#2468d8" stroke-width="2.5"/>
+<circle cx="191.00" cy="558.00" r="3.80" fill="#2468d8"/>
+<text x="218.00" y="563.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">XYZ-Sketch</text>
+<line x1="405.00" y1="558" x2="437.00" y2="558" stroke="#18a665" stroke-width="2.5"/>
+<rect x="417.58" y="554.58" width="6.84" height="6.84" fill="#18a665"/>
+<text x="448.00" y="563.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">minisketch</text>
+<line x1="635.00" y1="558" x2="667.00" y2="558" stroke="#df2f2f" stroke-width="2.5"/>
+<polygon points="651.00,553.40 646.40,561.80 655.60,561.80" fill="#df2f2f"/>
+<text x="678.00" y="563.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">IBLT</text>
+<line x1="865.00" y1="558" x2="897.00" y2="558" stroke="#f09a18" stroke-width="2.5"/>
+<polygon points="881.00,553.40 876.40,558.00 881.00,562.60 885.60,558.00" fill="#f09a18"/>
+<text x="908.00" y="563.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">Rateless IBLT</text>
+<line x1="1095.00" y1="558" x2="1127.00" y2="558" stroke="#16a6bd" stroke-width="2.5"/>
+<polygon points="1111.00,562.60 1106.40,554.20 1115.60,554.20" fill="#16a6bd"/>
+<text x="1138.00" y="563.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#202020">CPISync</text>
+</svg>

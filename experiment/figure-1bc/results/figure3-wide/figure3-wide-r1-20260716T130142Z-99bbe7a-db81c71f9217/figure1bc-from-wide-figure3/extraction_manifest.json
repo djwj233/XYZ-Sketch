@@ -1,0 +1,35 @@
+{
+  "exploratory_axis_expansion": true,
+  "figure3_run": "figure3-wide-r1-20260716T130142Z-99bbe7a-db81c71f9217",
+  "mappings": [
+    {
+      "M": 596,
+      "d": 3000,
+      "figure1_panel": "figure1b",
+      "figure3_panel": "figure3e",
+      "outputs": {
+        "pdf": "612296fe64c86a5c7048428d29643c096c3c2a244a528caaf1cadddf2a2db58c",
+        "png": "09e4fc800d85a5150678c8fa7eafbf66c420d3d051e42f94413e3b329d97402c",
+        "svg": "902e03a1f128054bbc137d1c20b4c7ad2e8753be614837da5c808a89fde1ec5a"
+      },
+      "selected_rate": 0.97,
+      "title_relabel": "(e) to (b)"
+    },
+    {
+      "M": 1948,
+      "d": 10000,
+      "figure1_panel": "figure1c",
+      "figure3_panel": "figure3g",
+      "outputs": {
+        "pdf": "bd8f372dd47a53b8bd33f6ab568520cb7e27fe8c231cae6d2f34803f2bd6f3ee",
+        "png": "65b631de6b019a61399aa6bb8361b36bed639f59bb13467824b50086cfcac5bd",
+        "svg": "9b20156cc8beb298dafca1841fe4fb57deb7ecbecab470de36cfaeea504ebc76"
+      },
+      "selected_rate": 1.0,
+      "title_relabel": "(g) to (c)"
+    }
+  ],
+  "source_aggregate_sha256": "7e99444f2a3c54cc2bda738a9fa5982d6424954515f1cefd10ac04861b3d7f17",
+  "status": "complete",
+  "wide_round": 1
+}

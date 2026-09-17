@@ -1,0 +1,1 @@
+{"formal_trials_reexecuted":false,"kind":"coarse_finalization_recovery","parent_checkpoint_count":359,"parent_failed_run_id":"figure1a-20260716T153109Z-99bbe7a-9b10f88e383f","parent_run_state_sha256":"1d79ad526f94cab253fe9a08581178bf8f69595afd6b847fa2772f33c2310312","protocol_version":"figure1a-reduced-v1","recovery_reason":"TypeError: non-string JSON key at $.dense_step"}

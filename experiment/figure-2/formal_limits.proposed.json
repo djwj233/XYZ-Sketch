@@ -1,0 +1,29 @@
+{
+  "status": "approved",
+  "worker_policy": {
+    "resource_discovery": {
+      "workers": 8,
+      "physical_cpu_affinity": [0, 1, 2, 3, 4, 5, 6, 7]
+    },
+    "sealed_confirmation": {
+      "workers": 8,
+      "physical_cpu_affinity": [0, 1, 2, 3, 4, 5, 6, 7]
+    },
+    "timing": {
+      "workers": 1,
+      "physical_cpu_affinity": [0]
+    }
+  },
+  "memory_limit_gib": 80,
+  "timeout_seconds": {
+    "xyz": 600,
+    "minisketch": 600,
+    "external_iblt": 600,
+    "project_iblt": 600,
+    "riblt": 1800,
+    "cpisync": 3600
+  },
+  "timeout_scope": "one algorithm trial or one timing repetition",
+  "parallelism_rule": "resource discovery and sealed confirmation run on eight distinct physical cores; timing runs serially on CPU 0 with no probability workers alive",
+  "resource_limit_rule": "timeout_or_oom_stops_that_algorithm_at_all_larger_d"
+}

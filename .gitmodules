@@ -10,6 +10,3 @@
 [submodule "external/cpisync"]
 	path = external/cpisync
 	url = https://github.com/Bowenislandsong/cpisync
-[submodule "external/negentropy"]
-	path = external/negentropy
-	url = https://github.com/hoytech/negentropy

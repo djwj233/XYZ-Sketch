@@ -2,3 +2,11 @@ build/
 *.o
 *.a
 *.so
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Full trial archives and checkpoints stay local. Compact selected snapshots
+# are tracked and listed in experiment/artifact-index.json.
+/experiment/*/results/
+/experiment/*/run-logs/

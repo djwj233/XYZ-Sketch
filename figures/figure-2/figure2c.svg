@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700">
+<rect width="700" height="700" fill="#ffffff"/>
+<defs><clipPath id="plot"><rect x="86" y="72" width="594" height="548"/></clipPath></defs>
+<line x1="97.42" y1="72" x2="97.42" y2="620" stroke="#e2e2e2" stroke-width="1"/>
+<text x="97.42" y="644.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^2</text>
+<line x1="240.21" y1="72" x2="240.21" y2="620" stroke="#e2e2e2" stroke-width="1"/>
+<text x="240.21" y="644.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^3</text>
+<line x1="383.00" y1="72" x2="383.00" y2="620" stroke="#e2e2e2" stroke-width="1"/>
+<text x="383.00" y="644.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^4</text>
+<line x1="525.79" y1="72" x2="525.79" y2="620" stroke="#e2e2e2" stroke-width="1"/>
+<text x="525.79" y="644.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^5</text>
+<line x1="668.58" y1="72" x2="668.58" y2="620" stroke="#e2e2e2" stroke-width="1"/>
+<text x="668.58" y="644.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^6</text>
+<line x1="86" y1="620.00" x2="680" y2="620.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="76.00" y="625.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^-6</text>
+<line x1="86" y1="483.00" x2="680" y2="483.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="76.00" y="488.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^-5</text>
+<line x1="86" y1="346.00" x2="680" y2="346.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="76.00" y="351.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^-4</text>
+<line x1="86" y1="209.00" x2="680" y2="209.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="76.00" y="214.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^-3</text>
+<line x1="86" y1="72.00" x2="680" y2="72.00" stroke="#e2e2e2" stroke-width="1"/>
+<text x="76.00" y="77.00" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#202020">10^-2</text>
+<rect x="86" y="72" width="594" height="548" fill="none" stroke="#303030" stroke-width="1.4"/>
+<g clip-path="url(#plot)">
+<polyline points="97.42,387.34 165.55,379.12 240.21,363.71 308.34,371.50 383.00,367.43 451.13,363.20 525.79,359.56 593.92,358.29 668.58,356.75" fill="none" stroke="#2468d8" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="97.42" cy="387.34" r="4.20" fill="#2468d8"/>
+<circle cx="165.55" cy="379.12" r="4.20" fill="#2468d8"/>
+<circle cx="240.21" cy="363.71" r="4.20" fill="#2468d8"/>
+<circle cx="308.34" cy="371.50" r="4.20" fill="#2468d8"/>
+<circle cx="383.00" cy="367.43" r="4.20" fill="#2468d8"/>
+<circle cx="451.13" cy="363.20" r="4.20" fill="#2468d8"/>
+<circle cx="525.79" cy="359.56" r="4.20" fill="#2468d8"/>
+<circle cx="593.92" cy="358.29" r="4.20" fill="#2468d8"/>
+<circle cx="668.58" cy="356.75" r="4.20" fill="#2468d8"/>
+<polyline points="97.42,498.96 165.55,445.58 240.21,379.83 308.34,326.69 383.00,261.84" fill="none" stroke="#18a665" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="93.64" y="495.18" width="7.56" height="7.56" fill="#18a665"/>
+<rect x="161.77" y="441.80" width="7.56" height="7.56" fill="#18a665"/>
+<rect x="236.43" y="376.05" width="7.56" height="7.56" fill="#18a665"/>
+<rect x="304.56" y="322.91" width="7.56" height="7.56" fill="#18a665"/>
+<rect x="379.22" y="258.06" width="7.56" height="7.56" fill="#18a665"/>
+<polyline points="97.42,612.86 165.55,619.02 240.21,615.71 308.34,611.86 383.00,611.86 451.13,607.52 525.79,601.25 593.92,583.29 668.58,571.13" fill="none" stroke="#df2f2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="97.42,607.86 92.42,617.06 102.42,617.06" fill="#df2f2f"/>
+<polygon points="165.55,614.02 160.55,623.22 170.55,623.22" fill="#df2f2f"/>
+<polygon points="240.21,610.71 235.21,619.91 245.21,619.91" fill="#df2f2f"/>
+<polygon points="308.34,606.86 303.34,616.06 313.34,616.06" fill="#df2f2f"/>
+<polygon points="383.00,606.86 378.00,616.06 388.00,616.06" fill="#df2f2f"/>
+<polygon points="451.13,602.52 446.13,611.72 456.13,611.72" fill="#df2f2f"/>
+<polygon points="525.79,596.25 520.79,605.45 530.79,605.45" fill="#df2f2f"/>
+<polygon points="593.92,578.29 588.92,587.49 598.92,587.49" fill="#df2f2f"/>
+<polygon points="668.58,566.13 663.58,575.33 673.58,575.33" fill="#df2f2f"/>
+<polyline points="97.42,572.53 165.55,584.17 240.21,587.20 308.34,587.51 383.00,586.44 451.13,582.56 525.79,579.19 593.92,575.96 668.58,574.24" fill="none" stroke="#f09a18" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="97.42,567.53 92.42,572.53 97.42,577.53 102.42,572.53" fill="#f09a18"/>
+<polygon points="165.55,579.17 160.55,584.17 165.55,589.17 170.55,584.17" fill="#f09a18"/>
+<polygon points="240.21,582.20 235.21,587.20 240.21,592.20 245.21,587.20" fill="#f09a18"/>
+<polygon points="308.34,582.51 303.34,587.51 308.34,592.51 313.34,587.51" fill="#f09a18"/>
+<polygon points="383.00,581.44 378.00,586.44 383.00,591.44 388.00,586.44" fill="#f09a18"/>
+<polygon points="451.13,577.56 446.13,582.56 451.13,587.56 456.13,582.56" fill="#f09a18"/>
+<polygon points="525.79,574.19 520.79,579.19 525.79,584.19 530.79,579.19" fill="#f09a18"/>
+<polygon points="593.92,570.96 588.92,575.96 593.92,580.96 598.92,575.96" fill="#f09a18"/>
+<polygon points="668.58,569.24 663.58,574.24 668.58,579.24 673.58,574.24" fill="#f09a18"/>
+<polyline points="97.42,297.92 165.55,217.11 240.21,93.88" fill="none" stroke="#16a6bd" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="97.42,302.92 92.42,293.72 102.42,293.72" fill="#16a6bd"/>
+<polygon points="165.55,222.11 160.55,212.91 170.55,212.91" fill="#16a6bd"/>
+<polygon points="240.21,98.88 235.21,89.68 245.21,89.68" fill="#16a6bd"/>
+</g>
+<line x1="30" y1="20" x2="58" y2="20" stroke="#2468d8" stroke-width="2.6"/>
+<circle cx="44.00" cy="20.00" r="3.80" fill="#2468d8"/>
+<text x="67.00" y="25.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#202020">XYZ-Sketch</text>
+<line x1="252" y1="20" x2="280" y2="20" stroke="#18a665" stroke-width="2.6"/>
+<rect x="262.58" y="16.58" width="6.84" height="6.84" fill="#18a665"/>
+<text x="289.00" y="25.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#202020">minisketch</text>
+<line x1="474" y1="20" x2="502" y2="20" stroke="#df2f2f" stroke-width="2.6"/>
+<polygon points="488.00,15.40 483.40,23.80 492.60,23.80" fill="#df2f2f"/>
+<text x="511.00" y="25.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#202020">IBLT</text>
+<line x1="30" y1="48" x2="58" y2="48" stroke="#f09a18" stroke-width="2.6"/>
+<polygon points="44.00,43.40 39.40,48.00 44.00,52.60 48.60,48.00" fill="#f09a18"/>
+<text x="67.00" y="53.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#202020">Rateless IBLT</text>
+<line x1="252" y1="48" x2="280" y2="48" stroke="#16a6bd" stroke-width="2.6"/>
+<polygon points="266.00,52.60 261.40,44.20 270.60,44.20" fill="#16a6bd"/>
+<text x="289.00" y="53.00" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#202020">CPISync</text>
+<text x="383.00" y="680.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#202020">Difference size d</text>
+<text x="20.00" y="346.00" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#202020" transform="rotate(-90 20.00 346.00)">Decode time per difference (s)</text>
+</svg>

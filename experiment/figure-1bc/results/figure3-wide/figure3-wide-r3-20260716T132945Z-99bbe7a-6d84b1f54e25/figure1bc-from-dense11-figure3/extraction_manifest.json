@@ -1,0 +1,34 @@
+{
+  "figure3_run": "figure3-wide-r3-20260716T132945Z-99bbe7a-6d84b1f54e25",
+  "mappings": [
+    {
+      "M": 596,
+      "d": 3000,
+      "figure1_panel": "figure1b",
+      "figure3_panel": "figure3e",
+      "outputs": {
+        "pdf": "983f5cd99e8fc477931ca6b48115b6cc399c61780485acee464f3374edf23fef",
+        "png": "69c12b7dff55611407df85bdc0e16d0ba68a6bb5b0018ed38fedbe4895df0e8b",
+        "svg": "ef4e3182fa173283931e4d55f044ccdbf893cd6a347c45c6a230e545dba5db6e"
+      },
+      "selected_rate": 0.97,
+      "title_relabel": "(e) to (b)"
+    },
+    {
+      "M": 1948,
+      "d": 10000,
+      "figure1_panel": "figure1c",
+      "figure3_panel": "figure3g",
+      "outputs": {
+        "pdf": "c8bbdba695c8d7ee05e54a7efa954d630745132f41b449256d3a9e50d6cedb83",
+        "png": "c6a99baf249034fa15ca555cbbc579c750c74234b161b06e1a64211e86b5a002",
+        "svg": "1565c370e4ceca5102e4719f675fccb6f2b07ff02664f7ebf33fa344d00d84c3"
+      },
+      "selected_rate": 1.0,
+      "title_relabel": "(g) to (c)"
+    }
+  ],
+  "resolution_profile": "dense11",
+  "source_aggregate_sha256": "f2f7cc760e7d2429e31d9bd7a024bb5d6609371474d4f134eb622759e40ff205",
+  "status": "complete"
+}

@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1590" height="1725" viewBox="0 0 1590 1725">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs><linearGradient id="figure3-success" x1="0" y1="1" x2="0" y2="0">
+<stop offset="0%" stop-color="#b2182b"/>
+<stop offset="25%" stop-color="#ef8a62"/>
+<stop offset="50%" stop-color="#f7f7f7"/>
+<stop offset="75%" stop-color="#7fbf7b"/>
+<stop offset="100%" stop-color="#1b7837"/>
+</linearGradient></defs>
+<g transform="translate(0,0)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(a) d = 300, M = 67</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 2), measured = 0.99</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#c63c3d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.08</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#d75c4c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.15</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#ca4641" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.10</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#be2f36" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.05</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#cf4f45" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.12</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#db6650" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.17</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#f3c7b5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.39</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#e87c5b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.22</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#ed8560" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.24</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#b7212f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.02</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#e87c5b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.22</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#f5ddd3" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.44</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#d1e5cf" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.58</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#5ba563" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.84</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#c63c3d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.08</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#f09b7a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.29</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#cce3ca" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.59</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#4f9d5a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.87</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1f7b3a" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#c3383a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.07</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#97ca94" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.70</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#c3383a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.07</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#84c180" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.74</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#c3383a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.07</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#84c180" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.74</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">12</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">2</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">1</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(500,0)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(b) d = 300, M = 72</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 2), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#ca4641" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.10</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#f1a98c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.32</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#c7e1c5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.60</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#c2dec0" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.61</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#f4d0c1" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.41</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#f3c7b5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.39</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#d4584a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.14</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#c7e1c5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.60</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#77b976" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.77</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#67ae6b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.81</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#73b673" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.78</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#63ab68" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.82</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#d75c4c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.15</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#bddcbb" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.62</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#6fb470" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.79</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#afd5ad" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.65</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#afd5ad" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.65</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#3f924f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.91</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#afd5ad" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.65</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#afd5ad" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.65</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">12</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">2</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">1</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(1000,0)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(c) d = 1,000, M = 211</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 2), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#be2f36" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.05</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#be2f36" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.05</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#e37357" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.20</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#d75c4c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.15</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#c63c3d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.08</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b7212f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.02</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#ca4641" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.10</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#f4cbbb" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.40</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#9ccc99" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.69</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#6fb470" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.79</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#5fa865" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.83</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#439452" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.90</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#f1a080" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.30</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#afd5ad" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.65</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#4f9d5a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.87</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#f2b198" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.34</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#6fb470" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.79</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#f0936e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.27</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#7fbf7b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.75</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#f0936e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.27</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#6bb16d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.80</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">12</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">2</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">1</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(0,420)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(d) d = 1,000, M = 224</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 2), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#f5ddd3" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.44</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#c2dec0" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.61</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#bddcbb" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.62</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#f2ad92" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.33</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#be2f36" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.05</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#f7f3f1" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.49</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#77b976" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.77</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#5fa865" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.83</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#9ccc99" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.69</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#edf3ed" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.52</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#daead9" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.56</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#92c88f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.71</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#63ab68" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.82</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#73b673" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.78</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#73b673" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.78</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#6bb16d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.80</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#6bb16d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.80</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">12</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">2</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">1</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(500,420)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(e) d = 3,000, M = 596</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 3), measured = 0.97</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#b7212f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.02</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#b92632" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.03</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#f5ddd3" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.44</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#f1a98c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.32</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#f1a080" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.30</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#b4d8b2" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.64</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#27813f" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#3f924f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.91</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#f3c7b5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.39</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#a1cf9e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.68</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#84c180" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.74</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#d5e7d4" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.57</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#f1a98c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.32</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#be2f36" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.05</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#f3c3af" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.38</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#aad3a8" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.66</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#f7f7f7" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.50</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#de6a53" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.18</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#c13338" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.06</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#f6eae5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.47</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#b4d8b2" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.64</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#f3baa4" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.36</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#d9614e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.16</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#be2f36" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.05</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">18</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">12</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">2</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(1000,420)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(f) d = 3,000, M = 621</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 3), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#c8413f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.09</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#f1a080" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.30</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#439452" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.90</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#d25348" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.13</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#f3c7b5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.39</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#c7e1c5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.60</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#f7f7f7" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.50</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#b92632" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.03</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#479755" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.89</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#f09774" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.28</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#63ab68" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.82</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#4b9a58" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.88</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#daead9" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.56</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#479755" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.89</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#3b8f4d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.92</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#aad3a8" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.66</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#3b8f4d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.92</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#4f9d5a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.87</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#b9dab7" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.63</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#57a360" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.85</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#d5e7d4" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.57</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">18</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">12</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">2</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(0,840)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(g) d = 10,000, M = 1,948</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 5), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#b92632" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.03</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#c63c3d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.08</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#c8413f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.09</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#d4584a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.14</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#ea815e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.23</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#a1cf9e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.68</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#439452" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.90</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#f0936e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.27</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#be2f36" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.05</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#f6eae5" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.47</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#3f924f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.91</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#c63c3d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.08</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#f2b198" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.34</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#cce3ca" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.59</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#f2f5f2" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.51</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#f2ad92" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.33</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#ca4641" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.10</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#b92632" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.03</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#f3c3af" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.38</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#de6a53" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.18</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#b7212f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.02</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#b7212f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.02</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#ef8e68" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.26</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#ea815e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.23</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#b7212f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.02</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">30</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">20</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">13</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(500,840)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(h) d = 10,000, M = 2,036</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 5), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#f2f5f2" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.51</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#53a05d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.86</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#cf4f45" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.12</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#a5d1a3" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.67</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#92c88f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.71</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#3f924f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.91</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#3f924f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.91</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#afd5ad" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.65</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#67ae6b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.81</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#97ca94" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.70</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#3b8f4d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.92</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#8dc68a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.72</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#4f9d5a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.87</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#daead9" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.56</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#439452" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.90</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#2f8645" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.95</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#bddcbb" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.62</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#2b8342" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.96</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#338947" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.94</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#6bb16d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.80</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#9ccc99" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.69</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">30</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">20</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">13</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">8</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">3</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(1000,840)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(i) d = 100,000, M = 18,155</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 10), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#b7212f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.02</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#cd4a43" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.11</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#bc2a34" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.04</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#9ccc99" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.69</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#bddcbb" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.62</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#ef8a62" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.25</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#4b9a58" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.88</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">60</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">40</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">25</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">15</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">10</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(0,1260)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(j) d = 100,000, M = 18,940</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 10), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#53a05d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#202020">0.86</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#3f924f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.91</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#db6650" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.17</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#d9614e" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.16</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#ca4641" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.10</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#c13338" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.06</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#b41d2d" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.01</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">60</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">40</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">25</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">15</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">10</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">5</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(500,1260)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(k) d = 1,000,000, M = 178,767</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 21), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#378c4a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.93</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#237e3c" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.98</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#27813f" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.97</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">126</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">84</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">53</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">32</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">21</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">11</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<g transform="translate(1000,1260)">
+<text x="16.00" y="20.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#202020">(l) d = 1,000,000, M = 183,767</text>
+<text x="16.00" y="40.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#555555">selected = (0.724, 22), measured = 1.00</text>
+<text x="91.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.116</text>
+<rect data-cell="true" x="70" y="76" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="70" y="286" width="42" height="42" fill="#1f7b3a" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.99</text>
+<rect data-cell="true" x="70" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="91.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="133.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.262</text>
+<rect data-cell="true" x="112" y="76" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="112" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="133.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="175.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.492</text>
+<rect data-cell="true" x="154" y="76" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="244" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="154" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="175.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="217.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.724</text>
+<rect data-cell="true" x="196" y="76" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="118" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="160" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="202" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="244" width="42" height="42" fill="#1b7837" stroke="#ffd400" stroke-width="3.2"/>
+<text x="217.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="286" width="42" height="42" fill="#1b7837" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">1.00</text>
+<rect data-cell="true" x="196" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="217.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="259.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.877</text>
+<rect data-cell="true" x="238" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="238" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="259.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="301.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.951</text>
+<rect data-cell="true" x="280" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="280" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="301.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="343.00" y="67.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.981</text>
+<rect data-cell="true" x="322" y="76" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="101.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="118" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="143.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="160" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="185.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="202" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="227.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="244" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="269.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="286" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="311.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<rect data-cell="true" x="322" y="328" width="42" height="42" fill="#b2182b" stroke="#ffffff" stroke-width="1.0"/>
+<text x="343.00" y="353.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#ffffff">0.00</text>
+<text x="61.00" y="101.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">132</text>
+<text x="61.00" y="143.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">88</text>
+<text x="61.00" y="185.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">55</text>
+<text x="61.00" y="227.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">33</text>
+<text x="61.00" y="269.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">22</text>
+<text x="61.00" y="311.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">11</text>
+<text x="61.00" y="353.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0</text>
+<text x="28.00" y="223.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020" transform="rotate(-90 28.00 223.00)">z</text>
+<text x="217.00" y="397.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#202020">a</text>
+</g>
+<rect x="1528" y="76" width="22" height="294" fill="url(#figure3-success)" stroke="#555555" stroke-width="1"/>
+<text x="1539.00" y="63.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#202020">success</text>
+<line x1="1550" y1="76.00" x2="1556" y2="76.00" stroke="#444444"/>
+<text x="1562.00" y="80.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">1.0</text>
+<line x1="1550" y1="134.80" x2="1556" y2="134.80" stroke="#444444"/>
+<text x="1562.00" y="138.80" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.8</text>
+<line x1="1550" y1="193.60" x2="1556" y2="193.60" stroke="#444444"/>
+<text x="1562.00" y="197.60" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.6</text>
+<line x1="1550" y1="252.40" x2="1556" y2="252.40" stroke="#444444"/>
+<text x="1562.00" y="256.40" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.4</text>
+<line x1="1550" y1="311.20" x2="1556" y2="311.20" stroke="#444444"/>
+<text x="1562.00" y="315.20" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.2</text>
+<line x1="1550" y1="370.00" x2="1556" y2="370.00" stroke="#444444"/>
+<text x="1562.00" y="374.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#202020">0.0</text>
+<text x="795.00" y="1711.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#202020">Exploratory legal 7x7 heatmaps; yellow cells are frozen predictions</text>
+</svg>

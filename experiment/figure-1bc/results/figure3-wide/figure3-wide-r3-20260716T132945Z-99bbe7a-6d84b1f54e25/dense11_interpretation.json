@@ -1,0 +1,17 @@
+{
+  "axis_selection": {
+    "passing_panel_count": 8,
+    "required_passing_panels": 8,
+    "stop_rule_met": true,
+    "summary_sha256": "1ed9bf60bb2480018b87939540c5940eecfda184150882931867c177a20f01ae",
+    "wide_round_run": "figure3-wide-r1-20260716T130142Z-99bbe7a-db81c71f9217"
+  },
+  "dense11_descriptive_rescore": {
+    "passing_panel_count": 7,
+    "stop_rule_applicable": false,
+    "summary_sha256": "e2248f5dac78cbaaacc4c5d84ccdb0c4dbaf90295e06c34da509d2ea7aaf1d61"
+  },
+  "resolution_profile": "dense11",
+  "scope": "same endpoints and z axis as selected wide Round 1; four interior a columns added",
+  "status": "complete"
+}

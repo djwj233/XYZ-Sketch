@@ -1,0 +1,114 @@
+diff --git a/iblt.cpp b/iblt.cpp
+index 028104d..69e24a3 100644
+--- a/iblt.cpp
++++ b/iblt.cpp
+@@ -2,12 +2,17 @@
+ #include <iostream>
+ #include <list>
+ #include <sstream>
++#include <stdexcept>
+ #include <utility>
+ #include "iblt.h"
+ #include "murmurhash3.h"
+ 
+ static const size_t N_HASH = 4;
+ static const size_t N_HASHCHECK = 11;
++static const size_t WIRE_COUNT_BITS = 25;
++static const size_t WIRE_KEY_BITS = 30;
++static const size_t WIRE_CHECK_BITS = 32;
++static const size_t WIRE_CELL_BITS = WIRE_COUNT_BITS + WIRE_KEY_BITS + WIRE_CHECK_BITS;
+ 
+ template<typename T>
+ std::vector<uint8_t> ToVec(T number)
+@@ -211,6 +216,74 @@ IBLT IBLT::operator-(const IBLT& other) const
+     return result;
+ }
+ 
++size_t IBLT::cell_count() const
++{
++    return hashTable.size();
++}
++
++std::vector<uint8_t> IBLT::serialize_canonical() const
++{
++    if (valueSize != 0) throw std::runtime_error("canonical experiment wire requires valueSize=0");
++    std::vector<uint8_t> output;
++    output.reserve((hashTable.size() * WIRE_CELL_BITS + 7) / 8);
++    size_t bitOffset = 0;
++    const auto append = [&output, &bitOffset](uint64_t value, size_t width) {
++        for (size_t index = 0; index < width; ++index) {
++            if (bitOffset % 8 == 0) output.push_back(0);
++            const size_t shift = width - index - 1;
++            if ((value >> shift) & 1U) {
++                output.back() |= static_cast<uint8_t>(1U << (7U - bitOffset % 8U));
++            }
++            ++bitOffset;
++        }
++    };
++    for (const HashTableEntry& entry : hashTable) {
++        if (entry.count < -(1 << 24) || entry.count >= (1 << 24)) {
++            throw std::runtime_error("IBLT count exceeds 25-bit wire range");
++        }
++        if (entry.keySum >= (uint64_t(1) << WIRE_KEY_BITS)) {
++            throw std::runtime_error("IBLT key sum exceeds 30-bit wire range");
++        }
++        append(static_cast<uint32_t>(entry.count) & ((uint32_t(1) << WIRE_COUNT_BITS) - 1U),
++               WIRE_COUNT_BITS);
++        append(entry.keySum, WIRE_KEY_BITS);
++        append(entry.keyCheck, WIRE_CHECK_BITS);
++    }
++    return output;
++}
++
++void IBLT::deserialize_canonical(const std::vector<uint8_t>& bytes)
++{
++    const size_t logicalBits = hashTable.size() * WIRE_CELL_BITS;
++    if (valueSize != 0 || bytes.size() != (logicalBits + 7) / 8) {
++        throw std::runtime_error("canonical IBLT wire size/parameter mismatch");
++    }
++    size_t bitOffset = 0;
++    const auto read = [&bytes, &bitOffset](size_t width) {
++        uint64_t value = 0;
++        for (size_t index = 0; index < width; ++index) {
++            value = (value << 1U) |
++                ((bytes[bitOffset / 8U] >> (7U - bitOffset % 8U)) & 1U);
++            ++bitOffset;
++        }
++        return value;
++    };
++    for (size_t index = 0; index < hashTable.size(); ++index) {
++        HashTableEntry& entry = hashTable[index];
++        uint32_t encodedCount = static_cast<uint32_t>(read(WIRE_COUNT_BITS));
++        entry.count = static_cast<int32_t>(encodedCount);
++        if (encodedCount & (uint32_t(1) << (WIRE_COUNT_BITS - 1))) {
++            entry.count -= static_cast<int32_t>(uint32_t(1) << WIRE_COUNT_BITS);
++        }
++        entry.keySum = read(WIRE_KEY_BITS);
++        entry.keyCheck = static_cast<uint32_t>(read(WIRE_CHECK_BITS));
++        entry.valueSum.clear();
++    }
++    if (logicalBits % 8U && (bytes.back() & ((1U << (8U - logicalBits % 8U)) - 1U))) {
++        throw std::runtime_error("canonical IBLT wire has nonzero padding");
++    }
++}
++
+ // For debugging during development:
+ std::string IBLT::DumpTable() const
+ {
+diff --git a/iblt.h b/iblt.h
+index 23a5147..aec3507 100644
+--- a/iblt.h
++++ b/iblt.h
+@@ -45,6 +45,12 @@ public:
+     // Subtract two IBLTs
+     IBLT operator-(const IBLT& other) const;
+ 
++    // Read-only/wire interfaces used by the experiment wrapper. They do not
++    // change hashing, updates, subtraction, purity checks, or peeling.
++    size_t cell_count() const;
++    std::vector<uint8_t> serialize_canonical() const;
++    void deserialize_canonical(const std::vector<uint8_t>& bytes);
++
+     // For debugging:
+     std::string DumpTable() const;
+ 

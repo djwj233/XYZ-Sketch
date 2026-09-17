@@ -1,0 +1,31 @@
+{
+  "figure3_run": "figure3-20260716T123930Z-99bbe7a-020bd9ea7099",
+  "mappings": [
+    {
+      "figure1_panel": "figure1b",
+      "figure3_panel": "figure3e",
+      "d": 3000,
+      "M": 596,
+      "outputs": {
+        "pdf": "ca8ffebac6ee682f1a70e172b8bb14d25bb0e4aa984f54db218cfbc694e86663",
+        "png": "41713806c3f1c2cb6104772efd706c547e681dbbf7337e373cb09d181be2adb7",
+        "svg": "22f5c730cd6cd7b6597780cdcaa12064dee698e2bfb655c141743f09f4471a47"
+      },
+      "title_relabel": "(e) to (b)"
+    },
+    {
+      "figure1_panel": "figure1c",
+      "figure3_panel": "figure3g",
+      "d": 10000,
+      "M": 1948,
+      "outputs": {
+        "pdf": "bd7ddebda08fb054c8e198e3b18888089d64466b8762d29272846920bc47335f",
+        "png": "f2f99711ea67f65928dcf5d7113f732b8ae26342f78990a7b67cbae0da93b8f2",
+        "svg": "eeb113a67240ff3e3ee6c88b5989f05d26e40d3dd8ff3f1ad34ff42e35e5b29b"
+      },
+      "title_relabel": "(g) to (c)"
+    }
+  ],
+  "source_aggregate_sha256": "dd6066ac677c5c87810ed226648e69e2293b20892a26e1d0bd82a1f5687ad850",
+  "status": "complete"
+}
