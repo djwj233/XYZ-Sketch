@@ -13,7 +13,8 @@
     "optimized/sharp-threshold",
     "optimized/fingerprint-two-scales",
     "optimized/parameters-update_ns_per_input",
-    "optimized/parameters-full_decode_s"
+    "optimized/parameters-full_decode_s",
+    "optimized/communication-breakdown"
   ],
   "measurements_rerun": false,
   "source": "stored measured results; paper and optimized campaigns are separate"
