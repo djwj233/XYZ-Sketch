@@ -37,6 +37,9 @@ def plot(out):
  fig,axs=plt.subplots(6,2,figsize=(11,23),constrained_layout=True)
  for ax,(d,m) in zip(axs.flat,panels):im=heat(ax,d,m)
  fig.colorbar(im,ax=axs,label='Success probability',shrink=.5);emit(fig,'paper/figure3')
+ fig,axs=plt.subplots(2,2,figsize=(11,8),constrained_layout=True)
+ for ax,(d,m) in zip(axs.flat,[(3000,596),(3000,621),(100000,18155),(100000,18940)]):im=heat(ax,d,m)
+ fig.colorbar(im,ax=axs,label='Success probability');emit(fig,'optimized/supplementary-heatmaps')
  pts=load(ROOT/'results/paper/aggregate.json')['points'];names={'xyz':'XYZ-Sketch (unoptimized)','external_iblt':'IBLT','riblt':'Rateless (fixed-prefix adapter)','minisketch':'MiniSketch','cpisync':'CPISync'}
  for metric,label,stem in [('R_w30','Communication ratio','figure2a'),('update_ns_per_input_conditional_mean','Update (ns/input)','figure2b'),('decode_ns_per_difference_conditional_mean','Decode (ns/difference)','figure2c')]:
   fig,ax=plt.subplots(figsize=(5,3.6))
@@ -45,7 +48,7 @@ def plot(out):
   ax.set(xscale='log',xlabel='Difference size d',ylabel=label)
   if metric!='R_w30':ax.set_yscale('log')
   ax.legend(fontsize=7);emit(fig,'paper/'+stem)
- # Accepted GF(2^30) evaluation, kept separate from the supplied prime-field PDF.
+ # Accepted GF(2^30) evaluation, kept separate from earlier prime-field comparisons.
  sf=ROOT/'results/optimized/plotted-series.json'
  if sf.exists():
   series=load(sf)
@@ -88,6 +91,11 @@ def plot(out):
   components.append((label,30*m,32*m,count,padding))
  rateless=next(r for r in load(ROOT/'results/rateless/summary.json') if r['d']==d)['communication']
  components.append(('Rateless',rateless['symbol_bits']['mean'],rateless['hash_bits']['mean'],8*rateless['count_bytes']['mean'],8*(rateless['metadata_bytes']['mean']+rateless['ack_bytes']['mean'])+rateless['padding_bits']['mean']))
+ final_components=[r for r in components if r[0]!='Rateless']
+ fig,ax=plt.subplots(figsize=(6.5,3.6));bottom=np.zeros(len(final_components))
+ for i,label in enumerate(['Data','Checksum','Count','Metadata/padding'],1):
+  values=np.array([r[i] for r in final_components])/(30*d);ax.bar([r[0] for r in final_components],values,bottom=bottom,label=label);bottom+=values
+ ax.set_ylabel('Communication ratio');ax.legend(fontsize=8);emit(fig,'optimized/figure2e-communication-breakdown')
  fig,ax=plt.subplots(figsize=(6.5,3.6));bottom=np.zeros(len(components))
  for i,label in enumerate(['Data','Checksum','Count','Metadata/padding'],1):
   values=np.array([r[i] for r in components])/(30*d);ax.bar([r[0] for r in components],values,bottom=bottom,label=label);bottom+=values

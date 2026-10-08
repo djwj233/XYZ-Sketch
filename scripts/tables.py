@@ -1,4 +1,4 @@
-"""Derived word-space ratios and principal operating points for Tables 3--5."""
+"""Derived word-space ratios for Tables 3--4, plus principal operating points."""
 import csv, math
 from common import load,ROOT,save
 def derived(out):

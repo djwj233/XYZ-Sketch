@@ -25,6 +25,7 @@ def execute(cmd,timeout,stdin=None):
  return {'command':[str(x) for x in cmd],'returncode':p.returncode,'failure':failure or ('process_error' if p.returncode else None),'wall_seconds':time.monotonic()-t,'stdout':out,'stderr':err}
 def run(campaign,args,out):
  jobs=[json.loads(s) for s in (ROOT/'scripts/jobs'/(campaign+'.jsonl')).read_text().splitlines()]
+ for j in jobs:j.setdefault('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint') else 'timing')
  if args.d:jobs=[j for j in jobs if j.get('d')==args.d]
  if args.method:jobs=[j for j in jobs if j['engine']==args.method]
  if args.kind:jobs=[j for j in jobs if j.get('kind', 'timing')==args.kind]
@@ -77,7 +78,7 @@ def run(campaign,args,out):
  raw=[];info_map=json.loads((ROOT/'scripts/inputs.json').read_text())
  for r in records:
   if not r['results']:
-   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'kind':r['job'].get('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint-') else 'timing'),'config_id':r['job'].get('config_id',''),'success':False,'status':r['execution']['failure'] or 'parse_error'})
+   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'kind':r['job'].get('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint') else 'timing'),'config_id':r['job'].get('config_id',''),'success':False,'status':r['execution']['failure'] or 'parse_error'})
   for result in r['results']:
    n=max(200,r['job']['d']) if args.smoke else info_map[r['job']['dataset']]['N']
    result=dict(result)
@@ -89,7 +90,7 @@ def run(campaign,args,out):
     result['full_decode_s']=sum(result[k] for k in ['alice_generate_cpu_s','bob_receive_cpu_s','wire_encode_cpu_s','wire_decode_cpu_s'])
    if 'full_decode_s' in result:result['full_decode_us_per_difference']=result['full_decode_s']*1e6/r['job']['d']
    if 'payload_bits' in result:result['communication_ratio']=result['payload_bits']/(30*r['job']['d'])
-   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'kind':r['job'].get('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint-') else 'timing'),'config_id':r['job'].get('config_id',r['job']['args'][-1] if r['job']['engine'].startswith('paper-') else ''),**result})
+   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'kind':r['job'].get('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint') else 'timing'),'config_id':r['job'].get('config_id',r['job']['args'][-1] if r['job']['engine'].startswith('paper-') else ''),**result})
  keys=sorted({k for r in raw for k in r})
  with (out/'raw.csv').open('x',newline='') as f:
   w=csv.DictWriter(f,keys);w.writeheader();w.writerows(raw)

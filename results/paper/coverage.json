@@ -318,5 +318,5 @@
   ],
   "selected_raw_rows": 3347,
   "timing_reproduction_uses_recorded_success_and_failure_attempts": true,
-  "note": "The supplied 37-page PDF uses the prime-field experiments. Its printed C~0.276,D~0.5 conflict with the recorded frozen C=0.875,D=1.1884504306083168. Both facts are documented, not silently reconciled."
+  "note": "Earlier prime-field comparison, preserved for the unoptimized implementation. This directory is not the final 53-page GF(2^30) manuscript evaluation; see results/manuscript-correspondence.json for the final-paper mapping."
 }

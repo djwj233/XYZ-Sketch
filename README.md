@@ -15,15 +15,11 @@ The ell=10 entry point only extends the parameter whitelist; ell<=8 uses the spe
 
 ## Paper correspondence
 
-The supplied `finalpaper.pdf` has 37 pages and describes prime-field experiments in Figures 1--3.
-Those results are under `results/paper/` and `results/reference/`. The accepted binary-field
-evaluation is under `results/optimized/` and the other named experiment folders.
-They are separate measurements and must not be combined under one implementation label.
-
-There is one manuscript discrepancy: the supplied PDF prints C~0.276 and D~0.5,
-whereas the recorded calibration used C=0.875 and D=1.1884504306083168.
-The runners reproduce the recorded configurations. They do not manufacture a calibration
-record for the different constants printed in that PDF.
+The final 53-page manuscript (the local file named `定稿.pdf` during packaging) uses
+GF(2^30), C=0.875, and D~1.18845. Its experiment is Figure 2(a)--(h), with supplementary
+heatmaps in Figure 3 and fingerprint sensitivity in Figure 4. The table below follows
+this manuscript. The original prime-field implementation and its measured comparisons
+remain available separately under `results/paper/` and `results/reference/`.
 
 ## Requirements
 
@@ -53,21 +49,22 @@ Every measurement command below builds the required engines automatically.
 
 | Result | Command | Stored result |
 |---|---|---|
-| Supplied PDF Figure 1(a), original full-implementation threshold | `python3 scripts/reproduce.py paper-threshold` | `results/reference/threshold/` |
-| Supplied PDF Figures 1(b), 1(c), and 3, ideal-cell heatmaps | `python3 scripts/reproduce.py paper-heatmaps` | `results/reference/heatmaps.csv` |
-| Supplied PDF Figure 2(a)--(c), original end-to-end comparison | `python3 scripts/reproduce.py paper-comparison` | `results/paper/` |
-| Tables 3--5, peeling/orientability thresholds and ratios | `python3 scripts/reproduce.py threshold-tables` | `results/threshold-tables/` |
+| Figure 2(a), full GF(2^30) implementation threshold | `python3 scripts/reproduce.py optimized-sharp --workers 8` | `results/sharp/` |
+| Figure 2(b)--(c), k/ell timing | `python3 scripts/reproduce.py optimized-parameters` | `results/optimized/`, `results/parameters/` |
+| Figure 2(d) and Figure 3, ideal-cell heatmaps | `python3 scripts/reproduce.py paper-heatmaps` | `results/reference/heatmaps.csv` |
+| Figure 2(e)--(h), all main comparison methods and codecs | `python3 scripts/reproduce.py main-comparison` | Named comparison result folders |
+| Figure 4, fingerprint sensitivity at both scales | `python3 scripts/reproduce.py fingerprint --workers 8` | `results/fingerprint/` |
+| Tables 3--4, peeling/orientability thresholds and ratios | `python3 scripts/reproduce.py threshold-tables` | `results/threshold-tables/` |
 | Recorded C,D heuristic fit, final fixed grid | `python3 scripts/reproduce.py heuristic-calibration` | `results/calibration/` |
-| Accepted GF(2^30) main timing, with paired original IBLT | `python3 scripts/reproduce.py optimized-comparison` | `results/optimized/` |
-| GF(2^30) k/ell timing, including ell=8,10 | `python3 scripts/reproduce.py optimized-parameters` | `results/optimized/`, `results/parameters/` |
-| GF(2^30) sharp threshold, d=10^4, 10^7 elements per side | `python3 scripts/reproduce.py optimized-sharp --workers 8` | `results/sharp/` |
-| Compact-count IBLT and IBLT+SC, communication and decoding | `python3 scripts/reproduce.py compact-baselines` | `results/compact-iblt/` |
-| Paper-faithful Rateless IBLT, communication and CPU phases | `python3 scripts/reproduce.py rateless` | `results/rateless/` |
-| Rateless paper's representative count and symbol-count checks | `python3 scripts/reproduce.py rateless-representative` | `results/rateless/representative-summary.json` |
-| Extra timing points d=200,000 and 500,000 | `python3 scripts/reproduce.py extra-points` | `results/extra-points/` |
-| IBLT fingerprint sensitivity, d=10^5 | `python3 scripts/reproduce.py fingerprint-100000 --workers 8` | `results/fingerprint/100000/` |
-| IBLT fingerprint sensitivity, d=10^6 | `python3 scripts/reproduce.py fingerprint-1000000 --workers 8` | `results/fingerprint/1000000/` |
 | All included plots, from stored data | `python3 scripts/reproduce.py figures` | Fresh `results/runs/*-figures-*/` |
+
+Individual components can be run with `optimized-comparison`, `compact-baselines`,
+`rateless`, or `rateless-representative`. `extra-points` reproduces the supplementary
+timing points at d=200,000 and 500,000.
+
+The retained original implementation can also be measured with `paper-threshold`
+and `paper-comparison`. These are explicitly separate from the final manuscript's
+binary-field evaluation.
 
 Table 1 summarizes analytical/literature bounds, and Table 2 defines notation; neither is
 an empirical experiment. Mathematical theorem proofs are in the paper.
@@ -79,8 +76,7 @@ For the accepted GF(2^30) eight-panel presentation: panel (a) uses `optimized-sh
 field sizes. It does not mix fixed-prefix Rateless data into the accepted plots.
 
 `reference-comparison` additionally replays the common-input prime-field evaluation
-used to select the accepted implementation's configurations. It is distinct from the
-earlier supplied-PDF measurement batch.
+used to select the accepted implementation's configurations.
 
 Use `--dry-run` to inspect a campaign without building or running it. Use `--d`,
 `--method`, `--kind timing`, `--kind communication`, or `--limit` to select jobs.
@@ -130,8 +126,8 @@ generation, receiver processing, and wire encoding/decoding. It is not a fixed-s
 update interface. `results/rateless/` includes representative-paper checks and field-level
 byte accounting.
 
-The original paper's Rateless adapter used a fixed prefix and a truncated hash. It is
-retained only to reproduce the supplied PDF's data and is explicitly labelled
+The original Rateless adapter used a fixed prefix and a truncated hash. It is
+retained only for the original implementation's comparison and is explicitly labelled
 `paper-rateless`/`rateless-fixed`, not as the faithful current baseline.
 
 Compact IBLT/IBLT+SC restores every counter exactly and retains the 30-bit key and

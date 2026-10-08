@@ -4,6 +4,7 @@
     "paper/figure1b",
     "paper/figure1c",
     "paper/figure3",
+    "optimized/supplementary-heatmaps",
     "paper/figure2a",
     "paper/figure2b",
     "paper/figure2c",
@@ -14,6 +15,7 @@
     "optimized/fingerprint-two-scales",
     "optimized/parameters-update_ns_per_input",
     "optimized/parameters-full_decode_s",
+    "optimized/figure2e-communication-breakdown",
     "optimized/communication-breakdown"
   ],
   "measurements_rerun": false,

@@ -2,7 +2,7 @@
 """One-command entry points; --dry-run plans, --smoke runs tiny nonformal checks."""
 import argparse, os, subprocess, sys
 from common import ROOT,fresh
-CAMPAIGNS=['paper-comparison','reference-comparison','optimized-comparison','optimized-parameters','compact-baselines','rateless','fingerprint-100000','fingerprint-1000000','optimized-sharp','extra-points']
+CAMPAIGNS=['paper-comparison','reference-comparison','optimized-comparison','optimized-parameters','compact-baselines','rateless','fingerprint-100000','fingerprint-1000000','optimized-sharp','extra-points','main-comparison','fingerprint']
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('result',choices=CAMPAIGNS+['paper-threshold','paper-heatmaps','threshold-tables','figures','verify','heuristic-calibration','rateless-representative'])
  p.add_argument('--data-root',default=os.environ.get('XYZ_DATA_ROOT',str(ROOT/'results/inputs')))
