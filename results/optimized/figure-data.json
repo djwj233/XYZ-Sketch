@@ -1,0 +1,3003 @@
+{
+  "main": [
+    {
+      "d": 100,
+      "name": "XYZ",
+      "config_id": "793b1e52fdb7b31cb04bd7eed6c215805fdd9ba5d8acc737c0fd4e1f4cc81233",
+      "R": 1.4106666666666667,
+      "update": {
+        "mean": 26.696347169999996,
+        "ci95": [
+          25.95920398333333,
+          27.433490356666663
+        ],
+        "dataset_means": [
+          27.611966,
+          26.76066748333333,
+          25.682727050000004,
+          25.834949166666664,
+          27.591426149999997
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.086678000000211,
+        "ci95": [
+          1.0135560000007855,
+          1.1470779999999496
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 300,
+      "name": "XYZ",
+      "config_id": "f40b1004a96609189560f1e8a900e518cd9fd610c9fc074c80256666f1f7789c",
+      "R": 1.3084444444444445,
+      "update": {
+        "mean": 26.79141170666667,
+        "ci95": [
+          26.12425686333333,
+          27.52451109333333
+        ],
+        "dataset_means": [
+          26.859929983333334,
+          25.856112166666662,
+          26.19301783333333,
+          26.858129333333334,
+          28.18986921666667
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 0.7952839999998653,
+        "ci95": [
+          0.7753411111111298,
+          0.8185213333330569
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 1000,
+      "name": "XYZ",
+      "config_id": "d2d44b939f8ff2c9af8904356c95d8e839513e05653eac1ff0bb08e2268a1700",
+      "R": 1.2512,
+      "update": {
+        "mean": 27.00171523333333,
+        "ci95": [
+          26.36921162333333,
+          27.634218843333333
+        ],
+        "dataset_means": [
+          28.058522433333337,
+          27.04209221666666,
+          26.257391433333332,
+          26.144591516666665,
+          27.505978566666663
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 0.771661066666655,
+        "ci95": [
+          0.7398401333333026,
+          0.803482000000007
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 3000,
+      "name": "XYZ",
+      "config_id": "96ee1798585b39dfbd1eaa54a4d75d62e9c36e0d978db123c3802d0bd80e97d6",
+      "R": 1.2144,
+      "update": {
+        "mean": 28.178134336666666,
+        "ci95": [
+          27.555519309999994,
+          28.593393083333332
+        ],
+        "dataset_means": [
+          28.608194816666664,
+          28.230856016666667,
+          26.961946399999995,
+          28.428773116666665,
+          28.66090133333333
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 0.8188429555555456,
+        "ci95": [
+          0.7855758666666447,
+          0.8528477111110859
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 10000,
+      "name": "XYZ",
+      "config_id": "69cff5116009bf9707f8169c70e7e0769ee71011290c31d6d145173bfbf15b40",
+      "R": 1.1653333333333333,
+      "update": {
+        "mean": 28.55571137,
+        "ci95": [
+          28.26084390666666,
+          28.83971840666667
+        ],
+        "dataset_means": [
+          28.108366883333332,
+          28.771373599999997,
+          28.793911733333335,
+          28.91969748333333,
+          28.18520715
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 0.8727875533333348,
+        "ci95": [
+          0.8454306200000042,
+          0.9031389533333333
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 30000,
+      "name": "XYZ",
+      "config_id": "2c33cd6c57416959d9ab646d789800fdb91618018f4ba3e6d9992c175d063008",
+      "R": 1.1408,
+      "update": {
+        "mean": 30.19788193,
+        "ci95": [
+          29.46025468,
+          30.935509179999997
+        ],
+        "dataset_means": [
+          29.273335366666664,
+          29.041342866666668,
+          31.093027383333332,
+          30.909787099999996,
+          30.671916933333332
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 0.8919527244444432,
+        "ci95": [
+          0.8722577555555553,
+          0.9108286688888863
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 100000,
+      "name": "XYZ",
+      "config_id": "2da579635a745863421ad836515debcc936a1a8f84090fc78733881b205508c5",
+      "R": 1.104,
+      "update": {
+        "mean": 35.875464236666666,
+        "ci95": [
+          35.22841417000001,
+          36.25632302
+        ],
+        "dataset_means": [
+          34.620520400000004,
+          36.13611068333333,
+          36.20041806666667,
+          36.080091583333335,
+          36.34018045
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 0.9355789013333341,
+        "ci95": [
+          0.9155702333333336,
+          0.9583345666666669
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 300000,
+      "name": "XYZ",
+      "config_id": "a0ec1cf2647d6f1e8f1fa6baafec4df1c8fdf83cc8de3913850ae9810a834d72",
+      "R": 1.0917333333333332,
+      "update": {
+        "mean": 43.672650266666665,
+        "ci95": [
+          42.713279359999994,
+          44.70692428333333
+        ],
+        "dataset_means": [
+          44.330506383333336,
+          45.46356478333333,
+          42.53480101666666,
+          43.57196353333334,
+          42.46241561666666
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 0.9616481640000001,
+        "ci95": [
+          0.9521189442222225,
+          0.9781772871111114
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 1000000,
+      "name": "XYZ",
+      "config_id": "87481969e1d8335e412dcd549858eab8e4f351cfc5aaf2f57bf6bcddc5c68400",
+      "R": 1.0794666666666666,
+      "update": {
+        "mean": 52.50316413666667,
+        "ci95": [
+          50.91032812,
+          54.35600388333334
+        ],
+        "dataset_means": [
+          52.78467978333333,
+          49.67363808333334,
+          52.746046566666664,
+          55.8612583,
+          51.450197949999996
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.0086135806,
+        "ci95": [
+          0.9990266476,
+          1.0169264710666668
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "frozen-gf230-v15"
+    },
+    {
+      "d": 100,
+      "name": "Conventional IBLT",
+      "config_id": "2a66c0dacabbf0597b79ba838013fb00b499a78568e8c0853ee64f806942031d",
+      "R": 4.176,
+      "update": {
+        "mean": 128.00281179,
+        "ci95": [
+          125.91177308333333,
+          130.49622015666668
+        ],
+        "dataset_means": [
+          132.66273231666668,
+          128.77241568333332,
+          127.24645191666667,
+          124.72699535000001,
+          126.60546368333333
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.1138166666674705,
+        "ci95": [
+          1.0747053333339807,
+          1.1528560000000354
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 300,
+      "name": "Conventional IBLT",
+      "config_id": "99193c3b4f7502eeb8747c80321b7eaefe4b05cf40e67d7d57815d3938262c1a",
+      "R": 3.983111111111111,
+      "update": {
+        "mean": 126.76674119666669,
+        "ci95": [
+          124.89082262333332,
+          130.18411114
+        ],
+        "dataset_means": [
+          124.62397333333332,
+          125.12129375,
+          125.30166851666667,
+          125.2805246,
+          133.50624578333333
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.0623982222224269,
+        "ci95": [
+          1.017721111111511,
+          1.108803999999846
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 1000,
+      "name": "Conventional IBLT",
+      "config_id": "fc4521899e7f3e428b3c62427aff06ff1591e4f52657961c64b51410bf33912f",
+      "R": 3.8744,
+      "update": {
+        "mean": 127.06090189666665,
+        "ci95": [
+          126.03335195,
+          128.17271323666665
+        ],
+        "dataset_means": [
+          129.18783793333336,
+          125.71225858333332,
+          127.10436058333333,
+          125.818941,
+          127.48111138333331
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.0659866666666553,
+        "ci95": [
+          1.041155666666634,
+          1.090817666666677
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 3000,
+      "name": "Conventional IBLT",
+      "config_id": "a9eb7dee4321905e929c31b8dde381f610c4e7a8acd1a08083142d3001c23885",
+      "R": 3.828,
+      "update": {
+        "mean": 128.68742713333333,
+        "ci95": [
+          126.24473768666667,
+          131.65349977666668
+        ],
+        "dataset_means": [
+          126.53566136666667,
+          125.50945421666667,
+          127.13345726666667,
+          133.73663735,
+          130.52192546666666
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.0709535777777703,
+        "ci95": [
+          1.0439591333333573,
+          1.0954753111110962
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 10000,
+      "name": "Conventional IBLT",
+      "config_id": "47e4bc1cf73b83d86012c98d5f86ba4c28fe1a36974ee3aaed0cd7909823214f",
+      "R": 3.80712,
+      "update": {
+        "mean": 128.04622767,
+        "ci95": [
+          126.76993569000001,
+          129.32251964999998
+        ],
+        "dataset_means": [
+          126.48794076666667,
+          129.91528971666665,
+          126.53355125,
+          127.80669441666666,
+          129.4876622
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.1076826466666685,
+        "ci95": [
+          1.0935095133333397,
+          1.1224616866666803
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 30000,
+      "name": "Conventional IBLT",
+      "config_id": "ed0a1a7426a0bcc5dc68244d1a2373215a4c5257314670e22574fe6426e4f1ad",
+      "R": 3.7846933333333332,
+      "update": {
+        "mean": 139.86068904666666,
+        "ci95": [
+          137.87323364666665,
+          141.57199408
+        ],
+        "dataset_means": [
+          139.26373143333333,
+          140.7189114,
+          142.77886451666666,
+          140.25964541666664,
+          136.28229246666666
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.2508975511111102,
+        "ci95": [
+          1.2069524666666698,
+          1.3170297555555492
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 100000,
+      "name": "Conventional IBLT",
+      "config_id": "8eb40b36caac557eb8f06dc0da0b46491667ad0adcffd9fb0af79fab54462a4e",
+      "R": 3.7845013333333335,
+      "update": {
+        "mean": 146.18169559666666,
+        "ci95": [
+          144.4560059066667,
+          147.80500008999996
+        ],
+        "dataset_means": [
+          148.2900545,
+          145.60900485000002,
+          142.80888796666667,
+          148.24436078333332,
+          145.95616988333333
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.3261242826666668,
+        "ci95": [
+          1.296487253333334,
+          1.3557613119999994
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 300000,
+      "name": "Conventional IBLT",
+      "config_id": "6a3c1a7fc131dc4ecbe9982f821ab2ef294cb57087b35902c5f715f9fe35638c",
+      "R": 3.7627697777777778,
+      "update": {
+        "mean": 193.75881053999998,
+        "ci95": [
+          184.24520572,
+          208.98797328999999
+        ],
+        "dataset_means": [
+          223.15665875,
+          184.88583723333335,
+          187.7349451,
+          181.85970451666668,
+          191.1569071
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 1.8278472648888897,
+        "ci95": [
+          1.7422331373333346,
+          1.9062637675555563
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 1000000,
+      "name": "Conventional IBLT",
+      "config_id": "eece01052cbc709ee4405d4956ea6719c4496f0dd7303039436253de450626b6",
+      "R": 3.7627501333333333,
+      "update": {
+        "mean": 372.27226073,
+        "ci95": [
+          363.61218901666666,
+          381.09790036333334
+        ],
+        "dataset_means": [
+          386.95401998333335,
+          362.8339674333334,
+          367.1666733833334,
+          381.7934744333333,
+          362.61316841666667
+        ],
+        "datasets": 5,
+        "resampling_unit": "dataset_mean",
+        "bootstrap_repetitions": 10000
+      },
+      "decode": {
+        "mean": 2.2671177404,
+        "ci95": [
+          2.2172822448666674,
+          2.315277273399999
+        ]
+      },
+      "source": "final v15 evaluation",
+      "implementation": "formal-v1-iblt-original"
+    },
+    {
+      "d": 100,
+      "name": "IBLT + standard SC",
+      "config_id": "fcedb57848037c634d540c0255bcb554751d5fa1ca16b541ae9af8920b9577ed",
+      "R": 4.989333333333334,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          118.19282333000001,
+          120.27467019333335
+        ],
+        "estimator": "mean",
+        "mean": 119.21505780666666,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "fcedb57848037c634d540c0255bcb554751d5fa1ca16b541ae9af8920b9577ed|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          1.2986239999994709,
+          1.3349766666663025
+        ],
+        "estimator": "mean",
+        "mean": 1.3179846666666606,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "fcedb57848037c634d540c0255bcb554751d5fa1ca16b541ae9af8920b9577ed|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "54501c40522bba8875f3212b66678a05da887f9937384087efc52fe3eb253a8a",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 300,
+      "name": "IBLT + standard SC",
+      "config_id": "bf03eee6fc58943a94f3b0e40ac079f0fdb88c9d427c31c7c3a340fc151a87e3",
+      "R": 4.466666666666667,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          117.73598913333335,
+          119.87838825333333
+        ],
+        "estimator": "mean",
+        "mean": 118.80718869333334,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "bf03eee6fc58943a94f3b0e40ac079f0fdb88c9d427c31c7c3a340fc151a87e3|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          1.1625140000003733,
+          1.3596495555553054
+        ],
+        "estimator": "mean",
+        "mean": 1.2437544444445534,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "bf03eee6fc58943a94f3b0e40ac079f0fdb88c9d427c31c7c3a340fc151a87e3|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "3b23f60c82d7c5b8eb3558464b54f4bc90eeb41bc383ace7f058b5267a689503",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 1000,
+      "name": "IBLT + standard SC",
+      "config_id": "3d53d0da7f88fce8cc45a1c5a9cf03206b5c0573e5659c5c13b8d17ff78b27f1",
+      "R": 4.1472,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          143.84443188333333,
+          148.59452409666667
+        ],
+        "estimator": "mean",
+        "mean": 146.21947799,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "3d53d0da7f88fce8cc45a1c5a9cf03206b5c0573e5659c5c13b8d17ff78b27f1|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          1.2718535333331893,
+          1.5027519999999701
+        ],
+        "estimator": "mean",
+        "mean": 1.359923733333268,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "3d53d0da7f88fce8cc45a1c5a9cf03206b5c0573e5659c5c13b8d17ff78b27f1|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "5fafb0f4c05b5d4705874289f4f110944f95d06847e398104b9fd60b944e0771",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 3000,
+      "name": "IBLT + standard SC",
+      "config_id": "12bd86749770392b6513c3cb20fb391ae4850f2846cdb23ae3f764ae9f52db0d",
+      "R": 3.7990222222222223,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          122.60150474,
+          126.12143164
+        ],
+        "estimator": "mean",
+        "mean": 124.27172133666666,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "12bd86749770392b6513c3cb20fb391ae4850f2846cdb23ae3f764ae9f52db0d|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          1.181604511111129,
+          1.224987200000014
+        ],
+        "estimator": "mean",
+        "mean": 1.2038828222222404,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "12bd86749770392b6513c3cb20fb391ae4850f2846cdb23ae3f764ae9f52db0d|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "bb108c0480b2fe16134e6d1d19dd447233250c86db607f0cda7ff155200b613d",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 10000,
+      "name": "IBLT + standard SC",
+      "config_id": "d9535ffc05121af687afc46157142e4da4688ffd33f0e262685d29ec4ef78100",
+      "R": 3.567013333333333,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          130.30666688333332,
+          135.19356442999998
+        ],
+        "estimator": "mean",
+        "mean": 132.63592335666667,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "d9535ffc05121af687afc46157142e4da4688ffd33f0e262685d29ec4ef78100|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          1.425881386666677,
+          1.50840274666668
+        ],
+        "estimator": "mean",
+        "mean": 1.4674759066666767,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "d9535ffc05121af687afc46157142e4da4688ffd33f0e262685d29ec4ef78100|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "0e34b1c276879277cce190e0f5f398189cc8f2a8632739c568ea6ab922c68d9f",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 30000,
+      "name": "IBLT + standard SC",
+      "config_id": "da9295ca31007dad2fda5ac2a258130c27c7eb0086dc11b71e025c9964b01a56",
+      "R": 3.3930044444444443,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          144.91269013666664,
+          149.10917307999998
+        ],
+        "estimator": "mean",
+        "mean": 146.95157960999998,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "da9295ca31007dad2fda5ac2a258130c27c7eb0086dc11b71e025c9964b01a56|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          1.8847929955555554,
+          1.9725840733333329
+        ],
+        "estimator": "mean",
+        "mean": 1.9296898844444441,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "da9295ca31007dad2fda5ac2a258130c27c7eb0086dc11b71e025c9964b01a56|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "f40d8973e56ab1bd0c81ce98aec769aa551d2e7c03a7ea346adcf8a80703eb69",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 100000,
+      "name": "IBLT + standard SC",
+      "config_id": "8f053da6e9b516b6b161a1af7fbb370a16401ca48c2baf9e71568e27cdd57e58",
+      "R": 3.248,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          195.56695985000002,
+          205.98376186333334
+        ],
+        "estimator": "mean",
+        "mean": 200.19015902333334,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "8f053da6e9b516b6b161a1af7fbb370a16401ca48c2baf9e71568e27cdd57e58|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          3.227925991333335,
+          3.3220817486666605
+        ],
+        "estimator": "mean",
+        "mean": 3.27908019933333,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "8f053da6e9b516b6b161a1af7fbb370a16401ca48c2baf9e71568e27cdd57e58|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 300000,
+      "name": "IBLT + standard SC",
+      "config_id": "06fff6c4caa60791d91f6a4926d70089bbf4bd61e10f30536fd56b6003d6e274",
+      "R": 3.161,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          181.22530849,
+          193.61476914666667
+        ],
+        "estimator": "mean",
+        "mean": 187.51234043333335,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "06fff6c4caa60791d91f6a4926d70089bbf4bd61e10f30536fd56b6003d6e274|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          4.483117878000001,
+          4.649338897999999
+        ],
+        "estimator": "mean",
+        "mean": 4.578391335333334,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "06fff6c4caa60791d91f6a4926d70089bbf4bd61e10f30536fd56b6003d6e274|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 1000000,
+      "name": "IBLT + standard SC",
+      "config_id": "f886e541f23df5d2d96c9a575bf77ff1d9b6db3b166577b541e8d5c1ee877a8d",
+      "R": 3.074,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          291.07483927000004,
+          297.7295679233333
+        ],
+        "estimator": "mean",
+        "mean": 294.0754085133333,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "f886e541f23df5d2d96c9a575bf77ff1d9b6db3b166577b541e8d5c1ee877a8d|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          11.3006775566,
+          15.713868502733334
+        ],
+        "estimator": "mean",
+        "mean": 13.48989697686667,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "f886e541f23df5d2d96c9a575bf77ff1d9b6db3b166577b541e8d5c1ee877a8d|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "09c613143edbd7b469219e2a81c19cb7927123bc302cc7abea740eca5a305efc",
+      "implementation": "upstream-iblt-standard-sc-v1"
+    },
+    {
+      "d": 100,
+      "name": "MiniSketch",
+      "config_id": "bdbd4d9c63b11edc89743a8fe04b1df01947e5cca2bf012da0b7c415a73de086",
+      "R": 1.0,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          485.58682493666663,
+          493.34998339666674
+        ],
+        "estimator": "mean",
+        "mean": 489.46840416666674,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "bdbd4d9c63b11edc89743a8fe04b1df01947e5cca2bf012da0b7c415a73de086|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          7.5217426666741956,
+          7.913289333332092
+        ],
+        "estimator": "mean",
+        "mean": 7.717516000003144,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "bdbd4d9c63b11edc89743a8fe04b1df01947e5cca2bf012da0b7c415a73de086|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "54501c40522bba8875f3212b66678a05da887f9937384087efc52fe3eb253a8a",
+      "implementation": "legacy-minisketch-v4"
+    },
+    {
+      "d": 300,
+      "name": "MiniSketch",
+      "config_id": "0f572f33fe8b7f6660e5d0b64fbb976581cf7ebf5ff0144765a43ebdd5d1c08f",
+      "R": 1.0,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          1499.1065566900002,
+          1501.2354869866665
+        ],
+        "estimator": "mean",
+        "mean": 1500.00927681,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "0f572f33fe8b7f6660e5d0b64fbb976581cf7ebf5ff0144765a43ebdd5d1c08f|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          17.442456888900892,
+          17.904661111109654
+        ],
+        "estimator": "mean",
+        "mean": 17.634522222223836,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "0f572f33fe8b7f6660e5d0b64fbb976581cf7ebf5ff0144765a43ebdd5d1c08f|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "3b23f60c82d7c5b8eb3558464b54f4bc90eeb41bc383ace7f058b5267a689503",
+      "implementation": "legacy-minisketch-v4"
+    },
+    {
+      "d": 1000,
+      "name": "MiniSketch",
+      "config_id": "8d2f22cb3839b16d96ce79e4a8462ab56aa87066c8196680fcac1d214600437c",
+      "R": 1.0,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          5120.572701346667,
+          5126.794796356667
+        ],
+        "estimator": "mean",
+        "mean": 5123.9749540600005,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "8d2f22cb3839b16d96ce79e4a8462ab56aa87066c8196680fcac1d214600437c|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          51.04102899999721,
+          57.096924200005596
+        ],
+        "estimator": "mean",
+        "mean": 54.068976600001406,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "8d2f22cb3839b16d96ce79e4a8462ab56aa87066c8196680fcac1d214600437c|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "5fafb0f4c05b5d4705874289f4f110944f95d06847e398104b9fd60b944e0771",
+      "implementation": "legacy-minisketch-v4"
+    },
+    {
+      "d": 3000,
+      "name": "MiniSketch",
+      "config_id": "7f72a5624801412cb7472c522b63cbe512f17c9f5d3b040cc03a27e3d70be4af",
+      "R": 1.0,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          15272.894077273333,
+          16686.78511218
+        ],
+        "estimator": "mean",
+        "mean": 15979.839594726665,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "7f72a5624801412cb7472c522b63cbe512f17c9f5d3b040cc03a27e3d70be4af|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          140.8814072888832,
+          157.23603297777294
+        ],
+        "estimator": "mean",
+        "mean": 149.66619211110884,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "7f72a5624801412cb7472c522b63cbe512f17c9f5d3b040cc03a27e3d70be4af|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "bb108c0480b2fe16134e6d1d19dd447233250c86db607f0cda7ff155200b613d",
+      "implementation": "legacy-minisketch-v4"
+    },
+    {
+      "d": 10000,
+      "name": "MiniSketch",
+      "config_id": "94b6bee91eb1923dac99f17325f5be2f0dadb317c4d1b96d9c499f817cb2614c",
+      "R": 1.0,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          50676.12058593667,
+          51727.85027935333
+        ],
+        "estimator": "mean",
+        "mean": 51141.17985679666,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "94b6bee91eb1923dac99f17325f5be2f0dadb317c4d1b96d9c499f817cb2614c|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          418.66247351999846,
+          441.1380810333344
+        ],
+        "estimator": "mean",
+        "mean": 428.86479789999765,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "94b6bee91eb1923dac99f17325f5be2f0dadb317c4d1b96d9c499f817cb2614c|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "0e34b1c276879277cce190e0f5f398189cc8f2a8632739c568ea6ab922c68d9f",
+      "implementation": "legacy-minisketch-v4"
+    },
+    {
+      "d": 100,
+      "name": "CPISync",
+      "config_id": "cd61f0eb9e6bd85936bb36cf0bd763cf99d16ae3b45c16322caa593bd9771593",
+      "R": 1.1199733333333333,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          10042.222316446667,
+          10099.256486103333
+        ],
+        "estimator": "mean",
+        "mean": 10068.706839756667,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "cd61f0eb9e6bd85936bb36cf0bd763cf99d16ae3b45c16322caa593bd9771593|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          223.3497233333992,
+          249.29483333346525
+        ],
+        "estimator": "mean",
+        "mean": 234.01968466674816,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "cd61f0eb9e6bd85936bb36cf0bd763cf99d16ae3b45c16322caa593bd9771593|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "54501c40522bba8875f3212b66678a05da887f9937384087efc52fe3eb253a8a",
+      "implementation": "legacy-cpisync-v4"
+    },
+    {
+      "d": 300,
+      "name": "CPISync",
+      "config_id": "cf388ed321a59f88056eef49aace1bd41c65cff3d4bdb3809cdb1b3dd0aa8baf",
+      "R": 1.039991111111111,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          24366.99776999667,
+          26702.961075450003
+        ],
+        "estimator": "mean",
+        "mean": 25215.56941376667,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "cf388ed321a59f88056eef49aace1bd41c65cff3d4bdb3809cdb1b3dd0aa8baf|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          817.1749546667241,
+          1030.708622666528
+        ],
+        "estimator": "mean",
+        "mean": 899.1703337777608,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "cf388ed321a59f88056eef49aace1bd41c65cff3d4bdb3809cdb1b3dd0aa8baf|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "3b23f60c82d7c5b8eb3558464b54f4bc90eeb41bc383ace7f058b5267a689503",
+      "implementation": "legacy-cpisync-v4"
+    },
+    {
+      "d": 1000,
+      "name": "CPISync",
+      "config_id": "8f79cb48b2c7fe3faef8a6c7d86e3afa0ed82faa6db97530b5bd89ccc8d10fab",
+      "R": 1.0119866666666666,
+      "update": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          74750.57549405667,
+          79573.73744240333
+        ],
+        "estimator": "mean",
+        "mean": 76563.52176329,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "8f79cb48b2c7fe3faef8a6c7d86e3afa0ed82faa6db97530b5bd89ccc8d10fab|update"
+      },
+      "decode": {
+        "bootstrap_repetitions": 10000,
+        "ci95": [
+          6500.629067400072,
+          6857.833074466711
+        ],
+        "estimator": "mean",
+        "mean": 6659.43374026671,
+        "resampling_unit": "dataset_mean",
+        "seed_material": "8f79cb48b2c7fe3faef8a6c7d86e3afa0ed82faa6db97530b5bd89ccc8d10fab|decode"
+      },
+      "source": "unchanged formal-v1",
+      "source_final_sha256": "5fafb0f4c05b5d4705874289f4f110944f95d06847e398104b9fd60b944e0771",
+      "implementation": "legacy-cpisync-v4"
+    }
+  ],
+  "parameters": [
+    {
+      "d": 10000,
+      "config_id": "a35e0115ea8f96295c5e450360b960b96ab31feb0cbd6ee725ecc5736f41ba3b",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 2,
+      "M": 6000,
+      "R": 1.26,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.96,
+        "status": "empirical_target_met",
+        "successes": 96,
+        "trials": 100,
+        "wilson95": [
+          0.9016292856411208,
+          0.9843366960084523
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 23.467058246666664,
+          "ci95": [
+            22.859703536666665,
+            24.074412956666663
+          ],
+          "dataset_means": [
+            22.893154683333332,
+            24.248102349999996,
+            22.596193749999998,
+            23.319820816666663,
+            24.278019633333333
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.00426553459999998,
+          "ci95": [
+            0.004176305599999974,
+            0.004369793599999989
+          ],
+          "dataset_means": [
+            0.00414849166666668,
+            0.004317466999999982,
+            0.0042345486666666154,
+            0.004174997999999948,
+            0.004452167666666673
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.00450585926666666,
+          "ci95": [
+            0.004410060333333302,
+            0.004619853533333407
+          ],
+          "dataset_means": [
+            0.004377717666666688,
+            0.004567381999999916,
+            0.004462918999999917,
+            0.00441597366666661,
+            0.0047053040000001696
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.00022529533333336772,
+          "ci95": [
+            0.00021645733333336046,
+            0.00023413333333337504
+          ],
+          "dataset_means": [
+            0.00021477000000006777,
+            0.00023470199999997554,
+            0.00021371533333332712,
+            0.00022531600000001242,
+            0.00023797333333345586
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "648f3db2de4ecb110f80e11180c266bcb583604d2d11b38e46b55465d31e148f",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 3,
+      "M": 3800,
+      "R": 1.178,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": false,
+        "rate": 0.89,
+        "status": "below_target_uncertain",
+        "successes": 89,
+        "trials": 100,
+        "wilson95": [
+          0.8136870349691969,
+          0.9374580364293543
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 27.384865206666667,
+          "ci95": [
+            27.027389793333334,
+            27.819950593333328
+          ],
+          "dataset_means": [
+            26.899257383333328,
+            28.220192049999998,
+            27.01356678333333,
+            27.42561003333333,
+            27.365699783333334
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.006055721133333369,
+          "ci95": [
+            0.005860967333333351,
+            0.006395599666666725
+          ],
+          "dataset_means": [
+            0.005852228000000033,
+            0.0067285216666667464,
+            0.005842729999999981,
+            0.00591492066666673,
+            0.005940205333333355
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.0062700785333333455,
+          "ci95": [
+            0.006070547266666656,
+            0.006612231733333414
+          ],
+          "dataset_means": [
+            0.006067161666666617,
+            0.006952673666666816,
+            0.006045496666666687,
+            0.006135976000000006,
+            0.0061490846666666
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.0001994597999999718,
+          "ci95": [
+            0.00019297446666663258,
+            0.00020631266666664886
+          ],
+          "dataset_means": [
+            0.00019631633333331658,
+            0.00020984233333335803,
+            0.000189104000000014,
+            0.00020686233333326123,
+            0.00019517399999990914
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "39e2dd768cc249e92ebf1c2a288e0f449f1f77bb5a3d252a74c83a5acd723ce7",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 4,
+      "M": 2840,
+      "R": 1.1738666666666666,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.99,
+        "status": "empirical_target_met",
+        "successes": 99,
+        "trials": 100,
+        "wilson95": [
+          0.9455138038212946,
+          0.9982325679358593
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 26.22180413,
+          "ci95": [
+            25.669574993333335,
+            26.769791626666667
+          ],
+          "dataset_means": [
+            25.62057,
+            26.94927243333333,
+            25.538037383333332,
+            26.0306602,
+            26.970480633333334
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.006762653866666643,
+          "ci95": [
+            0.006608009799999958,
+            0.006926655666666623
+          ],
+          "dataset_means": [
+            0.006572726000000066,
+            0.006622702333333175,
+            0.006649192333333313,
+            0.007020963666666639,
+            0.0069476850000000185
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.006964991666666605,
+          "ci95": [
+            0.006807988066666641,
+            0.007131981933333249
+          ],
+          "dataset_means": [
+            0.006773911666666669,
+            0.006823541666666655,
+            0.006845033666666556,
+            0.007226948333333223,
+            0.007155522999999923
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.00018688193333330123,
+          "ci95": [
+            0.00018386253333327514,
+            0.00018956306666663517
+          ],
+          "dataset_means": [
+            0.00018629033333332026,
+            0.00018646600000001476,
+            0.0001809786666665906,
+            0.00019058833333329694,
+            0.00019008633333328362
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "69cff5116009bf9707f8169c70e7e0769ee71011290c31d6d145173bfbf15b40",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 6,
+      "M": 1900,
+      "R": 1.1653333333333333,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.97,
+        "status": "empirical_target_met",
+        "successes": 97,
+        "trials": 100,
+        "wilson95": [
+          0.9154806357094724,
+          0.9897454759759611
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 28.55571137,
+          "ci95": [
+            28.26084390666666,
+            28.83971840666667
+          ],
+          "dataset_means": [
+            28.108366883333332,
+            28.771373599999997,
+            28.793911733333335,
+            28.91969748333333,
+            28.18520715
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.008527580133333339,
+          "ci95": [
+            0.008260588533333366,
+            0.00882332886666665
+          ],
+          "dataset_means": [
+            0.008240018000000035,
+            0.00875174633333331,
+            0.008386112666666667,
+            0.009041626666666636,
+            0.008218397000000044
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.008727875533333347,
+          "ci95": [
+            0.008454306200000043,
+            0.009031389533333333
+          ],
+          "dataset_means": [
+            0.008435913000000092,
+            0.008961684666666617,
+            0.00857762166666672,
+            0.009253116666666653,
+            0.008411041666666655
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.0001850757333333064,
+          "ci95": [
+            0.00017815266666657928,
+            0.00019205479999998923
+          ],
+          "dataset_means": [
+            0.0001808386666666273,
+            0.00019443233333330903,
+            0.00017666966666666598,
+            0.0001952853333333504,
+            0.00017815266666657928
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "bf3d9d65394b4442b0fff9d85dc62e97409e9ab802a8651840de831ec0c0c7c7",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 2,
+      "M": 5860,
+      "R": 1.2306133333333333,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": false,
+        "rate": 0.87,
+        "status": "below_target_uncertain",
+        "successes": 87,
+        "trials": 100,
+        "wilson95": [
+          0.7901964855992357,
+          0.9224283257275948
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 48.512269716666665,
+          "ci95": [
+            46.78458961333333,
+            49.74945988
+          ],
+          "dataset_means": [
+            49.78209265,
+            50.104695016666675,
+            48.48082756666667,
+            48.97372406666666,
+            45.22000928333333
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.006043596533333329,
+          "ci95": [
+            0.00589180073333336,
+            0.006192112199999978
+          ],
+          "dataset_means": [
+            0.006109200666666685,
+            0.006034505999999995,
+            0.00599073799999994,
+            0.006297182999999966,
+            0.005786355000000058
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.006290554600000009,
+          "ci95": [
+            0.006130625533333337,
+            0.00644568720000002
+          ],
+          "dataset_means": [
+            0.006355637666666691,
+            0.0062843659999999675,
+            0.006240556999999998,
+            0.0065532346666667225,
+            0.0060189776666666655
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.00023201233333329795,
+          "ci95": [
+            0.0002247508666665935,
+            0.00023777386666667217
+          ],
+          "dataset_means": [
+            0.0002314846666665963,
+            0.00023486399999998278,
+            0.00023404566666666385,
+            0.00024111300000003352,
+            0.0002185543333332133
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "49173c44171ef2ca02bb0ea52972b4d71bb30b665a53658dc64a1b20a23debfd",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 3,
+      "M": 3940,
+      "R": 1.2214133333333332,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": false,
+        "rate": 0.89,
+        "status": "below_target_uncertain",
+        "successes": 89,
+        "trials": 100,
+        "wilson95": [
+          0.8136870349691969,
+          0.9374580364293543
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 50.00604012,
+          "ci95": [
+            49.461639136666655,
+            50.550441103333334
+          ],
+          "dataset_means": [
+            50.876804533333335,
+            50.46768935000001,
+            50.06321774999999,
+            49.17591925,
+            49.44656971666666
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.0088084207333333,
+          "ci95": [
+            0.008494785733333333,
+            0.009151065666666621
+          ],
+          "dataset_means": [
+            0.009082429999999938,
+            0.00840825933333337,
+            0.008661967333333243,
+            0.00939172566666661,
+            0.008497721333333338
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.009037412799999908,
+          "ci95": [
+            0.008715836399999895,
+            0.009392402133333248
+          ],
+          "dataset_means": [
+            0.00930322299999986,
+            0.008627728000000001,
+            0.008892912666666586,
+            0.009647793666666645,
+            0.008715406666666444
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.00021382626666660202,
+          "ci95": [
+            0.0002041605333332234,
+            0.00022775766666665773
+          ],
+          "dataset_means": [
+            0.0002058253333332427,
+            0.0002043556666665817,
+            0.00021589833333327904,
+            0.00023991900000005137,
+            0.00020313299999985546
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "35316cf8f892915cae0421603d9e635ea968957fd4c4710b769855d64e151c1e",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 4,
+      "M": 2960,
+      "R": 1.2234666666666667,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": false,
+        "rate": 0.89,
+        "status": "below_target_uncertain",
+        "successes": 89,
+        "trials": 100,
+        "wilson95": [
+          0.8136870349691969,
+          0.9374580364293543
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 49.41742988,
+          "ci95": [
+            48.781068913333336,
+            50.05379084666667
+          ],
+          "dataset_means": [
+            49.81436726666667,
+            50.48597446666667,
+            48.498964283333336,
+            49.66827076666666,
+            48.619572616666666
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.009939794066666622,
+          "ci95": [
+            0.009634020666666564,
+            0.010288200266666672
+          ],
+          "dataset_means": [
+            0.009945143000000009,
+            0.009994936333333296,
+            0.00977539533333327,
+            0.010573487666666695,
+            0.00941000799999984
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.010153140266666598,
+          "ci95": [
+            0.009831142133333162,
+            0.010504436466666774
+          ],
+          "dataset_means": [
+            0.010162502333333379,
+            0.010210671666666412,
+            0.009993598000000029,
+            0.010788694000000154,
+            0.009610235333333014
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.00019873193333334407,
+          "ci95": [
+            0.00019225640000001637,
+            0.00020265766666668718
+          ],
+          "dataset_means": [
+            0.00020276400000004044,
+            0.00020166966666653371,
+            0.0002030453333334107,
+            0.00020015266666676781,
+            0.00018602799999996775
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "97c256e638ba9f97174af474c3ae33836e39d8a5f09d2eacfdf53450fe25d095",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 6,
+      "M": 2020,
+      "R": 1.2389333333333334,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.96,
+        "status": "empirical_target_met",
+        "successes": 96,
+        "trials": 100,
+        "wilson95": [
+          0.9016292856411208,
+          0.9843366960084523
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 53.62619176666666,
+          "ci95": [
+            53.16583667333333,
+            54.08112616
+          ],
+          "dataset_means": [
+            54.157124249999995,
+            52.93223496666667,
+            53.75003029999999,
+            54.18422775,
+            53.10734156666667
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.011181363666666652,
+          "ci95": [
+            0.010939196266666685,
+            0.011478561999999956
+          ],
+          "dataset_means": [
+            0.010810735000000035,
+            0.011203275333333318,
+            0.011060501,
+            0.011104110999999936,
+            0.011728195999999969
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.011390237800000013,
+          "ci95": [
+            0.01115917546666673,
+            0.011688176199999994
+          ],
+          "dataset_means": [
+            0.011024882000000069,
+            0.0114106133333333,
+            0.011265193999999997,
+            0.011310618000000142,
+            0.01193988166666656
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.00019428633333332297,
+          "ci95": [
+            0.00019219226666669086,
+            0.00019638039999995507
+          ],
+          "dataset_means": [
+            0.00019681533333330373,
+            0.0001934999999999576,
+            0.00019126633333336565,
+            0.00019246433333338273,
+            0.00019738566666660518
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "7e1f55ead6e626411ea14c808076813e6d43eb71876fa2f29fd28bd62f65ddd5",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 3,
+      "ell": 1,
+      "M": 12700,
+      "R": 3.6830133333333333,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.93,
+        "status": "empirical_target_met",
+        "successes": 93,
+        "trials": 100,
+        "wilson95": [
+          0.8625048526092651,
+          0.9656807389327273
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            101.13814510666667,
+            106.58734032666666
+          ],
+          "estimator": "mean",
+          "mean": 103.66025843666667,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "7e1f55ead6e626411ea14c808076813e6d43eb71876fa2f29fd28bd62f65ddd5|update"
+        },
+        "full_decode_s": {
+          "mean": 0.012468849266666648,
+          "ci95": [
+            0.011964261999999958,
+            0.012947464666666608
+          ]
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "d9535ffc05121af687afc46157142e4da4688ffd33f0e262685d29ec4ef78100",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 4,
+      "ell": 1,
+      "M": 12300,
+      "R": 3.567013333333333,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.98,
+        "status": "empirical_target_met",
+        "successes": 98,
+        "trials": 100,
+        "wilson95": [
+          0.929988209271456,
+          0.9944980324498376
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            130.30666688333332,
+            135.19356442999998
+          ],
+          "estimator": "mean",
+          "mean": 132.63592335666667,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "d9535ffc05121af687afc46157142e4da4688ffd33f0e262685d29ec4ef78100|update"
+        },
+        "full_decode_s": {
+          "mean": 0.014674759066666767,
+          "ci95": [
+            0.014258813866666772,
+            0.0150840274666668
+          ]
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "7c4260bcb184762a33d0545220a40936bb917017fbb83e9ed8a97b2a8ea3542f",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 5,
+      "ell": 1,
+      "M": 12300,
+      "R": 3.567013333333333,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.99,
+        "status": "empirical_target_met",
+        "successes": 99,
+        "trials": 100,
+        "wilson95": [
+          0.9455138038212946,
+          0.9982325679358593
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            142.84359300333335,
+            144.27702236666667
+          ],
+          "estimator": "mean",
+          "mean": 143.52585758,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "7c4260bcb184762a33d0545220a40936bb917017fbb83e9ed8a97b2a8ea3542f|update"
+        },
+        "full_decode_s": {
+          "mean": 0.015692049733333255,
+          "ci95": [
+            0.014501101866666519,
+            0.01732364139999995
+          ]
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "c1b53cef0a90ee2294867fba9ba20d90c1602a76becd55fd9829404ccaef9268",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 6,
+      "ell": 1,
+      "M": 12400,
+      "R": 3.596,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.9,
+        "status": "empirical_target_met",
+        "successes": 90,
+        "trials": 100,
+        "wilson95": [
+          0.8256343384950865,
+          0.9447708629393249
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            175.39980247,
+            180.27663159
+          ],
+          "estimator": "mean",
+          "mean": 177.76501019999998,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "c1b53cef0a90ee2294867fba9ba20d90c1602a76becd55fd9829404ccaef9268|update"
+        },
+        "full_decode_s": {
+          "mean": 0.018056848599999852,
+          "ci95": [
+            0.01733379226666655,
+            0.018891101933333234
+          ]
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "config_id": "e2d3203e9557080eacbda588cb1945ddbefc499cb60aed5d9ce8e4ff3b676bc6",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 7,
+      "ell": 1,
+      "M": 12500,
+      "R": 3.6250133333333334,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.92,
+        "status": "empirical_target_met",
+        "successes": 92,
+        "trials": 100,
+        "wilson95": [
+          0.8500189229905127,
+          0.9589065385156194
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            200.62041595,
+            207.57026402333332
+          ],
+          "estimator": "mean",
+          "mean": 204.09533998666666,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "e2d3203e9557080eacbda588cb1945ddbefc499cb60aed5d9ce8e4ff3b676bc6|update"
+        },
+        "full_decode_s": {
+          "mean": 0.018843054333333536,
+          "ci95": [
+            0.017724967466666953,
+            0.020113071733333376
+          ]
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "0291140689609a044e60316e8a1285130e64b05731797b1569175f085c4c9e8d",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 2,
+      "M": 58200,
+      "R": 1.2222,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.9,
+        "status": "empirical_target_met",
+        "successes": 90,
+        "trials": 100,
+        "wilson95": [
+          0.8256343384950865,
+          0.9447708629393249
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 30.542499273333334,
+          "ci95": [
+            30.151351979999998,
+            30.98084349
+          ],
+          "dataset_means": [
+            30.061813616666665,
+            30.989285399999996,
+            30.218063666666662,
+            30.2075345,
+            31.235799183333334
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.04418187553333331,
+          "ci95": [
+            0.04352276559999996,
+            0.045083705199999935
+          ],
+          "dataset_means": [
+            0.043292894333333276,
+            0.04426814900000009,
+            0.04591873266666657,
+            0.04383116399999998,
+            0.043598437666666635
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.04636373860000002,
+          "ci95": [
+            0.04566459500000002,
+            0.047335656599999984
+          ],
+          "dataset_means": [
+            0.04539631766666674,
+            0.04637686333333354,
+            0.04830170066666654,
+            0.04595728299999998,
+            0.04578652833333333
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.002025384733333372,
+          "ci95": [
+            0.0019581607333333767,
+            0.0021211155333333695
+          ],
+          "dataset_means": [
+            0.001953480333333424,
+            0.0019557533333333468,
+            0.0022203016666667206,
+            0.001972336333333343,
+            0.002025052000000027
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "5c3b50e5b55e98842e9fd2a6980595febc1d039199af7396e2cd34ad095aa15d",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 3,
+      "M": 36800,
+      "R": 1.1408,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.92,
+        "status": "empirical_target_met",
+        "successes": 92,
+        "trials": 100,
+        "wilson95": [
+          0.8500189229905127,
+          0.9589065385156194
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 40.445785156666666,
+          "ci95": [
+            39.83566100666666,
+            41.006574439999994
+          ],
+          "dataset_means": [
+            39.832408066666666,
+            39.46859371666666,
+            40.94011581666666,
+            40.8229758,
+            41.164832383333334
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.06828954146666666,
+          "ci95": [
+            0.0670842887333333,
+            0.069700994
+          ],
+          "dataset_means": [
+            0.06906069333333331,
+            0.06784267666666673,
+            0.07066144500000004,
+            0.06623892899999999,
+            0.06764396333333322
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.07037792733333334,
+          "ci95": [
+            0.0691435240666666,
+            0.07187889840000004
+          ],
+          "dataset_means": [
+            0.07133062866666662,
+            0.0698108696666669,
+            0.07279476300000016,
+            0.06827380099999991,
+            0.06967957433333316
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.0019424698666666925,
+          "ci95": [
+            0.0018648184666666772,
+            0.0020323890000000532
+          ],
+          "dataset_means": [
+            0.0021184560000000463,
+            0.0018225446666667218,
+            0.001984032333333404,
+            0.0018916866666666514,
+            0.001895629666666639
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "e1964fefaa8a04de85e83b9af39f3dd0209aa65a104577b498e86e875943c71b",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 4,
+      "M": 27400,
+      "R": 1.1325333333333334,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.99,
+        "status": "empirical_target_met",
+        "successes": 99,
+        "trials": 100,
+        "wilson95": [
+          0.9455138038212946,
+          0.9982325679358593
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 34.93198602,
+          "ci95": [
+            34.32650686666666,
+            35.61035944333334
+          ],
+          "dataset_means": [
+            34.14316363333333,
+            35.403446833333334,
+            34.40128301666667,
+            34.54364103333334,
+            36.16839558333333
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.07241378260000002,
+          "ci95": [
+            0.07052899986666664,
+            0.0753573379333334
+          ],
+          "dataset_means": [
+            0.06991220233333333,
+            0.07820440966666675,
+            0.07182166199999991,
+            0.07108673033333335,
+            0.07104390866666677
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.07426026733333335,
+          "ci95": [
+            0.07230886719999989,
+            0.07728553273333345
+          ],
+          "dataset_means": [
+            0.07166637066666655,
+            0.08023525366666684,
+            0.07368427266666651,
+            0.07286095133333337,
+            0.07285448833333352
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.0017022742000000126,
+          "ci95": [
+            0.001631366199999995,
+            0.0017980976666666908
+          ],
+          "dataset_means": [
+            0.0016108129999999516,
+            0.0018845870000000116,
+            0.0017141866666667098,
+            0.0016334206666666813,
+            0.0016683636666667094
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "2da579635a745863421ad836515debcc936a1a8f84090fc78733881b205508c5",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 2,
+      "ell": 6,
+      "M": 18000,
+      "R": 1.104,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.94,
+        "status": "empirical_target_met",
+        "successes": 94,
+        "trials": 100,
+        "wilson95": [
+          0.8752318455410406,
+          0.9722138760368118
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 35.875464236666666,
+          "ci95": [
+            35.22841417000001,
+            36.25632302
+          ],
+          "dataset_means": [
+            34.620520400000004,
+            36.13611068333333,
+            36.20041806666667,
+            36.080091583333335,
+            36.34018045
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.09179214360000003,
+          "ci95": [
+            0.08982455493333337,
+            0.09390388146666671
+          ],
+          "dataset_means": [
+            0.08935492066666677,
+            0.089471068,
+            0.09297172833333334,
+            0.0914707973333333,
+            0.09569220366666675
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.0935578901333334,
+          "ci95": [
+            0.09155702333333336,
+            0.09583345666666669
+          ],
+          "dataset_means": [
+            0.091081079,
+            0.09118980300000008,
+            0.09471502333333352,
+            0.09324335266666665,
+            0.09756019266666671
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.0016268653333333233,
+          "ci95": [
+            0.0015891874666666232,
+            0.0016789146666666827
+          ],
+          "dataset_means": [
+            0.0015886739999998827,
+            0.0015829009999999883,
+            0.0016027873333333738,
+            0.0016341103333333458,
+            0.0017258540000000266
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "b29c0efccbff86185894ff50b3c2b39d29198615c0fbd47298532d0a857508ee",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 2,
+      "M": 56400,
+      "R": 1.1844,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": false,
+        "rate": 0.88,
+        "status": "below_target_uncertain",
+        "successes": 88,
+        "trials": 100,
+        "wilson95": [
+          0.8018790057328857,
+          0.9300059356298052
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 63.262746549999996,
+          "ci95": [
+            62.842109089999994,
+            63.623971643333334
+          ],
+          "dataset_means": [
+            62.57714481666666,
+            62.97212651666666,
+            63.40906461666666,
+            63.50698448333333,
+            63.848412316666675
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.06024333966666667,
+          "ci95": [
+            0.05962451060000005,
+            0.06104010653333332
+          ],
+          "dataset_means": [
+            0.060116703333333334,
+            0.061688110333333324,
+            0.060085654666666675,
+            0.06001949833333331,
+            0.059306731666666744
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.062312125200000054,
+          "ci95": [
+            0.06164403240000005,
+            0.06310114533333343
+          ],
+          "dataset_means": [
+            0.062226751333333365,
+            0.06372817533333348,
+            0.06218333300000012,
+            0.062137867666666624,
+            0.061284498666666666
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.0019198847333333547,
+          "ci95": [
+            0.0018700212666666737,
+            0.001961308933333342
+          ],
+          "dataset_means": [
+            0.00196209800000006,
+            0.0018945213333334543,
+            0.0019409353333333563,
+            0.001970706666666618,
+            0.0018311623333332843
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "186f35f78dfc209887e3ae01026da12f2d113aef172cc2956402325b8bc4a523",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 3,
+      "M": 37600,
+      "R": 1.1656,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": false,
+        "rate": 0.89,
+        "status": "below_target_uncertain",
+        "successes": 89,
+        "trials": 100,
+        "wilson95": [
+          0.8136870349691969,
+          0.9374580364293543
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 71.17962235666667,
+          "ci95": [
+            70.77553996333334,
+            71.52992884
+          ],
+          "dataset_means": [
+            71.42524456666668,
+            70.86737375,
+            70.5283605,
+            71.35511086666666,
+            71.7220221
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.09311214766666664,
+          "ci95": [
+            0.09162621613333333,
+            0.09463985286666667
+          ],
+          "dataset_means": [
+            0.09112256333333331,
+            0.09311290999999988,
+            0.09593699966666665,
+            0.09400174333333333,
+            0.09138652200000008
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.0950788679333333,
+          "ci95": [
+            0.09359470733333324,
+            0.09659914426666674
+          ],
+          "dataset_means": [
+            0.09309192966666657,
+            0.0951124699999999,
+            0.09790289066666687,
+            0.0959484456666666,
+            0.09333860366666658
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.001817090666666621,
+          "ci95": [
+            0.0017980177999999147,
+            0.0018359998000000062
+          ],
+          "dataset_means": [
+            0.0018201303333332437,
+            0.001851372666666684,
+            0.0018226533333334238,
+            0.0017880693333331976,
+            0.0018032276666665552
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "e3f1a494e9b7c9849ab7358dba813e2cc83236259f830a59e0a062e7894d3dcb",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 4,
+      "M": 28200,
+      "R": 1.1656,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.95,
+        "status": "empirical_target_met",
+        "successes": 95,
+        "trials": 100,
+        "wilson95": [
+          0.8882495307680808,
+          0.9784563208456319
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 69.42284765,
+          "ci95": [
+            67.95517031,
+            70.89052498999999
+          ],
+          "dataset_means": [
+            67.7227129,
+            67.90838283333333,
+            68.51366008333333,
+            71.31704805,
+            71.65243438333333
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.10814140206666671,
+          "ci95": [
+            0.10510978020000009,
+            0.11076543200000004
+          ],
+          "dataset_means": [
+            0.10296826833333343,
+            0.1057585986666667,
+            0.11088549733333337,
+            0.11013312666666682,
+            0.11096151933333331
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.11007720073333335,
+          "ci95": [
+            0.10702171393333329,
+            0.11274651713333336
+          ],
+          "dataset_means": [
+            0.10484509266666664,
+            0.10762099133333325,
+            0.11286036566666668,
+            0.11210725366666703,
+            0.11295230033333326
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.001787298399999937,
+          "ci95": [
+            0.0017418899999998981,
+            0.0018304905333333434
+          ],
+          "dataset_means": [
+            0.0017293873333332026,
+            0.0017175753333331656,
+            0.0018266059999999158,
+            0.00182733666666679,
+            0.001835586666666611
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "e1d8edc668bb2b059e802f90ba687321bd9037dffe52393adbb1e8ca5d0c0284",
+      "method": "xyz",
+      "implementation": "frozen-gf230-v15",
+      "k": 3,
+      "ell": 6,
+      "M": 18800,
+      "R": 1.1530666666666667,
+      "reliability_source": "inherited formal-v1 evaluation, not newly measured under GF(2^30)",
+      "probability": {
+        "passing": true,
+        "rate": 0.98,
+        "status": "empirical_target_met",
+        "successes": 98,
+        "trials": 100,
+        "wilson95": [
+          0.929988209271456,
+          0.9944980324498376
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "mean": 67.61971102,
+          "ci95": [
+            66.65205786333334,
+            68.46239004
+          ],
+          "dataset_means": [
+            68.85333198333335,
+            65.96685816666667,
+            67.01639676666666,
+            67.91865013333333,
+            68.34331805000001
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "mean": 0.1312605557333334,
+          "ci95": [
+            0.12887146780000003,
+            0.13391829273333336
+          ],
+          "dataset_means": [
+            0.13115270466666673,
+            0.13212033866666673,
+            0.13583465133333336,
+            0.12996717099999996,
+            0.1272279130000001
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "mean": 0.13313552840000006,
+          "ci95": [
+            0.1306249841333334,
+            0.13567833073333338
+          ],
+          "dataset_means": [
+            0.13302241033333329,
+            0.13393926700000028,
+            0.13783998933333344,
+            0.13184927533333327,
+            0.12902670000000013
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "mean": 0.0017300354000000517,
+          "ci95": [
+            0.0016757518000000949,
+            0.0017960644666666988
+          ],
+          "dataset_means": [
+            0.0017243423333333692,
+            0.0016685920000001353,
+            0.0018565520000000113,
+            0.0017420743333333248,
+            0.001658616333333418
+          ],
+          "datasets": 5,
+          "resampling_unit": "dataset_mean",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "9ab024e26c7359934f411fe33ba8304e569aedd54422d7fc6117a92b3a2ec03e",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 3,
+      "ell": 1,
+      "M": 118000,
+      "R": 3.422,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.95,
+        "status": "empirical_target_met",
+        "successes": 95,
+        "trials": 100,
+        "wilson95": [
+          0.8882495307680808,
+          0.9784563208456319
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            151.3871148133333,
+            161.49980490666664
+          ],
+          "estimator": "mean",
+          "mean": 156.39948651,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "9ab024e26c7359934f411fe33ba8304e569aedd54422d7fc6117a92b3a2ec03e|update"
+        },
+        "full_decode_s": {
+          "mean": 0.24672227586666687,
+          "ci95": [
+            0.23566131346666672,
+            0.2591202072000004
+          ]
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "87be920094a26634e0ea7b0cd51963886996ad286de2fe34acde6a8f85217282",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 4,
+      "ell": 1,
+      "M": 113000,
+      "R": 3.277,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 1.0,
+        "status": "empirical_target_met",
+        "successes": 100,
+        "trials": 100,
+        "wilson95": [
+          0.9630065017930143,
+          1.0
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            167.15377646666667,
+            178.50024382666666
+          ],
+          "estimator": "mean",
+          "mean": 172.82701014666662,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "87be920094a26634e0ea7b0cd51963886996ad286de2fe34acde6a8f85217282|update"
+        },
+        "full_decode_s": {
+          "mean": 0.31331377560000007,
+          "ci95": [
+            0.2833715081333331,
+            0.3432560430666669
+          ]
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "8f053da6e9b516b6b161a1af7fbb370a16401ca48c2baf9e71568e27cdd57e58",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 5,
+      "ell": 1,
+      "M": 112000,
+      "R": 3.248,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.97,
+        "status": "empirical_target_met",
+        "successes": 97,
+        "trials": 100,
+        "wilson95": [
+          0.9154806357094724,
+          0.9897454759759611
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            195.56695985000002,
+            205.98376186333334
+          ],
+          "estimator": "mean",
+          "mean": 200.19015902333334,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "8f053da6e9b516b6b161a1af7fbb370a16401ca48c2baf9e71568e27cdd57e58|update"
+        },
+        "full_decode_s": {
+          "mean": 0.32790801993333296,
+          "ci95": [
+            0.32279259913333347,
+            0.33220817486666604
+          ]
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "26d665e61023fb7b57bb6fad09df3b86b1fc5a59e49868774c383e9dff5d033f",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 6,
+      "ell": 1,
+      "M": 112000,
+      "R": 3.248,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.96,
+        "status": "empirical_target_met",
+        "successes": 96,
+        "trials": 100,
+        "wilson95": [
+          0.9016292856411208,
+          0.9843366960084523
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            230.50485858666667,
+            233.84432119333331
+          ],
+          "estimator": "mean",
+          "mean": 232.17458988999996,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "26d665e61023fb7b57bb6fad09df3b86b1fc5a59e49868774c383e9dff5d033f|update"
+        },
+        "full_decode_s": {
+          "mean": 0.3921243279999998,
+          "ci95": [
+            0.3660538146666664,
+            0.4199955698000003
+          ]
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "config_id": "10f2c15f8954177f3b3dea91fb40ea409ea3826ee1408906ad27310a6afd38b9",
+      "method": "iblt_sc",
+      "implementation": "upstream-iblt-standard-sc-v1",
+      "k": 7,
+      "ell": 1,
+      "M": 113000,
+      "R": 3.277,
+      "reliability_source": "unchanged formal-v1 evaluation",
+      "probability": {
+        "passing": true,
+        "rate": 0.96,
+        "status": "empirical_target_met",
+        "successes": 96,
+        "trials": 100,
+        "wilson95": [
+          0.9016292856411208,
+          0.9843366960084523
+        ]
+      },
+      "metrics": {
+        "update_ns_per_input": {
+          "bootstrap_repetitions": 10000,
+          "ci95": [
+            256.77027660333334,
+            266.44992422666667
+          ],
+          "estimator": "mean",
+          "mean": 261.10107818333336,
+          "resampling_unit": "dataset_mean",
+          "seed_material": "10f2c15f8954177f3b3dea91fb40ea409ea3826ee1408906ad27310a6afd38b9|update"
+        },
+        "full_decode_s": {
+          "mean": 0.38639244686666663,
+          "ci95": [
+            0.36793337839999957,
+            0.4048515153333335
+          ]
+        }
+      }
+    }
+  ],
+  "rateless_policy": "Faithful incremental Rateless timings have different metric boundaries and are kept in their separate reproduction delivery; historical fixed-prefix/masked-hash timing is not silently relabeled as the paper baseline.",
+  "reuse_policy": "original M/k/ell/a/z, threshold tables, ideal-cell heatmaps, parameter choices, existing reliability cohorts; unchanged non-IBLT baselines retain original sources; no new calibration or reliability sweep"
+}

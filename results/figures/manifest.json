@@ -1,0 +1,20 @@
+{
+  "assets": [
+    "paper/figure1a",
+    "paper/figure1b",
+    "paper/figure1c",
+    "paper/figure3",
+    "paper/figure2a",
+    "paper/figure2b",
+    "paper/figure2c",
+    "optimized/communication",
+    "optimized/update",
+    "optimized/decode",
+    "optimized/sharp-threshold",
+    "optimized/fingerprint-two-scales",
+    "optimized/parameters-update_ns_per_input",
+    "optimized/parameters-full_decode_s"
+  ],
+  "measurements_rerun": false,
+  "source": "stored measured results; paper and optimized campaigns are separate"
+}

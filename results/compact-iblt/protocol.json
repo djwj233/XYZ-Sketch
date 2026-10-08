@@ -1,0 +1,9 @@
+{
+  "schema": "compact-count-comparison-v1",
+  "codec": "128-cell block minimum, signed32 base + 6-bit width + unsigned offsets; unchanged key30/checksum32",
+  "scope": "18 existing main configurations across 9 d values; five original successful timing datasets each; three paired decode repetitions",
+  "M_policy": "reuse unchanged; no calibration",
+  "timing": "single CPU 0, thread CPU time, input tables built once per dataset; alternating canonical/compact order; snapshot and ground-truth checks outside timing; supplemental paired experiment, not replacement of formal-v1 timing",
+  "start": "2026-10-06T05:52:39Z",
+  "jobs": 90
+}

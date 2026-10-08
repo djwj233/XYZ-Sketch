@@ -1,0 +1,17 @@
+{
+  "build_id": "81cc8d496a7970af94107e813c0761821876ab0290885bc5148a4e400f1bc7fe",
+  "calibration_candidates": 6690,
+  "datasets": 2458,
+  "groups": 9,
+  "kind": "self_audit",
+  "protocol_id": "cb3241417cab3275adb37c769abda4f6cbbb92e1c65dabcf7bb6f4090e05f183",
+  "raw_status_counts": {
+    "decode_failed": 183377,
+    "success": 500048,
+    "timeout": 16,
+    "wrong_output": 3
+  },
+  "records": 683444,
+  "status": "passed",
+  "trial_index_sha256": "ce62cce16fee9fdd6f14e051d52ceaa8e78f9f2565a754a0294469881b5c45f3"
+}

@@ -1,0 +1,17 @@
+{
+  "completed_at_utc": "2026-10-07T07:48:48.472791+00:00",
+  "total_runs": 480,
+  "all_success": true,
+  "all_validation_passed": true,
+  "method_runs": {
+    "xyz": 345,
+    "iblt": 135
+  },
+  "xyz_configurations": 23,
+  "inherited_reliability_retested": false,
+  "old_files_preserved": true,
+  "frozen_source_preserved": true,
+  "data_conservation": "Every planned run retained; no replacement, dropped timeout or success-based new input selection",
+  "timing_consistency": "All XYZ figure time points use GF(2^30) v15; full decode and receiver are separate",
+  "issues": []
+}

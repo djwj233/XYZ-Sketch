@@ -1,0 +1,2477 @@
+[
+  {
+    "d": 100,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch0",
+    "config_id": "efc0a6e053db228278bc56e56b0af6d016d46751f2272dd64cf247812024046d",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 145.1,
+        "sd": 9.044781965756876,
+        "ci95": [
+          143.41,
+          146.91
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 2046.67,
+        "sd": 125.85730696773913,
+        "ci95": [
+          2022.3397499999999,
+          2072.32025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.946872846483828,
+        "sd": 0.02367524946965143,
+        "ci95": [
+          1.9422701254577885,
+          1.9514597389005226
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.4510000000000003,
+        "sd": 0.09044781965756875,
+        "ci95": [
+          1.4332000000000003,
+          1.4684999999999997
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 5.457786666666666,
+        "sd": 0.3356194852473044,
+        "ci95": [
+          5.391678,
+          5.524217333333333
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 4353.0,
+        "sd": 271.34345897270623,
+        "ci95": [
+          4300.4925,
+          4407.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 9286.4,
+        "sd": 578.86604580844,
+        "ci95": [
+          9172.48,
+          9401.616
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 282.47,
+        "sd": 17.608225235940047,
+        "ci95": [
+          279.07,
+          285.92
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 290.2,
+        "sd": 18.08956393151375,
+        "ci95": [
+          286.6995,
+          293.7
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.9467263955892489
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.5046305279333332,
+        "sd": 0.012833598926826985,
+        "ci95": [
+          0.4940457264666658,
+          0.5138635135333333
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.5095935326666662,
+          0.48741783433333213,
+          0.5090159123333334,
+          0.5205572950000003,
+          0.49656806533333436
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 5046.305279333332
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.4588830231333338,
+        "sd": 0.008665225656366344,
+        "ci95": [
+          0.45237914473333474,
+          0.46532310433333307
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.4467531276666681,
+          0.46412811500000023,
+          0.45378564900000146,
+          0.461137156333334,
+          0.4686110676666653
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 4588.830231333338
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 14.039308853133326,
+        "sd": 0.14952182647246978,
+        "ci95": [
+          13.913251064133316,
+          14.136544670666671
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          14.041586732999951,
+          13.789152852333308,
+          14.058683893333352,
+          14.14011287033331,
+          14.1670079166667
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 140393.08853133325
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 14.049480358133348,
+        "sd": 0.14421609145827066,
+        "ci95": [
+          13.935552424133345,
+          14.157074303933348
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          13.985392312666692,
+          13.841894664333337,
+          14.054858107666686,
+          14.198570891000006,
+          14.16668581500002
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 140494.8035813335
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 6.224160001139604e-05,
+        "sd": 2.221229110670097e-06,
+        "ci95": [
+          6.051266667486861e-05,
+          6.386380001351573e-05
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          6.215966668898787e-05,
+          5.895866666498032e-05,
+          6.44023333236099e-05,
+          6.41773333656855e-05,
+          6.15100000137166e-05
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.6224160001139604
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 6.449473335594645e-05,
+        "sd": 3.897504046224719e-06,
+        "ci95": [
+          6.188866668172347e-05,
+          6.793013334431089e-05
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          6.07380000148261e-05,
+          6.217633334844781e-05,
+          6.48473333919597e-05,
+          6.383633336411639e-05,
+          7.087566666038232e-05
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.6449473335594645
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 29.052974527933337,
+        "sd": 0.29944802726461245,
+        "ci95": [
+          28.810948828199997,
+          29.2636567976
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          28.983984907666663,
+          28.583229165666665,
+          29.077033144666665,
+          29.321071736333334,
+          29.299553685333336
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 290529.7452793334
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "d": 300,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch1",
+    "config_id": "766ee7be611e0564582afbf455c1e39e8e2da53fc8c7b3b9488aff70735b7ab0",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 419.85,
+        "sd": 17.890449458249552,
+        "ci95": [
+          416.28975,
+          423.34
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 5841.16,
+        "sd": 246.92773735396244,
+        "ci95": [
+          5793.07975,
+          5888.97025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.8578215501560316,
+        "sd": 0.015758937526297413,
+        "ci95": [
+          1.8547015463296774,
+          1.8608834707551694
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3995000000000002,
+        "sd": 0.05963483152749851,
+        "ci95": [
+          1.3878333333333333,
+          1.4115008333333336
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 5.192142222222222,
+        "sd": 0.21949132209241107,
+        "ci95": [
+          5.149696888888889,
+          5.2346319999999995
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 12595.5,
+        "sd": 536.7134837474866,
+        "ci95": [
+          12494.7,
+          12699.9
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 26870.4,
+        "sd": 1144.9887653279714,
+        "ci95": [
+          26641.92,
+          27091.84
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 779.96,
+        "sd": 32.81534501855601,
+        "ci95": [
+          773.5197499999999,
+          786.14025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 839.7,
+        "sd": 35.780898916499105,
+        "ci95": [
+          832.86,
+          846.66
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.8577110872930809
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.5031572240666653,
+        "sd": 0.007099777578202066,
+        "ci95": [
+          0.49765875013333183,
+          0.5086556979999988
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.4970694776666635,
+          0.509814380666663,
+          0.5089629296666679,
+          0.5057238693333321,
+          0.494215463
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 1677.1907468888842
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.4523225551999994,
+        "sd": 0.00802766701435749,
+        "ci95": [
+          0.44721895826666724,
+          0.45936135193333116
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.4490196006666712,
+          0.446027144333331,
+          0.46586201766666574,
+          0.4531935623333276,
+          0.4475104510000014
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 1507.7418506666647
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 19.662180503933364,
+        "sd": 0.22342833898109066,
+        "ci95": [
+          19.511388969599988,
+          19.855930963666754
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          19.721877822666734,
+          19.48006513166671,
+          20.025903954666777,
+          19.51375897399994,
+          19.569296636666646
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 65540.60167977787
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 19.67599941326665,
+        "sd": 0.2287441228625643,
+        "ci95": [
+          19.51212545206666,
+          19.86826439206667
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          19.739647522000027,
+          19.432345332666635,
+          20.025910232666654,
+          19.52394374033336,
+          19.658150238666565
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 65586.66471088883
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.00015266206662598592,
+        "sd": 6.468060425805259e-06,
+        "ci95": [
+          0.0001476632666632227,
+          0.00015760293328040593
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.0001574143333279802,
+          0.000146677999979102,
+          0.0001587093332595657,
+          0.00014474133333634379,
+          0.0001557673332269379
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.508873555419953
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.00016425866666385978,
+        "sd": 7.789319465759818e-06,
+        "ci95": [
+          0.0001593682666667521,
+          0.00017101873333279135
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.00016390466663462888,
+          0.00015900299995334302,
+          0.00017739533335866162,
+          0.00015784500005440924,
+          0.00016314533331825606
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.5475288888795325
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 40.29538098286666,
+        "sd": 0.45694659089985723,
+        "ci95": [
+          39.9814525022,
+          40.6729309516
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          40.40937494866667,
+          39.869893522333335,
+          41.02846209566666,
+          39.99830111866667,
+          40.170873229
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 134317.93660955553
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "d": 1000,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch1",
+    "config_id": "bccd9316f5533fe106d3eda6df3e191929f89966836185a11f7d306c520e3f06",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 1375.2,
+        "sd": 29.63720021128238,
+        "ci95": [
+          1369.52,
+          1381.05025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 18902.65,
+        "sd": 405.55312957625034,
+        "ci95": [
+          18825.42625,
+          18981.12375
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.7286835325088195,
+        "sd": 0.011085260487815487,
+        "ci95": [
+          1.7265560287522161,
+          1.7308793629860328
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3751999999999998,
+        "sd": 0.029637200211282366,
+        "ci95": [
+          1.3695300000000001,
+          1.38113
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 5.040706666666667,
+        "sd": 0.1081475012203335,
+        "ci95": [
+          5.020036933333333,
+          5.062040066666667
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 41256.0,
+        "sd": 889.1160063384714,
+        "ci95": [
+          41084.9925,
+          41430.9
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 88012.8,
+        "sd": 1896.7808135220723,
+        "ci95": [
+          87644.8,
+          88372.496
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 2377.25,
+        "sd": 51.87988750250648,
+        "ci95": [
+          2367.28,
+          2387.48025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 2750.4,
+        "sd": 59.27440042256476,
+        "ci95": [
+          2739.12,
+          2761.9
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.7286576497963932
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.4986151327999996,
+        "sd": 0.01223949888298369,
+        "ci95": [
+          0.4888198756000001,
+          0.5076353123333335
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.493640823666664,
+          0.5094026743333335,
+          0.4803519600000011,
+          0.4999891989999978,
+          0.5096910070000013
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 498.61513279999957
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.45523517626666854,
+        "sd": 0.009808595575293679,
+        "ci95": [
+          0.4474642139333363,
+          0.4624227946666667
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.4414346480000039,
+          0.4523180133333354,
+          0.4540542763333368,
+          0.46766983133333245,
+          0.460699112333334
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 455.23517626666853
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 27.70089036453332,
+        "sd": 0.19217589787789896,
+        "ci95": [
+          27.551519065333174,
+          27.85026166373346
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          27.742757539999833,
+          27.518562690333304,
+          27.93026646900012,
+          27.48885620299971,
+          27.824008920333615
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 27700.89036453332
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 27.70982548533332,
+        "sd": 0.2236812666521531,
+        "ci95": [
+          27.533699475000038,
+          27.885951495666596
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          27.756658312333286,
+          27.519291728999992,
+          27.92526083966683,
+          27.436627802333465,
+          27.911288743333024
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 27709.82548533332
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.00043905046673632,
+        "sd": 1.3899688950695134e-05,
+        "ci95": [
+          0.0004283176000529151,
+          0.0004497200000796712
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.00044021733312874883,
+          0.0004204329999117166,
+          0.00045431300011170944,
+          0.00043041066700633124,
+          0.0004498783335230942
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.43905046673632
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.0004760558666215312,
+        "sd": 1.731119781377876e-05,
+        "ci95": [
+          0.00046346893320624956,
+          0.0004908686666393139
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.0004713753332346767,
+          0.00045863533334215373,
+          0.000502037333332872,
+          0.00046434933305613174,
+          0.00048388200014182203
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.47605586662153115
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 56.36978866953333,
+        "sd": 0.4055964339318274,
+        "ci95": [
+          56.04911078946666,
+          56.6904665496
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          56.43966171933334,
+          56.00471337566666,
+          56.79528431966667,
+          55.89823273833333,
+          56.71105119466666
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 56369.78866953333
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "d": 3000,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch0",
+    "config_id": "3c39df8a4e5b7a3d114cae007abb79f69510f9275d1d99cf6a16e11de0d977bf",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 4093.5,
+        "sd": 56.82802339008671,
+        "ci95": [
+          4082.46,
+          4104.6105
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 55497.58,
+        "sd": 763.9459389091336,
+        "ci95": [
+          55349.747,
+          55648.9645
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.5518928067674194,
+        "sd": 0.007720709167583176,
+        "ci95": [
+          1.5503929206866782,
+          1.5533950562658982
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3645000000000003,
+        "sd": 0.018942674463362234,
+        "ci95": [
+          1.36084325,
+          1.3681868333333331
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 4.933118222222222,
+        "sd": 0.06790630568081184,
+        "ci95": [
+          4.919854933333334,
+          4.9464652
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 122805.0,
+        "sd": 1704.8407017026013,
+        "ci95": [
+          122469.2925,
+          123140.4075
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 261984.0,
+        "sd": 3636.9934969655496,
+        "ci95": [
+          261281.264,
+          262713.632
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 6352.58,
+        "sd": 87.02805538584914,
+        "ci95": [
+          6335.57,
+          6369.59025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 8187.0,
+        "sd": 113.65604678017343,
+        "ci95": [
+          8164.8395,
+          8208.74
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.5518700378649077
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.4993349106666673,
+        "sd": 0.009344627834017195,
+        "ci95": [
+          0.4913792176000015,
+          0.5061597003999994
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.5092134370000018,
+          0.48668334800000235,
+          0.5041470446666616,
+          0.4925531850000013,
+          0.5040775386666695
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 166.44497022222242
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.46639911826666774,
+        "sd": 0.012290041381866987,
+        "ci95": [
+          0.45604286519999454,
+          0.47532011740000407
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.47616864666666997,
+          0.4611733583333331,
+          0.4772338143333346,
+          0.44762410699998983,
+          0.4697956650000114
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 155.4663727555559
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 35.82832810893332,
+        "sd": 0.11936193267925418,
+        "ci95": [
+          35.735954214533464,
+          35.91646625673325
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          35.78287711266679,
+          35.95589464366654,
+          35.65730518800015,
+          35.924978396000064,
+          35.82058520433308
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 11942.776036311107
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 35.81840811153338,
+        "sd": 0.155624402304683,
+        "ci95": [
+          35.694396690199994,
+          35.94241953286677
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          35.67856907833333,
+          35.98827718666682,
+          35.652182048666525,
+          35.96253104699999,
+          35.81048119700023
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 11939.469370511128
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.0012052204002685881,
+        "sd": 1.2326824646777505e-05,
+        "ci95": [
+          0.0011958566003214286,
+          0.0012145842002157475
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.0011893320001955903,
+          0.0012026089999639389,
+          0.0011990050006260116,
+          0.0012190763337399286,
+          0.0012160796668174711
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.4017401334228627
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.0012900465995993927,
+        "sd": 2.1928730904825654e-05,
+        "ci95": [
+          0.0012730497995195656,
+          0.0013070433996792198
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.0012649836662739962,
+          0.0012985176662794196,
+          0.001268381999385208,
+          0.001305825666857885,
+          0.0013125239992004545
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.4300155331997976
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 72.6265983808,
+        "sd": 0.2528307799253904,
+        "ci95": [
+          72.4300822086,
+          72.823114553
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          72.46086123333333,
+          72.90623200633334,
+          72.30470699066666,
+          72.84191707866667,
+          72.619274595
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 24208.866126933335
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "d": 10000,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch1",
+    "config_id": "7eda7547d2fab5ca8ac2b82fc6df3692f77a53c622a9890a201fc22e2748471f",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 13560.74,
+        "sd": 96.78745014231185,
+        "ci95": [
+          13542.18,
+          13579.34025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 180417.96,
+        "sd": 1261.4046677246663,
+        "ci95": [
+          180167.51374999998,
+          180659.10075
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.3027512992505421,
+        "sd": 0.004125070754342205,
+        "ci95": [
+          1.3019513656858996,
+          1.3035495698338495
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3560740000000002,
+        "sd": 0.009678745014231186,
+        "ci95": [
+          1.354179975,
+          1.357934025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 4.8111456,
+        "sd": 0.03363745780599111,
+        "ci95": [
+          4.804507879999999,
+          4.8177755
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 406822.2,
+        "sd": 2903.623504269356,
+        "ci95": [
+          406254.8775,
+          407390.115
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 867887.36,
+        "sd": 6194.396809107959,
+        "ci95": [
+          866643.792,
+          869091.872
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 17666.08,
+        "sd": 110.42522768412529,
+        "ci95": [
+          17644.49975,
+          17687.670499999997
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 27121.48,
+        "sd": 193.5749002846237,
+        "ci95": [
+          27083.277,
+          27158.8805
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.3027371662608382
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.4988538590666679,
+        "sd": 0.015314384831772044,
+        "ci95": [
+          0.4889467210666682,
+          0.5125785769333359
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.4888494080000003,
+          0.4912528899999952,
+          0.4878909496666726,
+          0.5019131040000041,
+          0.5243629436666674
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 49.88538590666679
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.4773347069333342,
+        "sd": 0.020053549304084452,
+        "ci95": [
+          0.46666717346666714,
+          0.4953905181333343
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.46852741666666436,
+          0.4698208439999971,
+          0.46402892966666637,
+          0.4714282343333398,
+          0.5128681100000033
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 47.733470693333416
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 46.192772369867285,
+        "sd": 1.9356650383076386,
+        "ci95": [
+          45.28897401786728,
+          47.930887640534216
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          45.27867340866686,
+          45.27455897200096,
+          45.41839659566675,
+          45.33840532800077,
+          49.65382754500112
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 4619.277236986729
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 46.22553277866617,
+        "sd": 1.941004649838868,
+        "ci95": [
+          45.297915382199236,
+          47.96364988879927
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          45.35070165166535,
+          45.218735978000076,
+          45.47809884133305,
+          45.38641723733313,
+          49.69371018499928
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 4622.553277866617
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.0038952979999383073,
+        "sd": 0.0002759818096800863,
+        "ci95": [
+          0.0037416213335367187,
+          0.004142941133399939
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.0038072260001030442,
+          0.0037159556661570114,
+          0.0038381249990141106,
+          0.0037344846676332644,
+          0.004380698666784107
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.38952979999383075
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.004102671933016595,
+        "sd": 0.0003032331096648291,
+        "ci95": [
+          0.003935999465773261,
+          0.004380263333382572
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.003993813666726205,
+          0.0039725789996375065,
+          0.0040098966667342735,
+          0.003897456665137966,
+          0.004639613666847027
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.4102671933016595
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 93.4390270548,
+        "sd": 3.9131614716965144,
+        "ci95": [
+          91.59931963900002,
+          96.93850885280001
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          91.63000353033333,
+          91.49769908,
+          91.89193694200002,
+          91.74119297433334,
+          100.43430274733333
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 9343.902705479999
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "d": 30000,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch0",
+    "config_id": "299760c7e0552062cdd7366f69d4a79429468ddb83000a0e95f70a2435afb9db",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 40653.78,
+        "sd": 177.4490155828235,
+        "ci95": [
+          40619.729750000006,
+          40689.33025
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 533378.36,
+        "sd": 2311.078778755965,
+        "ci95": [
+          532922.864,
+          533825.73225
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.1194549690028628,
+        "sd": 0.0014130661256464303,
+        "ci95": [
+          1.1191826043254667,
+          1.119729359917167
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3551259999999998,
+        "sd": 0.005914967186094125,
+        "ci95": [
+          1.3539876583333332,
+          1.3562870083333332
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 4.741140977777778,
+        "sd": 0.020542922477830745,
+        "ci95": [
+          4.737161655555556,
+          4.745150233333333
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 1219613.4,
+        "sd": 5323.470467484704,
+        "ci95": [
+          1218576.2850000001,
+          1220639.7149999999
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 2601841.92,
+        "sd": 11356.736997300704,
+        "ci95": [
+          2599575.04,
+          2604024.976
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 45510.0,
+        "sd": 189.0994073459403,
+        "ci95": [
+          45473.47825,
+          45547.4715
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 81307.56,
+        "sd": 354.898031165647,
+        "ci95": [
+          81239.1985,
+          81377.62449999999
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.1194530988262346
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.5393755994666611,
+        "sd": 0.010794527322234479,
+        "ci95": [
+          0.531265313066659,
+          0.547799434066665
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.5283791483333232,
+          0.5335779113333216,
+          0.5498876426666648,
+          0.5329951786666638,
+          0.5520381163333322
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 17.979186648888703
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.5068630200666673,
+        "sd": 0.008544197034208167,
+        "ci95": [
+          0.5001077060666669,
+          0.5130745124000017
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.49459006166666936,
+          0.5029308133333296,
+          0.5083841726666632,
+          0.5113942046666717,
+          0.5170158480000023
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 16.895434002222242
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 62.402557178464825,
+        "sd": 0.8221264871577577,
+        "ci95": [
+          61.75657922093178,
+          63.04853513599788
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          61.63623980400024,
+          63.01824561799854,
+          62.57483962999558,
+          61.46778843333141,
+          63.315672406998395
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 2080.0852392821607
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 62.59169354019938,
+        "sd": 0.8419594827892481,
+        "ci95": [
+          61.95327072806769,
+          63.22646257513215
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          61.6479921593361,
+          63.09970135433153,
+          63.04328659166347,
+          61.72267580799865,
+          63.44481178766711
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 2086.3897846733125
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.012920454133283452,
+        "sd": 0.00014304400804259341,
+        "ci95": [
+          0.012800373731779845,
+          0.013015315333297622
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.012975348001415051,
+          0.013068760999659812,
+          0.01296913233269903,
+          0.012687867997833724,
+          0.012901161334809638
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.43068180444278176
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.013310132734279518,
+        "sd": 0.00016436658243945657,
+        "ci95": [
+          0.013184823333799046,
+          0.013428422467202713
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.01336570666930544,
+          0.013360131334509973,
+          0.013247108668031546,
+          0.013067951333325093,
+          0.013509765666225526
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.4436710911426506
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 126.18123566193333,
+        "sd": 1.6690036706987306,
+        "ci95": [
+          124.89101419626665,
+          127.4714571276
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          124.44595146833333,
+          127.29616718666666,
+          126.81737609733332,
+          124.37289597366667,
+          127.97378758366668
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 4206.041188731111
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "d": 100000,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch0",
+    "config_id": "9ec7222cc23e00ddd0352f153663a7e12db8c6fc26ce02bbb77f5ef7a2a62653",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 135406.88,
+        "sd": 334.24893281940194,
+        "ci95": [
+          135341.00875,
+          135470.5905
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 1765213.5,
+        "sd": 4345.416218397394,
+        "ci95": [
+          1764349.10525,
+          1766038.0225
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.036195280025688,
+        "sd": 0.0004167724898672666,
+        "ci95": [
+          1.0361131587174455,
+          1.0362758987157956
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3540688,
+        "sd": 0.0033424893281940263,
+        "ci95": [
+          1.353409595,
+          1.3547169125000003
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 4.707236,
+        "sd": 0.011587776582393055,
+        "ci95": [
+          4.704988684666666,
+          4.709525735333333
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 4062206.4,
+        "sd": 10027.46798458206,
+        "ci95": [
+          4060252.1625,
+          4064098.8225
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 8666040.32,
+        "sd": 21391.931700441724,
+        "ci95": [
+          8661772.096,
+          8670217.136
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 140307.94,
+        "sd": 338.5949822726292,
+        "ci95": [
+          140241.46975,
+          140373.26275
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 270813.76,
+        "sd": 668.4978656388039,
+        "ci95": [
+          270681.3735,
+          270943.181
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.0361950589216737
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.526642503333336,
+        "sd": 0.004370440297975141,
+        "ci95": [
+          0.523004863600004,
+          0.5297997390666638
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.5319469129999943,
+          0.5281189326666768,
+          0.5199887146666726,
+          0.5275290870000008,
+          0.5256288693333349
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 5.26642503333336
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.49680396646666647,
+        "sd": 0.011108684475799498,
+        "ci95": [
+          0.4869062652000025,
+          0.5038520597333344
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.5030792383333277,
+          0.5029622773333343,
+          0.4946320396666586,
+          0.5050697723333413,
+          0.4782765046666708
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 4.968039664666665
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 73.00257827967118,
+        "sd": 1.6831443644599589,
+        "ci95": [
+          71.96089852260548,
+          74.44444747040146
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          75.86488765166521,
+          72.82195531900392,
+          72.7947899443405,
+          71.72563940533857,
+          71.80561907800771
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 730.0257827967117
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 73.39937007306722,
+        "sd": 1.7069167111312251,
+        "ci95": [
+          72.32105163653526,
+          74.90290582733519
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          76.2907434533362,
+          73.4006345639945,
+          73.00568651333441,
+          72.05812162199804,
+          72.24166421267289
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 733.9937007306722
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.03873740539949605,
+        "sd": 0.0011349896966689475,
+        "ci95": [
+          0.037888199132438974,
+          0.039632659668480834
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.04032893467144364,
+          0.03927893899292142,
+          0.038717311004035526,
+          0.03789755533515186,
+          0.03746428699392782
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.3873740539949605
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.04035008300241385,
+        "sd": 0.0012222872505361151,
+        "ci95": [
+          0.039482351735481765,
+          0.04133139893745236
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.042236798339863345,
+          0.04064470433047399,
+          0.040326066006055004,
+          0.039301895337197745,
+          0.039240950998479164
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.4035008300241385
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 147.78459838019998,
+        "sd": 3.4041443194632888,
+        "ci95": [
+          145.66306615866668,
+          150.69662182073336
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          153.56692639233333,
+          147.61330492599998,
+          147.170190372,
+          145.16902500066666,
+          145.40354521
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 1477.8459838019996
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "d": 300000,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch0",
+    "config_id": "6aa9ac762c93f23078b6c3c1efc710e6d88d2b0afc6aff1ef0f2c732f144e25e",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 406078.17,
+        "sd": 504.73617581041003,
+        "ci95": [
+          405979.3865,
+          406176.40425
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 5283930.32,
+        "sd": 6567.772723155872,
+        "ci95": [
+          5282650.56475,
+          5285198.7645
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.0120447502730427,
+        "sd": 0.00013934883757124375,
+        "ci95": [
+          1.0120172116258987,
+          1.012072011421355
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3535939000000001,
+        "sd": 0.0016824539193680385,
+        "ci95": [
+          1.3532639333333334,
+          1.353920446666667
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 4.6968269511111105,
+        "sd": 0.005838020198360763,
+        "ci95": [
+          4.695670562,
+          4.697949678888889
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 12182345.1,
+        "sd": 15142.0852743123,
+        "ci95": [
+          12179392.1625,
+          12185327.1
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 25989002.88,
+        "sd": 32303.115251866242,
+        "ci95": [
+          25982618.72,
+          25995214.319999997
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 410969.28,
+        "sd": 513.8201760668155,
+        "ci95": [
+          410867.77575000003,
+          411066.35199999996
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 812156.34,
+        "sd": 1009.4723516208201,
+        "ci95": [
+          811953.637,
+          812349.8835
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.0120447499061573
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.49526369920000146,
+        "sd": 0.008395522972390067,
+        "ci95": [
+          0.4891389870000058,
+          0.5016723929999997
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.4869358493333425,
+          0.5078248593333324,
+          0.4881471993333377,
+          0.49674018766666367,
+          0.49667040033333104
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 1.6508789973333382
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.4645465033333348,
+        "sd": 0.012048555837862416,
+        "ci95": [
+          0.45430332633333637,
+          0.4727224430000022
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.4449563366666733,
+          0.47464667600001204,
+          0.4627291313333319,
+          0.46648188233332716,
+          0.47391849033332994
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 1.5484883444444493
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 75.09737268159805,
+        "sd": 0.07162570238594844,
+        "ci95": [
+          75.03961927853338,
+          75.15108196026394
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          75.13434112766595,
+          75.00880263200048,
+          75.12601701266075,
+          75.03734736899949,
+          75.18035526666351
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 250.32457560532683
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 75.45959158859809,
+        "sd": 0.0744808394694742,
+        "ci95": [
+          75.40215837259444,
+          75.51702480460172
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          75.38824772732342,
+          75.37086612132607,
+          75.51750774666178,
+          75.49256416567324,
+          75.52877218200591
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 251.53197196199363
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.10461626813434925,
+        "sd": 0.0012909032406160708,
+        "ci95": [
+          0.10359746413254864,
+          0.1055614113059627
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.10520337967310296,
+          0.10306391866703295,
+          0.10535944032732021,
+          0.10343612433432418,
+          0.10601847766996597
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.3487208937811642
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.10722084246575145,
+        "sd": 0.0012827154568800618,
+        "ci95": [
+          0.10623952500297314,
+          0.1082021599285298
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.10770926500042233,
+          0.1057361686666017,
+          0.10798801066898145,
+          0.10600801134061995,
+          0.10866275665213188
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.35740280821917153
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 152.33844224993334,
+        "sd": 0.1292765339103256,
+        "ci95": [
+          152.24239404866665,
+          152.44279777366668
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          152.281537726,
+          152.175592807,
+          152.42025667733333,
+          152.305225024,
+          152.50959901533335
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 507.7948074997778
+      }
+    },
+    "timing_trials": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "d": 1000000,
+    "communication_attempts": 100,
+    "communication_successes": 100,
+    "communication_failures": 0,
+    "success_wilson95": [
+      0.9630065017930143,
+      1
+    ],
+    "cohort": "evaluation_epoch0",
+    "config_id": "83578a5b8db1f3452ce8355cd58a7dde59b9c5185f9ce0d06892fa9841bf0ce9",
+    "communication_estimator": "mean over all 100 if all succeed; conditional successful-prefix mean explicitly labeled if any fail",
+    "communication": {
+      "symbols": {
+        "n": 100,
+        "mean": 1353237.94,
+        "sd": 990.5119767885777,
+        "ci95": [
+          1353040.6297499998,
+          1353424.6332500002
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "bytes": {
+        "n": 100,
+        "mean": 17596997.51,
+        "sd": 12874.559833993972,
+        "ci95": [
+          17594436.243,
+          17599426.58425
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "mean_count_bytes": {
+        "n": 100,
+        "mean": 1.0036071218916198,
+        "sd": 4.179384869917975e-05,
+        "ci95": [
+          1.0035989700370644,
+          1.0036151703178775
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbols_per_d": {
+        "n": 100,
+        "mean": 1.3532379399999999,
+        "sd": 0.000990511976788584,
+        "ci95": [
+          1.3530471690000003,
+          1.3534347930000001
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ratio": {
+        "n": 100,
+        "mean": 4.692532669333334,
+        "sd": 0.0034332159557317644,
+        "ci95": [
+          4.6918755162000005,
+          4.693212256866666
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "symbol_bits": {
+        "n": 100,
+        "mean": 40597138.2,
+        "sd": 29715.359303657333,
+        "ci95": [
+          40591364.91,
+          40602914.16
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "hash_bits": {
+        "n": 100,
+        "mean": 86607228.16,
+        "sd": 63392.766514468974,
+        "ci95": [
+          86594893.40799999,
+          86619510.544
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "count_bytes": {
+        "n": 100,
+        "mean": 1358119.23,
+        "sd": 989.8933914132554,
+        "ci95": [
+          1357924.75975,
+          1358315.22175
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "metadata_bytes": {
+        "n": 100,
+        "mean": 22.0,
+        "sd": 0.0,
+        "ci95": [
+          22.0,
+          22.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "padding_bits": {
+        "n": 100,
+        "mean": 2706475.88,
+        "sd": 1981.0239535771555,
+        "ci95": [
+          2706086.4695,
+          2706859.722
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "ack_bytes": {
+        "n": 100,
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_repetitions": 10000
+      },
+      "pooled_mean_count_bytes": 1.0036071187894717
+    },
+    "timing": {
+      "alice_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.5266748887333286,
+        "sd": 0.004146682182265002,
+        "ci95": [
+          0.5230828605333321,
+          0.5293796731999916
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.5279534863333314,
+          0.5198357766666659,
+          0.5287432269999982,
+          0.526185360999991,
+          0.5306565926666561
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.5266748887333286
+      },
+      "bob_ingest_cpu_s": {
+        "n": 5,
+        "mean": 0.42989897360000134,
+        "sd": 0.013074112266816826,
+        "ci95": [
+          0.4200941100000106,
+          0.44047312779999653
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.42293107266665525,
+          0.42122869833334686,
+          0.4466714419999917,
+          0.44112261466666064,
+          0.417541040333352
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.42989897360000134
+      },
+      "alice_generate_cpu_s": {
+        "n": 5,
+        "mean": 86.69520711073497,
+        "sd": 0.2804839093761647,
+        "ci95": [
+          86.44539509837978,
+          86.86631733960459
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          86.7581646220441,
+          86.91217869768415,
+          86.21064162897612,
+          86.86038564397326,
+          86.73466496099724
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 86.69520711073497
+      },
+      "bob_receive_cpu_s": {
+        "n": 5,
+        "mean": 87.56172908207644,
+        "sd": 0.11873161390611753,
+        "ci95": [
+          87.46744235900887,
+          87.656015805144
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          87.56204895700921,
+          87.6593541203661,
+          87.44115210767028,
+          87.69966091398929,
+          87.44642931134729
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 87.56172908207644
+      },
+      "wire_encode_cpu_s": {
+        "n": 5,
+        "mean": 0.34280766046748756,
+        "sd": 0.0025267683492865957,
+        "ci95": [
+          0.34093435367452546,
+          0.34491979299624986
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.34215539300998116,
+          0.3431704763185664,
+          0.33978196634802654,
+          0.34673803165952205,
+          0.3421924350013416
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.34280766046748756
+      },
+      "wire_decode_cpu_s": {
+        "n": 5,
+        "mean": 0.34892108166412605,
+        "sd": 0.002511765755837725,
+        "ci95": [
+          0.34714513660263574,
+          0.35096816691793
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          0.3480103839950475,
+          0.3496092776869599,
+          0.34594001866439356,
+          0.3527493786411912,
+          0.34829634933303816
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 0.34892108166412605
+      },
+      "total_cpu_s": {
+        "n": 5,
+        "mean": 177.60780486826667,
+        "sd": 0.3807218912829922,
+        "ci95": [
+          177.28866064146666,
+          177.87363086126666
+        ],
+        "bootstrap_repetitions": 10000,
+        "dataset_means_s": [
+          177.66142480433334,
+          177.91285648333334,
+          177.003105969,
+          177.94050826766664,
+          177.521128817
+        ],
+        "repetitions_per_dataset": 3,
+        "resampling_unit": "dataset mean",
+        "mean_us_per_difference": 177.60780486826667
+      }
+    },
+    "timing_trials": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+]

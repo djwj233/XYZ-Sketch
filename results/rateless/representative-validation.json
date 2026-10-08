@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "mean_count_bytes": 1.04868,
+  "mean_symbols_per_d": 1.3541937,
+  "full_set_mean_symbols_per_d": 1.35188,
+  "predeclared_tolerance": {
+    "count_bytes": 0.04,
+    "symbols_per_d": 0.035
+  }
+}

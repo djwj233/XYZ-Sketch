@@ -1,0 +1,79 @@
+{
+  "schema": "riblt-faithful-paper-reproduction-v1",
+  "frozen_utc": "2026-10-06T13:41:39Z",
+  "upstream": {
+    "commit": "4afa6bc06cb2237d9ea273a51d97a7e05b3f573b",
+    "remote": "git@github.com:yangl1996/riblt",
+    "status": "",
+    "files": {
+      ".git": "f80abd9f28a3fd59bbfff0757ae84c6f373089c0a6fda03ae4fdc499d7796579",
+      "decoder.go": "4d9b29ef1fb674b62c30f27d7c69e81f414c7cfb5b70654685413b6b0cabc90a",
+      "LICENSE": "1417293c039bf8072f854904147d1725f765fdb98b8169ff549cc195df5576e7",
+      "symbol.go": "104dfa961035cbc10acc047e277a37d2d220ef6f5def1b4de278f7bef4f5fb15",
+      "go.sum": "3c43c7ca6e87b5b9395ab5185f8448c28b34b5af83d682deb5c39d2bd6c228a6",
+      "codec_test.go": "fdbef78978b2dde179ff79f329623a0c66e081b9ded26f9293c8308d154492f1",
+      "mapping_test.go": "56e21deb8f8184ddf3380a48269024078a406916ee4d3938c703566137427293",
+      "mapping.go": "d08ec0071d9052100e0299fa7144c54023a420f75ac06462821e4f0ace843fbb",
+      "sketch.go": "cb9e4dce8b1b73aabe3f2842f0a320135f3ac6743db6ad5746ddd782b662539d",
+      "README": "8e49e779b3314af3abaf8a45270db5adf9245cfe11aabdec22fdd43d75faeae5",
+      "sketch_test.go": "f05080e70de431f980a6582517ff2bfba5a90e56037b11c136288fb3b1772db5",
+      "encoder.go": "9999a6faba079a80ddd933940b773f84232f4220e73ff421a0585bc794b5e228",
+      "go.mod": "ef41dae6e4a6dea8ce46b8d7c5a795f6a4de3a0b92890de4b3a3914de99af259",
+      "example_test.go": "e2855ec2a5fa69a9d3242ef668102e42058af1b97dacc909205055cabe66001e"
+    }
+  },
+  "rho": "2/(i+2), alpha=0.5",
+  "hash": "unmasked SipHash64 of uint64 little-endian (official example representation); full 64-bit hash seeds official mapping",
+  "keys": "same two public seed-derived keys as each original formal Rateless trial; transmitted 16 bytes in session header",
+  "codec": {
+    "attribution": "based on paper section 6, not provided by official source",
+    "expected_count": "floor(2*N/(i+2)), exact integer arithmetic",
+    "signed_deviation": "ZigZag then unsigned LEB128, base128",
+    "frames": "32-bit little-endian symbol slot containing 30-bit value and 2 zero padding bits; 64-bit little-endian hash; signed residual VLQ",
+    "header": "version byte, symbol width byte, 16 hash-key bytes, N unsigned LEB128",
+    "ordering": "reliable ordered byte stream, index implicit starting at zero, VLQ self-delimits frames, no per-symbol index or frame length",
+    "ack": "one byte counted on success",
+    "batch_size": 1,
+    "padding": "2 bits per symbol, explicitly accounted; network/TCP headers excluded like original application payload convention",
+    "negative_and_rounding": "experiment conventions; unspecified in paper and absent in official source"
+  },
+  "input": "exact original formal full dataset bytes, SHA256 verified by engine each run; no success filtering in 100-sample communication cohort",
+  "communication_jobs": 900,
+  "timing_jobs": 45,
+  "timing_repetitions": 3,
+  "stop": "official Decoder.Decoded() after AddCodedSymbol and TryDecode; always send at least symbol0, truth only afterwards",
+  "limits": {
+    "symbols": 10000000,
+    "wall_seconds_per_repetition": 1800,
+    "external_seconds_per_job": "1800*repetitions+180",
+    "address_space_bytes": 85899345920,
+    "failures": "retained, no retries; no new calibration"
+  },
+  "communication_workers": 8,
+  "worker_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "timing_cpu": 0,
+  "timing": "serial after communication, CLOCK_THREAD_CPUTIME_ID, GOMAXPROCS1, thread locked; separately ingest A/B, Alice generation, receive-side local encoding plus peeling, wire encode/decode; total includes instrumentation and wire SHA; truth/data reading outside",
+  "representative": {
+    "count_N": 1000000,
+    "count_symbols": 10000,
+    "count_trials": 10,
+    "ratio_d": 100000,
+    "ratio_trials": 100,
+    "symbol_bits": 256,
+    "full_N": 1000000,
+    "full_d": 100000,
+    "full_trials": 3
+  },
+  "pilot": "communication d100000 trial0; then remaining cohort including all original failures",
+  "uncertainty": "10000 deterministic bootstrap resamples of independent communication samples or five timing dataset means; also sample SD, retained limits, Wilson success CI",
+  "fairness": "does not claim Encoder.AddSymbol is ongoing sketch update; official API forbids adding after generation starts; Bob receive includes generating local symbols and is not pure peeling"
+}

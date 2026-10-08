@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"snapshots\":330,\"empty_singleton_recoveries\":66,\"placement_unchanged\":true,\"mask_build_equivalence\":true,\"wire_roundtrip\":true,\"passed\":true}\n",
+  "stderr": ""
+}

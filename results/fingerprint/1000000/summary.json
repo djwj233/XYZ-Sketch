@@ -1,0 +1,535 @@
+[
+  {
+    "fingerprint_bits": 0,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 100,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 1,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 100,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 2,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 100,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 3,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 100,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 4,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 100,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 5,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 100,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 6,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 100,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 7,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 1,
+    "decode_budget_exceeded": 99,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 99,
+      "decode_failed": 1
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 8,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 69,
+    "decode_budget_exceeded": 31,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_budget_exceeded": 31,
+      "decode_failed": 69
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 9,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 100,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 10,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 100,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 11,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 100,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 12,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 100,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 13,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 100,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 14,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 0,
+    "wrong_output": 0,
+    "decode_failed": 100,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 15,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 1,
+    "wrong_output": 1,
+    "decode_failed": 99,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 99,
+      "wrong_output": 1
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 16,
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "wilson95_low": 3.469446951953614e-18,
+    "wilson95_high": 0.03699349820698568,
+    "decoder_reported_successes": 12,
+    "wrong_output": 12,
+    "decode_failed": 88,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 88,
+      "wrong_output": 12
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 17,
+    "trials": 100,
+    "successes": 2,
+    "success_rate": 0.02,
+    "wilson95_low": 0.00550196755016235,
+    "wilson95_high": 0.07001179072854388,
+    "decoder_reported_successes": 40,
+    "wrong_output": 38,
+    "decode_failed": 60,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 60,
+      "success": 2,
+      "wrong_output": 38
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 18,
+    "trials": 100,
+    "successes": 12,
+    "success_rate": 0.12,
+    "wilson95_low": 0.06999406437019488,
+    "wilson95_high": 0.19812099426711421,
+    "decoder_reported_successes": 61,
+    "wrong_output": 49,
+    "decode_failed": 39,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 39,
+      "success": 12,
+      "wrong_output": 49
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 19,
+    "trials": 100,
+    "successes": 30,
+    "success_rate": 0.3,
+    "wilson95_low": 0.2189488529493276,
+    "wilson95_high": 0.3958485463334666,
+    "decoder_reported_successes": 79,
+    "wrong_output": 49,
+    "decode_failed": 21,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 21,
+      "success": 30,
+      "wrong_output": 49
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 20,
+    "trials": 100,
+    "successes": 47,
+    "success_rate": 0.47,
+    "wilson95_low": 0.3751081795934127,
+    "wilson95_high": 0.5671114302990063,
+    "decoder_reported_successes": 92,
+    "wrong_output": 45,
+    "decode_failed": 8,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 8,
+      "success": 47,
+      "wrong_output": 45
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 21,
+    "trials": 100,
+    "successes": 68,
+    "success_rate": 0.68,
+    "wilson95_low": 0.5833738138954762,
+    "wilson95_high": 0.7633085267500092,
+    "decoder_reported_successes": 95,
+    "wrong_output": 27,
+    "decode_failed": 5,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 5,
+      "success": 68,
+      "wrong_output": 27
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 22,
+    "trials": 100,
+    "successes": 87,
+    "success_rate": 0.87,
+    "wilson95_low": 0.7901964855992357,
+    "wilson95_high": 0.9224283257275948,
+    "decoder_reported_successes": 98,
+    "wrong_output": 11,
+    "decode_failed": 2,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 2,
+      "success": 87,
+      "wrong_output": 11
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 23,
+    "trials": 100,
+    "successes": 91,
+    "success_rate": 0.91,
+    "wilson95_low": 0.837737871472837,
+    "wilson95_high": 0.9519274599974348,
+    "decoder_reported_successes": 98,
+    "wrong_output": 7,
+    "decode_failed": 2,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 2,
+      "success": 91,
+      "wrong_output": 7
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 24,
+    "trials": 100,
+    "successes": 94,
+    "success_rate": 0.94,
+    "wilson95_low": 0.8752318455410406,
+    "wilson95_high": 0.9722138760368118,
+    "decoder_reported_successes": 98,
+    "wrong_output": 4,
+    "decode_failed": 2,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "decode_failed": 2,
+      "success": 94,
+      "wrong_output": 4
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 28,
+    "trials": 100,
+    "successes": 100,
+    "success_rate": 1.0,
+    "wilson95_low": 0.9630065017930143,
+    "wilson95_high": 1,
+    "decoder_reported_successes": 100,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "success": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  },
+  {
+    "fingerprint_bits": 32,
+    "trials": 100,
+    "successes": 100,
+    "success_rate": 1.0,
+    "wilson95_low": 0.9630065017930143,
+    "wilson95_high": 1,
+    "decoder_reported_successes": 100,
+    "wrong_output": 0,
+    "decode_failed": 0,
+    "decode_budget_exceeded": 0,
+    "process_failure": 0,
+    "status_counts": {
+      "success": 100
+    },
+    "M": 1297500,
+    "d": 1000000,
+    "k": 4
+  }
+]
