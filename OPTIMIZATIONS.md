@@ -1,7 +1,7 @@
 # XYZ-Sketch optimization overview
 
 The original implementation is preserved in `algorithms/XYZ-Sketch-unoptimized/`.
-The accepted implementation is in `algorithms/XYZ-Sketch-optimized/`.
+The optimized implementation is in `algorithms/XYZ-Sketch-optimized/`.
 
 1. **Binary-field arithmetic.** Replace the prime field with GF(2^30), using XOR,
    carry-less multiplication, and fast squaring. Reuse MiniSketch's field techniques
@@ -21,5 +21,4 @@ The accepted implementation is in `algorithms/XYZ-Sketch-optimized/`.
 The binary-field version changes the arithmetic field; the shared 30-bit inputs remain
 unchanged. Structural peeling simulations are independent of these arithmetic routines.
 Validation checks signed output, wire accounting, native/generic arithmetic, and the
-accepted optimized recovery paths. The published timing data uses the frozen accepted
-implementation; exploratory versions are not included.
+optimized recovery paths. The timing data uses the optimized implementation.

@@ -243,5 +243,6 @@
   "algorithms/XYZ-Sketch-optimized/src/small_coefficients.hpp": "2bb6592148fdd813bd077ec4f1891ec901e6c7a8ddde42b58ec19546c9e5629f",
   "algorithms/XYZ-Sketch-optimized/src/hash.h": "ad6acf4f02f0c4d1794f5f11f79368d5434b7cfd50530122cb48bd4dcb69d699",
   "algorithms/XYZ-Sketch-optimized/src/optimization.hpp": "490ec10bdaa0fcf6197d6b295de9b65f4d961f140b7824a38b75193fd6bd5743",
-  "algorithms/XYZ-Sketch-optimized/harness/common.hpp": "4076ffb0f12f528c70d1522dd5bb85180e4637f6bebc4751323fd2c51ac0ba08"
+  "algorithms/XYZ-Sketch-optimized/harness/common.hpp": "4076ffb0f12f528c70d1522dd5bb85180e4637f6bebc4751323fd2c51ac0ba08",
+  "algorithms/XYZ-Sketch-optimized/sample.cpp": "16f6f72c4febb60e6f7fdde9c3da3917ac227b72660b8c663679050caaf64c56"
 }

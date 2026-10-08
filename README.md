@@ -1,146 +1,130 @@
-# XYZ-Sketch experiments
+# XYZ-Sketch
 
-Source code, measured results, and one-command experiment runners for XYZ-Sketch.
+XYZ-Sketch is a sketch for set reconciliation: two parties exchange a compact sketch
+to recover the elements present in only one of their sets.
+This repository includes the implementations, baselines, and experiments from the paper.
 
 ```
-algorithms/   XYZ-Sketch before and after optimization, baselines, dependencies
-scripts/      build, measurement, verification, and plotting commands
-results/      measured data, configurations, validation, and figures
+algorithms/   XYZ-Sketch, baselines, and dependencies
+scripts/      experiment runners and plotting scripts
+results/      measurements, configurations, and figures
 ```
 
-`algorithms/XYZ-Sketch-unoptimized/` is the original prime-field implementation.
-`algorithms/XYZ-Sketch-optimized/` is the accepted GF(2^30) implementation (v15).
-See [OPTIMIZATIONS.md](OPTIMIZATIONS.md) for a short description of the changes.
-The ell=10 entry point only extends the parameter whitelist; ell<=8 uses the specialized routines.
+[XYZ-Sketch-optimized](algorithms/XYZ-Sketch-optimized/) uses GF(2^30).
+[XYZ-Sketch-unoptimized](algorithms/XYZ-Sketch-unoptimized/) preserves the original
+prime-field implementation. [OPTIMIZATIONS.md](OPTIMIZATIONS.md) summarizes the main
+optimization techniques.
 
-## Paper correspondence
+## Quick start
 
-The final 53-page manuscript (the local file named `定稿.pdf` during packaging) uses
-GF(2^30), C=0.875, and D~1.18845. Its experiment is Figure 2(a)--(h), with supplementary
-heatmaps in Figure 3 and fingerprint sensitivity in Figure 4. The table below follows
-this manuscript. The original prime-field implementation and its measured comparisons
-remain available separately under `results/paper/` and `results/reference/`.
-
-## Requirements
-
-Linux, Python 3.8+, GCC with C++17, OpenSSL development headers, Go 1.21+,
-and NTL/GMP development libraries for CPISync. The optimized native backend requires
-x86 PCLMUL support. All upstream source dependencies are included, with versions in
-`algorithms/dependencies/versions.json` and their license files beside the code.
-
-On Ubuntu, install the system packages `build-essential libssl-dev libntl-dev libgmp-dev`.
-For plots, install the Python packages in `scripts/requirements.txt` in a virtual environment.
-Set `GO=/path/to/go` if the appropriate Go executable is not on PATH.
-
-Clone the artifact branch, then run commands from the repository root:
+Clone the repository:
 
 ```bash
 git clone --branch paper-artifact https://github.com/djwj233/XYZ-Sketch.git
 cd XYZ-Sketch
 ```
 
+Run from the repository root. Both examples require GCC with C++17; the optimized
+example additionally requires an x86 CPU with PCLMUL support.
+
+**XYZ-Sketch (optimized):**
+
 ```bash
-python3 scripts/reproduce.py verify
-python3 scripts/build.py xyz
-python3 scripts/reproduce.py optimized-comparison --d 100 --method xyz --smoke
-python3 scripts/reproduce.py figures
+g++ -std=c++17 -O2 -mpclmul -DXYZ_TABLE_SQUARES -DXYZ_DYNAMIC_RECON \
+    algorithms/XYZ-Sketch-optimized/sample.cpp -o /tmp/xyz_sketch_sample \
+    && /tmp/xyz_sketch_sample
 ```
 
-The smoke command measures a small input, not a formal data point. The figures command
-regenerates plots from stored measurements and performs no new trials.
-Every measurement command below builds the required engines automatically.
+**XYZ-Sketch (unoptimized):**
 
-## One-command experiment map
+```bash
+g++ -std=c++17 -O2 algorithms/XYZ-Sketch-unoptimized/sample.cpp \
+    -o /tmp/xyz_sketch_unoptimized_sample \
+    && /tmp/xyz_sketch_unoptimized_sample
+```
 
-| Result | Command | Stored result |
+Both examples encode two sets, serialize Alice's sketch, and recover the directed
+differences: Alice-only elements `{2, 8, 9}` and Bob-only elements `{12, 28, 39}`.
+The optimized example checks the recovered values and exits with an error on failure.
+
+## Reproduce the experiments
+
+The experiment runners require Linux, Python 3.8+, GCC, OpenSSL development headers,
+and Go 1.21+. CPISync also requires NTL and GMP. On Ubuntu, the system packages are
+`build-essential libssl-dev libntl-dev libgmp-dev`. Set `GO=/path/to/go` if needed.
+Upstream sources and licenses are included in `algorithms/dependencies/`, with
+versions in `algorithms/dependencies/versions.json`.
+
+For plotting:
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r scripts/requirements.txt
+```
+
+Check the included data and run a small example measurement:
+
+```bash
+python3 scripts/reproduce.py verify
+python3 scripts/reproduce.py optimized-comparison --d 100 --method xyz --smoke
+```
+
+The smoke run uses a small input. Each measurement command below automatically builds
+its required implementations.
+
+| Result | Command | Data |
 |---|---|---|
-| Figure 2(a), full GF(2^30) implementation threshold | `python3 scripts/reproduce.py optimized-sharp --workers 8` | `results/sharp/` |
-| Figure 2(b)--(c), k/ell timing | `python3 scripts/reproduce.py optimized-parameters` | `results/optimized/`, `results/parameters/` |
-| Figure 2(d) and Figure 3, ideal-cell heatmaps | `python3 scripts/reproduce.py paper-heatmaps` | `results/reference/heatmaps.csv` |
-| Figure 2(e)--(h), all main comparison methods and codecs | `python3 scripts/reproduce.py main-comparison` | Named comparison result folders |
-| Figure 4, fingerprint sensitivity at both scales | `python3 scripts/reproduce.py fingerprint --workers 8` | `results/fingerprint/` |
-| Tables 3--4, peeling/orientability thresholds and ratios | `python3 scripts/reproduce.py threshold-tables` | `results/threshold-tables/` |
-| Recorded C,D heuristic fit, final fixed grid | `python3 scripts/reproduce.py heuristic-calibration` | `results/calibration/` |
-| All included plots, from stored data | `python3 scripts/reproduce.py figures` | Fresh `results/runs/*-figures-*/` |
+| Figure 2(a): decoding success threshold | `python3 scripts/reproduce.py optimized-sharp --workers 8` | `results/sharp/` |
+| Figure 2(b)--(c): time and space for different k, ell | `python3 scripts/reproduce.py optimized-parameters` | `results/optimized/`, `results/parameters/` |
+| Figure 2(d) and Figure 3: spatial-coupling heatmaps | `python3 scripts/reproduce.py paper-heatmaps` | `results/reference/heatmaps.csv` |
+| Figure 2(e)--(h): communication and timing comparisons | `python3 scripts/reproduce.py main-comparison` | `results/optimized/`, `results/compact-iblt/`, `results/rateless/`, `results/reference/` |
+| Figure 4: IBLT fingerprint sensitivity | `python3 scripts/reproduce.py fingerprint --workers 8` | `results/fingerprint/` |
+| Tables 3--4: thresholds and space ratios | `python3 scripts/reproduce.py threshold-tables` | `results/threshold-tables/` |
+| C,D parameter calibration | `python3 scripts/reproduce.py heuristic-calibration` | `results/calibration/` |
+| Regenerate figures from stored measurements | `python3 scripts/reproduce.py figures` | New directory under `results/runs/` |
 
-Individual components can be run with `optimized-comparison`, `compact-baselines`,
-`rateless`, or `rateless-representative`. `extra-points` reproduces the supplementary
-timing points at d=200,000 and 500,000.
+Individual comparison methods can be run using `optimized-comparison`,
+`compact-baselines`, or `rateless`. `rateless-representative` runs the representative
+checks from the Rateless IBLT paper. `extra-points` reproduces the additional timing
+points at d=200,000 and 500,000. For the unoptimized implementation, use
+`paper-comparison` and `paper-threshold`.
 
-The retained original implementation can also be measured with `paper-threshold`
-and `paper-comparison`. These are explicitly separate from the final manuscript's
-binary-field evaluation.
-
-Table 1 summarizes analytical/literature bounds, and Table 2 defines notation; neither is
-an empirical experiment. Mathematical theorem proofs are in the paper.
-
-For the accepted GF(2^30) eight-panel presentation: panel (a) uses `optimized-sharp`,
-(b)--(c) use `optimized-parameters`, (d) uses `paper-heatmaps`, (e) uses
-`compact-baselines` and `rateless`, and (f)--(h) combine the named comparison campaigns.
-`figures` also generates the communication-breakdown plot directly from measured
-field sizes. It does not mix fixed-prefix Rateless data into the accepted plots.
-
-`reference-comparison` additionally replays the common-input prime-field evaluation
-used to select the accepted implementation's configurations.
-
-Use `--dry-run` to inspect a campaign without building or running it. Use `--d`,
-`--method`, `--kind timing`, `--kind communication`, or `--limit` to select jobs.
-Do not present a limited or smoke run as the full experiment.
-Run timings with `--workers 1 --cpu N`; multiple workers are intended for probability
-experiments, not for reproducing the reported single-core timing conditions.
+Use `--dry-run` to inspect jobs without running them. `--d`, `--method`,
+`--kind timing`, `--kind communication`, and `--limit` select subsets.
+For single-core timing, use `--workers 1 --cpu N`; parallel workers are intended for
+success-probability experiments.
 
 ## Inputs and outputs
 
-Each full input contains 10^7 elements per side unless the recorded protocol specifies
-otherwise. Raw input binaries remain on the experiment server and are not in Git.
-`scripts/inputs.json` records the generator seeds, source paths, and available SHA-256
-hashes. Earlier paper records contain input-array hashes rather than a file hash;
-the runner checks that recorded metadata when regenerating those inputs.
+Full comparison inputs contain 10^7 elements per party, with 30-bit element values.
+Large input binaries are not included. `scripts/inputs.json` records seeds and hashes;
+missing inputs are generated deterministically and checked against those records.
+Use `--data-root /path/to/input-cache` to reuse existing inputs.
 
-On the original server, reuse the existing files:
-
-```bash
-python3 scripts/reproduce.py optimized-comparison --data-root /root/XYZ-Sketch-experiment
-```
-
-Elsewhere, omit `--data-root` or point it to a new cache directory. Missing inputs are
-generated deterministically and verified. Existing inputs with a recorded file hash
-are checked before use. Full campaigns need considerable disk space and CPU time;
-`--dry-run` shows the number of jobs before execution.
-
-Runs create a fresh directory under `results/runs/`, containing raw records, input
-receipts, protocol, summaries, and validation. `--out` may specify a new directory.
-Existing outputs are never overwritten. Build products, generated inputs, and new runs
-are excluded from Git. Stored failures and timeouts are retained rather than retried
-until success. Ground truth is used for output validation, not as a decoder stop oracle.
+Each run creates a new directory under `results/runs/`, containing raw outputs,
+input verification records, configuration, summaries, and validation. `--out` selects
+a different new output directory. Full campaigns require substantial disk space and
+CPU time; `--dry-run` reports their job counts. The `figures` command only replots
+stored measurements.
 
 ## Measurement conventions
 
-Reported timings used an Intel Core i9-10980XE, GCC 9.4.0, and Go 1.21.13.
-Use three repetitions on each of five successful datasets, average within each dataset,
-then report the mean and a 95% bootstrap interval over the five means.
-Full fixed-sketch decoding includes sender serialization, in-memory transfer, and
-receiver parsing, subtraction, recovery, and output normalization. Input generation
-and the final exact-output comparison are outside algorithm timing.
+The reported timings use an Intel Core i9-10980XE, GCC 9.4.0, and Go 1.21.13.
+Timing uses three repetitions on each of five successful inputs, averaged within each
+input, with 95% bootstrap intervals over the five averages. Full fixed-sketch decoding
+includes serialization, an in-memory copy, parsing, subtraction, recovery, and output
+normalization. Input generation and ground-truth verification are outside algorithm
+timing. Failed trials and timeouts are retained.
 
-The accepted Rateless runner keeps the official 64-bit hash, encodes counts as deviations
-from their expectation with signed variable-length encoding, and generates coded symbols
-until the incremental decoder reports completion. Its communication uses 100 inputs per
-scale. Its ingestion time is an encoder API measurement; full decoding includes sender
-generation, receiver processing, and wire encoding/decoding. It is not a fixed-sketch
-update interface. `results/rateless/` includes representative-paper checks and field-level
-byte accounting.
+Rateless IBLT uses the official 64-bit hash, count deviations encoded as signed variable-length
+integers, and incremental decoding until completion. Communication is measured on 100
+inputs per scale. Its ingestion time measures the encoder API; its full decoding time
+includes symbol generation, receiver processing, and wire encoding/decoding.
 
-The original Rateless adapter used a fixed prefix and a truncated hash. It is
-retained only for the original implementation's comparison and is explicitly labelled
-`paper-rateless`/`rateless-fixed`, not as the faithful current baseline.
+IBLT and IBLT+SC use lossless counter compression with 30-bit keys and 32-bit checksums.
+Their communication and decoding measurements use the same codec. Fingerprint tests
+require exact directed recovery and enforce the 10d peeling and 100M inspection limits.
 
-Compact IBLT/IBLT+SC restores every counter exactly and retains the 30-bit key and
-32-bit checksum. Use its own codec timing with its communication results. Fingerprint
-experiments count exact signed recovery as success, retain all failures, and enforce
-the recorded 10d peel/100M inspection budgets.
-
-Source hashes are in `results/source-manifest.json`. New machines can reproduce
-inputs, configurations, outputs, and accounting; CPU times will vary with hardware
-and system load. Packaged verification does not claim that every full campaign was
-rerun during repository assembly.
+Source hashes are in `results/source-manifest.json`. Timings vary with hardware and
+system load.
