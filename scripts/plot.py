@@ -76,4 +76,21 @@ def plot(out):
    rr=sorted([r for r in points if r['method']=='xyz' and r['d']==100000 and r['k']==k],key=lambda r:r['ell']);ax.plot([r['R'] for r in rr],[r['metrics'][metric]['mean'] for r in rr],marker='o',label=f'k={k}')
    for r in rr:ax.annotate(str(r['ell']),(r['R'],r['metrics'][metric]['mean']),xytext=(3,3),textcoords='offset points')
   ax.set(xlabel='Communication ratio',ylabel=ylabel);ax.legend();emit(fig,'optimized/parameters-'+metric)
+ # Field-level communication at d=100,000, using each implementation's own codec.
+ components=[];d=100000
+ xyz=next(r for r in load(ROOT/'results/optimized/timing.json') if r['d']==d and r['method']=='xyz' and r['main_curve'])
+ cells=xyz['source_actual']['M'];data=30*xyz['source_actual']['ell']*cells;v=xyz['result']
+ components.append(('XYZ',data,0,v['logical_bits']-data,v['payload_bits']-v['logical_bits']))
+ compact=load(ROOT/'results/compact-iblt/timing.json')
+ for algorithm,label in [('external_iblt','IBLT'),('iblt_sc','IBLT+SC')]:
+  matched=[r for r in compact if r['actual']['d']==d and r['actual']['algorithm']==algorithm];m=matched[0]['actual']['M']
+  values=[v for r in matched for v in r['rows'] if v['algorithm']=='compact_count'];count=np.mean([v['logical_bits']-62*m for v in values]);padding=np.mean([v['payload_bits']-v['logical_bits'] for v in values])
+  components.append((label,30*m,32*m,count,padding))
+ rateless=next(r for r in load(ROOT/'results/rateless/summary.json') if r['d']==d)['communication']
+ components.append(('Rateless',rateless['symbol_bits']['mean'],rateless['hash_bits']['mean'],8*rateless['count_bytes']['mean'],8*(rateless['metadata_bytes']['mean']+rateless['ack_bytes']['mean'])+rateless['padding_bits']['mean']))
+ fig,ax=plt.subplots(figsize=(6.5,3.6));bottom=np.zeros(len(components))
+ for i,label in enumerate(['Data','Checksum','Count','Metadata/padding'],1):
+  values=np.array([r[i] for r in components])/(30*d);ax.bar([r[0] for r in components],values,bottom=bottom,label=label);bottom+=values
+ ax.set_ylabel('Communication ratio');ax.legend(fontsize=8);emit(fig,'optimized/communication-breakdown')
+ save(out/'communication-breakdown.json',{'d':d,'components_bits':components,'field_names':['label','data','checksum','count','metadata_padding']})
  save(out/'manifest.json',{'assets':assets,'measurements_rerun':False,'source':'stored measured results; paper and optimized campaigns are separate'});print(out)

@@ -72,6 +72,12 @@ Every measurement command below builds the required engines automatically.
 Table 1 summarizes analytical/literature bounds, and Table 2 defines notation; neither is
 an empirical experiment. Mathematical theorem proofs are in the paper.
 
+For the accepted GF(2^30) eight-panel presentation: panel (a) uses `optimized-sharp`,
+(b)--(c) use `optimized-parameters`, (d) uses `paper-heatmaps`, (e) uses
+`compact-baselines` and `rateless`, and (f)--(h) combine the named comparison campaigns.
+`figures` also generates the communication-breakdown plot directly from measured
+field sizes. It does not mix fixed-prefix Rateless data into the accepted plots.
+
 `reference-comparison` additionally replays the common-input prime-field evaluation
 used to select the accepted implementation's configurations. It is distinct from the
 earlier supplied-PDF measurement batch.
