@@ -32,7 +32,12 @@ On Ubuntu, install the system packages `build-essential libssl-dev libntl-dev li
 For plots, install the Python packages in `scripts/requirements.txt` in a virtual environment.
 Set `GO=/path/to/go` if the appropriate Go executable is not on PATH.
 
-From the repository root:
+Clone the artifact branch, then run commands from the repository root:
+
+```bash
+git clone --branch paper-artifact https://github.com/djwj233/XYZ-Sketch.git
+cd XYZ-Sketch
+```
 
 ```bash
 python3 scripts/reproduce.py verify
