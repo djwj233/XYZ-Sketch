@@ -77,7 +77,7 @@ def run(campaign,args,out):
  raw=[];info_map=json.loads((ROOT/'scripts/inputs.json').read_text())
  for r in records:
   if not r['results']:
-   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'config_id':r['job'].get('config_id',''),'success':False,'status':r['execution']['failure'] or 'parse_error'})
+   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'kind':r['job'].get('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint-') else 'timing'),'config_id':r['job'].get('config_id',''),'success':False,'status':r['execution']['failure'] or 'parse_error'})
   for result in r['results']:
    n=max(200,r['job']['d']) if args.smoke else info_map[r['job']['dataset']]['N']
    result=dict(result)
@@ -89,20 +89,21 @@ def run(campaign,args,out):
     result['full_decode_s']=sum(result[k] for k in ['alice_generate_cpu_s','bob_receive_cpu_s','wire_encode_cpu_s','wire_decode_cpu_s'])
    if 'full_decode_s' in result:result['full_decode_us_per_difference']=result['full_decode_s']*1e6/r['job']['d']
    if 'payload_bits' in result:result['communication_ratio']=result['payload_bits']/(30*r['job']['d'])
-   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'config_id':r['job'].get('config_id',r['job']['args'][-1] if r['job']['engine'].startswith('paper-') else ''),**result})
+   raw.append({'engine':r['job']['engine'],'d':r['job']['d'],'trial':r['job']['trial'],'job':r['job']['id'],'kind':r['job'].get('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint-') else 'timing'),'config_id':r['job'].get('config_id',r['job']['args'][-1] if r['job']['engine'].startswith('paper-') else ''),**result})
  keys=sorted({k for r in raw for k in r})
  with (out/'raw.csv').open('x',newline='') as f:
   w=csv.DictWriter(f,keys);w.writeheader();w.writerows(raw)
  groups=[]
- def group(r):return (r['engine'],r['d'],str(r.get('config_id','')),str(r.get('algorithm','')),str(r.get('fingerprint_bits','')))
+ def group(r):return (r['engine'],r['d'],str(r.get('kind','timing')),str(r.get('config_id','')),str(r.get('algorithm','')),str(r.get('fingerprint_bits','')))
  for key in sorted({group(r) for r in raw}):
-  eng,d,cid,codec,bits=key;rr=[r for r in raw if group(r)==key];g={'engine':eng,'d':d,'config_id':cid,'codec':codec,'fingerprint_bits':bits,'observations':len(rr),'successes':sum(r.get('success',r.get('status')=='success') for r in rr)}
+  eng,d,kind,cid,codec,bits=key;rr=[r for r in raw if group(r)==key];g={'engine':eng,'d':d,'kind':kind,'config_id':cid,'codec':codec,'fingerprint_bits':bits,'observations':len(rr),'successes':sum(r.get('success',r.get('status')=='success') for r in rr)}
   for key in ['payload_bits','bytes','ratio','symbols','update_alice','update_bob','sender','transfer','receiver']:
    successful=[r for r in rr if r.get('success',r.get('status')=='success')]
    v=[r[key] for r in successful if isinstance(r.get(key),(int,float))]
    if v:g[key+'_mean']=statistics.mean(v)
   # Dataset means are the unit of timing uncertainty; repetitions are not independent inputs.
-  for key in ['update_ns_per_input','full_decode_s','full_decode_us_per_difference','update_alice','update_bob','sender','transfer','receiver','alice_ingest_cpu_s','bob_ingest_cpu_s','alice_generate_cpu_s','bob_receive_cpu_s','wire_encode_cpu_s','wire_decode_cpu_s']:
+  time_keys=['update_ns_per_input','full_decode_s','full_decode_us_per_difference','update_alice','update_bob','sender','transfer','receiver','alice_ingest_cpu_s','bob_ingest_cpu_s','alice_generate_cpu_s','bob_receive_cpu_s','wire_encode_cpu_s','wire_decode_cpu_s']
+  for key in (time_keys if kind=='timing' else []):
    by_trial={}
    for r in successful:
     if isinstance(r.get(key),(int,float)):by_trial.setdefault(r['trial'],[]).append(r[key])
