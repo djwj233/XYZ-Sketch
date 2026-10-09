@@ -51,11 +51,12 @@ The optimized example checks the recovered values and exits with an error on fai
 
 The experiment runners require Linux, Python 3.8+, GCC, OpenSSL development headers,
 and Go 1.21+. CPISync also requires NTL and GMP. On Ubuntu, the system packages are
-`build-essential libssl-dev libntl-dev libgmp-dev`. Set `GO=/path/to/go` if needed.
+`build-essential python3-venv libssl-dev libntl-dev libgmp-dev`.
+Set `GO=/path/to/go` if needed.
 Upstream sources and licenses are included in `algorithms/dependencies/`, with
 versions in `algorithms/dependencies/versions.json`.
 
-For plotting:
+For plotting, use Python 3.8--3.12 and install the packages in a virtual environment:
 
 ```bash
 python3 -m venv .venv
@@ -90,6 +91,7 @@ checks from the Rateless IBLT paper. `extra-points` reproduces the additional ti
 points at d=200,000 and 500,000. For the unoptimized implementation, use
 `paper-comparison` and `paper-threshold`.
 
+Fingerprint experiments require full inputs; use `--limit 1` for a single-input check.
 Use `--dry-run` to inspect jobs without running them. `--d`, `--method`,
 `--kind timing`, `--kind communication`, and `--limit` select subsets.
 For single-core timing, use `--workers 1 --cpu N`; parallel workers are intended for
@@ -99,7 +101,8 @@ success-probability experiments.
 
 Full comparison inputs contain 10^7 elements per party, with 30-bit element values.
 Large input binaries are not included. `scripts/inputs.json` records seeds and hashes;
-missing inputs are generated deterministically and checked against those records.
+missing inputs are generated with fixed sampling and shuffle rules and checked
+against those records. Input regeneration does not depend on the GCC version.
 Use `--data-root /path/to/input-cache` to reuse existing inputs.
 
 Each run creates a new directory under `results/runs/`, containing raw outputs,
@@ -121,6 +124,7 @@ Rateless IBLT uses the official 64-bit hash, count deviations encoded as signed 
 integers, and incremental decoding until completion. Communication is measured on 100
 inputs per scale. Its ingestion time measures the encoder API; its full decoding time
 includes symbol generation, receiver processing, and wire encoding/decoding.
+Rateless output extraction and sorting are outside its timers.
 
 IBLT and IBLT+SC use lossless counter compression with 30-bit keys and 32-bit checksums.
 Their communication and decoding measurements use the same codec. Fingerprint tests
@@ -128,3 +132,9 @@ require exact directed recovery and enforce the 10d peeling and 100M inspection 
 
 Source hashes are in `results/source-manifest.json`. Timings vary with hardware and
 system load.
+
+## License
+
+Project-authored code is released under the [MIT License](LICENSE).
+Third-party code retains its original licenses, including CPISync's GPLv3;
+the corresponding license files and notices are included alongside those sources.

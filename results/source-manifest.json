@@ -244,5 +244,15 @@
   "algorithms/XYZ-Sketch-optimized/src/hash.h": "ad6acf4f02f0c4d1794f5f11f79368d5434b7cfd50530122cb48bd4dcb69d699",
   "algorithms/XYZ-Sketch-optimized/src/optimization.hpp": "490ec10bdaa0fcf6197d6b295de9b65f4d961f140b7824a38b75193fd6bd5743",
   "algorithms/XYZ-Sketch-optimized/harness/common.hpp": "4076ffb0f12f528c70d1522dd5bb85180e4637f6bebc4751323fd2c51ac0ba08",
-  "algorithms/XYZ-Sketch-optimized/sample.cpp": "16f6f72c4febb60e6f7fdde9c3da3917ac227b72660b8c663679050caaf64c56"
+  "algorithms/XYZ-Sketch-optimized/sample.cpp": "16f6f72c4febb60e6f7fdde9c3da3917ac227b72660b8c663679050caaf64c56",
+  "scripts/build.py": "9a4bf57cfeb831cc193e673c58f7bb3fb833357968f6e0b0dae87d35fd6d619a",
+  "scripts/run_measurements.py": "1cba1ab032c993e0788825d01295cfc8faf2e35c2745515f11d769e9b70131d0",
+  "scripts/requirements.txt": "88b09711bd1cbdd626b9841101f012215ff22aad69a361f39957cd6d9c4e7aba",
+  "scripts/dataset_engine.cpp": "04f532d5e05dfa43fcbb19a6f94a4654d2d0d93d17d2764602ed9d9a27469939",
+  "scripts/stable_random.hpp": "f307da6b6c6ab71a54773578bce87fba36ad87ed7c090a92e07116e3489cbb85",
+  "scripts/tests/stable_random_test.cpp": "2fb620ca62a22f5ef8b9812763c8956ac74ec483ce5f9b04d11c5ca26a57cebf",
+  "scripts/tests/test_runner_failures.py": "985f087a76daf922086073bc33554a45b05f77596ff4a6dec93bb195ed90b57c",
+  "scripts/threshold_engine.cpp": "1430c533bab7ef8c3f6c35e545f1e590079579a6c5634a58da1bf178e93eb917",
+  "scripts/reproduce.py": "6323395c226f0a316fc32f3384531acfab524ee87ed5acf16dd34e662d7899b0",
+  "scripts/paper_arguments.py": "42891ea7147988ddb9e65312fcafabfb17a1d1d2465a62e3190e0b01ac5619e8"
 }

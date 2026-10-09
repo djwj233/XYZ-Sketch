@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "scope": "README examples, dependency installation, all experiment entry points using representative jobs, stored-result verification and figure regeneration",
+  "full_campaigns_rerun": false,
+  "frozen_algorithms_and_measurements_unchanged": true,
+  "server": {
+    "compiler": "GCC 9.4.0",
+    "python": "3.8.10",
+    "checks": [
+      {
+        "name": "sample-0",
+        "passed": true
+      },
+      {
+        "name": "sample-1",
+        "passed": true
+      },
+      {
+        "name": "verify",
+        "passed": true
+      },
+      {
+        "name": "runner-failures",
+        "passed": true
+      },
+      {
+        "name": "plot-install",
+        "passed": true
+      },
+      {
+        "name": "figures",
+        "passed": true
+      },
+      {
+        "name": "smoke",
+        "passed": true
+      },
+      {
+        "name": "threshold-tables",
+        "passed": true
+      },
+      {
+        "name": "formal-xyz",
+        "passed": true
+      },
+      {
+        "name": "formal-iblt",
+        "passed": true
+      },
+      {
+        "name": "formal-iblt-sc",
+        "passed": true
+      },
+      {
+        "name": "formal-iblt-compact",
+        "passed": true
+      },
+      {
+        "name": "formal-minisketch",
+        "passed": true
+      },
+      {
+        "name": "formal-cpisync",
+        "passed": true
+      },
+      {
+        "name": "formal-rateless",
+        "passed": true
+      },
+      {
+        "name": "entry-optimized-sharp",
+        "passed": true
+      },
+      {
+        "name": "entry-optimized-parameters",
+        "passed": true
+      },
+      {
+        "name": "entry-paper-heatmaps",
+        "passed": true
+      },
+      {
+        "name": "entry-fingerprint",
+        "passed": true
+      },
+      {
+        "name": "entry-paper-threshold",
+        "passed": true
+      },
+      {
+        "name": "formal-paper-xyz",
+        "passed": true
+      },
+      {
+        "name": "formal-paper-minisketch",
+        "passed": true
+      },
+      {
+        "name": "formal-paper-iblt",
+        "passed": true
+      },
+      {
+        "name": "formal-paper-rateless",
+        "passed": true
+      },
+      {
+        "name": "entry-paper-cpisync",
+        "passed": true
+      },
+      {
+        "name": "entry-extra-points",
+        "passed": true
+      },
+      {
+        "name": "entry-heuristic-calibration",
+        "passed": true
+      },
+      {
+        "name": "ell10",
+        "passed": true
+      },
+      {
+        "name": "rateless-representative",
+        "passed": true
+      },
+      {
+        "name": "runner-failures-final",
+        "passed": true
+      },
+      {
+        "name": "verify-final",
+        "passed": true
+      }
+    ],
+    "plot_assets": 17,
+    "fingerprint_reference_rows_matched": 27,
+    "stable_random": {
+      "draws": 53248,
+      "shuffles": 40,
+      "transcript": 3472880905860209796
+    },
+    "ratio_representative_trials": 100,
+    "count_representative_trials": 10
+  },
+  "modern": {
+    "compiler": "GCC 13.3.0",
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "matplotlib": "3.7.5",
+    "plot_assets": 17,
+    "fresh_formal_inputs": [
+      {
+        "d": 100,
+        "sha256": "02f48daccbe1486c41681a8dce448dd0bb5a11f0bc68630fc9448bc01adc770e",
+        "expected_sha256": "02f48daccbe1486c41681a8dce448dd0bb5a11f0bc68630fc9448bc01adc770e",
+        "matches": true
+      },
+      {
+        "d": 1000000,
+        "sha256": "0b9c6ef62803bd898c92946ff2eb37c2b520c223272ec9e3b6da28a729404b48",
+        "expected_sha256": "0b9c6ef62803bd898c92946ff2eb37c2b520c223272ec9e3b6da28a729404b48",
+        "matches": true
+      }
+    ],
+    "formal_jobs_reference_match": true,
+    "prime_field_xyz_formal_reference_match": true,
+    "runner_failure_tests": 4,
+    "stable_random": {
+      "draws": 53248,
+      "shuffles": 40,
+      "transcript": 3472880905860209796
+    },
+    "threshold_sample_sha256": "124176a2d32f351bae6d6113ebae9e93b452332428e6e1941dae2cec0ba4f478",
+    "full_campaigns_rerun": false
+  },
+  "source_manifest_canonical_sha256": "3b3624aed4786f0f2af416f2ed89506dcf73798941ba9a70882317ac43be38d6"
+}

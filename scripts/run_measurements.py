@@ -23,6 +23,10 @@ def execute(cmd,timeout,stdin=None):
  except subprocess.TimeoutExpired:
   os.killpg(p.pid,signal.SIGKILL);out,err=p.communicate();failure='timeout'
  return {'command':[str(x) for x in cmd],'returncode':p.returncode,'failure':failure or ('process_error' if p.returncode else None),'wall_seconds':time.monotonic()-t,'stdout':out,'stderr':err}
+def expects_timeout(job):
+ # Recorded timeouts are observations, not unexpected runner failures.
+ expected=job.get('expected_paper') or job.get('expected') or {}
+ return any(expected.get(k)=='timeout' for k in ['failure','failure_reason','terminal_status'])
 def run(campaign,args,out):
  jobs=[json.loads(s) for s in (ROOT/'scripts/jobs'/(campaign+'.jsonl')).read_text().splitlines()]
  for j in jobs:j.setdefault('kind','communication' if campaign=='optimized-sharp' or campaign.startswith('fingerprint') else 'timing')
@@ -42,13 +46,20 @@ def run(campaign,args,out):
  cpus=sorted(os.sched_getaffinity(0));assert args.cpu in cpus,'Requested CPU is unavailable'
  def worker(item):
   index,j=item;p=inputs[j['dataset']];a=[str(p) if v=='{dataset}' else v for v in j['args']]
+  if j['engine'].startswith('paper-') and j.get('expected_paper'):
+   from paper_arguments import arguments
+   a=arguments(j,p)
   if args.smoke and j['engine']=='rateless':a[-1]=sha(p)
   cpu=cpus[(cpus.index(args.cpu)+index%args.workers)%len(cpus)]
   memory=j.get('memory_limit_bytes',8589934592 if j['engine'].startswith('fingerprint-') else 85899345920)
   cmd=['prlimit','--as='+str(memory),'--','taskset','-c',str(cpu),str(exes[j['engine']])]+a
   r=execute(cmd,j['timeout']);result=[];issues=[]
+  if r['failure'] and not (r['failure']=='timeout' and expects_timeout(j)):
+   issues.append('unexpected_execution_failure: '+r['failure'])
   if r['returncode']==0:
-   try:result=parse(r['stdout'])
+   try:
+    result=parse(r['stdout'])
+    if not result:issues.append('parse_error: empty output')
    except Exception as e:issues.append('parse_error: '+str(e))
   if not args.smoke and result:
    if j.get('expected_rows'):
@@ -115,6 +126,6 @@ def run(campaign,args,out):
     g[key]={'mean':statistics.mean(means),'ci95':[samples[249],samples[9749]],'dataset_means':means}
   groups.append(g)
  save(out/'summary.json',groups)
- validation={'jobs':len(records),'process_failures':sum(bool(r['execution']['failure']) for r in records),'reference_mismatches':sum(bool(r['validation_issues']) for r in records),'smoke':args.smoke,'formal_results':not args.smoke}
+ validation={'jobs':len(records),'process_failures':sum(bool(r['execution']['failure']) for r in records),'expected_timeouts':sum(r['execution']['failure']=='timeout' and expects_timeout(r['job']) for r in records),'reference_mismatches':sum(any('reference_mismatch' in x for x in r['validation_issues']) for r in records),'validation_failures':sum(bool(r['validation_issues']) for r in records),'smoke':args.smoke,'formal_results':not args.smoke}
  save(out/'validation.json',validation);print(json.dumps({'output':str(out),**validation},indent=2))
- if validation['reference_mismatches']:raise RuntimeError('Reference validation failed; inspect retained records')
+ if validation['validation_failures']:raise RuntimeError('Measurement validation failed; inspect retained records')

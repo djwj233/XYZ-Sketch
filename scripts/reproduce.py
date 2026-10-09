@@ -10,6 +10,7 @@ def main():
  p.add_argument('--limit',type=int);p.add_argument('--cpu',type=int,default=min(os.sched_getaffinity(0)));p.add_argument('--workers',type=int,default=1)
  p.add_argument('--smoke',action='store_true');p.add_argument('--dry-run',action='store_true');a=p.parse_args()
  if a.workers<1 or a.workers>len(os.sched_getaffinity(0)):p.error('Invalid worker count')
+ if a.smoke and a.result.startswith('fingerprint'):p.error('Fingerprint experiments require full inputs; use --limit 1 without --smoke.')
  if a.smoke and not a.limit:a.limit=1
  if a.result=='verify':
   from verify import verify;verify();return
