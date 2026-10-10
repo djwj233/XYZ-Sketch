@@ -1,0 +1,44 @@
+{
+  "frozen_at_utc": "2026-10-07T08:14:27.985546+00:00",
+  "scope": "two additional main-curve points only",
+  "d_values": [
+    200000,
+    500000
+  ],
+  "methods": [
+    "xyz",
+    "iblt"
+  ],
+  "datasets_per_point": 5,
+  "repetitions_per_dataset": 3,
+  "total_runs": 60,
+  "cpu": 10,
+  "idle_sibling_cpu": 28,
+  "generation_cpus": [
+    11,
+    12
+  ],
+  "dataset_generator": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_dataset_engine",
+  "dataset_generator_sha256": "151decc0a1d9cc87fee61930d7e83b3823ef608f7ca5bafd5ed52c6f1d6ca5c9",
+  "set_size_per_side": 10000000,
+  "input_bits": 30,
+  "input_domain": "unchanged original nonzero values below 998244353",
+  "seed_policy": "unchanged formal-v1 timing_final derivation with new d and trials 0..4",
+  "parameter_policy": "carry the resource/d ratio of the original adjacent smaller main point, not a newly calibrated operating point; fixed before observing outcomes",
+  "failure_policy": "keep all five predetermined inputs and every planned repetition; no success-based replacement or omission",
+  "timeout_seconds": 600,
+  "dataset_timeout_seconds": 600,
+  "memory_limit_bytes": 85899345920,
+  "binary_sha256": {
+    "xyz": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
+    "iblt": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46"
+  },
+  "measure_boundaries": {
+    "update": "(update_alice+update_bob)/20000000",
+    "full_decode": "sender+transfer+receiver",
+    "receiver": "parse+subtract+PRNG+decode+normalization",
+    "truth_and_hash": "outside CPU timers"
+  },
+  "reliability": "no 100-trial probability study at the two new scales; report actual 15/point/method timing statuses",
+  "existing_results": "previous 480-run final delivery retained unchanged; other baselines and old scales reused without interpolation"
+}

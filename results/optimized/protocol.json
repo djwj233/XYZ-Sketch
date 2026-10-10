@@ -1,0 +1,284 @@
+{
+  "frozen_at_utc": "2026-10-07T07:28:50.785934+00:00",
+  "purpose": "final frozen XYZ v15 evaluation, main and existing parameter timing; stop development after completion",
+  "cpu": 10,
+  "idle_sibling_cpu": 28,
+  "timeout_seconds": 600,
+  "memory_limit_bytes": 85899345920,
+  "datasets_per_config": 5,
+  "repetitions_per_dataset": 3,
+  "set_size_per_side": 10000000,
+  "input_bits": 30,
+  "xyz_execution_field": "GF(2^30), native x^30+x+1 basis",
+  "xyz_source_manifest": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/source-manifest-v15.json",
+  "xyz_binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
+  "iblt_binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
+  "input_policy": "original five selected successful timing inputs for each original configuration, original seeds, no new success-dependent reselection; preserve failures without replacement",
+  "measure_boundaries": {
+    "update": "two set-maintenance windows divided by 20000000 input elements",
+    "receiver": "wire parse + subtract + PRNG seed + decode + output normalization, all original validation inside timer",
+    "full_decode": "sender + transfer + receiver, original paper comparison definition",
+    "transfer": "in-memory message copy, no network waiting",
+    "truth_and_hash": "outside algorithm CPU timing"
+  },
+  "analysis": "average three repetitions per original dataset, then average five dataset means; 10000 cluster bootstrap resamples; pair methods only on common original input datasets",
+  "scope": {
+    "total_runs": 480,
+    "xyz_runs": 345,
+    "iblt_runs": 135,
+    "xyz_unique_configurations": 23,
+    "main_xyz_runs": 135,
+    "additional_parameter_xyz_runs": 210,
+    "main_d_values": [
+      100,
+      300,
+      1000,
+      3000,
+      10000,
+      30000,
+      100000,
+      300000,
+      1000000
+    ],
+    "parameter_d_values": [
+      10000,
+      100000
+    ]
+  },
+  "main_input_index": [
+    {
+      "d": 100,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "paired_trials": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 300,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "paired_trials": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 1000,
+      "trials": {
+        "iblt": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "xyz": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "paired_trials": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 3000,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "paired_trials": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 10000,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "paired_trials": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 30000,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "paired_trials": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 100000,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "paired_trials": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 300000,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "paired_trials": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "d": 1000000,
+      "trials": {
+        "iblt": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "xyz": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "paired_trials": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "reuse": "original M/k/ell/a/z, threshold tables, ideal-cell heatmaps, parameter choices, existing reliability cohorts; unchanged non-IBLT baselines retain original sources; no new calibration or reliability sweep",
+  "completion_policy": "deliver frozen code/version, every raw run including failures, summary and confidence intervals, final figures and author report; no further optimization",
+  "source_protocol_sha256": "a48f8f79e33e5471ea6f11ed7462777dd819d0c97fe151cb7104ebdd14acd858"
+}

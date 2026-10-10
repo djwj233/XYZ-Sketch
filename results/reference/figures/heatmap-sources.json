@@ -1,0 +1,79 @@
+{
+  "dedup": "old Figure1b/c are already panels in these six pages; not copied again",
+  "interpretation": "ideal-cell simulator; heuristic marker retained; not full wire communication or runtime",
+  "outputs": {
+    "appendix-heatmaps-1.pdf": {
+      "sha256": "5e5890e27598cd041169fed04e2801aa0d2a76427828138ff642bc2eecc842ec",
+      "source": "figures/review-15-v4/figure3-page1.pdf"
+    },
+    "appendix-heatmaps-1.png": {
+      "sha256": "bc281f002d53df0e8075420fbcd4845bb8f09f43f6a2bff76f117461da6034d6",
+      "source": "figures/review-15-v4/figure3-page1.png"
+    },
+    "appendix-heatmaps-1.svg": {
+      "sha256": "dafb9686a2045a8cd6734e7b991880b335d89cfc4de369667ac8093b4b650fce",
+      "source": "figures/review-15-v4/figure3-page1.svg"
+    },
+    "appendix-heatmaps-2.pdf": {
+      "sha256": "7a9f5b0940f9d5e0e5900979588bf6793f53a6e23d2fa301d015879686dbddb6",
+      "source": "figures/review-15-v4/figure3-page2.pdf"
+    },
+    "appendix-heatmaps-2.png": {
+      "sha256": "ba9e359cdf9e048ae97902290ead51edc52a0d436f991f420ed91781dd0b0993",
+      "source": "figures/review-15-v4/figure3-page2.png"
+    },
+    "appendix-heatmaps-2.svg": {
+      "sha256": "71ea89f2333ffd8f6150273da91148a48287adafd0f5db283c88cc9c4f090831",
+      "source": "figures/review-15-v4/figure3-page2.svg"
+    },
+    "appendix-heatmaps-3.pdf": {
+      "sha256": "b03cbe5b43e83572bcbb7993393c1777a32e671f963093125b39706f892a618c",
+      "source": "figures/review-15-v4/figure3-page3.pdf"
+    },
+    "appendix-heatmaps-3.png": {
+      "sha256": "20331633a3ca587bbbb81e87d9704cb0fb41291d1da18133302431c4b2769485",
+      "source": "figures/review-15-v4/figure3-page3.png"
+    },
+    "appendix-heatmaps-3.svg": {
+      "sha256": "9b2c520d3be6c2286538e910bbcb9b3824d0f5871b30558896d709466a14b0bb",
+      "source": "figures/review-15-v4/figure3-page3.svg"
+    },
+    "appendix-heatmaps-4.pdf": {
+      "sha256": "8802c2bdd2a6a74274a1f4cac4f6d57ac84b2d792c46a33c669dcd4b2f2842e7",
+      "source": "figures/review-15-v4/figure3-page4.pdf"
+    },
+    "appendix-heatmaps-4.png": {
+      "sha256": "0300dc9887289f0d7a803aae85fa860a23f4872d922b09df54cf58e58a4dbdbd",
+      "source": "figures/review-15-v4/figure3-page4.png"
+    },
+    "appendix-heatmaps-4.svg": {
+      "sha256": "6ce74b6220b89726eca462a918f269f86293c83509d9ec4510410b86cb5ac2df",
+      "source": "figures/review-15-v4/figure3-page4.svg"
+    },
+    "appendix-heatmaps-5.pdf": {
+      "sha256": "4159e75710d35b91e5776e4747bf4b62a84f09ac9245762fc24ac0aa818f0ccd",
+      "source": "figures/review-15-v4/figure3-page5.pdf"
+    },
+    "appendix-heatmaps-5.png": {
+      "sha256": "1560a38706cc1a85fcd5b9d5b10c0a7e3c7d8e084498c982dd0ab3c3d04be97e",
+      "source": "figures/review-15-v4/figure3-page5.png"
+    },
+    "appendix-heatmaps-5.svg": {
+      "sha256": "f147b47cae502c6b4b3793a1892557dfe7f5677098e63bb89568607778820f50",
+      "source": "figures/review-15-v4/figure3-page5.svg"
+    },
+    "appendix-heatmaps-6.pdf": {
+      "sha256": "b333a78a55917970265659fb621e34a7a639d7346b6f2feecdbd97e1c7edc023",
+      "source": "figures/review-15-v4/figure3-page6.pdf"
+    },
+    "appendix-heatmaps-6.png": {
+      "sha256": "caee274e154ae8fde7f8de8612f79c6532f968748a55bcac781e887d12411fad",
+      "source": "figures/review-15-v4/figure3-page6.png"
+    },
+    "appendix-heatmaps-6.svg": {
+      "sha256": "b719aaeb9673bf829dd785e5063354e0fa455c5a9e50cf554be2c3569d7fad80",
+      "source": "figures/review-15-v4/figure3-page6.svg"
+    }
+  },
+  "source_manifest_sha256": "f5692dcc30de6210ff3613f1a70bd4d930a7c2b0966699cafe0462c70c8310fd"
+}

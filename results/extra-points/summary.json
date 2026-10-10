@@ -1,0 +1,4747 @@
+{
+  "created_at_utc": "2026-10-07T08:21:51.307321+00:00",
+  "new_run_completion": {
+    "completed_at_utc": "2026-10-07T08:18:49.464579+00:00",
+    "total_runs": 60,
+    "method_runs": {
+      "xyz": 30,
+      "iblt": 30
+    },
+    "d_values": [
+      200000,
+      500000
+    ],
+    "all_success": true,
+    "all_validation_passed": true,
+    "issues": [],
+    "old_files_preserved": true,
+    "frozen_source_preserved": true,
+    "elapsed_seconds": 261.6879687802866
+  },
+  "new_protocol": {
+    "frozen_at_utc": "2026-10-07T08:14:27.985546+00:00",
+    "scope": "two additional main-curve points only",
+    "d_values": [
+      200000,
+      500000
+    ],
+    "methods": [
+      "xyz",
+      "iblt"
+    ],
+    "datasets_per_point": 5,
+    "repetitions_per_dataset": 3,
+    "total_runs": 60,
+    "cpu": 10,
+    "idle_sibling_cpu": 28,
+    "generation_cpus": [
+      11,
+      12
+    ],
+    "dataset_generator": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_dataset_engine",
+    "dataset_generator_sha256": "151decc0a1d9cc87fee61930d7e83b3823ef608f7ca5bafd5ed52c6f1d6ca5c9",
+    "set_size_per_side": 10000000,
+    "input_bits": 30,
+    "input_domain": "unchanged original nonzero values below 998244353",
+    "seed_policy": "unchanged formal-v1 timing_final derivation with new d and trials 0..4",
+    "parameter_policy": "carry the resource/d ratio of the original adjacent smaller main point, not a newly calibrated operating point; fixed before observing outcomes",
+    "failure_policy": "keep all five predetermined inputs and every planned repetition; no success-based replacement or omission",
+    "timeout_seconds": 600,
+    "dataset_timeout_seconds": 600,
+    "memory_limit_bytes": 85899345920,
+    "binary_sha256": {
+      "xyz": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
+      "iblt": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46"
+    },
+    "measure_boundaries": {
+      "update": "(update_alice+update_bob)/20000000",
+      "full_decode": "sender+transfer+receiver",
+      "receiver": "parse+subtract+PRNG+decode+normalization",
+      "truth_and_hash": "outside CPU timers"
+    },
+    "reliability": "no 100-trial probability study at the two new scales; report actual 15/point/method timing statuses",
+    "existing_results": "previous 480-run final delivery retained unchanged; other baselines and old scales reused without interpolation"
+  },
+  "prior_source": {
+    "path": "/mnt/c/users/djwj233/.codex/.chatgpt-projects/g-p-6a42258cfdf0819181055bc0e1a0e70e/drafts/2026-10-07-xyz-v15-final-evaluation/delivery/analysis/summary.json",
+    "sha256": "759fd9ea00db2ed4607bebb0c9d830b70e9225904a42966e66343bcc3277e980",
+    "prior_runs": 480,
+    "prior_points": 9
+  },
+  "definitions": {
+    "update_ns_per_input": "(update_alice + update_bob)*1e9/20000000",
+    "receiver_s": "wire parse + subtract + PRNG seed + decode + canonical output normalization",
+    "full_decode_s": "sender + transfer + receiver, original formal-v1 figure boundary",
+    "decode_us_per_difference": "full_decode_s*1e6/d",
+    "communication_ratio": "actual transmitted payload_bits/(30*d)",
+    "uncertainty": "10,000 cluster bootstrap resamples; first average three repeats per dataset; do not count repeats as independent inputs",
+    "paired_speedup": "IBLT/XYZ means on original common datasets (42 matched dataset pairs in total)",
+    "v10_speedup": "old GF v10 / v15 means on identical original five XYZ timing datasets; separate run epochs"
+  },
+  "new_points": [
+    {
+      "d": 200000,
+      "methods": {
+        "xyz": {
+          "d": 200000,
+          "method": "xyz",
+          "config_id": "b5ed5186f667e020630c9b8cfd24ae9c78c18a31e57bc1db285cacad1c55d46c",
+          "source_actual": {
+            "algorithm": "xyz",
+            "d": 200000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "k": 2,
+            "ell": 6,
+            "M": 36000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "a": 0.7243668166820519,
+            "z": 13,
+            "placement": "circular",
+            "q": 1,
+            "checksum": "none-q1",
+            "wire": "xyz-main-no-header-v1",
+            "bits_per_cell": 184,
+            "implementation": "legacy-xyz-parameterized-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 41.86855498666667,
+              "ci95": [
+                40.90050452333334,
+                43.01311067333334
+              ],
+              "dataset_means": [
+                40.73682381666667,
+                41.590376883333334,
+                40.71924905,
+                42.280123,
+                44.016202183333334
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.18999955660000004,
+              "ci95": [
+                0.18295331626666667,
+                0.1986820306666667
+              ],
+              "dataset_means": [
+                0.179113451,
+                0.18716973266666667,
+                0.1871012076666667,
+                0.20635689600000004,
+                0.19025649566666672
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.1936014446,
+              "ci95": [
+                0.18646714599999997,
+                0.20236538526666675
+              ],
+              "dataset_means": [
+                0.18261388366666664,
+                0.19074336599999983,
+                0.1906158773333333,
+                0.21015589433333348,
+                0.1938782016666667
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.0033182247333333114,
+              "ci95": [
+                0.0032407813999999627,
+                0.0034176885999999866
+              ],
+              "dataset_means": [
+                0.0032206596666666254,
+                0.003290807666666673,
+                0.003235889999999945,
+                0.003504393333333337,
+                0.003339372999999979
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 100000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 6624000,
+          "communication_ratio": 1.104
+        },
+        "iblt": {
+          "d": 200000,
+          "method": "iblt",
+          "config_id": "365b92d5efd8214e7225dc396ac616d05c5d093a8e871f809f24bece5c188e6f",
+          "source_actual": {
+            "algorithm": "external_iblt",
+            "d": 200000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "implementation": "legacy-external_iblt-v4",
+            "expected": 174000,
+            "M": 261000,
+            "k": 4,
+            "ell": 1,
+            "a": 0,
+            "z": 0,
+            "placement": "legacy-four-partitions",
+            "checksum": "MurmurHash3-11-u64le-32",
+            "bits_per_cell": 87,
+            "wire": "canonical-25-30-32-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 168.23900082333336,
+              "ci95": [
+                161.87964299,
+                178.07960469
+              ],
+              "dataset_means": [
+                166.5294912,
+                160.08081803333334,
+                164.05176095,
+                162.62626965,
+                187.90666428333333
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.20871560346666662,
+              "ci95": [
+                0.20042667860000002,
+                0.21874043259999998
+              ],
+              "dataset_means": [
+                0.19853336133333332,
+                0.20443575099999967,
+                0.2003154596666669,
+                0.21374681633333337,
+                0.22654662899999986
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.2931627126666668,
+              "ci95": [
+                0.2829235920666669,
+                0.3058140566000002
+              ],
+              "dataset_means": [
+                0.2810635226666669,
+                0.2870684269999999,
+                0.2827112440000003,
+                0.29845217433333343,
+                0.31651819533333353
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.08315439340000007,
+              "ci95": [
+                0.08121851420000005,
+                0.08609087280000005
+              ],
+              "dataset_means": [
+                0.0812471273333335,
+                0.08135951500000023,
+                0.08111940066666652,
+                0.08340140433333332,
+                0.08864451966666682
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 100000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 22707000,
+          "communication_ratio": 3.7845
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.018266235290667,
+          "ci95": [
+            3.883070949553375,
+            4.153128627266467
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.0985057397058504,
+          "ci95": [
+            1.057077932489824,
+            1.1510212984795511
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.5142589109929958,
+          "ci95": [
+            1.4564575516459803,
+            1.5778431259335648
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 25.059904039853144,
+          "ci95": [
+            24.28283695300639,
+            25.925645850504345
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "source": "two extra points, fixed inherited resources; no new operating-point calibration"
+    },
+    {
+      "d": 500000,
+      "methods": {
+        "xyz": {
+          "d": 500000,
+          "method": "xyz",
+          "config_id": "d5eb61d071d84aa0c9865ce93f9750f26875c66d8cc321ae475d7117065e8b3c",
+          "source_actual": {
+            "algorithm": "xyz",
+            "d": 500000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "k": 2,
+            "ell": 6,
+            "M": 89000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "a": 0.7243668166820519,
+            "z": 17,
+            "placement": "circular",
+            "q": 1,
+            "checksum": "none-q1",
+            "wire": "xyz-main-no-header-v1",
+            "bits_per_cell": 184,
+            "implementation": "legacy-xyz-parameterized-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 45.618608009999996,
+              "ci95": [
+                45.42222007,
+                45.82364150666667
+              ],
+              "dataset_means": [
+                45.48856096666667,
+                45.57271016666666,
+                45.99092906666667,
+                45.74999008333334,
+                45.29084976666667
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.4825685830666666,
+              "ci95": [
+                0.4683259574666666,
+                0.49625667233333337
+              ],
+              "dataset_means": [
+                0.48802498233333336,
+                0.4906634986666667,
+                0.4667999706666666,
+                0.5059656909999999,
+                0.4613887726666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.4917995609333333,
+              "ci95": [
+                0.4773726906666666,
+                0.5055946585333333
+              ],
+              "dataset_means": [
+                0.49765977200000006,
+                0.4996447263333334,
+                0.475662545,
+                0.515512034,
+                0.47051872733333316
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.008294092466666658,
+              "ci95": [
+                0.008035600199999996,
+                0.00855258473333332
+              ],
+              "dataset_means": [
+                0.008674975000000066,
+                0.008039324666666644,
+                0.007938950666666722,
+                0.00859576166666661,
+                0.00822145033333325
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 300000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 16376000,
+          "communication_ratio": 1.0917333333333332
+        },
+        "iblt": {
+          "d": 500000,
+          "method": "iblt",
+          "config_id": "3021ee594af51eef564d628284a4b9fefa0d56cff19d48842209d77334c34034",
+          "source_actual": {
+            "algorithm": "external_iblt",
+            "d": 500000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "implementation": "legacy-external_iblt-v4",
+            "expected": 432500,
+            "M": 648752,
+            "k": 4,
+            "ell": 1,
+            "a": 0,
+            "z": 0,
+            "placement": "legacy-four-partitions",
+            "checksum": "MurmurHash3-11-u64le-32",
+            "bits_per_cell": 87,
+            "wire": "canonical-25-30-32-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 268.0332873033334,
+              "ci95": [
+                257.36396766666667,
+                282.9463397433334
+              ],
+              "dataset_means": [
+                259.3839086,
+                256.96338306666667,
+                256.7545818,
+                295.45627693333336,
+                271.60828611666665
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.7996417152666668,
+              "ci95": [
+                0.7795550098666667,
+                0.8248241175333335
+              ],
+              "dataset_means": [
+                0.7674898526666668,
+                0.7871729070000001,
+                0.814170589666667,
+                0.8409256970000003,
+                0.7884495299999997
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 1.0082726044,
+              "ci95": [
+                0.9863428216000001,
+                1.0349211582666673
+              ],
+              "dataset_means": [
+                0.9754900136666667,
+                0.9920762580000003,
+                1.0201754200000008,
+                1.0570397656666668,
+                0.9965815646666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.20534718166666668,
+              "ci95": [
+                0.20252786680000007,
+                0.20913491619999997
+              ],
+              "dataset_means": [
+                0.2047278343333332,
+                0.2016883106666668,
+                0.20271066266666674,
+                0.2127453613333333,
+                0.20486373933333338
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 300000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 56441424,
+          "communication_ratio": 3.7627616
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 5.875525339233897,
+          "ci95": [
+            5.628743141870459,
+            6.190525843307617
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.6570529937631615,
+          "ci95": [
+            1.6036141831598183,
+            1.7127765239975898
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 2.050169793739767,
+          "ci95": [
+            1.9888173709592492,
+            2.114127446712294
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 24.75824600363955,
+          "ci95": [
+            24.139024611156902,
+            25.264761651338933
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "source": "two extra points, fixed inherited resources; no new operating-point calibration"
+    }
+  ],
+  "main": [
+    {
+      "d": 100,
+      "methods": {
+        "xyz": {
+          "d": 100,
+          "method": "xyz",
+          "config_id": "793b1e52fdb7b31cb04bd7eed6c215805fdd9ba5d8acc737c0fd4e1f4cc81233",
+          "roles": [
+            "legacy-xyz"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 23,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 100,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 1
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 26.696347169999996,
+              "ci95": [
+                25.95920398333333,
+                27.433490356666663
+              ],
+              "dataset_means": [
+                27.611966,
+                26.76066748333333,
+                25.682727050000004,
+                25.834949166666664,
+                27.591426149999997
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.00010373933333331919,
+              "ci95": [
+                9.690646666663896e-05,
+                0.00010927726666665194
+              ],
+              "dataset_means": [
+                0.00010652433333335765,
+                0.00010743766666661732,
+                9.981466666664218e-05,
+                9.242666666664512e-05,
+                0.00011249333333333371
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.0001086678000000211,
+              "ci95": [
+                0.00010135560000007853,
+                0.00011470779999999496
+              ],
+              "dataset_means": [
+                0.00011216833333323646,
+                0.00011271800000001164,
+                0.00010369800000005942,
+                9.678733333344051e-05,
+                0.00011796733333335752
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 4.1980666666644835e-06,
+              "ci95": [
+                3.6012000000103697e-06,
+                4.7141999999518925e-06
+              ],
+              "dataset_means": [
+                4.807999999911772e-06,
+                4.558333333385771e-06,
+                3.1910000000134886e-06,
+                3.7346666667363118e-06,
+                4.698333333275073e-06
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": false,
+            "rate": 0.88,
+            "status": "below_target_uncertain",
+            "successes": 88,
+            "trials": 100,
+            "wilson95": [
+              0.8018790057328857,
+              0.9300059356298052
+            ]
+          },
+          "actual_payload_bits": 4232,
+          "communication_ratio": 1.4106666666666667
+        },
+        "iblt": {
+          "d": 100,
+          "method": "iblt",
+          "config_id": "2a66c0dacabbf0597b79ba838013fb00b499a78568e8c0853ee64f806942031d",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 144,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 100,
+            "ell": 1,
+            "expected": 94,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 128.00281179,
+              "ci95": [
+                125.91177308333333,
+                130.49622015666668
+              ],
+              "dataset_means": [
+                132.66273231666668,
+                128.77241568333332,
+                127.24645191666667,
+                124.72699535000001,
+                126.60546368333333
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 5.614873333336471e-05,
+              "ci95": [
+                5.319746666675822e-05,
+                5.909999999997121e-05
+              ],
+              "dataset_means": [
+                5.3524666666711816e-05,
+                6.0062333333258756e-05,
+                5.9447666666656573e-05,
+                5.64800000000254e-05,
+                5.122900000017102e-05
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.00011138166666674703,
+              "ci95": [
+                0.00010747053333339806,
+                0.00011528560000000354
+              ],
+              "dataset_means": [
+                0.00010836066666675137,
+                0.00011333733333351859,
+                0.00011824333333324925,
+                0.00011305700000023104,
+                0.00010390999999998485
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 5.429533333337252e-05,
+              "ci95": [
+                5.2437600000043715e-05,
+                5.6323466666678244e-05
+              ],
+              "dataset_means": [
+                5.377933333342947e-05,
+                5.241833333347046e-05,
+                5.785299999994109e-05,
+                5.5640000000097466e-05,
+                5.1785999999924094e-05
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": false,
+            "rate": 0.88,
+            "status": "below_target_uncertain",
+            "successes": 88,
+            "trials": 100,
+            "wilson95": [
+              0.8018790057328857,
+              0.9300059356298052
+            ]
+          },
+          "actual_payload_bits": 12528,
+          "communication_ratio": 4.176
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.794768773978302,
+          "ci95": [
+            4.677731135654243,
+            4.896121285656388
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 0.5412482568492731,
+          "ci95": [
+            0.4915667936179086,
+            0.5934246805547239
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.0249739726646294,
+          "ci95": [
+            0.9387236993366659,
+            1.1211810525962405
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 12.933413793667107,
+          "ci95": [
+            11.18106995896937,
+            15.605076085695643
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.0443489476591692,
+          "ci95": [
+            1.0138893217246079,
+            1.0882523606469738
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.0530978285314212,
+          "ci95": [
+            0.9823053871469813,
+            1.1211270304374543
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.0547877721521515,
+          "ci95": [
+            0.9827953466467002,
+            1.125076408148087
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.1114163662722456,
+          "ci95": [
+            0.944342804880298,
+            1.3436508824902635
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 300,
+      "methods": {
+        "xyz": {
+          "d": 300,
+          "method": "xyz",
+          "config_id": "f40b1004a96609189560f1e8a900e518cd9fd610c9fc074c80256666f1f7789c",
+          "roles": [
+            "legacy-xyz"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 64,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 300,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 2
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 26.79141170666667,
+              "ci95": [
+                26.12425686333333,
+                27.52451109333333
+              ],
+              "dataset_means": [
+                26.859929983333334,
+                25.856112166666662,
+                26.19301783333333,
+                26.858129333333334,
+                28.18986921666667
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.00023037179999998436,
+              "ci95": [
+                0.0002247756666666767,
+                0.00023713233333326754
+              ],
+              "dataset_means": [
+                0.00024255733333326349,
+                0.00022444966666671876,
+                0.00022686233333339226,
+                0.00022405833333327685,
+                0.00023393133333327043
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.0002385851999999596,
+              "ci95": [
+                0.00023260233333333895,
+                0.00024555639999991705
+              ],
+              "dataset_means": [
+                0.00025090866666658645,
+                0.00023196033333331792,
+                0.00023483166666671274,
+                0.00023212966666667315,
+                0.00024309566666650775
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 7.35799999998695e-06,
+              "ci95": [
+                6.9375999999750814e-06,
+                7.8620666666455e-06
+              ],
+              "dataset_means": [
+                7.485666666677086e-06,
+                6.688999999967156e-06,
+                7.1033333333136994e-06,
+                7.225666666702916e-06,
+                8.286333333273888e-06
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": false,
+            "rate": 0.88,
+            "status": "below_target_uncertain",
+            "successes": 88,
+            "trials": 100,
+            "wilson95": [
+              0.8018790057328857,
+              0.9300059356298052
+            ]
+          },
+          "actual_payload_bits": 11776,
+          "communication_ratio": 1.3084444444444445
+        },
+        "iblt": {
+          "d": 300,
+          "method": "iblt",
+          "config_id": "99193c3b4f7502eeb8747c80321b7eaefe4b05cf40e67d7d57815d3938262c1a",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 412,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 300,
+            "ell": 1,
+            "expected": 273,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 126.76674119666669,
+              "ci95": [
+                124.89082262333332,
+                130.18411114
+              ],
+              "dataset_means": [
+                124.62397333333332,
+                125.12129375,
+                125.30166851666667,
+                125.2805246,
+                133.50624578333333
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.00016592760000004128,
+              "ci95": [
+                0.0001560006666667076,
+                0.00017711239999999387
+              ],
+              "dataset_means": [
+                0.00016654533333341584,
+                0.0001541390000000161,
+                0.0001875296666666119,
+                0.000152590000000045,
+                0.0001688340000001176
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.00031871946666672807,
+              "ci95": [
+                0.0003053163333334533,
+                0.00033264119999995383
+              ],
+              "dataset_means": [
+                0.0003162576666667268,
+                0.0003026969999999629,
+                0.00034416566666658116,
+                0.00030246500000030707,
+                0.00032801200000006264
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.0001516677333333346,
+              "ci95": [
+                0.00014810973333334587,
+                0.0001556567333332796
+              ],
+              "dataset_means": [
+                0.00014840899999990498,
+                0.00014743433333341827,
+                0.00015551266666665361,
+                0.00014886200000008287,
+                0.00015812066666661315
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.94,
+            "status": "empirical_target_met",
+            "successes": 94,
+            "trials": 100,
+            "wilson95": [
+              0.8752318455410406,
+              0.9722138760368118
+            ]
+          },
+          "actual_payload_bits": 35848,
+          "communication_ratio": 3.983111111111111
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.731618571824737,
+          "ci95": [
+            4.669571456691882,
+            4.795231243142761
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 0.7202600318270402,
+          "ci95": [
+            0.6844696260591027,
+            0.7760670794505817
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.3358727476255108,
+          "ci95": [
+            1.285554897999177,
+            1.4014034066840086
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 20.61263024376238,
+          "ci95": [
+            19.6525118434773,
+            21.681952676936437
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.0257897949125765,
+          "ci95": [
+            0.9861940061819285,
+            1.0606240800710003
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.1568487693953842,
+          "ci95": [
+            1.0946050109744263,
+            1.2216054953532043
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.1535851064251603,
+          "ci95": [
+            1.0881782802275384,
+            1.218007988949044
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.070897888924901,
+          "ci95": [
+            0.9785033461809537,
+            1.1397240042489143
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 1000,
+      "methods": {
+        "xyz": {
+          "d": 1000,
+          "method": "xyz",
+          "config_id": "d2d44b939f8ff2c9af8904356c95d8e839513e05653eac1ff0bb08e2268a1700",
+          "roles": [
+            "legacy-xyz"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 204,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 1000,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 2
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 27.00171523333333,
+              "ci95": [
+                26.36921162333333,
+                27.634218843333333
+              ],
+              "dataset_means": [
+                28.058522433333337,
+                27.04209221666666,
+                26.257391433333332,
+                26.144591516666665,
+                27.505978566666663
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.0007512547999999934,
+              "ci95": [
+                0.0007195795999999977,
+                0.0007825237333333549
+              ],
+              "dataset_means": [
+                0.000770193666666715,
+                0.000708897333333273,
+                0.0007695966666666129,
+                0.0007062690000000001,
+                0.000801317333333366
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.0007716610666666549,
+              "ci95": [
+                0.0007398401333333026,
+                0.000803482000000007
+              ],
+              "dataset_means": [
+                0.0007913613333334624,
+                0.0007286953333333438,
+                0.000789193999999919,
+                0.0007263079999999533,
+                0.0008227466666665961
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 1.9465133333336953e-05,
+              "ci95": [
+                1.884520000000241e-05,
+                2.008820000002724e-05
+              ],
+              "dataset_means": [
+                2.0289000000062174e-05,
+                1.888200000007186e-05,
+                1.8730666666651647e-05,
+                1.9000666666565042e-05,
+                2.0423333333334053e-05
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.93,
+            "status": "empirical_target_met",
+            "successes": 93,
+            "trials": 100,
+            "wilson95": [
+              0.8625048526092651,
+              0.9656807389327273
+            ]
+          },
+          "actual_payload_bits": 37536,
+          "communication_ratio": 1.2512
+        },
+        "iblt": {
+          "d": 1000,
+          "method": "iblt",
+          "config_id": "fc4521899e7f3e428b3c62427aff06ff1591e4f52657961c64b51410bf33912f",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 1336,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 1000,
+            "ell": 1,
+            "expected": 890,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 127.06090189666665,
+              "ci95": [
+                126.03335195,
+                128.17271323666665
+              ],
+              "dataset_means": [
+                129.18783793333336,
+                125.71225858333332,
+                127.10436058333333,
+                125.818941,
+                127.48111138333331
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.000589508999999951,
+              "ci95": [
+                0.0005746162666666165,
+                0.0006044017333332854
+              ],
+              "dataset_means": [
+                0.0005669369999998786,
+                0.000609896666666702,
+                0.0006100453333332349,
+                0.0005785413333333859,
+                0.0005821246666665539
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.0010659866666666554,
+              "ci95": [
+                0.001041155666666634,
+                0.0010908176666666767
+              ],
+              "dataset_means": [
+                0.001034971333333227,
+                0.001103688333333371,
+                0.0010926863333331482,
+                0.001061339000000346,
+                0.001037248333333185
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.0004708473999999482,
+              "ci95": [
+                0.00045776186666663207,
+                0.0004813971999999407
+              ],
+              "dataset_means": [
+                0.00046263466666666514,
+                0.00048793166666645976,
+                0.0004768573333332841,
+                0.0004771326666667501,
+                0.00044968066666658163
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": false,
+            "rate": 0.89,
+            "status": "below_target_uncertain",
+            "successes": 89,
+            "trials": 100,
+            "wilson95": [
+              0.8136870349691969,
+              0.9374580364293543
+            ]
+          },
+          "actual_payload_bits": 116232,
+          "communication_ratio": 3.8744
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.748229480708766,
+          "ci95": [
+            4.625764820422601,
+            4.8399784266543335
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 0.7921489274512481,
+          "ci95": [
+            0.7396956143503277,
+            0.8447685809381162
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.3996620088271436,
+          "ci95": [
+            1.3196977396898228,
+            1.4762712713352844
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 24.722725109267213,
+          "ci95": [
+            23.772760493695067,
+            25.66041061706259
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.025563185426133,
+          "ci95": [
+            0.9881254244166301,
+            1.0644155311556884
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.1603807389982954,
+          "ci95": [
+            1.1167672427892177,
+            1.2062733122526574
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.1573750513611243,
+          "ci95": [
+            1.113201256131248,
+            1.2038659474367128
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.0456166067875525,
+          "ci95": [
+            0.9773743760493544,
+            1.1173217019130997
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 3000,
+      "methods": {
+        "xyz": {
+          "d": 3000,
+          "method": "xyz",
+          "config_id": "96ee1798585b39dfbd1eaa54a4d75d62e9c36e0d978db123c3802d0bd80e97d6",
+          "roles": [
+            "legacy-xyz"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 594,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 3000,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 3
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 28.178134336666666,
+              "ci95": [
+                27.555519309999994,
+                28.593393083333332
+              ],
+              "dataset_means": [
+                28.608194816666664,
+                28.230856016666667,
+                26.961946399999995,
+                28.428773116666665,
+                28.66090133333333
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.0023978713333333195,
+              "ci95": [
+                0.0023013880000000006,
+                0.002494354666666639
+              ],
+              "dataset_means": [
+                0.0022817433333333823,
+                0.002538833000000018,
+                0.0023152246666665968,
+                0.002539441333333281,
+                0.0023141143333333205
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.002456528866666637,
+              "ci95": [
+                0.002356727599999934,
+                0.0025585431333332576
+              ],
+              "dataset_means": [
+                0.0023381879999999633,
+                0.0025948283333333912,
+                0.0023676973333331595,
+                0.0026100633333332457,
+                0.0023718673333334253
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 5.722619999999345e-05,
+              "ci95": [
+                5.288153333335247e-05,
+                6.343579999992245e-05
+              ],
+              "dataset_means": [
+                5.501899999993398e-05,
+                5.449600000010749e-05,
+                5.117133333332191e-05,
+                6.904699999991475e-05,
+                5.639766666668914e-05
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.98,
+            "status": "empirical_target_met",
+            "successes": 98,
+            "trials": 100,
+            "wilson95": [
+              0.929988209271456,
+              0.9944980324498376
+            ]
+          },
+          "actual_payload_bits": 109296,
+          "communication_ratio": 1.2144
+        },
+        "iblt": {
+          "d": 3000,
+          "method": "iblt",
+          "config_id": "a9eb7dee4321905e929c31b8dde381f610c4e7a8acd1a08083142d3001c23885",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 3960,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 3000,
+            "ell": 1,
+            "expected": 2640,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 128.68742713333333,
+              "ci95": [
+                126.24473768666667,
+                131.65349977666668
+              ],
+              "dataset_means": [
+                126.53566136666667,
+                125.50945421666667,
+                127.13345726666667,
+                133.73663735,
+                130.52192546666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.0018799372666666574,
+              "ci95": [
+                0.001809846400000007,
+                0.0019447725333333094
+              ],
+              "dataset_means": [
+                0.001998298333333389,
+                0.0018108903333334443,
+                0.0019029426666665,
+                0.0019121616666666341,
+                0.0017753933333333194
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.0032128607333333113,
+              "ci95": [
+                0.0031318774000000716,
+                0.003286425933333289
+              ],
+              "dataset_means": [
+                0.003328056999999903,
+                0.0030790490000001114,
+                0.0032349576666665194,
+                0.003270529000000059,
+                0.0031517109999999646
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.001319935999999977,
+              "ci95": [
+                0.0012858635999999518,
+                0.0013506949999999719
+              ],
+              "dataset_means": [
+                0.0013165439999998085,
+                0.0012558243333333035,
+                0.0013181340000000634,
+                0.0013453010000000394,
+                0.0013638766666666708
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.99,
+            "status": "empirical_target_met",
+            "successes": 99,
+            "trials": 100,
+            "wilson95": [
+              0.9455138038212946,
+              0.9982325679358593
+            ]
+          },
+          "actual_payload_bits": 344520,
+          "communication_ratio": 3.828
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.566925034702507,
+          "ci95": [
+            4.458455822072418,
+            4.677647499209082
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 0.7840025611604966,
+          "ci95": [
+            0.7394552585803605,
+            0.8384689345386728
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.3078864152298653,
+          "ci95": [
+            1.2335316274145027,
+            1.3813849622105892
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 23.065239348412582,
+          "ci95": [
+            21.025953798983824,
+            24.863511269836298
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 0.9939988671838139,
+          "ci95": [
+            0.9768576510936943,
+            1.0127981869178708
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.1360380748814056,
+          "ci95": [
+            1.0962261764296022,
+            1.1647228809534391
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.1363973387597874,
+          "ci95": [
+            1.0940023076634986,
+            1.1662269093594062
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.1074938868325446,
+          "ci95": [
+            0.981172220248951,
+            1.2240533766921127
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 10000,
+      "methods": {
+        "xyz": {
+          "d": 10000,
+          "method": "xyz",
+          "config_id": "69cff5116009bf9707f8169c70e7e0769ee71011290c31d6d145173bfbf15b40",
+          "roles": [
+            "legacy-xyz",
+            "parameter-k2-ell6"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 1900,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 10000,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 5
+          },
+          "trials": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 28.55571137,
+              "ci95": [
+                28.26084390666666,
+                28.83971840666667
+              ],
+              "dataset_means": [
+                28.108366883333332,
+                28.771373599999997,
+                28.793911733333335,
+                28.91969748333333,
+                28.18520715
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.008527580133333339,
+              "ci95": [
+                0.008260588533333366,
+                0.00882332886666665
+              ],
+              "dataset_means": [
+                0.008240018000000035,
+                0.00875174633333331,
+                0.008386112666666667,
+                0.009041626666666636,
+                0.008218397000000044
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.008727875533333347,
+              "ci95": [
+                0.008454306200000043,
+                0.009031389533333333
+              ],
+              "dataset_means": [
+                0.008435913000000092,
+                0.008961684666666617,
+                0.00857762166666672,
+                0.009253116666666653,
+                0.008411041666666655
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.0001850757333333064,
+              "ci95": [
+                0.00017815266666657928,
+                0.00019205479999998923
+              ],
+              "dataset_means": [
+                0.0001808386666666273,
+                0.00019443233333330903,
+                0.00017666966666666598,
+                0.0001952853333333504,
+                0.00017815266666657928
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.97,
+            "status": "empirical_target_met",
+            "successes": 97,
+            "trials": 100,
+            "wilson95": [
+              0.9154806357094724,
+              0.9897454759759611
+            ]
+          },
+          "actual_payload_bits": 349600,
+          "communication_ratio": 1.1653333333333333
+        },
+        "iblt": {
+          "d": 10000,
+          "method": "iblt",
+          "config_id": "47e4bc1cf73b83d86012c98d5f86ba4c28fe1a36974ee3aaed0cd7909823214f",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 13128,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 10000,
+            "ell": 1,
+            "expected": 8750,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 128.04622767,
+              "ci95": [
+                126.76993569000001,
+                129.32251964999998
+              ],
+              "dataset_means": [
+                126.48794076666667,
+                129.91528971666665,
+                126.53355125,
+                127.80669441666666,
+                129.4876622
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.006692981333333343,
+              "ci95": [
+                0.006609778200000023,
+                0.006759592000000048
+              ],
+              "dataset_means": [
+                0.0067559013333333695,
+                0.006670234666666571,
+                0.006533877000000003,
+                0.006723630000000054,
+                0.006781263666666722
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.011076826466666686,
+              "ci95": [
+                0.010935095133333395,
+                0.011224616866666804
+              ],
+              "dataset_means": [
+                0.011336963666666922,
+                0.010991931333333168,
+                0.010834628000000013,
+                0.011120262000000084,
+                0.011100347333333241
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.004334952266666677,
+              "ci95": [
+                0.004265148133333311,
+                0.004438672400000095
+              ],
+              "dataset_means": [
+                0.004533371000000101,
+                0.004274698666666558,
+                0.004252078333333446,
+                0.004341170666666727,
+                0.004273442666666553
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 1.0,
+            "status": "empirical_target_met",
+            "successes": 100,
+            "trials": 100,
+            "wilson95": [
+              0.9630065017930143,
+              1.0
+            ]
+          },
+          "actual_payload_bits": 1142136,
+          "communication_ratio": 3.80712
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.483185096938774,
+          "ci95": [
+            4.41787249206886,
+            4.57529245227853
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 0.7759846159315631,
+          "ci95": [
+            0.7483202126244847,
+            0.8055912067093058
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.2503335004715068,
+          "ci95": [
+            1.2042390653579091,
+            1.2996825037571889
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 22.940034652614298,
+          "ci95": [
+            21.87614709109969,
+            24.09977203328851
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.0359689943175105,
+          "ci95": [
+            1.0040964607416532,
+            1.0685911635342198
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.1788865980909529,
+          "ci95": [
+            1.128827257281104,
+            1.228078346713207
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.1757069129606408,
+          "ci95": [
+            1.1256775123871532,
+            1.2248980129858982
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.0451858266311698,
+          "ci95": [
+            0.9931607930093006,
+            1.1078034009364075
+          ],
+          "trials": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 30000,
+      "methods": {
+        "xyz": {
+          "d": 30000,
+          "method": "xyz",
+          "config_id": "2c33cd6c57416959d9ab646d789800fdb91618018f4ba3e6d9992c175d063008",
+          "roles": [
+            "legacy-xyz"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 5580,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 30000,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 7
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 30.19788193,
+              "ci95": [
+                29.46025468,
+                30.935509179999997
+              ],
+              "dataset_means": [
+                29.273335366666664,
+                29.041342866666668,
+                31.093027383333332,
+                30.909787099999996,
+                30.671916933333332
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.026206921266666627,
+              "ci95": [
+                0.025623924266666636,
+                0.026788382266666633
+              ],
+              "dataset_means": [
+                0.026441939666666636,
+                0.025183304666666666,
+                0.02718773166666666,
+                0.02628485366666659,
+                0.025936776666666567
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.026758581733333297,
+              "ci95": [
+                0.02616773266666666,
+                0.02732486006666659
+              ],
+              "dataset_means": [
+                0.02697583900000004,
+                0.025721541333333375,
+                0.027764385999999936,
+                0.02683701966666659,
+                0.026494122666666547
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.0005102255333333231,
+              "ci95": [
+                0.000498406666666688,
+                0.0005232780666666474
+              ],
+              "dataset_means": [
+                0.0004929890000000547,
+                0.0004980250000000316,
+                0.0005344413333333206,
+                0.0005106309999999651,
+                0.0005150413333332438
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 1.0,
+            "status": "empirical_target_met",
+            "successes": 100,
+            "trials": 100,
+            "wilson95": [
+              0.9630065017930143,
+              1.0
+            ]
+          },
+          "actual_payload_bits": 1026720,
+          "communication_ratio": 1.1408
+        },
+        "iblt": {
+          "d": 30000,
+          "method": "iblt",
+          "config_id": "ed0a1a7426a0bcc5dc68244d1a2373215a4c5257314670e22574fe6426e4f1ad",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 39152,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 30000,
+            "ell": 1,
+            "expected": 26100,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 139.86068904666666,
+              "ci95": [
+                137.87323364666665,
+                141.57199408
+              ],
+              "dataset_means": [
+                139.26373143333333,
+                140.7189114,
+                142.77886451666666,
+                140.25964541666664,
+                136.28229246666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.024343278666666572,
+              "ci95": [
+                0.02337335086666658,
+                0.025754171066666543
+              ],
+              "dataset_means": [
+                0.023909536333333332,
+                0.02418144066666657,
+                0.02714680733333319,
+                0.023329616333333192,
+                0.02314899266666659
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.03752692653333331,
+              "ci95": [
+                0.0362085740000001,
+                0.03951089266666648
+              ],
+              "dataset_means": [
+                0.0366800356666667,
+                0.0372152933333334,
+                0.04145284033333304,
+                0.03651590666666656,
+                0.03577055666666684
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.013035862200000043,
+              "ci95": [
+                0.012617951266666752,
+                0.013622534599999892
+              ],
+              "dataset_means": [
+                0.012621284666666602,
+                0.012891210333333625,
+                0.014151280333333164,
+                0.013037547333333363,
+                0.012477988333333467
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 1.0,
+            "status": "empirical_target_met",
+            "successes": 100,
+            "trials": 100,
+            "wilson95": [
+              0.9630065017930143,
+              1.0
+            ]
+          },
+          "actual_payload_bits": 3406224,
+          "communication_ratio": 3.7846933333333332
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.631473471247745,
+          "ci95": [
+            4.5110775330270565,
+            4.76338117986167
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 0.9288873889062856,
+          "ci95": [
+            0.89289510223999,
+            0.9693314829090625
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.4024258425694451,
+          "ci95": [
+            1.3561162877920896,
+            1.456321205419377
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 25.549215686710642,
+          "ci95": [
+            24.811347362213716,
+            26.132383120386585
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.0084144169643756,
+          "ci95": [
+            0.9845534630639315,
+            1.034719269953743
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.1760239271549826,
+          "ci95": [
+            1.1490999436861558,
+            1.197933234132499
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.1732277086354634,
+          "ci95": [
+            1.146934319751287,
+            1.1945026982854985
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.0373306810857805,
+          "ci95": [
+            1.018989006575806,
+            1.0577232269494259
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 100000,
+      "methods": {
+        "xyz": {
+          "d": 100000,
+          "method": "xyz",
+          "config_id": "2da579635a745863421ad836515debcc936a1a8f84090fc78733881b205508c5",
+          "roles": [
+            "legacy-xyz",
+            "parameter-k2-ell6"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 18000,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 100000,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 10
+          },
+          "trials": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 35.875464236666666,
+              "ci95": [
+                35.22841417000001,
+                36.25632302
+              ],
+              "dataset_means": [
+                34.620520400000004,
+                36.13611068333333,
+                36.20041806666667,
+                36.080091583333335,
+                36.34018045
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.09179214360000003,
+              "ci95": [
+                0.08982455493333337,
+                0.09390388146666671
+              ],
+              "dataset_means": [
+                0.08935492066666677,
+                0.089471068,
+                0.09297172833333334,
+                0.0914707973333333,
+                0.09569220366666675
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.0935578901333334,
+              "ci95": [
+                0.09155702333333336,
+                0.09583345666666669
+              ],
+              "dataset_means": [
+                0.091081079,
+                0.09118980300000008,
+                0.09471502333333352,
+                0.09324335266666665,
+                0.09756019266666671
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.0016268653333333233,
+              "ci95": [
+                0.0015891874666666232,
+                0.0016789146666666827
+              ],
+              "dataset_means": [
+                0.0015886739999998827,
+                0.0015829009999999883,
+                0.0016027873333333738,
+                0.0016341103333333458,
+                0.0017258540000000266
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.94,
+            "status": "empirical_target_met",
+            "successes": 94,
+            "trials": 100,
+            "wilson95": [
+              0.8752318455410406,
+              0.9722138760368118
+            ]
+          },
+          "actual_payload_bits": 3312000,
+          "communication_ratio": 1.104
+        },
+        "iblt": {
+          "d": 100000,
+          "method": "iblt",
+          "config_id": "8eb40b36caac557eb8f06dc0da0b46491667ad0adcffd9fb0af79fab54462a4e",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 130500,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 100000,
+            "ell": 1,
+            "expected": 87000,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 146.18169559666666,
+              "ci95": [
+                144.4560059066667,
+                147.80500008999996
+              ],
+              "dataset_means": [
+                148.2900545,
+                145.60900485000002,
+                142.80888796666667,
+                148.24436078333332,
+                145.95616988333333
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.0895857007333333,
+              "ci95": [
+                0.08719956046666662,
+                0.09189770439999995
+              ],
+              "dataset_means": [
+                0.09095851633333323,
+                0.09334367599999993,
+                0.0908841373333334,
+                0.08659361800000005,
+                0.08614855599999993
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.1326124282666667,
+              "ci95": [
+                0.1296487253333334,
+                0.13557613119999995
+              ],
+              "dataset_means": [
+                0.13564300333333298,
+                0.13640220933333355,
+                0.13379023066666665,
+                0.1291183976666669,
+                0.12810830033333329
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.04238282666666666,
+              "ci95": [
+                0.04165570873333329,
+                0.04327997033333327
+              ],
+              "dataset_means": [
+                0.0440310166666665,
+                0.042421585333333546,
+                0.04226486766666667,
+                0.04188521633333334,
+                0.041311447333333216
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 1.0,
+            "status": "empirical_target_met",
+            "successes": 100,
+            "trials": 100,
+            "wilson95": [
+              0.9630065017930143,
+              1.0
+            ]
+          },
+          "actual_payload_bits": 11353504,
+          "communication_ratio": 3.7845013333333335
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.0919405277019445,
+          "ci95": [
+            3.987801735497263,
+            4.221947659129684
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 0.9760956804015811,
+          "ci95": [
+            0.9365636985051262,
+            1.0168692762304419
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.4225238028054483,
+          "ci95": [
+            1.368530115412361,
+            1.4782022835660582
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 26.448197069109515,
+          "ci95": [
+            25.627334483433387,
+            27.317235801481264
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "datasets": 4,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.0840816822169603,
+          "ci95": [
+            1.0540722661733557,
+            1.1265390437611085
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.2315711573962345,
+          "ci95": [
+            1.1993533622266004,
+            1.263419604545377
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.227888157477845,
+          "ci95": [
+            1.1959184542070145,
+            1.2598268573508395
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.0378395999177308,
+          "ci95": [
+            1.0084487599002019,
+            1.068480060324771
+          ],
+          "trials": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 200000,
+      "methods": {
+        "xyz": {
+          "d": 200000,
+          "method": "xyz",
+          "config_id": "b5ed5186f667e020630c9b8cfd24ae9c78c18a31e57bc1db285cacad1c55d46c",
+          "source_actual": {
+            "algorithm": "xyz",
+            "d": 200000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "k": 2,
+            "ell": 6,
+            "M": 36000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "a": 0.7243668166820519,
+            "z": 13,
+            "placement": "circular",
+            "q": 1,
+            "checksum": "none-q1",
+            "wire": "xyz-main-no-header-v1",
+            "bits_per_cell": 184,
+            "implementation": "legacy-xyz-parameterized-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 41.86855498666667,
+              "ci95": [
+                40.90050452333334,
+                43.01311067333334
+              ],
+              "dataset_means": [
+                40.73682381666667,
+                41.590376883333334,
+                40.71924905,
+                42.280123,
+                44.016202183333334
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.18999955660000004,
+              "ci95": [
+                0.18295331626666667,
+                0.1986820306666667
+              ],
+              "dataset_means": [
+                0.179113451,
+                0.18716973266666667,
+                0.1871012076666667,
+                0.20635689600000004,
+                0.19025649566666672
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.1936014446,
+              "ci95": [
+                0.18646714599999997,
+                0.20236538526666675
+              ],
+              "dataset_means": [
+                0.18261388366666664,
+                0.19074336599999983,
+                0.1906158773333333,
+                0.21015589433333348,
+                0.1938782016666667
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.0033182247333333114,
+              "ci95": [
+                0.0032407813999999627,
+                0.0034176885999999866
+              ],
+              "dataset_means": [
+                0.0032206596666666254,
+                0.003290807666666673,
+                0.003235889999999945,
+                0.003504393333333337,
+                0.003339372999999979
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 100000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 6624000,
+          "communication_ratio": 1.104
+        },
+        "iblt": {
+          "d": 200000,
+          "method": "iblt",
+          "config_id": "365b92d5efd8214e7225dc396ac616d05c5d093a8e871f809f24bece5c188e6f",
+          "source_actual": {
+            "algorithm": "external_iblt",
+            "d": 200000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "implementation": "legacy-external_iblt-v4",
+            "expected": 174000,
+            "M": 261000,
+            "k": 4,
+            "ell": 1,
+            "a": 0,
+            "z": 0,
+            "placement": "legacy-four-partitions",
+            "checksum": "MurmurHash3-11-u64le-32",
+            "bits_per_cell": 87,
+            "wire": "canonical-25-30-32-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 168.23900082333336,
+              "ci95": [
+                161.87964299,
+                178.07960469
+              ],
+              "dataset_means": [
+                166.5294912,
+                160.08081803333334,
+                164.05176095,
+                162.62626965,
+                187.90666428333333
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.20871560346666662,
+              "ci95": [
+                0.20042667860000002,
+                0.21874043259999998
+              ],
+              "dataset_means": [
+                0.19853336133333332,
+                0.20443575099999967,
+                0.2003154596666669,
+                0.21374681633333337,
+                0.22654662899999986
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.2931627126666668,
+              "ci95": [
+                0.2829235920666669,
+                0.3058140566000002
+              ],
+              "dataset_means": [
+                0.2810635226666669,
+                0.2870684269999999,
+                0.2827112440000003,
+                0.29845217433333343,
+                0.31651819533333353
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.08315439340000007,
+              "ci95": [
+                0.08121851420000005,
+                0.08609087280000005
+              ],
+              "dataset_means": [
+                0.0812471273333335,
+                0.08135951500000023,
+                0.08111940066666652,
+                0.08340140433333332,
+                0.08864451966666682
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 100000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 22707000,
+          "communication_ratio": 3.7845
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.018266235290667,
+          "ci95": [
+            3.883070949553375,
+            4.153128627266467
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.0985057397058504,
+          "ci95": [
+            1.057077932489824,
+            1.1510212984795511
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.5142589109929958,
+          "ci95": [
+            1.4564575516459803,
+            1.5778431259335648
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 25.059904039853144,
+          "ci95": [
+            24.28283695300639,
+            25.925645850504345
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "source": "two extra points, fixed inherited resources; no new operating-point calibration"
+    },
+    {
+      "d": 300000,
+      "methods": {
+        "xyz": {
+          "d": 300000,
+          "method": "xyz",
+          "config_id": "a0ec1cf2647d6f1e8f1fa6baafec4df1c8fdf83cc8de3913850ae9810a834d72",
+          "roles": [
+            "legacy-xyz"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 53400,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 300000,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 14
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 43.672650266666665,
+              "ci95": [
+                42.713279359999994,
+                44.70692428333333
+              ],
+              "dataset_means": [
+                44.330506383333336,
+                45.46356478333333,
+                42.53480101666666,
+                43.57196353333334,
+                42.46241561666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.28307992993333336,
+              "ci95": [
+                0.2803169215333333,
+                0.28792475333333345
+              ],
+              "dataset_means": [
+                0.2927534373333334,
+                0.28120904,
+                0.2812487400000001,
+                0.28011471466666676,
+                0.2800737176666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.28849444920000006,
+              "ci95": [
+                0.2856356832666668,
+                0.29345318613333343
+              ],
+              "dataset_means": [
+                0.2983801110000001,
+                0.2867473953333332,
+                0.2865110630000001,
+                0.28545547433333346,
+                0.28537820233333333
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.004869192999999964,
+              "ci95": [
+                0.004751911266666623,
+                0.004990067666666631
+              ],
+              "dataset_means": [
+                0.005063965999999957,
+                0.005000645999999979,
+                0.0047204089999999255,
+                0.004803149666666655,
+                0.0047577943333333055
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.99,
+            "status": "empirical_target_met",
+            "successes": 99,
+            "trials": 100,
+            "wilson95": [
+              0.9455138038212946,
+              0.9982325679358593
+            ]
+          },
+          "actual_payload_bits": 9825600,
+          "communication_ratio": 1.0917333333333332
+        },
+        "iblt": {
+          "d": 300000,
+          "method": "iblt",
+          "config_id": "6a3c1a7fc131dc4ecbe9982f821ab2ef294cb57087b35902c5f715f9fe35638c",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 389252,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 300000,
+            "ell": 1,
+            "expected": 259500,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 193.75881053999998,
+              "ci95": [
+                184.24520572,
+                208.98797328999999
+              ],
+              "dataset_means": [
+                223.15665875,
+                184.88583723333335,
+                187.7349451,
+                181.85970451666668,
+                191.1569071
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.4232299284000002,
+              "ci95": [
+                0.3985180042666667,
+                0.4453795037333335
+              ],
+              "dataset_means": [
+                0.438716990666667,
+                0.3987988586666666,
+                0.4401605766666667,
+                0.45392968733333355,
+                0.38454352866666675
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.5483541794666669,
+              "ci95": [
+                0.5226699412000004,
+                0.5718791302666669
+              ],
+              "dataset_means": [
+                0.5671339560000002,
+                0.5221995869999999,
+                0.563736194,
+                0.580695772666667,
+                0.5080053876666675
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.12320095839999994,
+              "ci95": [
+                0.12156395873333334,
+                0.12516649646666658
+              ],
+              "dataset_means": [
+                0.12650077333333312,
+                0.12152969399999976,
+                0.1216441623333333,
+                0.12477204066666658,
+                0.12155812166666695
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 0.97,
+            "status": "empirical_target_met",
+            "successes": 97,
+            "trials": 100,
+            "wilson95": [
+              0.9154806357094724,
+              0.9897454759759611
+            ]
+          },
+          "actual_payload_bits": 33864928,
+          "communication_ratio": 3.7627697777777778
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 4.436616723668067,
+          "ci95": [
+            4.1707263876285365,
+            4.759649867700904
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.4950898444113392,
+          "ci95": [
+            1.4169256771096475,
+            1.573245099383271
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.9007442985030119,
+          "ci95": [
+            1.8213551125627772,
+            1.9801509947461462
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 25.30213084591242,
+          "ci95": [
+            24.72066005406573,
+            25.80940170120376
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.0171897086334218,
+          "ci95": [
+            0.9954876710030407,
+            1.0457000828456309
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.2360781581456701,
+          "ci95": [
+            1.2102200185006093,
+            1.2561919956293246
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.2320276335262448,
+          "ci95": [
+            1.2058482525320238,
+            1.2517184359613482
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.0201987064386404,
+          "ci95": [
+            1.0048905151526917,
+            1.0372999021296143
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    },
+    {
+      "d": 500000,
+      "methods": {
+        "xyz": {
+          "d": 500000,
+          "method": "xyz",
+          "config_id": "d5eb61d071d84aa0c9865ce93f9750f26875c66d8cc321ae475d7117065e8b3c",
+          "source_actual": {
+            "algorithm": "xyz",
+            "d": 500000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "k": 2,
+            "ell": 6,
+            "M": 89000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "a": 0.7243668166820519,
+            "z": 17,
+            "placement": "circular",
+            "q": 1,
+            "checksum": "none-q1",
+            "wire": "xyz-main-no-header-v1",
+            "bits_per_cell": 184,
+            "implementation": "legacy-xyz-parameterized-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 45.618608009999996,
+              "ci95": [
+                45.42222007,
+                45.82364150666667
+              ],
+              "dataset_means": [
+                45.48856096666667,
+                45.57271016666666,
+                45.99092906666667,
+                45.74999008333334,
+                45.29084976666667
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.4825685830666666,
+              "ci95": [
+                0.4683259574666666,
+                0.49625667233333337
+              ],
+              "dataset_means": [
+                0.48802498233333336,
+                0.4906634986666667,
+                0.4667999706666666,
+                0.5059656909999999,
+                0.4613887726666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 0.4917995609333333,
+              "ci95": [
+                0.4773726906666666,
+                0.5055946585333333
+              ],
+              "dataset_means": [
+                0.49765977200000006,
+                0.4996447263333334,
+                0.475662545,
+                0.515512034,
+                0.47051872733333316
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.008294092466666658,
+              "ci95": [
+                0.008035600199999996,
+                0.00855258473333332
+              ],
+              "dataset_means": [
+                0.008674975000000066,
+                0.008039324666666644,
+                0.007938950666666722,
+                0.00859576166666661,
+                0.00822145033333325
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 300000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 16376000,
+          "communication_ratio": 1.0917333333333332
+        },
+        "iblt": {
+          "d": 500000,
+          "method": "iblt",
+          "config_id": "3021ee594af51eef564d628284a4b9fefa0d56cff19d48842209d77334c34034",
+          "source_actual": {
+            "algorithm": "external_iblt",
+            "d": 500000,
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "field": 998244353,
+            "rng_scheme": "actual-config-v1",
+            "implementation": "legacy-external_iblt-v4",
+            "expected": 432500,
+            "M": 648752,
+            "k": 4,
+            "ell": 1,
+            "a": 0,
+            "z": 0,
+            "placement": "legacy-four-partitions",
+            "checksum": "MurmurHash3-11-u64le-32",
+            "bits_per_cell": 87,
+            "wire": "canonical-25-30-32-v1"
+          },
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 268.0332873033334,
+              "ci95": [
+                257.36396766666667,
+                282.9463397433334
+              ],
+              "dataset_means": [
+                259.3839086,
+                256.96338306666667,
+                256.7545818,
+                295.45627693333336,
+                271.60828611666665
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.7996417152666668,
+              "ci95": [
+                0.7795550098666667,
+                0.8248241175333335
+              ],
+              "dataset_means": [
+                0.7674898526666668,
+                0.7871729070000001,
+                0.814170589666667,
+                0.8409256970000003,
+                0.7884495299999997
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 1.0082726044,
+              "ci95": [
+                0.9863428216000001,
+                1.0349211582666673
+              ],
+              "dataset_means": [
+                0.9754900136666667,
+                0.9920762580000003,
+                1.0201754200000008,
+                1.0570397656666668,
+                0.9965815646666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.20534718166666668,
+              "ci95": [
+                0.20252786680000007,
+                0.20913491619999997
+              ],
+              "dataset_means": [
+                0.2047278343333332,
+                0.2016883106666668,
+                0.20271066266666674,
+                0.2127453613333333,
+                0.20486373933333338
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "main_curve": true,
+          "parameter_source": {
+            "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
+            "left_d": 300000,
+            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
+          },
+          "inherited_reliability": null,
+          "actual_payload_bits": 56441424,
+          "communication_ratio": 3.7627616
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 5.875525339233897,
+          "ci95": [
+            5.628743141870459,
+            6.190525843307617
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.6570529937631615,
+          "ci95": [
+            1.6036141831598183,
+            1.7127765239975898
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 2.050169793739767,
+          "ci95": [
+            1.9888173709592492,
+            2.114127446712294
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 24.75824600363955,
+          "ci95": [
+            24.139024611156902,
+            25.264761651338933
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "source": "two extra points, fixed inherited resources; no new operating-point calibration"
+    },
+    {
+      "d": 1000000,
+      "methods": {
+        "xyz": {
+          "d": 1000000,
+          "method": "xyz",
+          "config_id": "87481969e1d8335e412dcd549858eab8e4f351cfc5aaf2f57bf6bcddc5c68400",
+          "roles": [
+            "legacy-xyz"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 176000,
+            "a": 0.7243668166820519,
+            "algorithm": "xyz",
+            "bits_per_cell": 184,
+            "checksum": "none-q1",
+            "d": 1000000,
+            "ell": 6,
+            "field": 998244353,
+            "implementation": "legacy-xyz-parameterized-v1",
+            "k": 2,
+            "placement": "circular",
+            "q": 1,
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "xyz-main-no-header-v1",
+            "z": 21
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 52.50316413666667,
+              "ci95": [
+                50.91032812,
+                54.35600388333334
+              ],
+              "dataset_means": [
+                52.78467978333333,
+                49.67363808333334,
+                52.746046566666664,
+                55.8612583,
+                51.450197949999996
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 0.9907254700666666,
+              "ci95": [
+                0.9807905803333332,
+                0.9994075243999999
+              ],
+              "dataset_means": [
+                0.9865717393333333,
+                1.0045836479999999,
+                0.9724388529999999,
+                0.9933181713333332,
+                0.9967149386666666
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 1.0086135806,
+              "ci95": [
+                0.9990266476,
+                1.0169264710666668
+              ],
+              "dataset_means": [
+                1.0044713046666667,
+                1.0220224863333331,
+                0.9908596619999999,
+                1.0116208583333333,
+                1.0140935916666667
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.016029946399999995,
+              "ci95": [
+                0.015677724466666643,
+                0.01638216833333335
+              ],
+              "dataset_means": [
+                0.01604221566666671,
+                0.015624329999999928,
+                0.016517657333333362,
+                0.01641665566666665,
+                0.015548873333333324
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 1.0,
+            "status": "empirical_target_met",
+            "successes": 100,
+            "trials": 100,
+            "wilson95": [
+              0.9630065017930143,
+              1.0
+            ]
+          },
+          "actual_payload_bits": 32384000,
+          "communication_ratio": 1.0794666666666666
+        },
+        "iblt": {
+          "d": 1000000,
+          "method": "iblt",
+          "config_id": "eece01052cbc709ee4405d4956ea6719c4496f0dd7303039436253de450626b6",
+          "roles": [
+            "legacy-external_iblt"
+          ],
+          "main_curve": true,
+          "source_actual": {
+            "M": 1297500,
+            "a": 0,
+            "algorithm": "external_iblt",
+            "bits_per_cell": 87,
+            "checksum": "MurmurHash3-11-u64le-32",
+            "d": 1000000,
+            "ell": 1,
+            "expected": 865000,
+            "field": 998244353,
+            "implementation": "legacy-external_iblt-v4",
+            "k": 4,
+            "placement": "legacy-four-partitions",
+            "rng_scheme": "actual-config-v1",
+            "target_nA": 10000000,
+            "target_nB": 10000000,
+            "wire": "canonical-25-30-32-v1",
+            "z": 0
+          },
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "runs": 15,
+          "successes": 15,
+          "valid_runs": 15,
+          "status": "complete",
+          "metrics": {
+            "update_ns_per_input": {
+              "mean": 372.27226073,
+              "ci95": [
+                363.61218901666666,
+                381.09790036333334
+              ],
+              "dataset_means": [
+                386.95401998333335,
+                362.8339674333334,
+                367.1666733833334,
+                381.7934744333333,
+                362.61316841666667
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "receiver_s": {
+              "mean": 1.8486481112666666,
+              "ci95": [
+                1.7972415342000008,
+                1.8910408756666666
+              ],
+              "dataset_means": [
+                1.8700488530000001,
+                1.8159922666666664,
+                1.7646216740000014,
+                1.9162273803333332,
+                1.8763503823333334
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "full_decode_s": {
+              "mean": 2.2671177404,
+              "ci95": [
+                2.2172822448666674,
+                2.315277273399999
+              ],
+              "dataset_means": [
+                2.316957525999999,
+                2.2172201983333335,
+                2.1840778333333346,
+                2.3251381706666656,
+                2.2921949736666662
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            },
+            "sender_s": {
+              "mean": 0.411943282733333,
+              "ci95": [
+                0.4000209081333333,
+                0.42699624613333287
+              ],
+              "dataset_means": [
+                0.43980699666666584,
+                0.3948480999999999,
+                0.4131045463333341,
+                0.40245569433333256,
+                0.4095010763333331
+              ],
+              "datasets": 5,
+              "resampling_unit": "dataset_mean",
+              "bootstrap_repetitions": 10000
+            }
+          },
+          "inherited_reliability": {
+            "passing": true,
+            "rate": 1.0,
+            "status": "empirical_target_met",
+            "successes": 100,
+            "trials": 100,
+            "wilson95": [
+              0.9630065017930143,
+              1.0
+            ]
+          },
+          "actual_payload_bits": 112882504,
+          "communication_ratio": 3.7627501333333333
+        }
+      },
+      "paired": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 7.090472866758444,
+          "ci95": [
+            6.925110438144736,
+            7.263767767831439
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.8659539570959751,
+          "ci95": [
+            1.8254931307474536,
+            1.9063679690039659
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 2.247756508544477,
+          "ci95": [
+            2.20140950058991,
+            2.2940445524159254
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 25.698356841251396,
+          "ci95": [
+            24.86065889343043,
+            26.611560168706873
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      },
+      "v10_comparison": {
+        "update_ns_per_input": {
+          "speedup_baseline_over_xyz": 1.2445423178035366,
+          "ci95": [
+            1.1367636904034084,
+            1.3469355003598376
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "receiver_s": {
+          "speedup_baseline_over_xyz": 1.2257712239748402,
+          "ci95": [
+            1.1936447584469037,
+            1.2532171670714773
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "full_decode_s": {
+          "speedup_baseline_over_xyz": 1.222320723727126,
+          "ci95": [
+            1.1904311906407634,
+            1.250136458023049
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        },
+        "sender_s": {
+          "speedup_baseline_over_xyz": 1.0308612884694373,
+          "ci95": [
+            0.985891663821875,
+            1.0846006574125082
+          ],
+          "trials": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "datasets": 5,
+          "resampling_unit": "matched_dataset_pair",
+          "bootstrap_repetitions": 10000
+        }
+      }
+    }
+  ],
+  "total_recorded_runs_including_prior": 540,
+  "pairing": "new points: all five original predetermined datasets paired; old nine points retain their original 42 pairs",
+  "reliability": "new points have 15 successful timing runs/method, not independent calibrated 90-percent operating points"
+}

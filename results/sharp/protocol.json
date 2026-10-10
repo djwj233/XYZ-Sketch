@@ -1,0 +1,45 @@
+{
+  "d": 10000,
+  "set_size_per_side": 10000000,
+  "k": 2,
+  "ell": 6,
+  "field": "GF(2^30)",
+  "q": 1,
+  "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
+  "modes": [
+    "iid",
+    "naive",
+    "circular"
+  ],
+  "trials": 100,
+  "profile": {
+    "a": 0.7243668166820519,
+    "gamma": 0.9,
+    "C": 0.875,
+    "D": 1.1884504306083168,
+    "delta": 0.1
+  },
+  "coarse_R_grid": "1.00..1.34 step .02",
+  "refine_rule": "R values at .002 spacing within .022 of first coarse R with success>=.5, clipped to [1,1.34]; combine all measured points",
+  "dataset": "100 independent full set pairs, shared across modes and M, fixed named seed domain sharp-gf230-d10000-N10000000",
+  "communication": "Actual v15 packed 184-bit cell message, byte padding included, no synthetic header",
+  "same_core_as_v15": true,
+  "workers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ]
+}

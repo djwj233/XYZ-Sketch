@@ -1,4 +1,11 @@
-build/
-*.o
-*.a
-*.so
+results/build/
+results/runs/
+results/inputs/
+__pycache__/
+*.pyc
+results/reference/threshold/trials.jsonl
+scripts/protocols/figure1a/
+scripts/protocols/figure1bc/*
+!scripts/protocols/figure1bc/__init__.py
+!scripts/protocols/figure1bc/constants.py
+!scripts/protocols/figure1bc/relative.py

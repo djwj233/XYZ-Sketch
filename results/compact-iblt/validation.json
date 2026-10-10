@@ -1,0 +1,24 @@
+{
+  "source_hashes_unchanged": true,
+  "full_datasets": 90,
+  "paired_repetitions": 270,
+  "snapshot_identity": true,
+  "historical_messages_and_outputs_identical": true,
+  "unit_tests": "Passed before measurements: 480 random/boundary snapshots, malformed inputs, full int32 range, signed peeling for both placements",
+  "compiler": "g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0",
+  "sha256": {
+    "engine": "4f87659b6b74b1f7d4980ab625c1dd8d00b34fcaf54975fd94d8f368732e4d61",
+    "test": "56f3f7f557efa9f2e3f53a266a426254bca5342d5bb2bd327bcf86b78ddbf405",
+    "run_measurements.py": "e2d69244d1bffe022d6c4a72340f16ec7f22f55bcfab0caafc931b8d61f26a7d",
+    "src/LICENSE": "724612b942d26da1781328b7960462764b54d2750b44b07a8e9d9954dace276e",
+    "src/iblt.h": "baa246aa31d9cc404758921408c2194b6694d1c3b4720b41e6b69e9e1087039e",
+    "src/iblt.cpp": "287d1d4e8124ca26852e8a85009f40dc54e7f7d4284682ea46f7a869ead5fd82",
+    "src/engine.cpp": "68ca0a81f4c24111ee39cb62bcbdfc95dc6a7f86d247eb2809355e4d64ac8e7e",
+    "src/test.cpp": "6421b1e89ae01d1d6feb860aa915b9485822428974db1868dae014db36f871f7",
+    "src/murmurhash3.cpp": "d4e10101ea24cf75f4fe10720b0d5dd341ea23c28764053122b642fac2d17a00",
+    "src/COPYING": "64ce19f457f71f754d9f44c25020c08d045c9c6d8536711e29b6f5fa1b75fb8a",
+    "src/murmurhash3.h": "e89a3600b8639d6e4735f81ce5555caeb11eaa9616968284d918987cf3717521",
+    "src/common.hpp": "5ade68c39f33613d85534296587f16503f88d5c0c40785e2c445d0fa8786e804",
+    "src/compact_count.cpp": "0a94ce82449efb4fc5ecd062a7c50b10432911a208933fb0e85b5c3df268d95b"
+  }
+}

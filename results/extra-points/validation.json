@@ -1,0 +1,9 @@
+{
+  "runs": 60,
+  "all_success": true,
+  "all_validation_passed": true,
+  "old_files_preserved": true,
+  "source_frozen": true,
+  "new_probability_calibration": false,
+  "all_original_records_retained": true
+}

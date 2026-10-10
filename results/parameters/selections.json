@@ -1,0 +1,170 @@
+[
+  {
+    "config": {
+      "actual": {
+        "algorithm": "xyz",
+        "d": 100000,
+        "target_nA": 10000000,
+        "target_nB": 10000000,
+        "k": 2,
+        "ell": 8,
+        "M": 13600,
+        "field": 1073741824,
+        "rng_scheme": "actual-config-v1",
+        "a": 0.7004701007006837,
+        "z": 10,
+        "placement": "circular",
+        "q": 1,
+        "checksum": "none-q1",
+        "wire": "xyz-main-no-header-v1",
+        "bits_per_cell": 245,
+        "implementation": "frozen-v15-cli-ell10-extension"
+      },
+      "config_id": "9f327081f62ff17640080a65eb4eb64dc874e7f0aa98efa6eb4b8ae9b3853495",
+      "aliases": [
+        {
+          "alpha": null,
+          "z_raw": 9.617206306648269
+        }
+      ]
+    },
+    "evaluation": {
+      "status": "empirical_target_met",
+      "successes": 100,
+      "trials": 100,
+      "rate": 1.0,
+      "wilson95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "passing": true
+    },
+    "evaluation_epoch": 0
+  },
+  {
+    "config": {
+      "actual": {
+        "algorithm": "xyz",
+        "d": 100000,
+        "target_nA": 10000000,
+        "target_nB": 10000000,
+        "k": 2,
+        "ell": 10,
+        "M": 10800,
+        "field": 1073741824,
+        "rng_scheme": "actual-config-v1",
+        "a": 0.682313798683261,
+        "z": 9,
+        "placement": "circular",
+        "q": 1,
+        "checksum": "none-q1",
+        "wire": "xyz-main-no-header-v1",
+        "bits_per_cell": 305,
+        "implementation": "frozen-v15-cli-ell10-extension"
+      },
+      "config_id": "6902d495f64ba2592dca16940f980f555358002ea644815f124eab72ce5b646d",
+      "aliases": [
+        {
+          "alpha": null,
+          "z_raw": 9.262239266924652
+        }
+      ]
+    },
+    "evaluation": {
+      "status": "empirical_target_met",
+      "successes": 94,
+      "trials": 100,
+      "rate": 0.94,
+      "wilson95": [
+        0.8752318455410406,
+        0.9722138760368118
+      ],
+      "passing": true
+    },
+    "evaluation_epoch": 0
+  },
+  {
+    "config": {
+      "actual": {
+        "algorithm": "xyz",
+        "d": 100000,
+        "target_nA": 10000000,
+        "target_nB": 10000000,
+        "k": 3,
+        "ell": 8,
+        "M": 14000,
+        "field": 1073741824,
+        "rng_scheme": "actual-config-v1",
+        "a": 0.5265703116367059,
+        "z": 13,
+        "placement": "circular",
+        "q": 1,
+        "checksum": "none-q1",
+        "wire": "xyz-main-no-header-v1",
+        "bits_per_cell": 245,
+        "implementation": "frozen-v15-cli-ell10-extension"
+      },
+      "config_id": "045bd0d4a43d95be6062afe8811281420b0529eef5552ada64f1982f68273b4c",
+      "aliases": [
+        {
+          "alpha": null,
+          "z_raw": 13.176159612323278
+        }
+      ]
+    },
+    "evaluation": {
+      "status": "empirical_target_met",
+      "successes": 97,
+      "trials": 100,
+      "rate": 0.97,
+      "wilson95": [
+        0.9154806357094724,
+        0.9897454759759611
+      ],
+      "passing": true
+    },
+    "evaluation_epoch": 0
+  },
+  {
+    "config": {
+      "actual": {
+        "algorithm": "xyz",
+        "d": 100000,
+        "target_nA": 10000000,
+        "target_nB": 10000000,
+        "k": 3,
+        "ell": 10,
+        "M": 11200,
+        "field": 1073741824,
+        "rng_scheme": "actual-config-v1",
+        "a": 0.5055897819888198,
+        "z": 13,
+        "placement": "circular",
+        "q": 1,
+        "checksum": "none-q1",
+        "wire": "xyz-main-no-header-v1",
+        "bits_per_cell": 305,
+        "implementation": "frozen-v15-cli-ell10-extension"
+      },
+      "config_id": "9a897c6cb25a79478227e7f3e26e4214d54d76f2ed8f19c1c542b41a48f2faa3",
+      "aliases": [
+        {
+          "alpha": null,
+          "z_raw": 12.590417806221623
+        }
+      ]
+    },
+    "evaluation": {
+      "status": "below_target_uncertain",
+      "successes": 89,
+      "trials": 100,
+      "rate": 0.89,
+      "wilson95": [
+        0.8136870349691969,
+        0.9374580364293543
+      ],
+      "passing": false
+    },
+    "evaluation_epoch": 0
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "retained_measurements_replayed": 1035,
+  "groups": 18,
+  "communication_samples_per_scale": 100,
+  "timing_samples_per_scale": 15,
+  "timing_dataset_means_per_scale": 5,
+  "new_measurements": false,
+  "communication_and_timing_cohorts_separate": true
+}

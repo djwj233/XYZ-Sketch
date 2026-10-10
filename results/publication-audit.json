@@ -1,0 +1,15 @@
+{
+  "tracked_files": 417,
+  "tracked_bytes": 157544664,
+  "max_file_bytes": 17186739,
+  "secret_pattern_hits": 0,
+  "raw_inputs_in_git": false,
+  "top_level": [
+    ".gitignore",
+    "OPTIMIZATIONS.md",
+    "README.md",
+    "algorithms",
+    "results",
+    "scripts"
+  ]
+}

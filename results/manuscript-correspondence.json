@@ -1,0 +1,106 @@
+{
+  "manuscript": {
+    "local_filename": "定稿.pdf",
+    "pages": 53,
+    "bytes": 1193912,
+    "sha256": "ac64b36a8e696160c0424ee18aab6e42bc5644bb8082b4339d8c6ae1d324d97b",
+    "field": "GF(2^30)",
+    "C": 0.875,
+    "D": 1.1884504306083168
+  },
+  "entry": "python3 scripts/reproduce.py <command>",
+  "results": {
+    "Figure 2(a)": {
+      "command": "optimized-sharp --workers 8",
+      "data": "results/sharp/",
+      "plot": "optimized/sharp-threshold"
+    },
+    "Figure 2(b,c)": {
+      "command": "optimized-parameters",
+      "data": [
+        "results/optimized/",
+        "results/parameters/"
+      ],
+      "plots": [
+        "optimized/parameters-update_ns_per_input",
+        "optimized/parameters-full_decode_s"
+      ]
+    },
+    "Figure 2(d)": {
+      "command": "paper-heatmaps",
+      "data": "results/reference/heatmaps.csv",
+      "plot": "paper/figure1c",
+      "panel": {
+        "d": 10000,
+        "M": 1948
+      }
+    },
+    "Figure 2(e)": {
+      "command": "main-comparison",
+      "plot": "optimized/figure2e-communication-breakdown",
+      "methods": [
+        "XYZ",
+        "IBLT+SC",
+        "IBLT"
+      ]
+    },
+    "Figure 2(f,g,h)": {
+      "command": "main-comparison",
+      "plots": [
+        "optimized/communication",
+        "optimized/update",
+        "optimized/decode"
+      ],
+      "methods": [
+        "XYZ",
+        "MiniSketch",
+        "IBLT",
+        "CPISync",
+        "IBLT+SC",
+        "Rateless"
+      ]
+    },
+    "Figure 3": {
+      "command": "paper-heatmaps",
+      "data": "results/reference/heatmaps.csv",
+      "plot": "optimized/supplementary-heatmaps",
+      "panels": [
+        [
+          3000,
+          596
+        ],
+        [
+          3000,
+          621
+        ],
+        [
+          100000,
+          18155
+        ],
+        [
+          100000,
+          18940
+        ]
+      ]
+    },
+    "Figure 4": {
+      "command": "fingerprint --workers 8",
+      "data": "results/fingerprint/",
+      "plot": "optimized/fingerprint-two-scales"
+    },
+    "Tables 3,4": {
+      "command": "threshold-tables",
+      "data": "results/threshold-tables/"
+    },
+    "C,D parameter fit": {
+      "command": "heuristic-calibration",
+      "data": "results/calibration/"
+    },
+    "Figure 1": {
+      "type": "conceptual diagram, not an empirical measurement"
+    },
+    "Tables 1,2": {
+      "type": "analytical bounds and notation, not empirical measurements"
+    }
+  }
+}

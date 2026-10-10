@@ -1,0 +1,888 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "verify"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"source_hashes_verified\": true,\n  \"input_manifest_entries\": 2862,\n  \"campaign_jobs\": {\n    \"optimized-parameters\": 301,\n    \"fingerprint-100000\": 100,\n    \"rateless\": 945,\n    \"reference-comparison\": 1428,\n    \"optimized-sharp\": 11700,\n    \"optimized-comparison\": 270,\n    \"fingerprint-1000000\": 100,\n    \"compact-baselines\": 90,\n    \"paper-comparison\": 3347\n  },\n  \"rateless_accounting_rows\": 1035,\n  \"fingerprint_observations\": 5400,\n  \"formal_campaigns_rerun\": false\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.4140680367127061
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "threshold-tables"
+      ],
+      "returncode": 0,
+      "stdout": "wrote /root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223022-threshold-tables-380ecd/thresholds.json\n/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223022-threshold-tables-380ecd\n",
+      "stderr": "",
+      "wall_seconds": 0.16211545560508966
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "xyz"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz\n",
+      "stderr": "",
+      "wall_seconds": 5.745541526935995
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "xyz-ell10"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz-ell10\n",
+      "stderr": "",
+      "wall_seconds": 5.230493507348001
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "dataset"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/dataset\n",
+      "stderr": "",
+      "wall_seconds": 1.2113201236352324
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "prime-threshold"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/prime-threshold\n",
+      "stderr": "",
+      "wall_seconds": 4.349039015360177
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "ideal-cell"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/ideal-cell\n",
+      "stderr": "",
+      "wall_seconds": 1.177375908009708
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "iblt"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt\n",
+      "stderr": "",
+      "wall_seconds": 2.120162345468998
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "iblt-sc"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt-sc\n",
+      "stderr": "",
+      "wall_seconds": 2.0340408282354474
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "minisketch"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/minisketch\n",
+      "stderr": "",
+      "wall_seconds": 4.431108117103577
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "cpisync"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/cpisync\n",
+      "stderr": "",
+      "wall_seconds": 9.413270000368357
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "fingerprint-100000"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/fingerprint-100000\n",
+      "stderr": "",
+      "wall_seconds": 2.249831324443221
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "fingerprint-1000000"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/fingerprint-1000000\n",
+      "stderr": "",
+      "wall_seconds": 2.1515621403232217
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "paper-xyz"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-xyz\n",
+      "stderr": "",
+      "wall_seconds": 3.911307893693447
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "paper-minisketch"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-minisketch\n",
+      "stderr": "",
+      "wall_seconds": 4.325708351098001
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "paper-cpisync"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-cpisync\n",
+      "stderr": "",
+      "wall_seconds": 9.411973614245653
+    },
+    {
+      "command": [
+        "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "stdout": "{\"protocol\":\"figure2-engine-v2\",\"algorithm\":\"xyz-gf230\",\"golden_total_bits\":368,\"malformed_state_rejected\":true,\"passed\":true}\n",
+      "stderr": "",
+      "wall_seconds": 0.022631782107055187
+    },
+    {
+      "command": [
+        "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz-ell10",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "stdout": "{\"protocol\":\"figure2-engine-v2\",\"algorithm\":\"xyz-gf230\",\"golden_total_bits\":368,\"malformed_state_rejected\":true,\"passed\":true}\n",
+      "stderr": "",
+      "wall_seconds": 0.005068210884928703
+    },
+    {
+      "command": [
+        "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/prime-threshold",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "stdout": "{\"protocol\":\"figure1a-engine-v1\",\"residual_equivalence\":true,\"golden_accounting\":true}\n",
+      "stderr": "",
+      "wall_seconds": 0.20952913630753756
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "optimized-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "xyz"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223123-optimized-comparison-c9ac3f\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 1.4237926928326488
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "reference-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "xyz-prime"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223125-reference-comparison-af53bd\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 6.577751471661031
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "optimized-sharp",
+        "--d",
+        "10000",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223134-optimized-sharp-492aa5\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 1.6448963973671198
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "optimized-parameters",
+        "--d",
+        "100000",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "xyz-ell10"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223434-optimized-parameters-834d4f\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 2.4270823430269957
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-heatmaps",
+        "--d",
+        "300",
+        "--limit",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223436-paper-heatmaps-c5819f\n",
+      "stderr": "",
+      "wall_seconds": 0.11216252483427525
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-threshold",
+        "--limit",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223436-paper-threshold-290e40\n",
+      "stderr": "",
+      "wall_seconds": 49.72878158092499
+    },
+    {
+      "command": [
+        "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/.venv-plot/bin/python",
+        "scripts/reproduce.py",
+        "figures"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223526-figures-19a967\n",
+      "stderr": "",
+      "wall_seconds": 20.444936727173626
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "rateless"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless\n",
+      "stderr": "",
+      "wall_seconds": 0.07481109444051981
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "rateless-fixed"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless-fixed\n",
+      "stderr": "",
+      "wall_seconds": 0.09260271769016981
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "paper-rateless"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-rateless\n",
+      "stderr": "",
+      "wall_seconds": 0.06643544044345617
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "iblt-compact"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt-compact\n",
+      "stderr": "",
+      "wall_seconds": 0.07565298117697239
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "paper-iblt"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-iblt\n",
+      "stderr": "",
+      "wall_seconds": 0.08778505027294159
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "compact-baselines",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224325-compact-baselines-a349f7\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 3.4388721538707614
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "rateless",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224328-rateless-471e3e\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 31.986817439086735
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-xyz"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224400-paper-comparison-168e18\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 4.864273424260318
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-iblt"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224405-paper-comparison-4ed143\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 8.071712157689035
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-minisketch"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-396ebb\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.19333197362720966
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-cpisync"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-ce2904\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 223.7480292050168
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-rateless"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-paper-comparison-ab96aa\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.18655520863831043
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "extra-points",
+        "--d",
+        "200000",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "xyz"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-extra-points-220cd3\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 2.846778647042811
+    },
+    {
+      "command": [
+        "retained-fingerprint-output-parse",
+        "100000"
+      ],
+      "returncode": 0,
+      "rows": 27,
+      "ground_truth_exact_at_32_bits": true
+    },
+    {
+      "command": [
+        "retained-fingerprint-output-parse",
+        "1000000"
+      ],
+      "returncode": 0,
+      "rows": 27,
+      "ground_truth_exact_at_32_bits": true
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "heuristic-calibration",
+        "--smoke",
+        "--limit",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224800-heuristic-calibration-c15fcf\n",
+      "stderr": "",
+      "wall_seconds": 0.44877704232931137
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "heuristic-calibration",
+        "--dry-run"
+      ],
+      "returncode": 0,
+      "stdout": "{\"points\": 529, \"candidates\": 48200, \"trials\": 100, \"geometry_deduplication\": true}\n",
+      "stderr": "",
+      "wall_seconds": 0.2988363653421402
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "rateless-representative"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224801-rateless-representative-ce81f4\n",
+      "stderr": "",
+      "wall_seconds": 156.14054440241307
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "verify"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"source_hashes_verified\": true,\n  \"input_manifest_entries\": 2872,\n  \"campaign_jobs\": {\n    \"optimized-parameters\": 301,\n    \"fingerprint-100000\": 100,\n    \"rateless\": 945,\n    \"reference-comparison\": 1428,\n    \"optimized-sharp\": 11700,\n    \"extra-points\": 60,\n    \"optimized-comparison\": 270,\n    \"fingerprint-1000000\": 100,\n    \"compact-baselines\": 90,\n    \"paper-comparison\": 3347\n  },\n  \"rateless_accounting_rows\": 1035,\n  \"fingerprint_observations\": 5400,\n  \"formal_campaigns_rerun\": false\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.35068015940487385
+    },
+    {
+      "command": [
+        "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/.venv-plot/bin/python",
+        "scripts/reproduce.py",
+        "figures"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-225037-figures-24d3f8\n",
+      "stderr": "",
+      "wall_seconds": 18.960618735291064
+    }
+  ],
+  "final_repair_checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "rateless"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless\n",
+      "stderr": "",
+      "wall_seconds": 0.07481109444051981
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "rateless-fixed"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless-fixed\n",
+      "stderr": "",
+      "wall_seconds": 0.09260271769016981
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "paper-rateless"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-rateless\n",
+      "stderr": "",
+      "wall_seconds": 0.06643544044345617
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "iblt-compact"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt-compact\n",
+      "stderr": "",
+      "wall_seconds": 0.07565298117697239
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "paper-iblt"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-iblt\n",
+      "stderr": "",
+      "wall_seconds": 0.08778505027294159
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "compact-baselines",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224325-compact-baselines-a349f7\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 3.4388721538707614
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "rateless",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224328-rateless-471e3e\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 31.986817439086735
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-xyz"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224400-paper-comparison-168e18\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 4.864273424260318
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-iblt"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224405-paper-comparison-4ed143\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 8.071712157689035
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-minisketch"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-396ebb\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.19333197362720966
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-cpisync"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-ce2904\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 223.7480292050168
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "paper-comparison",
+        "--d",
+        "100",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "paper-rateless"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-paper-comparison-ab96aa\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.18655520863831043
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "extra-points",
+        "--d",
+        "200000",
+        "--limit",
+        "1",
+        "--data-root",
+        "/root/XYZ-Sketch-experiment",
+        "--method",
+        "xyz"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-extra-points-220cd3\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stderr": "",
+      "wall_seconds": 2.846778647042811
+    },
+    {
+      "command": [
+        "retained-fingerprint-output-parse",
+        "100000"
+      ],
+      "returncode": 0,
+      "rows": 27,
+      "ground_truth_exact_at_32_bits": true
+    },
+    {
+      "command": [
+        "retained-fingerprint-output-parse",
+        "1000000"
+      ],
+      "returncode": 0,
+      "rows": 27,
+      "ground_truth_exact_at_32_bits": true
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "heuristic-calibration",
+        "--smoke",
+        "--limit",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224800-heuristic-calibration-c15fcf\n",
+      "stderr": "",
+      "wall_seconds": 0.44877704232931137
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "heuristic-calibration",
+        "--dry-run"
+      ],
+      "returncode": 0,
+      "stdout": "{\"points\": 529, \"candidates\": 48200, \"trials\": 100, \"geometry_deduplication\": true}\n",
+      "stderr": "",
+      "wall_seconds": 0.2988363653421402
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "rateless-representative"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224801-rateless-representative-ce81f4\n",
+      "stderr": "",
+      "wall_seconds": 156.14054440241307
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "verify"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"source_hashes_verified\": true,\n  \"input_manifest_entries\": 2872,\n  \"campaign_jobs\": {\n    \"optimized-parameters\": 301,\n    \"fingerprint-100000\": 100,\n    \"rateless\": 945,\n    \"reference-comparison\": 1428,\n    \"optimized-sharp\": 11700,\n    \"extra-points\": 60,\n    \"optimized-comparison\": 270,\n    \"fingerprint-1000000\": 100,\n    \"compact-baselines\": 90,\n    \"paper-comparison\": 3347\n  },\n  \"rateless_accounting_rows\": 1035,\n  \"fingerprint_observations\": 5400,\n  \"formal_campaigns_rerun\": false\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.35068015940487385
+    },
+    {
+      "command": [
+        "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/.venv-plot/bin/python",
+        "scripts/reproduce.py",
+        "figures"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-225037-figures-24d3f8\n",
+      "stderr": "",
+      "wall_seconds": 18.960618735291064
+    }
+  ],
+  "full_formal_campaigns_rerun": false,
+  "scope": "All frozen engine builds, self-tests, representative full-input jobs, exact structural checks, representative Rateless checks, retained fingerprint outputs, all figure generation and static data accounting"
+}

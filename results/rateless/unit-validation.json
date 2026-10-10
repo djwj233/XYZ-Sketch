@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "=== RUN   TestCount\n--- PASS: TestCount (0.01s)\n=== RUN   TestHeaderFrame\n--- PASS: TestHeaderFrame (0.00s)\n=== RUN   TestIncremental\n--- PASS: TestIncremental (0.00s)\n=== RUN   TestOfficialHash\n--- PASS: TestOfficialHash (0.00s)\nPASS\nok  \tcommand-line-arguments\t0.013s\n",
+  "stderr": ""
+}

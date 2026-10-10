@@ -1,0 +1,322 @@
+{
+  "points": [
+    {
+      "algorithm": "xyz",
+      "d": 100,
+      "status": "confirmed",
+      "resource": 23,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 100,
+      "status": "confirmed",
+      "resource": 100,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 100,
+      "status": "confirmed",
+      "resource": 94,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 100,
+      "status": "confirmed",
+      "resource": 158,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 100,
+      "status": "confirmed",
+      "resource": 100,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 300,
+      "status": "confirmed",
+      "resource": 64,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 300,
+      "status": "confirmed",
+      "resource": 300,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 300,
+      "status": "confirmed",
+      "resource": 273,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 300,
+      "status": "confirmed",
+      "resource": 452,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 300,
+      "status": "confirmed",
+      "resource": 300,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 1000,
+      "status": "confirmed",
+      "resource": 204,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 1000,
+      "status": "confirmed",
+      "resource": 1000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 1000,
+      "status": "confirmed",
+      "resource": 890,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 1000,
+      "status": "confirmed",
+      "resource": 1417,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 1000,
+      "status": "confirmed",
+      "resource": 1000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 3000,
+      "status": "confirmed",
+      "resource": 594,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 3000,
+      "status": "confirmed",
+      "resource": 3000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 3000,
+      "status": "confirmed",
+      "resource": 2640,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 3000,
+      "status": "confirmed",
+      "resource": 4176,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 3000,
+      "status": "timeout",
+      "resource": 3000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 10000,
+      "status": "confirmed",
+      "resource": 1900,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 10000,
+      "status": "confirmed",
+      "resource": 10000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 10000,
+      "status": "confirmed",
+      "resource": 8750,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 10000,
+      "status": "confirmed",
+      "resource": 13743,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 10000,
+      "status": "not_run_after_resource_limit",
+      "resource": 10000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 30000,
+      "status": "confirmed",
+      "resource": 5580,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 30000,
+      "status": "not_run_after_resource_limit",
+      "resource": 30000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 30000,
+      "status": "confirmed",
+      "resource": 26100,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 30000,
+      "status": "confirmed",
+      "resource": 40875,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 30000,
+      "status": "not_run_after_resource_limit",
+      "resource": 30000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 100000,
+      "status": "confirmed",
+      "resource": 18000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 100000,
+      "status": "not_run_after_resource_limit",
+      "resource": 100000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 100000,
+      "status": "confirmed",
+      "resource": 87000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 100000,
+      "status": "confirmed",
+      "resource": 135867,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 100000,
+      "status": "not_run_after_resource_limit",
+      "resource": 100000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 300000,
+      "status": "confirmed",
+      "resource": 53400,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 300000,
+      "status": "not_run_after_resource_limit",
+      "resource": 300000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 300000,
+      "status": "confirmed",
+      "resource": 259500,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 300000,
+      "status": "confirmed",
+      "resource": 406746,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 300000,
+      "status": "not_run_after_resource_limit",
+      "resource": 300000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "xyz",
+      "d": 1000000,
+      "status": "confirmed",
+      "resource": 176000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "minisketch",
+      "d": 1000000,
+      "status": "not_run_after_resource_limit",
+      "resource": 1000000,
+      "timing_status": "not_run_not_confirmed"
+    },
+    {
+      "algorithm": "external_iblt",
+      "d": 1000000,
+      "status": "confirmed",
+      "resource": 865000,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "riblt",
+      "d": 1000000,
+      "status": "confirmed",
+      "resource": 1355552,
+      "timing_status": "complete"
+    },
+    {
+      "algorithm": "cpisync",
+      "d": 1000000,
+      "status": "not_run_after_resource_limit",
+      "resource": 1000000,
+      "timing_status": "not_run_not_confirmed"
+    }
+  ],
+  "selected_raw_rows": 3347,
+  "timing_reproduction_uses_recorded_success_and_failure_attempts": true,
+  "note": "Earlier prime-field comparison, preserved for the unoptimized implementation. This directory is not the final 53-page GF(2^30) manuscript evaluation; see results/manuscript-correspondence.json for the final-paper mapping."
+}

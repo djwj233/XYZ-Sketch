@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "verify"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"source_hashes_verified\": true,\n  \"input_manifest_entries\": 2872,\n  \"campaign_jobs\": {\n    \"optimized-parameters\": 301,\n    \"fingerprint-100000\": 100,\n    \"rateless\": 945,\n    \"reference-comparison\": 1428,\n    \"optimized-sharp\": 11700,\n    \"extra-points\": 60,\n    \"optimized-comparison\": 270,\n    \"fingerprint-1000000\": 100,\n    \"compact-baselines\": 90,\n    \"paper-comparison\": 3347\n  },\n  \"rateless_accounting_rows\": 1035,\n  \"fingerprint_observations\": 5400,\n  \"formal_campaigns_rerun\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "optimized-comparison",
+        "--d",
+        "100",
+        "--method",
+        "xyz",
+        "--smoke"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-clean-checkout-20261008/results/runs/20261008-225424-optimized-comparison-7beb31\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": true,\n  \"formal_results\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/build.py",
+        "rateless"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-clean-checkout-20261008/results/build/rateless\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/reproduce.py",
+        "heuristic-calibration",
+        "--smoke",
+        "--limit",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-clean-checkout-20261008/results/runs/20261008-225432-heuristic-calibration-e60130\n",
+      "stderr": ""
+    }
+  ],
+  "input_recreated_from_seeds": true,
+  "binary_builds_required_no_existing_build_files": true
+}

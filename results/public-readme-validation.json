@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "examples": [
+    {
+      "command": "g++ -std=c++17 -O2 -mpclmul -DXYZ_TABLE_SQUARES -DXYZ_DYNAMIC_RECON      algorithms/XYZ-Sketch-optimized/sample.cpp -o /tmp/xyz_sketch_sample      && /tmp/xyz_sketch_sample",
+      "returncode": 0,
+      "stdout": "Alice only: 2 8 9\nBob only: 12 28 39\n",
+      "stderr": "",
+      "exact_difference_verified": true
+    },
+    {
+      "command": "g++ -std=c++17 -O2 algorithms/XYZ-Sketch-unoptimized/sample.cpp      -o /tmp/xyz_sketch_unoptimized_sample      && /tmp/xyz_sketch_unoptimized_sample",
+      "returncode": 0,
+      "stdout": "A \\ B : \n2 8 9 \nB \\ A : \n12 28 39 \n",
+      "stderr": "",
+      "exact_difference_verified": true
+    }
+  ],
+  "repository_verification": {
+    "passed": true,
+    "source_hashes_verified": true,
+    "input_manifest_entries": 2872,
+    "campaign_jobs": {
+      "optimized-parameters": 301,
+      "fingerprint-100000": 100,
+      "rateless": 945,
+      "reference-comparison": 1428,
+      "optimized-sharp": 11700,
+      "fingerprint": 200,
+      "extra-points": 60,
+      "optimized-comparison": 270,
+      "fingerprint-1000000": 100,
+      "compact-baselines": 90,
+      "main-comparison": 1560,
+      "paper-comparison": 3347
+    },
+    "rateless_accounting_rows": 1035,
+    "fingerprint_observations": 5400,
+    "formal_campaigns_rerun": false
+  },
+  "algorithm_sources_unchanged_except_new_sample": true
+}

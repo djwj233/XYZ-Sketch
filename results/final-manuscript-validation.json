@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "manuscript": {
+    "local_filename": "定稿.pdf",
+    "pages": 53,
+    "bytes": 1193912,
+    "sha256": "ac64b36a8e696160c0424ee18aab6e42bc5644bb8082b4339d8c6ae1d324d97b",
+    "field": "GF(2^30)",
+    "C": 0.875,
+    "D": 1.1884504306083168
+  },
+  "checks": {
+    "verify": {
+      "passed": true,
+      "source_hashes_verified": true,
+      "input_manifest_entries": 2872,
+      "campaign_jobs": {
+        "optimized-parameters": 301,
+        "fingerprint-100000": 100,
+        "rateless": 945,
+        "reference-comparison": 1428,
+        "optimized-sharp": 11700,
+        "fingerprint": 200,
+        "extra-points": 60,
+        "optimized-comparison": 270,
+        "fingerprint-1000000": 100,
+        "compact-baselines": 90,
+        "main-comparison": 1560,
+        "paper-comparison": 3347
+      },
+      "rateless_accounting_rows": 1035,
+      "fingerprint_observations": 5400,
+      "formal_campaigns_rerun": false
+    },
+    "main-comparison": {
+      "campaign": "main-comparison",
+      "jobs": 1560,
+      "engines": [
+        "cpisync",
+        "iblt",
+        "iblt-compact",
+        "iblt-sc",
+        "minisketch",
+        "rateless",
+        "xyz"
+      ],
+      "first_job": {
+        "id": 0,
+        "engine": "iblt",
+        "args": [
+          "--run",
+          "{dataset}",
+          "865000"
+        ],
+        "dataset": "experiment/resubmission-20260922/results/formal-v1/datasets/timing_final/1000000/0.bin",
+        "d": 1000000,
+        "trial": 0,
+        "repetition": 0,
+        "timeout": 600,
+        "expected": {
+          "protocol": "figure2-engine-v2",
+          "algorithm": "external_iblt",
+          "success": true,
+          "failure": "success",
+          "logical_bits": 112882500,
+          "state_bits": 112882504,
+          "control_bits": 0,
+          "payload_bits": 112882504,
+          "update_alice": 3.7342791279999994,
+          "update_bob": 3.6618270179999994,
+          "sender": 0.45052353299999837,
+          "transfer": 0.006754959999998533,
+          "receiver": 1.7241443570000001,
+          "alice_hash": "741ddbc81576ae738d3ee93ab4bf6221dbbc8cdc57018a27306c30ff25774564",
+          "bob_hash": "a1013977c292b25b7c0bc299b159a7eb71af913ae501ed5c0ae3d4d4025cae74",
+          "residual_hash": "b5e513454ccca0cefcc06660c57df6785a5d5c1e18ff0a7b77f65d1ac51ac29f",
+          "required_symbols": -1,
+          "payload_sha256": "b2a8a67420ff6d4755888468735b498574977e485fba3a6dbfc08ddb30e67fcd",
+          "affinity": "10"
+        },
+        "config_id": "eece01052cbc709ee4405d4956ea6719c4496f0dd7303039436253de450626b6",
+        "label": "optimized-comparison",
+        "kind": "timing"
+      }
+    },
+    "fingerprint": {
+      "campaign": "fingerprint",
+      "jobs": 200,
+      "engines": [
+        "fingerprint-100000",
+        "fingerprint-1000000"
+      ],
+      "first_job": {
+        "id": 0,
+        "engine": "fingerprint-100000",
+        "args": [
+          "{dataset}"
+        ],
+        "dataset": "experiment/resubmission-20260922/results/formal-v1/datasets/evaluation_epoch0/100000/0.bin",
+        "d": 100000,
+        "trial": 0,
+        "timeout": 600,
+        "kind": "communication"
+      }
+    },
+    "figures": {
+      "assets": [
+        "paper/figure1a",
+        "paper/figure1b",
+        "paper/figure1c",
+        "paper/figure3",
+        "optimized/supplementary-heatmaps",
+        "paper/figure2a",
+        "paper/figure2b",
+        "paper/figure2c",
+        "optimized/communication",
+        "optimized/update",
+        "optimized/decode",
+        "optimized/sharp-threshold",
+        "optimized/fingerprint-two-scales",
+        "optimized/parameters-update_ns_per_input",
+        "optimized/parameters-full_decode_s",
+        "optimized/figure2e-communication-breakdown",
+        "optimized/communication-breakdown"
+      ],
+      "measured_data_only": true,
+      "all_final_paper_assets_found": true
+    }
+  },
+  "measurements_rerun": false
+}

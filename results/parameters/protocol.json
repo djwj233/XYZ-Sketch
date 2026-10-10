@@ -1,0 +1,167 @@
+{
+  "d": 100000,
+  "parameters": [
+    [
+      2,
+      8
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      10
+    ]
+  ],
+  "calibration_trials": 100,
+  "evaluation_trials": 100,
+  "timing_datasets": 5,
+  "repetitions": 3,
+  "worker_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "timing_cpu": 10,
+  "set_size": 10000000,
+  "memory_bytes": 85899345920,
+  "timeout": 600,
+  "field": "GF(2^30)",
+  "source": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/versions/v15",
+  "binary_sha256": "7bb2bae69989bdee1c54796c9f96a3a31d51cd3947f149e948141f25941f016b",
+  "source_manifest": {
+    "equivalence.cpp": "a57d71496cb00d4de96667d7715bbaaa69e6219de7154619e8a6258478ff906a",
+    "fast-equivalence.cpp": "3e9031c12041aeb6f1674d38b84f81121d3e429e3db9406e5225bf9d63c8c88b",
+    "gcd-equivalence.cpp": "499fc3a2f31d790d210ffa72a26a711a158a9e8ea5e8a78dc1f18dc5039756d0",
+    "harness/common.hpp": "4076ffb0f12f528c70d1522dd5bb85180e4637f6bebc4751323fd2c51ac0ba08",
+    "output-order-equivalence.cpp": "7f7de5d7290c85eea8a4a2397520509d0fdabf3e3c516a64d0c6f65d77b7f763",
+    "reconstruct-equivalence.cpp": "48394636604427a268e25e1df240b66a31fc14384d9b582884780e54b127f1b1",
+    "root-equivalence.cpp": "13d631328cff6468a976987c3500c86092f24fe3f591a2113c16cf197e8b2434",
+    "src/XYZSketch.cpp": "1a4dc24bfc8ef5609e2701e16b130df1a82fcb4edc8efefda055a7eed0f7cc84",
+    "src/XYZSketch.h": "fc4913e12a4b902564632fe0b8f79660c8834bdf07f4f4a62e9655f3a1ce184d",
+    "src/gf230.hpp": "15595a0d4b3f31606611d9ff4e580e40777a98aee04d146cc52ef1ec92cfae37",
+    "src/gf230_poly.hpp": "d04a83aed6f5088dfd17219fdd7b9d8dc33c3584dc81bb856960a7f4127c272c",
+    "src/gf230_reconstruct.hpp": "eb492bccd55f4dae54bd7f4b1800a0a2baa04877ca60b493526ff223fa9dbba9",
+    "src/gf230_roots_fast.hpp": "c3553256e261c2d96dd34d57fbca5350013b07b9fe9341d8b4ee98d7e5570934",
+    "src/hash.cpp": "99115639cf28f8209732a4dc6462b2a1467361615e9e0d38789affd7f6227c3c",
+    "src/hash.h": "ad6acf4f02f0c4d1794f5f11f79368d5434b7cfd50530122cb48bd4dcb69d699",
+    "src/murmur3.cc": "cd7a2ea74a4ee76dbe7152766f8d9a9ac1c003e71d7a4098f230cd8d465b63e7",
+    "src/murmur3.h": "08cfa972c1d65dae49e5dac9b746433c381ab9cdae71cb4b35f80b1fb6af37ee",
+    "src/optimization.hpp": "490ec10bdaa0fcf6197d6b295de9b65f4d961f140b7824a38b75193fd6bd5743",
+    "src/small_coefficients.hpp": "2bb6592148fdd813bd077ec4f1891ec901e6c7a8ddde42b58ec19546c9e5629f",
+    "src/xyz_gf230_engine.cpp": "1fbb19a66ce1146779cc84c3b17cdddad382b43f057e33dc0544911e377edbca",
+    "test.cpp": "2ec7b1ab15f49ca7dc8561ca3f07eecb5cbbceda719d410509e604b029685b81",
+    "vendor/minisketch/LICENSE": "bbc657fbd4edfb2f2b0f9fbf38d6414ec71348ff4bcf3d0924caf2506f542efa",
+    "vendor/minisketch/include/minisketch.h": "1c1463fe6a36d9a9313f7897d0b03dbfc13e48d6e55303db339dd07bcea1dc6f",
+    "vendor/minisketch/src/false_positives.h": "0c4d886e9715ccd5b0a8a80e9129b14c1184315abf54e63e8e1fb221e01c1b41",
+    "vendor/minisketch/src/fielddefines.h": "5eb9cd9f4777d55df47471d75bdf77a857f47d530b3ab82451bcb77755c8446b",
+    "vendor/minisketch/src/fields/clmul_4bytes.cpp": "34f74edad2d112118807da99b602fd96de69d13e1f1ee37ab660d720fa066987",
+    "vendor/minisketch/src/fields/clmul_common_impl.h": "8b8a78fefc82aa2547bb89f7d8c5c0201a43496d4342e501307b5f0b4a2fd12f",
+    "vendor/minisketch/src/fields/generic_4bytes.cpp": "3c5e3b1fc6e3cfc2cd63ea44a7822b44ff4fce906a116bb7eaabaa73d21ff15d",
+    "vendor/minisketch/src/fields/generic_common_impl.h": "cf504295503c3d6c60b3d1c711a7674f9981e125735d5c411e2a54748fdbba72",
+    "vendor/minisketch/src/int_utils.h": "35a4024030c0fe6c8e0bb48d35f4ae228bf9457e8c535e4cf5f221714f292542",
+    "vendor/minisketch/src/lintrans.h": "ea98d1bacbad50628f37c0d3f81f8d9399d4085115492701c490c6ad507efaf1",
+    "vendor/minisketch/src/sketch.h": "06f8e0d4beb22042b05da84de41299b900976c15eae1b62a1930353afab0c739",
+    "vendor/minisketch/src/sketch_impl.h": "3b527ebd17c9767fdb014f4eab421cd3237556e37023cf4fe33a761f48364c5b",
+    "vendor/minisketch/src/util.h": "164b4990e38ff7c052d36494438d3936d12485300289dd6c55175faa998fef91",
+    "verify-equivalence.cpp": "540bcc40c66d0b932e53cfb1639ac2e6d6907e28ade35e92bfe10451874da4ac"
+  },
+  "frozen_parameters": {
+    "C_cal": 0.875,
+    "D_cal": 1.1884504306083168,
+    "a_cal": 0.7243668166820519,
+    "c_orient": 5.964436239513146,
+    "c_peel": 4.93764536242195,
+    "config_sha256": "b4444f9c40f45554d48de89e24e39558a8088b0ba419c5304d78eb3415778174",
+    "delta": 0.1,
+    "frozen_payload_sha256": "8d1783fdf898cb9e3100377f5f6a0ea92f1b149ffe1849297ac5dbdf933f0f7c",
+    "gamma_cal": 0.9,
+    "git_commit": "99bbe7ae42df1f4bfff92f48bcd78ac1e4e6abaf",
+    "input_artifact_sha256": {
+      "aggregate.csv": "11f0031bb9c689fd56d59d98261d2f7e102aea0bf2c9c628a0fe2b585446ce6a",
+      "build_manifest.json": "492354f26629956d8fe14f3a2882295ca9eae66ad3f7da847f35e5ebf17bfba1",
+      "calibration_config.json": "b4444f9c40f45554d48de89e24e39558a8088b0ba419c5304d78eb3415778174",
+      "environment_manifest.json": "48c648a3d022a8582d152023d01416c17d029188d9e0d4867f58d54d6bb3a709",
+      "m_bracket.csv": "0149de8c7f4c37571d9ff9d905375216ec4e8600eb45b080f9d7ac43ab485dda",
+      "placement_groups.jsonl": "90a207093e30d90e445a4276e22092aa1bfe1572777d2018ffce7cc10ba670cc",
+      "relative_scores.csv": "407e8893bbac70635217d1ef0ec79cc9ca61b61430c6cb9014856b61bccbe10e",
+      "relative_selection.json": "f997d9b5b67fa779641da5329efb895683dbf5bcf8a0945207e8557fa8f3d45f",
+      "source_manifest.md": "3cda7b98008ba0f8cc887ea69080dbc9c00ca13983ea10d9d1d318185011320e",
+      "trials.jsonl": "bb50edbfcb4231f862bd2fbc226088135ca6679f980f1782f89e3355698d674e"
+    },
+    "protocol_version": "figure1bc-v4",
+    "run_id": "figure1bc-calibration-20260716T095512Z-99bbe7a-b4444f9c40f4",
+    "selection_basis": "fixed_point_relative_success",
+    "selection_score": {
+      "C": 0.875,
+      "D": 1.1884504306083168,
+      "candidate_id": "C0875-G0900",
+      "equal_d_mean_success_rate": 0.9252900766928546,
+      "gamma": 0.9,
+      "informative_points": 428,
+      "mean_pointwise_rank": 387.95093457943926,
+      "mean_pointwise_regret": 0.006214953271028037,
+      "minimum_d_mean_success_rate": 0.8775000000000001,
+      "pointwise_best_tie_fraction": 0.8387850467289719
+    },
+    "source_tree_sha256": "13c620a7e9260fd240b1ac1ac443b40218fc9ab88f8b293905e5a767b72220ae",
+    "status": "selected",
+    "threshold_sha256": "ef3f0c89d96ab326ed5c33340210b37033e47b033e9f124811cce7c80ef83b87"
+  },
+  "thresholds": [
+    {
+      "k": 2,
+      "ell": 8,
+      "peel_xi": 10.447030681325856,
+      "c_peel": 6.3905498479997735,
+      "peel_residual": 8.770761894538737e-15,
+      "orient_xi": 15.784029515752412,
+      "c_orient": 7.982826263970962,
+      "orient_residual": -3.552713678800501e-15
+    },
+    {
+      "k": 2,
+      "ell": 10,
+      "peel_xi": 13.09304249828628,
+      "c_peel": 7.791192731389937,
+      "peel_residual": 3.3306690738754696e-16,
+      "orient_xi": 19.875562110875816,
+      "c_orient": 9.991434517552344,
+      "orient_residual": 3.197442310920451e-14
+    },
+    {
+      "k": 3,
+      "ell": 8,
+      "peel_xi": 12.364017468389658,
+      "c_peel": 4.814318278910428,
+      "peel_residual": 7.549516567451064e-15,
+      "orient_xi": 23.99752228639362,
+      "c_orient": 7.999935433034733,
+      "orient_residual": 6.750155989720952e-14
+    },
+    {
+      "k": 3,
+      "ell": 10,
+      "peel_xi": 15.119578391994768,
+      "c_peel": 5.778163253051239,
+      "peel_residual": 9.880984919163893e-15,
+      "orient_xi": 29.999543046816978,
+      "c_orient": 9.999990163036237,
+      "orient_residual": 2.842170943040401e-14
+    }
+  ],
+  "search": "Original coarse M/d grid 0.100..0.400 step .020; original predecessor fine grid step .002; min passing communication; same fixed a,z formula",
+  "evaluation": "Independent original E0 full datasets; one C1/E1 recalibration only if Wilson upper below 0.9, as original protocol",
+  "timing": "First five successful original timing cohort inputs, three fresh process repeats, serial CPU10; raw failed attempts retained",
+  "no_timing_optimization": true
+}

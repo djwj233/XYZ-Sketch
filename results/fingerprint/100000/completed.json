@@ -1,0 +1,21 @@
+{
+  "completed_utc": "2026-10-07T13:32:33.687969+00:00",
+  "datasets": 100,
+  "widths": 27,
+  "samples": 2700,
+  "all_inputs_hash_verified": true,
+  "all_original32_equivalence": true,
+  "process_failures": 0,
+  "parse_errors": 0,
+  "protected_sources_unchanged": {
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/iblt.cpp": true,
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/iblt.h": true,
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/murmurhash3.cpp": true,
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/murmurhash3.h": true,
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/common.hpp": true,
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/COPYING": true,
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/LICENSE": true,
+    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine": true
+  },
+  "record_manifest_sha256": "f9269772522b90d130498d53fa3d83728607cfe833c7375ccb6e9c2c4266af43"
+}
