@@ -10,7 +10,7 @@
   "set_size_per_side": 10000000,
   "input_bits": 30,
   "xyz_execution_field": "GF(2^30), native x^30+x+1 basis",
-  "xyz_source_manifest": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/source-manifest-v15.json",
+  "xyz_source_manifest": "/artifact-history/XYZ-Sketch-fast-cells/source-manifest-v15.json",
   "xyz_binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
   "iblt_binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
   "input_policy": "original five selected successful timing inputs for each original configuration, original seeds, no new success-dependent reselection; preserve failures without replacement",

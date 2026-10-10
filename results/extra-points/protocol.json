@@ -18,7 +18,7 @@
     11,
     12
   ],
-  "dataset_generator": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_dataset_engine",
+  "dataset_generator": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_dataset_engine",
   "dataset_generator_sha256": "151decc0a1d9cc87fee61930d7e83b3823ef608f7ca5bafd5ed52c6f1d6ca5c9",
   "set_size_per_side": 10000000,
   "input_bits": 30,

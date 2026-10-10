@@ -38,7 +38,7 @@
       11,
       12
     ],
-    "dataset_generator": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_dataset_engine",
+    "dataset_generator": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_dataset_engine",
     "dataset_generator_sha256": "151decc0a1d9cc87fee61930d7e83b3823ef608f7ca5bafd5ed52c6f1d6ca5c9",
     "set_size_per_side": 10000000,
     "input_bits": 30,
@@ -63,7 +63,7 @@
     "existing_results": "previous 480-run final delivery retained unchanged; other baselines and old scales reused without interpolation"
   },
   "prior_source": {
-    "path": "/mnt/c/users/djwj233/.codex/.chatgpt-projects/g-p-6a42258cfdf0819181055bc0e1a0e70e/drafts/2026-10-07-xyz-v15-final-evaluation/delivery/analysis/summary.json",
+    "path": "/artifact-history/2026-10-07-xyz-v15-final-evaluation/delivery/analysis/summary.json",
     "sha256": "759fd9ea00db2ed4607bebb0c9d830b70e9225904a42966e66343bcc3277e980",
     "prior_runs": 480,
     "prior_points": 9
@@ -183,7 +183,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 100000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
             "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
           },
           "inherited_reliability": null,
@@ -291,7 +291,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 100000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
             "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
           },
           "inherited_reliability": null,
@@ -475,7 +475,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 300000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
             "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
           },
           "inherited_reliability": null,
@@ -583,7 +583,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 300000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
             "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
           },
           "inherited_reliability": null,
@@ -3482,7 +3482,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 100000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
             "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
           },
           "inherited_reliability": null,
@@ -3590,7 +3590,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 100000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
             "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
           },
           "inherited_reliability": null,
@@ -4163,7 +4163,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 300000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
             "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
           },
           "inherited_reliability": null,
@@ -4271,7 +4271,7 @@
           "parameter_source": {
             "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
             "left_d": 300000,
-            "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+            "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
             "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
           },
           "inherited_reliability": null,

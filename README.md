@@ -17,12 +17,7 @@ optimization techniques.
 
 ## Quick start
 
-Clone the repository:
-
-```bash
-git clone https://github.com/djwj233/XYZ-Sketch.git
-cd XYZ-Sketch
-```
+Clone the repository.
 
 Run from the repository root. Both examples require GCC with C++17; the optimized
 example additionally requires an x86 CPU with PCLMUL support.
@@ -138,3 +133,6 @@ system load.
 Project-authored code is released under the [MIT License](LICENSE).
 Third-party code retains its original licenses, including CPISync's GPLv3;
 the corresponding license files and notices are included alongside those sources.
+
+Historical machine-specific paths in stored records are anonymized as
+`/artifact-history/`. Measurements, seeds, and input/source hashes are unchanged.

@@ -19,7 +19,7 @@
         "threshold-tables"
       ],
       "returncode": 0,
-      "stdout": "wrote /root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223022-threshold-tables-380ecd/thresholds.json\n/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223022-threshold-tables-380ecd\n",
+      "stdout": "wrote /artifact-history/paper-artifact-20261008/results/runs/20261008-223022-threshold-tables-380ecd/thresholds.json\n/artifact-history/paper-artifact-20261008/results/runs/20261008-223022-threshold-tables-380ecd\n",
       "stderr": "",
       "wall_seconds": 0.16211545560508966
     },
@@ -30,7 +30,7 @@
         "xyz"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/xyz\n",
       "stderr": "",
       "wall_seconds": 5.745541526935995
     },
@@ -41,7 +41,7 @@
         "xyz-ell10"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz-ell10\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/xyz-ell10\n",
       "stderr": "",
       "wall_seconds": 5.230493507348001
     },
@@ -52,7 +52,7 @@
         "dataset"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/dataset\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/dataset\n",
       "stderr": "",
       "wall_seconds": 1.2113201236352324
     },
@@ -63,7 +63,7 @@
         "prime-threshold"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/prime-threshold\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/prime-threshold\n",
       "stderr": "",
       "wall_seconds": 4.349039015360177
     },
@@ -74,7 +74,7 @@
         "ideal-cell"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/ideal-cell\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/ideal-cell\n",
       "stderr": "",
       "wall_seconds": 1.177375908009708
     },
@@ -85,7 +85,7 @@
         "iblt"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/iblt\n",
       "stderr": "",
       "wall_seconds": 2.120162345468998
     },
@@ -96,7 +96,7 @@
         "iblt-sc"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt-sc\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/iblt-sc\n",
       "stderr": "",
       "wall_seconds": 2.0340408282354474
     },
@@ -107,7 +107,7 @@
         "minisketch"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/minisketch\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/minisketch\n",
       "stderr": "",
       "wall_seconds": 4.431108117103577
     },
@@ -118,7 +118,7 @@
         "cpisync"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/cpisync\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/cpisync\n",
       "stderr": "",
       "wall_seconds": 9.413270000368357
     },
@@ -129,7 +129,7 @@
         "fingerprint-100000"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/fingerprint-100000\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/fingerprint-100000\n",
       "stderr": "",
       "wall_seconds": 2.249831324443221
     },
@@ -140,7 +140,7 @@
         "fingerprint-1000000"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/fingerprint-1000000\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/fingerprint-1000000\n",
       "stderr": "",
       "wall_seconds": 2.1515621403232217
     },
@@ -151,7 +151,7 @@
         "paper-xyz"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-xyz\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/paper-xyz\n",
       "stderr": "",
       "wall_seconds": 3.911307893693447
     },
@@ -162,7 +162,7 @@
         "paper-minisketch"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-minisketch\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/paper-minisketch\n",
       "stderr": "",
       "wall_seconds": 4.325708351098001
     },
@@ -173,13 +173,13 @@
         "paper-cpisync"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-cpisync\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/paper-cpisync\n",
       "stderr": "",
       "wall_seconds": 9.411973614245653
     },
     {
       "command": [
-        "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz",
+        "/artifact-history/paper-artifact-20261008/results/build/xyz",
         "--self-test"
       ],
       "returncode": 0,
@@ -189,7 +189,7 @@
     },
     {
       "command": [
-        "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/xyz-ell10",
+        "/artifact-history/paper-artifact-20261008/results/build/xyz-ell10",
         "--self-test"
       ],
       "returncode": 0,
@@ -199,7 +199,7 @@
     },
     {
       "command": [
-        "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/prime-threshold",
+        "/artifact-history/paper-artifact-20261008/results/build/prime-threshold",
         "--self-test"
       ],
       "returncode": 0,
@@ -217,12 +217,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "xyz"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223123-optimized-comparison-c9ac3f\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-223123-optimized-comparison-c9ac3f\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 1.4237926928326488
     },
@@ -236,12 +236,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "xyz-prime"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223125-reference-comparison-af53bd\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-223125-reference-comparison-af53bd\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 6.577751471661031
     },
@@ -255,10 +255,10 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment"
+        "/artifact-history"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223134-optimized-sharp-492aa5\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-223134-optimized-sharp-492aa5\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 1.6448963973671198
     },
@@ -272,12 +272,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "xyz-ell10"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223434-optimized-parameters-834d4f\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-223434-optimized-parameters-834d4f\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 2.4270823430269957
     },
@@ -292,7 +292,7 @@
         "1"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223436-paper-heatmaps-c5819f\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-223436-paper-heatmaps-c5819f\n",
       "stderr": "",
       "wall_seconds": 0.11216252483427525
     },
@@ -305,18 +305,18 @@
         "1"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223436-paper-threshold-290e40\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-223436-paper-threshold-290e40\n",
       "stderr": "",
       "wall_seconds": 49.72878158092499
     },
     {
       "command": [
-        "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/.venv-plot/bin/python",
+        "/artifact-history/experiment/resubmission-20260922/.venv-plot/bin/python",
         "scripts/reproduce.py",
         "figures"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-223526-figures-19a967\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-223526-figures-19a967\n",
       "stderr": "",
       "wall_seconds": 20.444936727173626
     },
@@ -327,7 +327,7 @@
         "rateless"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/rateless\n",
       "stderr": "",
       "wall_seconds": 0.07481109444051981
     },
@@ -338,7 +338,7 @@
         "rateless-fixed"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless-fixed\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/rateless-fixed\n",
       "stderr": "",
       "wall_seconds": 0.09260271769016981
     },
@@ -349,7 +349,7 @@
         "paper-rateless"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-rateless\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/paper-rateless\n",
       "stderr": "",
       "wall_seconds": 0.06643544044345617
     },
@@ -360,7 +360,7 @@
         "iblt-compact"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt-compact\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/iblt-compact\n",
       "stderr": "",
       "wall_seconds": 0.07565298117697239
     },
@@ -371,7 +371,7 @@
         "paper-iblt"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-iblt\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/paper-iblt\n",
       "stderr": "",
       "wall_seconds": 0.08778505027294159
     },
@@ -385,10 +385,10 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment"
+        "/artifact-history"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224325-compact-baselines-a349f7\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224325-compact-baselines-a349f7\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 3.4388721538707614
     },
@@ -402,10 +402,10 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment"
+        "/artifact-history"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224328-rateless-471e3e\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224328-rateless-471e3e\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 31.986817439086735
     },
@@ -419,12 +419,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-xyz"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224400-paper-comparison-168e18\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224400-paper-comparison-168e18\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 4.864273424260318
     },
@@ -438,12 +438,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-iblt"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224405-paper-comparison-4ed143\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224405-paper-comparison-4ed143\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 8.071712157689035
     },
@@ -457,12 +457,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-minisketch"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-396ebb\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-396ebb\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 0.19333197362720966
     },
@@ -476,12 +476,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-cpisync"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-ce2904\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-ce2904\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 223.7480292050168
     },
@@ -495,12 +495,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-rateless"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-paper-comparison-ab96aa\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224757-paper-comparison-ab96aa\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 0.18655520863831043
     },
@@ -514,12 +514,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "xyz"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-extra-points-220cd3\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224757-extra-points-220cd3\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 2.846778647042811
     },
@@ -551,7 +551,7 @@
         "1"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224800-heuristic-calibration-c15fcf\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-224800-heuristic-calibration-c15fcf\n",
       "stderr": "",
       "wall_seconds": 0.44877704232931137
     },
@@ -574,7 +574,7 @@
         "rateless-representative"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224801-rateless-representative-ce81f4\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-224801-rateless-representative-ce81f4\n",
       "stderr": "",
       "wall_seconds": 156.14054440241307
     },
@@ -591,12 +591,12 @@
     },
     {
       "command": [
-        "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/.venv-plot/bin/python",
+        "/artifact-history/experiment/resubmission-20260922/.venv-plot/bin/python",
         "scripts/reproduce.py",
         "figures"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-225037-figures-24d3f8\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-225037-figures-24d3f8\n",
       "stderr": "",
       "wall_seconds": 18.960618735291064
     }
@@ -609,7 +609,7 @@
         "rateless"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/rateless\n",
       "stderr": "",
       "wall_seconds": 0.07481109444051981
     },
@@ -620,7 +620,7 @@
         "rateless-fixed"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/rateless-fixed\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/rateless-fixed\n",
       "stderr": "",
       "wall_seconds": 0.09260271769016981
     },
@@ -631,7 +631,7 @@
         "paper-rateless"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-rateless\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/paper-rateless\n",
       "stderr": "",
       "wall_seconds": 0.06643544044345617
     },
@@ -642,7 +642,7 @@
         "iblt-compact"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/iblt-compact\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/iblt-compact\n",
       "stderr": "",
       "wall_seconds": 0.07565298117697239
     },
@@ -653,7 +653,7 @@
         "paper-iblt"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/build/paper-iblt\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/build/paper-iblt\n",
       "stderr": "",
       "wall_seconds": 0.08778505027294159
     },
@@ -667,10 +667,10 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment"
+        "/artifact-history"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224325-compact-baselines-a349f7\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224325-compact-baselines-a349f7\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 3.4388721538707614
     },
@@ -684,10 +684,10 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment"
+        "/artifact-history"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224328-rateless-471e3e\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224328-rateless-471e3e\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 31.986817439086735
     },
@@ -701,12 +701,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-xyz"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224400-paper-comparison-168e18\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224400-paper-comparison-168e18\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 4.864273424260318
     },
@@ -720,12 +720,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-iblt"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224405-paper-comparison-4ed143\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224405-paper-comparison-4ed143\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 8.071712157689035
     },
@@ -739,12 +739,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-minisketch"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-396ebb\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-396ebb\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 0.19333197362720966
     },
@@ -758,12 +758,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-cpisync"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-ce2904\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224413-paper-comparison-ce2904\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 223.7480292050168
     },
@@ -777,12 +777,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "paper-rateless"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-paper-comparison-ab96aa\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224757-paper-comparison-ab96aa\",\n  \"jobs\": 1,\n  \"process_failures\": 1,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 0.18655520863831043
     },
@@ -796,12 +796,12 @@
         "--limit",
         "1",
         "--data-root",
-        "/root/XYZ-Sketch-experiment",
+        "/artifact-history",
         "--method",
         "xyz"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224757-extra-points-220cd3\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-20261008/results/runs/20261008-224757-extra-points-220cd3\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": false,\n  \"formal_results\": true\n}\n",
       "stderr": "",
       "wall_seconds": 2.846778647042811
     },
@@ -833,7 +833,7 @@
         "1"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224800-heuristic-calibration-c15fcf\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-224800-heuristic-calibration-c15fcf\n",
       "stderr": "",
       "wall_seconds": 0.44877704232931137
     },
@@ -856,7 +856,7 @@
         "rateless-representative"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-224801-rateless-representative-ce81f4\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-224801-rateless-representative-ce81f4\n",
       "stderr": "",
       "wall_seconds": 156.14054440241307
     },
@@ -873,12 +873,12 @@
     },
     {
       "command": [
-        "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/.venv-plot/bin/python",
+        "/artifact-history/experiment/resubmission-20260922/.venv-plot/bin/python",
         "scripts/reproduce.py",
         "figures"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-20261008/results/runs/20261008-225037-figures-24d3f8\n",
+      "stdout": "/artifact-history/paper-artifact-20261008/results/runs/20261008-225037-figures-24d3f8\n",
       "stderr": "",
       "wall_seconds": 18.960618735291064
     }

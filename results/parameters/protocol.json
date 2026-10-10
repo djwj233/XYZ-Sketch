@@ -37,7 +37,7 @@
   "memory_bytes": 85899345920,
   "timeout": 600,
   "field": "GF(2^30)",
-  "source": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/versions/v15",
+  "source": "/artifact-history/XYZ-Sketch-fast-cells/versions/v15",
   "binary_sha256": "7bb2bae69989bdee1c54796c9f96a3a31d51cd3947f149e948141f25941f016b",
   "source_manifest": {
     "equivalence.cpp": "a57d71496cb00d4de96667d7715bbaaa69e6219de7154619e8a6258478ff906a",

@@ -28,12 +28,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b945f939e8dec6bedcca2e7358b21bdf6c4ae8823a589c609868383b8d77a522",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -45,11 +45,11 @@
       "alice_only_sha256": "2489001a6d227c845613463f92acb8228ada136cfbbd243f9f9582bea7ae20e5",
       "bob_only_sha256": "717ecf594c9c7cf51c38dc32fd1dc837d6d235f68c279705d9ba852570104860"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -84,12 +84,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b945f939e8dec6bedcca2e7358b21bdf6c4ae8823a589c609868383b8d77a522",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -101,11 +101,11 @@
       "alice_only_sha256": "2489001a6d227c845613463f92acb8228ada136cfbbd243f9f9582bea7ae20e5",
       "bob_only_sha256": "717ecf594c9c7cf51c38dc32fd1dc837d6d235f68c279705d9ba852570104860"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
       "2",
       "6",
       "circular",
@@ -146,12 +146,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b945f939e8dec6bedcca2e7358b21bdf6c4ae8823a589c609868383b8d77a522",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -163,11 +163,11 @@
       "alice_only_sha256": "2489001a6d227c845613463f92acb8228ada136cfbbd243f9f9582bea7ae20e5",
       "bob_only_sha256": "717ecf594c9c7cf51c38dc32fd1dc837d6d235f68c279705d9ba852570104860"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
       "2",
       "6",
       "circular",
@@ -208,12 +208,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b945f939e8dec6bedcca2e7358b21bdf6c4ae8823a589c609868383b8d77a522",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -225,11 +225,11 @@
       "alice_only_sha256": "2489001a6d227c845613463f92acb8228ada136cfbbd243f9f9582bea7ae20e5",
       "bob_only_sha256": "717ecf594c9c7cf51c38dc32fd1dc837d6d235f68c279705d9ba852570104860"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -264,12 +264,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b945f939e8dec6bedcca2e7358b21bdf6c4ae8823a589c609868383b8d77a522",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -281,11 +281,11 @@
       "alice_only_sha256": "2489001a6d227c845613463f92acb8228ada136cfbbd243f9f9582bea7ae20e5",
       "bob_only_sha256": "717ecf594c9c7cf51c38dc32fd1dc837d6d235f68c279705d9ba852570104860"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -320,12 +320,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b945f939e8dec6bedcca2e7358b21bdf6c4ae8823a589c609868383b8d77a522",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -337,11 +337,11 @@
       "alice_only_sha256": "2489001a6d227c845613463f92acb8228ada136cfbbd243f9f9582bea7ae20e5",
       "bob_only_sha256": "717ecf594c9c7cf51c38dc32fd1dc837d6d235f68c279705d9ba852570104860"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/0.bin",
       "2",
       "6",
       "circular",
@@ -382,12 +382,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "7f9f92986e9bfd0733708aab99389afb1fcddec9b6c91eae80a25cd94260bdf7",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -399,11 +399,11 @@
       "alice_only_sha256": "1690bb88e3af9ced030c0a4909dc715f52c79de83aa355018223beaf6220aab1",
       "bob_only_sha256": "b4bb675184801eef2c9e0ce2accf59c4d3999d1d5a810c8590cfa81d28550fb7"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
       "2",
       "6",
       "circular",
@@ -444,12 +444,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "7f9f92986e9bfd0733708aab99389afb1fcddec9b6c91eae80a25cd94260bdf7",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -461,11 +461,11 @@
       "alice_only_sha256": "1690bb88e3af9ced030c0a4909dc715f52c79de83aa355018223beaf6220aab1",
       "bob_only_sha256": "b4bb675184801eef2c9e0ce2accf59c4d3999d1d5a810c8590cfa81d28550fb7"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -500,12 +500,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "7f9f92986e9bfd0733708aab99389afb1fcddec9b6c91eae80a25cd94260bdf7",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -517,11 +517,11 @@
       "alice_only_sha256": "1690bb88e3af9ced030c0a4909dc715f52c79de83aa355018223beaf6220aab1",
       "bob_only_sha256": "b4bb675184801eef2c9e0ce2accf59c4d3999d1d5a810c8590cfa81d28550fb7"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -556,12 +556,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "7f9f92986e9bfd0733708aab99389afb1fcddec9b6c91eae80a25cd94260bdf7",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -573,11 +573,11 @@
       "alice_only_sha256": "1690bb88e3af9ced030c0a4909dc715f52c79de83aa355018223beaf6220aab1",
       "bob_only_sha256": "b4bb675184801eef2c9e0ce2accf59c4d3999d1d5a810c8590cfa81d28550fb7"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
       "2",
       "6",
       "circular",
@@ -618,12 +618,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "7f9f92986e9bfd0733708aab99389afb1fcddec9b6c91eae80a25cd94260bdf7",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -635,11 +635,11 @@
       "alice_only_sha256": "1690bb88e3af9ced030c0a4909dc715f52c79de83aa355018223beaf6220aab1",
       "bob_only_sha256": "b4bb675184801eef2c9e0ce2accf59c4d3999d1d5a810c8590cfa81d28550fb7"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
       "2",
       "6",
       "circular",
@@ -680,12 +680,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "7f9f92986e9bfd0733708aab99389afb1fcddec9b6c91eae80a25cd94260bdf7",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -697,11 +697,11 @@
       "alice_only_sha256": "1690bb88e3af9ced030c0a4909dc715f52c79de83aa355018223beaf6220aab1",
       "bob_only_sha256": "b4bb675184801eef2c9e0ce2accf59c4d3999d1d5a810c8590cfa81d28550fb7"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/1.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -736,12 +736,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b58d8da22015856ef347ea58a409951a4b9b035d26b576e84880bc778ddf5f19",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -753,11 +753,11 @@
       "alice_only_sha256": "297db33999a7e4c5be3d823c2ce394513aff717681dca121da7e3fed005fac6e",
       "bob_only_sha256": "2ac5c7093cf43813a69e9d050e7159ae9fb3d983321db30db4703cc4f97859e3"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -792,12 +792,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b58d8da22015856ef347ea58a409951a4b9b035d26b576e84880bc778ddf5f19",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -809,11 +809,11 @@
       "alice_only_sha256": "297db33999a7e4c5be3d823c2ce394513aff717681dca121da7e3fed005fac6e",
       "bob_only_sha256": "2ac5c7093cf43813a69e9d050e7159ae9fb3d983321db30db4703cc4f97859e3"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
       "2",
       "6",
       "circular",
@@ -854,12 +854,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b58d8da22015856ef347ea58a409951a4b9b035d26b576e84880bc778ddf5f19",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -871,11 +871,11 @@
       "alice_only_sha256": "297db33999a7e4c5be3d823c2ce394513aff717681dca121da7e3fed005fac6e",
       "bob_only_sha256": "2ac5c7093cf43813a69e9d050e7159ae9fb3d983321db30db4703cc4f97859e3"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
       "2",
       "6",
       "circular",
@@ -916,12 +916,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b58d8da22015856ef347ea58a409951a4b9b035d26b576e84880bc778ddf5f19",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -933,11 +933,11 @@
       "alice_only_sha256": "297db33999a7e4c5be3d823c2ce394513aff717681dca121da7e3fed005fac6e",
       "bob_only_sha256": "2ac5c7093cf43813a69e9d050e7159ae9fb3d983321db30db4703cc4f97859e3"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -972,12 +972,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b58d8da22015856ef347ea58a409951a4b9b035d26b576e84880bc778ddf5f19",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -989,11 +989,11 @@
       "alice_only_sha256": "297db33999a7e4c5be3d823c2ce394513aff717681dca121da7e3fed005fac6e",
       "bob_only_sha256": "2ac5c7093cf43813a69e9d050e7159ae9fb3d983321db30db4703cc4f97859e3"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1028,12 +1028,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "b58d8da22015856ef347ea58a409951a4b9b035d26b576e84880bc778ddf5f19",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1045,11 +1045,11 @@
       "alice_only_sha256": "297db33999a7e4c5be3d823c2ce394513aff717681dca121da7e3fed005fac6e",
       "bob_only_sha256": "2ac5c7093cf43813a69e9d050e7159ae9fb3d983321db30db4703cc4f97859e3"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/2.bin",
       "2",
       "6",
       "circular",
@@ -1090,12 +1090,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "5870b293f245d4e08638a0960663a6789b15056e483ea340a3304af27c0b0eca",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1107,11 +1107,11 @@
       "alice_only_sha256": "7cf6a7a470c8728096b5f88fcf2e269f4e1a1ff3d452e8bb37d030f828641eca",
       "bob_only_sha256": "029c9c63b45b8006e0156c800e6648e6883d7478fbcb3a08630c47256c89522a"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
       "2",
       "6",
       "circular",
@@ -1152,12 +1152,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "5870b293f245d4e08638a0960663a6789b15056e483ea340a3304af27c0b0eca",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1169,11 +1169,11 @@
       "alice_only_sha256": "7cf6a7a470c8728096b5f88fcf2e269f4e1a1ff3d452e8bb37d030f828641eca",
       "bob_only_sha256": "029c9c63b45b8006e0156c800e6648e6883d7478fbcb3a08630c47256c89522a"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1208,12 +1208,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "5870b293f245d4e08638a0960663a6789b15056e483ea340a3304af27c0b0eca",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1225,11 +1225,11 @@
       "alice_only_sha256": "7cf6a7a470c8728096b5f88fcf2e269f4e1a1ff3d452e8bb37d030f828641eca",
       "bob_only_sha256": "029c9c63b45b8006e0156c800e6648e6883d7478fbcb3a08630c47256c89522a"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1264,12 +1264,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "5870b293f245d4e08638a0960663a6789b15056e483ea340a3304af27c0b0eca",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1281,11 +1281,11 @@
       "alice_only_sha256": "7cf6a7a470c8728096b5f88fcf2e269f4e1a1ff3d452e8bb37d030f828641eca",
       "bob_only_sha256": "029c9c63b45b8006e0156c800e6648e6883d7478fbcb3a08630c47256c89522a"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
       "2",
       "6",
       "circular",
@@ -1326,12 +1326,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "5870b293f245d4e08638a0960663a6789b15056e483ea340a3304af27c0b0eca",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1343,11 +1343,11 @@
       "alice_only_sha256": "7cf6a7a470c8728096b5f88fcf2e269f4e1a1ff3d452e8bb37d030f828641eca",
       "bob_only_sha256": "029c9c63b45b8006e0156c800e6648e6883d7478fbcb3a08630c47256c89522a"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
       "2",
       "6",
       "circular",
@@ -1388,12 +1388,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "5870b293f245d4e08638a0960663a6789b15056e483ea340a3304af27c0b0eca",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1405,11 +1405,11 @@
       "alice_only_sha256": "7cf6a7a470c8728096b5f88fcf2e269f4e1a1ff3d452e8bb37d030f828641eca",
       "bob_only_sha256": "029c9c63b45b8006e0156c800e6648e6883d7478fbcb3a08630c47256c89522a"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/3.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1444,12 +1444,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "555b76550c875af623fe107d890acd12be61a9df44d876a1457c974e589e4ec0",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1461,11 +1461,11 @@
       "alice_only_sha256": "b9633cb151b1ba36a1ce9852f7d19c39803042b94e45440a373a85d968414e7d",
       "bob_only_sha256": "281d7ca26a30f5f51ed07897b815d112a84d54bff9036d92df4d1be56be6b75c"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1500,12 +1500,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "555b76550c875af623fe107d890acd12be61a9df44d876a1457c974e589e4ec0",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1517,11 +1517,11 @@
       "alice_only_sha256": "b9633cb151b1ba36a1ce9852f7d19c39803042b94e45440a373a85d968414e7d",
       "bob_only_sha256": "281d7ca26a30f5f51ed07897b815d112a84d54bff9036d92df4d1be56be6b75c"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
       "2",
       "6",
       "circular",
@@ -1562,12 +1562,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "555b76550c875af623fe107d890acd12be61a9df44d876a1457c974e589e4ec0",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1579,11 +1579,11 @@
       "alice_only_sha256": "b9633cb151b1ba36a1ce9852f7d19c39803042b94e45440a373a85d968414e7d",
       "bob_only_sha256": "281d7ca26a30f5f51ed07897b815d112a84d54bff9036d92df4d1be56be6b75c"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
       "2",
       "6",
       "circular",
@@ -1624,12 +1624,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "555b76550c875af623fe107d890acd12be61a9df44d876a1457c974e589e4ec0",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1641,11 +1641,11 @@
       "alice_only_sha256": "b9633cb151b1ba36a1ce9852f7d19c39803042b94e45440a373a85d968414e7d",
       "bob_only_sha256": "281d7ca26a30f5f51ed07897b815d112a84d54bff9036d92df4d1be56be6b75c"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1680,12 +1680,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "555b76550c875af623fe107d890acd12be61a9df44d876a1457c974e589e4ec0",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1697,11 +1697,11 @@
       "alice_only_sha256": "b9633cb151b1ba36a1ce9852f7d19c39803042b94e45440a373a85d968414e7d",
       "bob_only_sha256": "281d7ca26a30f5f51ed07897b815d112a84d54bff9036d92df4d1be56be6b75c"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
       "174000"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1736,12 +1736,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 100000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/100000/final.json",
       "source_final_sha256": "7c01c3f20f104971e0754e97734420446abc77abfc213ef9d7a1f1f5372df633"
     },
     "main_curve": true,
     "dataset_sha256": "555b76550c875af623fe107d890acd12be61a9df44d876a1457c974e589e4ec0",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1753,11 +1753,11 @@
       "alice_only_sha256": "b9633cb151b1ba36a1ce9852f7d19c39803042b94e45440a373a85d968414e7d",
       "bob_only_sha256": "281d7ca26a30f5f51ed07897b815d112a84d54bff9036d92df4d1be56be6b75c"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/200000/4.bin",
       "2",
       "6",
       "circular",
@@ -1798,12 +1798,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "bed3061f638992841ce3e3d70cc0f134ed699194d91132718fb042552c4161e2",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1815,11 +1815,11 @@
       "alice_only_sha256": "d407dc4c0e84a9067a35e6e9584674b278efc9827268ff5dcfb68a0710b4fc1d",
       "bob_only_sha256": "56ee5cd819a5103a92d7ff966d58c023c3ac4ab6625bec362543615e7680480d"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -1854,12 +1854,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "bed3061f638992841ce3e3d70cc0f134ed699194d91132718fb042552c4161e2",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1871,11 +1871,11 @@
       "alice_only_sha256": "d407dc4c0e84a9067a35e6e9584674b278efc9827268ff5dcfb68a0710b4fc1d",
       "bob_only_sha256": "56ee5cd819a5103a92d7ff966d58c023c3ac4ab6625bec362543615e7680480d"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
       "2",
       "6",
       "circular",
@@ -1916,12 +1916,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "bed3061f638992841ce3e3d70cc0f134ed699194d91132718fb042552c4161e2",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1933,11 +1933,11 @@
       "alice_only_sha256": "d407dc4c0e84a9067a35e6e9584674b278efc9827268ff5dcfb68a0710b4fc1d",
       "bob_only_sha256": "56ee5cd819a5103a92d7ff966d58c023c3ac4ab6625bec362543615e7680480d"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
       "2",
       "6",
       "circular",
@@ -1978,12 +1978,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "bed3061f638992841ce3e3d70cc0f134ed699194d91132718fb042552c4161e2",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -1995,11 +1995,11 @@
       "alice_only_sha256": "d407dc4c0e84a9067a35e6e9584674b278efc9827268ff5dcfb68a0710b4fc1d",
       "bob_only_sha256": "56ee5cd819a5103a92d7ff966d58c023c3ac4ab6625bec362543615e7680480d"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2034,12 +2034,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "bed3061f638992841ce3e3d70cc0f134ed699194d91132718fb042552c4161e2",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2051,11 +2051,11 @@
       "alice_only_sha256": "d407dc4c0e84a9067a35e6e9584674b278efc9827268ff5dcfb68a0710b4fc1d",
       "bob_only_sha256": "56ee5cd819a5103a92d7ff966d58c023c3ac4ab6625bec362543615e7680480d"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2090,12 +2090,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "bed3061f638992841ce3e3d70cc0f134ed699194d91132718fb042552c4161e2",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2107,11 +2107,11 @@
       "alice_only_sha256": "d407dc4c0e84a9067a35e6e9584674b278efc9827268ff5dcfb68a0710b4fc1d",
       "bob_only_sha256": "56ee5cd819a5103a92d7ff966d58c023c3ac4ab6625bec362543615e7680480d"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/0.bin",
       "2",
       "6",
       "circular",
@@ -2152,12 +2152,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "cc5a588f10c92503db8bb0a39bd3fcf05801fecbe7c6e1c3c25bb02e67b6ab66",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2169,11 +2169,11 @@
       "alice_only_sha256": "0a50606847e9f922914a3ba55927e4b107f74bfef1db37e8b59fd089497a2208",
       "bob_only_sha256": "a9eb6fa9031ba4721209400079cc34ed2735442017c7419ae2944f07a6489ce0"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
       "2",
       "6",
       "circular",
@@ -2214,12 +2214,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "cc5a588f10c92503db8bb0a39bd3fcf05801fecbe7c6e1c3c25bb02e67b6ab66",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2231,11 +2231,11 @@
       "alice_only_sha256": "0a50606847e9f922914a3ba55927e4b107f74bfef1db37e8b59fd089497a2208",
       "bob_only_sha256": "a9eb6fa9031ba4721209400079cc34ed2735442017c7419ae2944f07a6489ce0"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2270,12 +2270,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "cc5a588f10c92503db8bb0a39bd3fcf05801fecbe7c6e1c3c25bb02e67b6ab66",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2287,11 +2287,11 @@
       "alice_only_sha256": "0a50606847e9f922914a3ba55927e4b107f74bfef1db37e8b59fd089497a2208",
       "bob_only_sha256": "a9eb6fa9031ba4721209400079cc34ed2735442017c7419ae2944f07a6489ce0"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2326,12 +2326,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "cc5a588f10c92503db8bb0a39bd3fcf05801fecbe7c6e1c3c25bb02e67b6ab66",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2343,11 +2343,11 @@
       "alice_only_sha256": "0a50606847e9f922914a3ba55927e4b107f74bfef1db37e8b59fd089497a2208",
       "bob_only_sha256": "a9eb6fa9031ba4721209400079cc34ed2735442017c7419ae2944f07a6489ce0"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
       "2",
       "6",
       "circular",
@@ -2388,12 +2388,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "cc5a588f10c92503db8bb0a39bd3fcf05801fecbe7c6e1c3c25bb02e67b6ab66",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2405,11 +2405,11 @@
       "alice_only_sha256": "0a50606847e9f922914a3ba55927e4b107f74bfef1db37e8b59fd089497a2208",
       "bob_only_sha256": "a9eb6fa9031ba4721209400079cc34ed2735442017c7419ae2944f07a6489ce0"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
       "2",
       "6",
       "circular",
@@ -2450,12 +2450,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "cc5a588f10c92503db8bb0a39bd3fcf05801fecbe7c6e1c3c25bb02e67b6ab66",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2467,11 +2467,11 @@
       "alice_only_sha256": "0a50606847e9f922914a3ba55927e4b107f74bfef1db37e8b59fd089497a2208",
       "bob_only_sha256": "a9eb6fa9031ba4721209400079cc34ed2735442017c7419ae2944f07a6489ce0"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/1.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2506,12 +2506,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "d3903cc0ba3f38bc73b176af25d98722d3256fd0ab9720882d042dc31a0f9a02",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2523,11 +2523,11 @@
       "alice_only_sha256": "4acaa76e50bc36d7514cbb3405da0cdbbdadcb31173f9ee2f8e7e1519e74c473",
       "bob_only_sha256": "c5c9920956cf96a88897e01378826b00748c1776a10b6fef7ae2dcce73813684"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2562,12 +2562,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "d3903cc0ba3f38bc73b176af25d98722d3256fd0ab9720882d042dc31a0f9a02",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2579,11 +2579,11 @@
       "alice_only_sha256": "4acaa76e50bc36d7514cbb3405da0cdbbdadcb31173f9ee2f8e7e1519e74c473",
       "bob_only_sha256": "c5c9920956cf96a88897e01378826b00748c1776a10b6fef7ae2dcce73813684"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
       "2",
       "6",
       "circular",
@@ -2624,12 +2624,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "d3903cc0ba3f38bc73b176af25d98722d3256fd0ab9720882d042dc31a0f9a02",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2641,11 +2641,11 @@
       "alice_only_sha256": "4acaa76e50bc36d7514cbb3405da0cdbbdadcb31173f9ee2f8e7e1519e74c473",
       "bob_only_sha256": "c5c9920956cf96a88897e01378826b00748c1776a10b6fef7ae2dcce73813684"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
       "2",
       "6",
       "circular",
@@ -2686,12 +2686,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "d3903cc0ba3f38bc73b176af25d98722d3256fd0ab9720882d042dc31a0f9a02",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2703,11 +2703,11 @@
       "alice_only_sha256": "4acaa76e50bc36d7514cbb3405da0cdbbdadcb31173f9ee2f8e7e1519e74c473",
       "bob_only_sha256": "c5c9920956cf96a88897e01378826b00748c1776a10b6fef7ae2dcce73813684"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2742,12 +2742,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "d3903cc0ba3f38bc73b176af25d98722d3256fd0ab9720882d042dc31a0f9a02",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2759,11 +2759,11 @@
       "alice_only_sha256": "4acaa76e50bc36d7514cbb3405da0cdbbdadcb31173f9ee2f8e7e1519e74c473",
       "bob_only_sha256": "c5c9920956cf96a88897e01378826b00748c1776a10b6fef7ae2dcce73813684"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2798,12 +2798,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "d3903cc0ba3f38bc73b176af25d98722d3256fd0ab9720882d042dc31a0f9a02",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2815,11 +2815,11 @@
       "alice_only_sha256": "4acaa76e50bc36d7514cbb3405da0cdbbdadcb31173f9ee2f8e7e1519e74c473",
       "bob_only_sha256": "c5c9920956cf96a88897e01378826b00748c1776a10b6fef7ae2dcce73813684"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/2.bin",
       "2",
       "6",
       "circular",
@@ -2860,12 +2860,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "493292b50d952049a2db7d8cf424a6e33015c9a7ff595916cfad99d1192b4510",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2877,11 +2877,11 @@
       "alice_only_sha256": "9c34fe86ab051255b154affd33ee74a454bc072c2e9b3ecf0b1ae0074dd9ba63",
       "bob_only_sha256": "d03a1501f4955098d208b67be41c5f548878e3ac41f7f2a2a60a02f470ac0fe4"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
       "2",
       "6",
       "circular",
@@ -2922,12 +2922,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "493292b50d952049a2db7d8cf424a6e33015c9a7ff595916cfad99d1192b4510",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2939,11 +2939,11 @@
       "alice_only_sha256": "9c34fe86ab051255b154affd33ee74a454bc072c2e9b3ecf0b1ae0074dd9ba63",
       "bob_only_sha256": "d03a1501f4955098d208b67be41c5f548878e3ac41f7f2a2a60a02f470ac0fe4"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -2978,12 +2978,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "493292b50d952049a2db7d8cf424a6e33015c9a7ff595916cfad99d1192b4510",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -2995,11 +2995,11 @@
       "alice_only_sha256": "9c34fe86ab051255b154affd33ee74a454bc072c2e9b3ecf0b1ae0074dd9ba63",
       "bob_only_sha256": "d03a1501f4955098d208b67be41c5f548878e3ac41f7f2a2a60a02f470ac0fe4"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -3034,12 +3034,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "493292b50d952049a2db7d8cf424a6e33015c9a7ff595916cfad99d1192b4510",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3051,11 +3051,11 @@
       "alice_only_sha256": "9c34fe86ab051255b154affd33ee74a454bc072c2e9b3ecf0b1ae0074dd9ba63",
       "bob_only_sha256": "d03a1501f4955098d208b67be41c5f548878e3ac41f7f2a2a60a02f470ac0fe4"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
       "2",
       "6",
       "circular",
@@ -3096,12 +3096,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "493292b50d952049a2db7d8cf424a6e33015c9a7ff595916cfad99d1192b4510",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3113,11 +3113,11 @@
       "alice_only_sha256": "9c34fe86ab051255b154affd33ee74a454bc072c2e9b3ecf0b1ae0074dd9ba63",
       "bob_only_sha256": "d03a1501f4955098d208b67be41c5f548878e3ac41f7f2a2a60a02f470ac0fe4"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
       "2",
       "6",
       "circular",
@@ -3158,12 +3158,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "493292b50d952049a2db7d8cf424a6e33015c9a7ff595916cfad99d1192b4510",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3175,11 +3175,11 @@
       "alice_only_sha256": "9c34fe86ab051255b154affd33ee74a454bc072c2e9b3ecf0b1ae0074dd9ba63",
       "bob_only_sha256": "d03a1501f4955098d208b67be41c5f548878e3ac41f7f2a2a60a02f470ac0fe4"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/3.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -3214,12 +3214,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "b3ea636caaac63c76a670e773f77932a7a4d1b7c452a9a89fe1d5d57a654da36",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3231,11 +3231,11 @@
       "alice_only_sha256": "41f51d0ba7b2d7bd309813e8dcad607427b11b4916d6729c79c24a8da85f1159",
       "bob_only_sha256": "04d19c3eb7b07c77ef27bbffb64074b243a387e0036562b58ef74b4a33a08cfc"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -3270,12 +3270,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "b3ea636caaac63c76a670e773f77932a7a4d1b7c452a9a89fe1d5d57a654da36",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3287,11 +3287,11 @@
       "alice_only_sha256": "41f51d0ba7b2d7bd309813e8dcad607427b11b4916d6729c79c24a8da85f1159",
       "bob_only_sha256": "04d19c3eb7b07c77ef27bbffb64074b243a387e0036562b58ef74b4a33a08cfc"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
       "2",
       "6",
       "circular",
@@ -3332,12 +3332,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "b3ea636caaac63c76a670e773f77932a7a4d1b7c452a9a89fe1d5d57a654da36",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3349,11 +3349,11 @@
       "alice_only_sha256": "41f51d0ba7b2d7bd309813e8dcad607427b11b4916d6729c79c24a8da85f1159",
       "bob_only_sha256": "04d19c3eb7b07c77ef27bbffb64074b243a387e0036562b58ef74b4a33a08cfc"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
       "2",
       "6",
       "circular",
@@ -3394,12 +3394,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "b3ea636caaac63c76a670e773f77932a7a4d1b7c452a9a89fe1d5d57a654da36",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3411,11 +3411,11 @@
       "alice_only_sha256": "41f51d0ba7b2d7bd309813e8dcad607427b11b4916d6729c79c24a8da85f1159",
       "bob_only_sha256": "04d19c3eb7b07c77ef27bbffb64074b243a387e0036562b58ef74b4a33a08cfc"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -3450,12 +3450,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "b3ea636caaac63c76a670e773f77932a7a4d1b7c452a9a89fe1d5d57a654da36",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3467,11 +3467,11 @@
       "alice_only_sha256": "41f51d0ba7b2d7bd309813e8dcad607427b11b4916d6729c79c24a8da85f1159",
       "bob_only_sha256": "04d19c3eb7b07c77ef27bbffb64074b243a387e0036562b58ef74b4a33a08cfc"
     },
-    "binary": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
+    "binary": "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine",
     "binary_sha256": "6da833a86e48174bd68781d11988d8e00a7cf8a46243603ac71cbe79b66b9a46",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
       "432500"
     ],
     "execution_implementation": "formal-v1-iblt-original",
@@ -3506,12 +3506,12 @@
     "parameter_source": {
       "policy": "carry cells/d or expected/d from the adjacent smaller original main point; a/z from unchanged original formula; no new calibration",
       "left_d": 300000,
-      "source_final": "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
+      "source_final": "/artifact-history/experiment/resubmission-20260922/results/formal-v1/groups/300000/final.json",
       "source_final_sha256": "a50147985aafbab318f65a995b062c7bd31a7b820a8c66c3b06ad71f113e3970"
     },
     "main_curve": true,
     "dataset_sha256": "b3ea636caaac63c76a670e773f77932a7a4d1b7c452a9a89fe1d5d57a654da36",
-    "dataset": "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+    "dataset": "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
     "truth": {
       "protocol": "figure2-dataset-v1",
       "full": true,
@@ -3523,11 +3523,11 @@
       "alice_only_sha256": "41f51d0ba7b2d7bd309813e8dcad607427b11b4916d6729c79c24a8da85f1159",
       "bob_only_sha256": "04d19c3eb7b07c77ef27bbffb64074b243a387e0036562b58ef74b4a33a08cfc"
     },
-    "binary": "/root/XYZ-Sketch-experiment/XYZ-Sketch-fast-cells/engine-v15-clmul",
+    "binary": "/artifact-history/XYZ-Sketch-fast-cells/engine-v15-clmul",
     "binary_sha256": "e56aee9b7b4bb79167ae44f69a1258f0539c30c49a4822fdeb3b6a1742b31e0a",
     "command_args": [
       "--run",
-      "/root/XYZ-Sketch-experiment/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
+      "/artifact-history/XYZ-v15-two-extra-points-20261007/datasets/500000/4.bin",
       "2",
       "6",
       "circular",

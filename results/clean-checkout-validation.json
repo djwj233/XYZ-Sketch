@@ -23,7 +23,7 @@
         "--smoke"
       ],
       "returncode": 0,
-      "stdout": "{\n  \"output\": \"/root/XYZ-Sketch-experiment/paper-artifact-clean-checkout-20261008/results/runs/20261008-225424-optimized-comparison-7beb31\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": true,\n  \"formal_results\": false\n}\n",
+      "stdout": "{\n  \"output\": \"/artifact-history/paper-artifact-clean-checkout-20261008/results/runs/20261008-225424-optimized-comparison-7beb31\",\n  \"jobs\": 1,\n  \"process_failures\": 0,\n  \"reference_mismatches\": 0,\n  \"smoke\": true,\n  \"formal_results\": false\n}\n",
       "stderr": ""
     },
     {
@@ -33,7 +33,7 @@
         "rateless"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-clean-checkout-20261008/results/build/rateless\n",
+      "stdout": "/artifact-history/paper-artifact-clean-checkout-20261008/results/build/rateless\n",
       "stderr": ""
     },
     {
@@ -46,7 +46,7 @@
         "1"
       ],
       "returncode": 0,
-      "stdout": "/root/XYZ-Sketch-experiment/paper-artifact-clean-checkout-20261008/results/runs/20261008-225432-heuristic-calibration-e60130\n",
+      "stdout": "/artifact-history/paper-artifact-clean-checkout-20261008/results/runs/20261008-225432-heuristic-calibration-e60130\n",
       "stderr": ""
     }
   ],

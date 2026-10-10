@@ -8,14 +8,14 @@
   "process_failures": 0,
   "parse_errors": 0,
   "protected_sources_unchanged": {
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/iblt.cpp": true,
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/iblt.h": true,
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/murmurhash3.cpp": true,
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/murmurhash3.h": true,
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/common.hpp": true,
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/COPYING": true,
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/generated/LICENSE": true,
-    "/root/XYZ-Sketch-experiment/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine": true
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/generated/iblt.cpp": true,
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/generated/iblt.h": true,
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/generated/murmurhash3.cpp": true,
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/generated/murmurhash3.h": true,
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/generated/common.hpp": true,
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/generated/COPYING": true,
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/generated/LICENSE": true,
+    "/artifact-history/experiment/resubmission-20260922/build/dev-v3/resubmission_external_iblt_engine": true
   },
   "record_manifest_sha256": "f9269772522b90d130498d53fa3d83728607cfe833c7375ccb6e9c2c4266af43"
 }
